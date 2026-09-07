@@ -463,3 +463,59 @@ window.MAPNERO_GUIDES = {
     }
   }
 };
+
+window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId, payload) {
+  const english = window.MAPNERO_GUIDES.en;
+  const platformIds = ["apple", "android", "web"];
+
+  function fail(message) {
+    throw new Error(`[MapNero guides:${localeId}] ${message}`);
+  }
+
+  if (!payload?.ui || !payload?.platforms) fail("locale payload is incomplete");
+
+  const localized = {
+    ui: { ...english.ui, ...payload.ui },
+    platforms: {}
+  };
+
+  platformIds.forEach((platformId) => {
+    const sourcePlatform = english.platforms[platformId];
+    const translatedPlatform = payload.platforms[platformId];
+    if (!translatedPlatform) fail(`missing ${platformId} platform`);
+
+    const translatedTopics = translatedPlatform.topics || {};
+    localized.platforms[platformId] = {
+      label: translatedPlatform.label,
+      description: translatedPlatform.description,
+      icon: sourcePlatform.icon,
+      topics: sourcePlatform.topics.map((sourceTopic) => {
+        const translatedTopic = translatedTopics[sourceTopic.id];
+        if (!translatedTopic) fail(`missing ${platformId}/${sourceTopic.id}`);
+        if (translatedTopic.steps?.length !== sourceTopic.steps.length) {
+          fail(`wrong step count for ${platformId}/${sourceTopic.id}`);
+        }
+        if ((translatedTopic.tips || []).length !== (sourceTopic.tips || []).length) {
+          fail(`wrong tip count for ${platformId}/${sourceTopic.id}`);
+        }
+        if (sourceTopic.note && !Object.hasOwn(translatedTopic, "note")) {
+          fail(`missing note for ${platformId}/${sourceTopic.id}`);
+        }
+
+        return {
+          id: sourceTopic.id,
+          title: translatedTopic.title,
+          summary: translatedTopic.summary,
+          access: translatedTopic.access,
+          ...(Object.hasOwn(translatedTopic, "note") ? { note: translatedTopic.note } : {}),
+          steps: translatedTopic.steps.map(([title, body]) => ({ title, body })),
+          ...(sourceTopic.tips?.length ? {
+            tips: translatedTopic.tips.map(([q, a]) => ({ q, a }))
+          } : {})
+        };
+      })
+    };
+  });
+
+  window.MAPNERO_GUIDES[localeId] = localized;
+};
