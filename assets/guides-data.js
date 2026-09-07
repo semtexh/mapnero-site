@@ -519,3 +519,47 @@ window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId
 
   window.MAPNERO_GUIDES[localeId] = localized;
 };
+
+window.registerMapNeroCompactGuideLocale = function registerMapNeroCompactGuideLocale(localeId, payload) {
+  const english = window.MAPNERO_GUIDES.en;
+  const mobileShared = payload.mobile || {};
+  const accessKeys = {
+    "quick-start": "free", "import-map": "mixed", "location-track": "mixed",
+    "pins-layers": "mixed", "offline-maps": "mixed", "collections-atlas": "atlas",
+    "measure-cogo-buffer": "buffer", "team-gnss": "team", "eod-safety": "safety",
+    "sign-in": "organization", "layers-features": "organization", "import-export": "write",
+    "edit-online": "write", "offline-snapshot": "organization", reports: "role",
+    "team-live": "team", "web-limits": "all"
+  };
+
+  const platforms = {};
+  ["apple", "android", "web"].forEach((platformId) => {
+    const source = english.platforms[platformId];
+    const translatedPlatform = payload.platforms[platformId];
+    if (!translatedPlatform) throw new Error(`[MapNero guides:${localeId}] missing ${platformId}`);
+    const entries = platformId === "web" ? payload.web : { ...mobileShared, ...(payload[platformId] || {}) };
+    const topics = source.topics.map((sourceTopic) => {
+      const entry = entries[sourceTopic.id];
+      if (!entry || !entry.title || !entry.summary || !entry.steps?.length) {
+        throw new Error(`[MapNero guides:${localeId}] missing ${platformId}/${sourceTopic.id}`);
+      }
+      return {
+        id: sourceTopic.id,
+        title: entry.title,
+        summary: entry.summary,
+        access: payload.access[accessKeys[sourceTopic.id]],
+        ...(entry.note ? { note: entry.note } : {}),
+        steps: entry.steps.map(([title, body]) => ({ title, body })),
+        ...(entry.tips?.length ? { tips: entry.tips.map(([q, a]) => ({ q, a })) } : {})
+      };
+    });
+    platforms[platformId] = {
+      label: translatedPlatform.label,
+      description: translatedPlatform.description,
+      icon: source.icon,
+      topics
+    };
+  });
+
+  window.MAPNERO_GUIDES[localeId] = { ui: payload.ui, platforms };
+};
