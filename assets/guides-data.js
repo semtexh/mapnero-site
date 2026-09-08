@@ -73,6 +73,9 @@ window.MAPNERO_GUIDES = {
             summary: "Load a GeoPDF, PDF, GeoTIFF, KMZ or image and open it in the map viewer.",
             access: "Free · some formats require Core or Pro",
             note: "A multi-page PDF requires Pro. Georeferencing a photo as a map requires Core or higher.",
+            motion: {
+              caption: "Choose a source, then open the link panel when you are importing a map from the web."
+            },
             steps: [
               { title: "Open Import", body: "From the map or Library, open Import Map." },
               { title: "Choose the source", body: "Pick a PDF/GeoPDF, GeoTIFF, image, KMZ, web link or QR code." },
