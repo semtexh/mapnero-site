@@ -15,6 +15,7 @@
   let topicId = "";
   let query = "";
   let toastTimer;
+  let screenshotRequest = 0;
 
   const elements = {
     language: document.getElementById("language-select"),
@@ -298,25 +299,24 @@
   }
 
   function renderScreenshot(topic) {
+    const request = ++screenshotRequest;
     const image = elements.screenshotImage;
     const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}.png`;
-    const fallbackPath = `assets/guides/screenshots/${platform}/en/${topic.id}.png`;
-    const show = (source) => {
-      image.src = source;
-      image.alt = `${currentPlatform().label}: ${topic.title}`;
+    const alt = `${currentPlatform().label}: ${topic.title}`;
+    elements.screenshot.hidden = true;
+    image.removeAttribute("src");
+    image.alt = "";
+
+    // Only show a successfully loaded capture for this exact language and topic.
+    // A late response from a previous selection must not replace the current one.
+    const capture = new Image();
+    capture.onload = () => {
+      if (request !== screenshotRequest) return;
+      image.src = path;
+      image.alt = alt;
       elements.screenshot.hidden = false;
     };
-    image.onerror = () => {
-      if (image.dataset.fallback !== "true" && locale !== "en") {
-        image.dataset.fallback = "true";
-        show(fallbackPath);
-        return;
-      }
-      image.removeAttribute("src");
-      elements.screenshot.hidden = true;
-    };
-    image.dataset.fallback = "false";
-    show(path);
+    capture.src = path;
   }
 
   function showToast(message) {
