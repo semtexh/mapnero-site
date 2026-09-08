@@ -134,6 +134,29 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Tamamlanma ölçütü
 
+### Cluster analizi — 2026-09-08
+
+- Serhan'ın ek isteği kılavuz kapsamına alındı. Apple ve Android için
+  `cluster-analysis` konusu 12 dilde eklendi; web'de eşdeğer akış varsayılmadı.
+- Kaynak: Apple `LayerLibraryView.swift` sheet/menu/clusterPoints;
+  Flutter `layer_library_view.dart` `_analyzeEodCluster`, `hasClusterAnalysis`;
+  iki platformun `EODClusterEngine` ve sonuç ekranları. Pro+, en az 8 nokta,
+  katman menüsü ve DBSCAN/görsel pin gruplaması ayrımı doğrulandı.
+- Bu yalnız erişim/girdi ve yorumlama sınırları anlatımıdır. EOD tahminleri,
+  risk etiketleri veya dışa aktarılan rapor bağımsız saha doğrulaması değildir.
+  Hesaplar değiştirilmedi, operasyonel kullanım talimatı eklenmedi.
+- 11 test, JS sözdizimi ve diff kontrolü geçti. Mevcut tarayıcı bağlantısıyla
+  24 platform/dil görünümünde iki adım, RTL ve 621 px'te yatay taşma olmaması
+  doğrulandı. agent-browser CLI kurulu olmadığından mevcut tarayıcı arayüzü
+  kullanıldı. Türkçe kartlar görüldü; uzun sayfa ekran yakalamasında birleşim
+  artefaktı oluştu, yayın görseli olarak kullanılmadı.
+- Gerçek cluster uygulama görüntüleri ve cihazdaki analiz/PDF kabulü henüz
+  yapılmadı; toplam gerçek iPhone kılavuz ekranı 72. Sonraki çekim: kişisel
+  olmayan en az 8 demo nokta, katman menüsü ve sonuç ekranı, her dil ayrı;
+  tahmin alanlarını kanıtlanmış sonuç gibi sunmadan. iPad/Mac/Android ayrı kabul.
+- Çeviriler kaynak kod doğrulamasının yerine geçmez; EOD terimleri için
+  uzman dil incelemesi ve cihaz ekranı eşleşmesi yayın öncesinde gerekli.
+
 Her desteklenen platform için erişim yolu ve abonelik sınırı doğrulanmış
 adımlar; 12 dilde uygulamanın kendi dilinde çekilmiş görüntüler; iPhone,
 iPad/Mac, Android ve web sınırlarının açık tutulması; görsel inceleme ve
