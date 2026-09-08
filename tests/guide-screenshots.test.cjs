@@ -23,6 +23,7 @@ function harness() {
   const motionLoads = [];
   const context = {
     screenshotRequest: 0, motionRequest: 0, locale: 'tr', platform: 'apple',
+    window: { MAPNERO_GUIDE_MOTION: {} },
     currentPlatform: () => ({label: 'Apple'}),
     elements: {
       screenshot: {hidden: false},
@@ -76,6 +77,14 @@ test('does not request or expose a motion clip when the topic has none', () => {
   assert.equal(context.elements.motionVideo.src, undefined);
   assert.equal(motionLoads.length, 1);
 });
+test('uses an exact-locale motion registry entry when the translated topic has no inline clip', () => {
+  const {context, motionLoads} = harness();
+  context.window.MAPNERO_GUIDE_MOTION = { tr: { apple: { 'import-map': { caption: 'Türkçe akış' } } } };
+  context.renderMotion({id:'import-map', title:'İçe aktar'});
+  assert.equal(context.elements.motionVideo.src, 'assets/guides/videos/apple/tr/import-map.mp4');
+  motionLoads.at(-1).onloadeddata();
+  assert.equal(context.elements.motionCaption.textContent, 'Türkçe akış');
+});
 test('the English Apple import workflow clip is a valid local MP4 asset', () => {
   const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/en/import-map.mp4'));
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');
@@ -85,6 +94,13 @@ test('the Turkish Apple import workflow clip is a valid local MP4 asset', () => 
   const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/tr/import-map.mp4'));
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');
   assert.ok(data.length > 500000);
+});
+test('all twelve Apple import workflow clips are valid exact-locale MP4 assets', () => {
+  for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
+    const data = fs.readFileSync(path.join(root, `assets/guides/videos/apple/${locale}/import-map.mp4`));
+    assert.equal(data.subarray(4, 8).toString(), 'ftyp', locale);
+    assert.ok(data.length > 100000, locale);
+  }
 });
 for (const topic of ['quick-start', 'import-map', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();

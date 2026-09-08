@@ -335,10 +335,11 @@
 
     // Motion is opt-in per topic. A guide must never fall back to a clip from
     // another language: captions and on-screen app text need to match.
-    if (!topic.motion) return;
+    const motion = topic.motion || window.MAPNERO_GUIDE_MOTION?.[locale]?.[platform]?.[topic.id];
+    if (!motion?.caption) return;
 
     const path = `assets/guides/videos/${platform}/${locale}/${topic.id}.mp4`;
-    const caption = topic.motion.caption || topic.title;
+    const caption = motion.caption;
     video.onloadeddata = () => {
       if (request !== motionRequest) return;
       elements.motionCaption.textContent = caption;

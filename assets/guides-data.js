@@ -467,6 +467,23 @@ window.MAPNERO_GUIDES = {
   }
 };
 
+// Short workflow clips are intentionally opt-in per exact locale. The guide
+// renderer never substitutes a different language when a clip is unavailable.
+window.MAPNERO_GUIDE_MOTION = {
+  en: { apple: { "import-map": { caption: "Choose a source, then open the link panel when you are importing a map from the web." } } },
+  tr: { apple: { "import-map": { caption: "Bir kaynak seçin; webden harita alırken bağlantı giriş panelini açın." } } },
+  ar: { apple: { "import-map": { caption: "اختر مصدرًا ثم افتح لوحة الرابط عند استيراد خريطة من الويب." } } },
+  de: { apple: { "import-map": { caption: "Wählen Sie eine Quelle und öffnen Sie beim Import einer Karte aus dem Web das Linkfeld." } } },
+  es: { apple: { "import-map": { caption: "Elija una fuente y abra el panel de enlace al importar un mapa desde la web." } } },
+  fr: { apple: { "import-map": { caption: "Choisissez une source, puis ouvrez le panneau de lien pour importer une carte depuis le Web." } } },
+  hi: { apple: { "import-map": { caption: "स्रोत चुनें; वेब से नक्शा आयात करते समय लिंक पैनल खोलें।" } } },
+  it: { apple: { "import-map": { caption: "Scegli una fonte, poi apri il pannello del link per importare una mappa dal web." } } },
+  pt: { apple: { "import-map": { caption: "Escolha uma origem e abra o painel de ligação ao importar um mapa da web." } } },
+  ru: { apple: { "import-map": { caption: "Выберите источник, затем откройте панель ссылки при импорте карты из интернета." } } },
+  uk: { apple: { "import-map": { caption: "Виберіть джерело, а потім відкрийте панель посилання для імпорту карти з інтернету." } } },
+  ur: { apple: { "import-map": { caption: "ماخذ منتخب کریں، پھر ویب سے نقشہ درآمد کرتے وقت لنک پینل کھولیں۔" } } }
+};
+
 window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId, payload) {
   const english = window.MAPNERO_GUIDES.en;
   const platformIds = ["apple", "android", "web"];
