@@ -18,8 +18,31 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
   reddedildiğinde göstergeler dönmeye devam ediyordu. Ayrı başlık/işlem satırı
   ve istek yaşam döngüsü takibi eklendi. Dar regresyon testi ve imzasız generic
   iOS Simulator derlemesi geçti; yeni uygulamada iki nokta + izin reddi görüldü.
-- Ayrı 3D ve track raporu konuları/görüntüleri henüz tamamlanmadı. Üçüncü
+- Apple 3D ve track raporu metinleri 12 dilde eklendi (`d5f81a6`);
+  bu iki konunun gerçek ekran görüntüleri henüz tamamlanmadı. Üçüncü
   taraf yükseklik izni verilmedi; demo rota noktaları yükseklik olmadan çizildi.
+
+### Android rota metni — 2026-09-08
+
+- `route-builder` Android konusu 12 dilde eklendi. Nokta yerleştirme ve
+  mesafe metni iki platformun kaynakları karşılaştırılarak ortak tutuldu;
+  Android araç çubuğu/More girişi, gerçek `Save` etiketi ve yükseklik
+  önizlemesindeki sıfır veri uyarısı ayrı yazıldı. Web'e eklenmedi.
+- Kaynak: `map_toolbar.dart` route düğmesi/More dispatcher;
+  `route_builder_panel.dart` eksi/çöp/X ve iki nokta eşiği;
+  `route_builder_notifier.dart` taslak yaşam döngüsü;
+  `map_viewer_screen.dart` `_saveRouteToLayer` ve hedef katman kontrolü;
+  `route_elevation_preview_screen.dart`, `elevation_service.dart`.
+- Eksik yükseklik/izin reddi sıfır değer döndürebiliyor. Düz önizleme gerçek
+  düz arazi kanıtı olarak anlatılmıyor. Bu tur uygulama davranışı değiştirilmedi.
+- 10 otomatik test, sözdizimi ve diff kontrolü geçti. Yerel tarayıcıda
+  12 dil × dört adım, Save metni, RTL, 621 px genişlikte yatay taşma olmaması
+  doğrulandı. Türkçe adım kartları görsel olarak incelendi.
+- Android rota ekranları hâlâ çekilmedi; eksik görsel alanı gizli ve Apple
+  görseline fallback yok. Toplam gerçek iPhone görseli hâlâ 72.
+- Device Hub ekran okuması iki farklı mevcut arayüzde zaman aşımına uğradı.
+  iOS 3D kadraj düzeltmesinin cihaz kabulü bekliyor. Yeni çizim/rapor ekranları,
+  Android/iPad/Mac/web çekimleri ve canlı yayın tamamlanma kapsamı dışında.
 
 ## Rota oluşturma
 

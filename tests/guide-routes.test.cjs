@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 
-test('the route guide loads after translations for all 12 Apple locales', () => {
+test('route guides load for 12 locales with separate Apple and Android flows', () => {
   const context = {window: {}};
   vm.createContext(context);
   const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
@@ -13,6 +13,7 @@ test('the route guide loads after translations for all 12 Apple locales', () => 
     .map(match => match[1]).filter(file => file !== 'assets/guides.js');
   assert.ok(scripts.includes('assets/guides-data.js'));
   assert.ok(scripts.indexOf('assets/guides-routes.js') > scripts.indexOf('assets/guides-rtl.js'));
+  assert.ok(scripts.indexOf('assets/guides-android-routes.js') > scripts.indexOf('assets/guides-routes.js'));
   for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
   const titles = new Set();
   for (const {id} of context.window.MAPNERO_GUIDE_LOCALES) {
@@ -26,10 +27,18 @@ test('the route guide loads after translations for all 12 Apple locales', () => 
     assert.equal(topic.tips.length, 1);
     for (const step of topic.steps) assert.ok(step.title && step.body, id);
     assert.ok(topic.tips[0].q && topic.tips[0].a, id);
-    for (const platform of ['android', 'web']) {
+    for (const platform of ['web']) {
       assert.ok(!platforms[platform].topics.some(topic => topic.id === 'route-builder'),
         'Apple instructions must not leak to ' + platform);
     }
+    const android = platforms.android.topics.filter(t => t.id === 'route-builder');
+    assert.equal(android.length, 1, id + ':android');
+    assert.equal(android[0].steps.length, 4);
+    assert.notEqual(android[0].steps[0].body, topic.steps[0].body);
+    assert.notEqual(android[0].steps[3].body, topic.steps[3].body);
+    assert.match(android[0].steps[3].body, /Save/);
+    assert.notEqual(android[0].tips[0].a, topic.tips[0].a);
+    assert.notStrictEqual(android[0].steps, topic.steps);
   }
   assert.equal(titles.size, 12);
 });
