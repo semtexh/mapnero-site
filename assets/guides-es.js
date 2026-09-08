@@ -43,7 +43,7 @@
           ["Centre el mapa", "Pulse Localizar. Vuelva a pulsarlo para cambiar el seguimiento y mantener el mapa centrado al moverse."],
           ["Inicie la grabación", "Pulse Grabar, confirme el estado y empiece a moverse."],
           ["Observe la línea en directo", "La línea se actualiza durante la grabación en el mapa base y en los PDF importados."],
-          ["Detenga y guarde", "Pulse Grabar otra vez, revise el track y guárdelo. Adminístrelo desde la Biblioteca o su capa."]
+          ["Detenga y guarde", "Pulse el botón cuadrado Detener; el track se guarda automáticamente al finalizar. Revíselo después en la Biblioteca o en su capa."]
         ], [["Localizar no mueve el mapa", "Revise Ajustes del iPhone → Privacidad y seguridad → Localización → MapNero y espere al aire libre."], ["El track no aparece", "Abra Capas y confirme que su capa está visible y sin filtros."]]),
         "pins-layers": T("Añadir pines y administrar capas", "Guarde lugares, detalles de campo y controle lo visible en el mapa.", "Gratis · herramientas avanzadas pueden requerir Core+", [
           ["Elija una capa visible", "Abra Capas, seleccione una capa normal editable y active su visibilidad."],

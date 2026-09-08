@@ -74,7 +74,7 @@
               ["Haritayı merkezleyin", "Konum’a dokunun. Hareket ederken haritanın merkezde kalması için takip durumunu değiştirmek üzere tekrar dokunun."],
               ["Kaydı başlatın", "Kayıt’a dokunun, kayıt durumunu doğrulayın ve hareket etmeye başlayın."],
               ["Canlı çizgiyi izleyin", "Kayıt çizgisi, kayıt sırasında Altlık Harita ve içe aktarılan PDF haritalarda güncellenir."],
-              ["Durdurun ve kaydedin", "Kayıt’a tekrar dokunun, izi inceleyip kaydedin. Kütüphane’den veya katmanından yönetebilirsiniz."]
+              ["Durdurun ve kaydedin", "Kare Durdur düğmesine dokunun; kayıt bitirilir ve iz otomatik kaydedilir. Daha sonra Kütüphane’den veya katmanından inceleyebilirsiniz."]
             ],
             tips: [
               ["Konum haritayı hareket ettirmiyor", "iPhone Ayarları → Gizlilik ve Güvenlik → Konum Servisleri → MapNero yolunu kontrol edip açık alanda yeni konum bekleyin."],

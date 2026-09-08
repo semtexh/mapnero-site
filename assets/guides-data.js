@@ -93,7 +93,7 @@ window.MAPNERO_GUIDES = {
               { title: "Centre the map", body: "Tap Locate. Tap it again to change the follow state if you want the map to remain centred while moving." },
               { title: "Start recording", body: "Tap Record, confirm the recording state, then begin moving." },
               { title: "Watch the live line", body: "The recording line updates on the Base Map and imported PDF maps while recording." },
-              { title: "Stop and save", body: "Tap Record again, review the track and save it. Manage saved tracks from the Library or their layer." }
+              { title: "Stop and save", body: "Tap the square Stop button to finish recording; the track is saved automatically. Review it later in the Library or its layer." }
             ],
             tips: [
               { q: "Locate does not move the map", a: "Check iPhone Settings → Privacy & Security → Location Services → MapNero, then return outdoors for a fresh fix." },

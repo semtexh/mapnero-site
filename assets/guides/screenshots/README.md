@@ -39,3 +39,27 @@ button still says "General" in this build; the first card is Simple Map.
 
 Run `node --test tests/guide-screenshots.test.cjs` for locale-selection, stale-load
 and image-file checks. Visual review remains necessary for future captures.
+
+## Measurement and recording controls — 2026-09-08
+
+Added `measure-cogo-buffer.png` and `location-track.png` for all twelve
+languages: 24 individually reviewed captures, bringing the iPhone total to 60.
+These use the same unedited simulator capture format and exact-locale lookup.
+
+- Measurement captures show one temporary ruler point, a live line to the
+  crosshair and a nonzero length label. The measurement was cancelled after
+  capture. This illustrates distance measurement, not COGO or buffer creation,
+  and is not a survey-accuracy validation.
+- Recording captures show the initial recording controls, including pause and
+  square Stop. The simulator was stationary, so distance and speed are zero.
+  They do not demonstrate a moving track or background recording. Every demo
+  recording was stopped before changing language. Short empty demo records may
+  remain in the simulator; no personal tracks or app database were published.
+- Apple instructions in all twelve languages now describe square Stop and
+  automatic saving, matching the actual UI and recorder implementation. There
+  is no separate review-and-save screen in this flow. Android text is unchanged.
+
+Seven automated screenshot tests cover the five topics. iPad, macOS, Android,
+web and the remaining iPhone topics still need their own capture verification.
+All 24 new topic/language combinations were also checked in the running local
+guide: exact image path, 1206-pixel natural width, and RTL for Arabic/Urdu.
