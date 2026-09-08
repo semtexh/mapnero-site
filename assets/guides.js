@@ -344,6 +344,13 @@
       if (request !== motionRequest) return;
       elements.motionCaption.textContent = caption;
       elements.motion.hidden = false;
+      // Motion clips are muted by design, so an immediate loop gives the
+      // same at-a-glance cue as a GIF without sacrificing the native video
+      // controls. Browsers may still reject autoplay in strict contexts.
+      if (typeof video.play === "function") {
+        const started = video.play();
+        if (typeof started?.catch === "function") started.catch(() => {});
+      }
     };
     video.onerror = () => {
       if (request !== motionRequest) return;
