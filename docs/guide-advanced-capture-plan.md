@@ -40,6 +40,15 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## 3D çizim/görünüm ve yükseklik
 
+- 2026-09-08: `track-3d` konusu Apple için 12 dilde eklendi. Katman → iz
+  kartı → 3D erişimi, üç mod ve otomatik döndürme düğmesi Türkçe simülatörde
+  görüldü. Kaynakta yükseklik ve yatay eksenler görsel amaçlı normalize
+  ediliyor; metin bunu ölçekli arazi modeli veya 3D çizim editörü diye sunmuyor.
+- Gerçek kayıt akışıyla yaklaşık 255 m demo iz üretildi; simüle edilmiş
+  konumlar kullanıldı, yükseklik sıfır. Kayıt durduruldu. İlk 3D görünümde
+  çizginin kadraj dışında kalması gözlendi; sürükleme kamerayı değiştirdi
+  ancak görüntü çekim için uygun değildi. Bu kareler siteye eklenmedi.
+  Tekrarlanabilir kamera/kadraj düzeltmesi ve 12 dil çekimi bekliyor.
 - İki ayrı akış kontrol edilecek: çizilmiş rotanın 3D yükseklik önizlemesi ve
   kaydedilmiş izin 3D görünümü. Bunlar serbest bir 3D model editörü değildir.
 - Kamera döndürme/zoom, yükseklik profili, renk ölçeği ve mevcut diğer
@@ -56,6 +65,17 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Track raporu
 
+- 2026-09-08: `track-report` konusu Apple için 12 dilde eklendi. Kartın
+  yatay işlem satırı → Daha Fazla → Analiz/Rapor, ayrıntılı Core+ bölümü ve
+  PDF hazırlama/paylaşım yolu kaynak koddan doğrulandı; rapor/PDF uçtan uca
+  simülatör testi ve ekranları henüz yapılmadı.
+- `TrackReportBuilder` yer adlarını ve hava durumunu rapor hazırlanırken
+  sorguluyor. Hava durumu geçmiş yolculuk koşulu olarak anlatılmıyor;
+  çevrimiçi veri gelmeyince koordinat/eksik hava durumu olabileceği 12 dilde
+  açıklandı. Raporun harici servis çağrıları için onay kendiliğinden verilmedi.
+- İki yeni konu 24 dil/konu birleşiminde tarayıcıdan açıldı: beklenen 3/4
+  adım, doğru başlık, ar/ur RTL, yatay taşma yok. Eksik ekranlar gizli; başka
+  dilin görseliyle doldurulmadı. 10 otomatik test ve JS/diff kontrolleri geçti.
 - Kayıtlı iz seçme → ayrıntı/rapor → grafikler → PDF paylaşma/kaydetme.
 - Mesafe, süre, hız, yükseklik ve veri eksikliği olan alanlar birbirinden
   ayrılacak. Çizilmiş rotaya gerçek yürüyüş süresi/hızı yakıştırılmayacak.
