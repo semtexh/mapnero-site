@@ -21,5 +21,21 @@
 Coverage is intentionally partial. Missing topic/platform captures stay hidden;
 the guide must not substitute another language's screenshot.
 
+## Quick-start capture procedure
+
+`apple/<language>/quick-start.png` is available in all twelve languages above.
+Together with import and initial GNSS screens this is 36 reviewed iPhone
+captures. All twelve quick-start images were loaded in the local guide browser
+with the matching locale path and 1206-pixel natural width; Arabic and Urdu
+used RTL. Five automated tests pass. Other topics and devices remain pending.
+
+The Simple Map introduction uses the real first-run mode picker. Temporary
+launch arguments show that screen without deleting maps, signing out, or
+changing the user's selected mode. Its localized heading and Simple Map card
+are checked before capture; every final image also requires visual review.
+Simulator startup may temporarily return an empty accessibility tree or a black
+frame. Those frames are rejected, not used as guide illustrations. The skip
+button still says "General" in this build; the first card is Simple Map.
+
 Run `node --test tests/guide-screenshots.test.cjs` for locale-selection, stale-load
 and image-file checks. Visual review remains necessary for future captures.
