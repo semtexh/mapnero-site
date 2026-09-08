@@ -1,5 +1,26 @@
 # Real guide captures
 
+## Saved-track 3D viewer — 2026-09-08
+
+- Added 12 unedited `apple/<language>/track-3d.png` captures, one per app
+  language. Total real iPhone guide captures: 84. App includes `a4d763e`.
+- iPhone 17 Pro / iOS 27 simulator, 1206 × 2622. Each app relaunch reached
+  Layers → demo layer → saved demo track → 3D; localized title was verified
+  in the live accessibility tree. Automatic rotation was stopped before capture.
+- The approximately 255 m track was previously recorded using simulated
+  coordinates. Its altitude is zero. The images demonstrate the viewer and
+  controls, not real terrain elevation, navigation or field accuracy.
+- All twelve images were individually inspected: complete track and start/end
+  markers visible, controls readable. French Route Only wraps and makes its
+  button taller than adjacent buttons; this cosmetic issue remains recorded.
+- Arabic/Urdu mirror the rotation control to the left; guide wording now says
+  the rotation button at the top, without an incorrect right-side instruction.
+- 12 automated guide tests pass. Live browser checks confirmed exact-language
+  image paths, natural width 1206, RTL, and no horizontal overflow at 621 px.
+- This validates the short flat demo in portrait, not all camera modes,
+  landscape, high-relief tracks, iPad/Mac or Android. No report/PDF capture,
+  external-service consent or store submission was performed.
+
 ## 2026-09-08 — iOS import and external GNSS screens
 
 - Source: installed MapNero app, iPhone 17 Pro simulator, iOS 27.

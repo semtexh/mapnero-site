@@ -41,7 +41,7 @@ test('a delayed previous-language image cannot replace the current capture', () 
   requests[0].onload();
   assert.equal(context.elements.screenshotImage.src, 'assets/guides/screenshots/apple/ar/import-map.png');
 });
-for (const topic of ['quick-start', 'import-map', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
+for (const topic of ['quick-start', 'import-map', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/${topic}.png`));

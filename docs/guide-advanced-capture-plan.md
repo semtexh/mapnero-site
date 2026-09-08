@@ -8,6 +8,12 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Güncel durum
 
+- **Son çekim güncellemesi:** Apple `track-3d` gerçek iPhone ekranları 12 dilde
+  tamamlandı ve tek tek incelendi; toplam 84 kare. `a4d763e` içeren uygulamada
+  kısa, sıfır yükseklikli demo iz portrait kadraja sığıyor. Diğer izler/yatay
+  görünüm için genel hata kabulü hâlâ açık. Track raporu/PDF ve diğer platform
+  çekimleri tamamlanmadı. Aşağıdaki eski durum kayıtları tarihsel ilerlemedir.
+
 - Apple `route-builder` konusu 12 dilde yerel kılavuza eklendi. Nokta ekleme,
   mesafe kontrolü, tek noktayı kaldırma, taslağı temizleme/kapama ve katmana
   kaydetme anlatılıyor. Android/web için aynı akış varsayılmadı.

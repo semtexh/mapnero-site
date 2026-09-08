@@ -67,6 +67,8 @@ test('3D and report topics have complete localized platform-specific instruction
       if (topicId === 'track-report') assert.match(topic.access, /Core/);
       assert.ok(!platforms.web.topics.some(t => t.id === topicId));
       if (topicId === 'track-3d') {
+        if (id === 'ar') assert.ok(!topic.steps[2].body.includes('أعلى اليمين'));
+        if (id === 'ur') assert.ok(!topic.steps[2].body.includes('اوپر دائیں'));
         const android = platforms.android.topics.filter(t => t.id === topicId);
         assert.equal(android.length, 1, id + ':android-3d');
         assert.equal(android[0].steps.length, 3);
