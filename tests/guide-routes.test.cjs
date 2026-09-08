@@ -9,7 +9,7 @@ test('route guides load for 12 locales with separate Apple and Android flows', (
   const context = {window: {}};
   vm.createContext(context);
   const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
-  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s]+\.js)"><\/script>/g)]
+  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s?]+\.js)(?:\?[^"\s]*)?"><\/script>/g)]
     .map(match => match[1]).filter(file => file !== 'assets/guides.js');
   assert.ok(scripts.includes('assets/guides-data.js'));
   assert.ok(scripts.indexOf('assets/guides-routes.js') > scripts.indexOf('assets/guides-rtl.js'));
@@ -47,7 +47,7 @@ test('3D and report topics have complete localized platform-specific instruction
   const context = {window: {}};
   vm.createContext(context);
   const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
-  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s]+\.js)"><\/script>/g)]
+  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s?]+\.js)(?:\?[^"\s]*)?"><\/script>/g)]
     .map(match => match[1]).filter(file => file !== 'assets/guides.js');
   assert.ok(scripts.indexOf('assets/guides-track-tools.js') < scripts.indexOf('assets/guides-android-reports.js'));
   for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);

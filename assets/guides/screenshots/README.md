@@ -1,5 +1,18 @@
 # Real guide captures
 
+## Android Add Map — 2026-09-08
+
+- Twelve unedited `android/<language>/import-map.png` captures from Pixel 7
+  emulator, Android API 37, 1080 × 2400, MapNero 2.1.5 / 2057 debug build.
+  Installed package version was checked after rebuilding with Java 17.
+- Language was selected through Settings → General, then the library's Add
+  button opened Add Map. Localized Import PDF labels were checked before capture.
+  All twelve images were individually reviewed; Arabic and Urdu use real RTL.
+- Light appearance is the app's current emulator setting. These demonstrate
+  the source chooser, not successful parsing of every listed file type.
+- Total saved screenshots: 96 iPhone + 12 Android = 108. Other Android topics,
+  iPad, Mac and web still require their own captures.
+
 ## Saved-track report — 2026-09-08
 
 - Added twelve unedited iPhone `track-report.png` captures; total: 96.

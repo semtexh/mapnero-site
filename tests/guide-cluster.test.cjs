@@ -9,7 +9,7 @@ test('cluster navigation and limitations load once per mobile platform in all 12
   const context = {window: {}};
   vm.createContext(context);
   const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
-  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s]+\.js)"><\/script>/g)]
+  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s?]+\.js)(?:\?[^"\s]*)?"><\/script>/g)]
     .map(m => m[1]).filter(file => file !== 'assets/guides.js');
   for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
   assert.equal(context.window.MAPNERO_GUIDE_LOCALES.length, 12);
