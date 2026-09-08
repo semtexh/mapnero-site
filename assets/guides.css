@@ -317,6 +317,25 @@ h1 {
 .article-header h2 { max-width: 48rem; margin: 0.5rem 0 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.08; letter-spacing: -0.03em; }
 .article-header > p { max-width: 50rem; margin: 0.9rem 0 0; color: var(--muted); font-size: 1.03rem; }
 
+.guide-screenshot {
+  width: min(100%, 34rem);
+  margin: 1.4rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #04080d;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+}
+
+.guide-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #04080d;
+}
+
+[dir="rtl"] .guide-screenshot { margin-inline-start: auto; }
+
 .access-badge {
   display: inline-flex;
   padding: 0.3rem 0.65rem;

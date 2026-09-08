@@ -29,6 +29,8 @@
     summary: document.getElementById("guide-summary"),
     note: document.getElementById("guide-note"),
     noteText: document.getElementById("guide-note-text"),
+    screenshot: document.getElementById("guide-screenshot"),
+    screenshotImage: document.getElementById("guide-screenshot-image"),
     steps: document.getElementById("step-list"),
     tipsSection: document.getElementById("tips-section"),
     tips: document.getElementById("tips-list"),
@@ -244,6 +246,7 @@
     elements.note.hidden = !topic.note;
     elements.noteText.textContent = topic.note || "";
     elements.steps.innerHTML = "";
+    renderScreenshot(topic);
 
     const progress = loadProgress();
     topic.steps.forEach((step, index) => {
@@ -292,6 +295,28 @@
     elements.next.disabled = index >= topics.length - 1;
     elements.previous.onclick = () => index > 0 && setTopic(topics[index - 1].id, true);
     elements.next.onclick = () => index < topics.length - 1 && setTopic(topics[index + 1].id, true);
+  }
+
+  function renderScreenshot(topic) {
+    const image = elements.screenshotImage;
+    const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}.png`;
+    const fallbackPath = `assets/guides/screenshots/${platform}/en/${topic.id}.png`;
+    const show = (source) => {
+      image.src = source;
+      image.alt = `${currentPlatform().label}: ${topic.title}`;
+      elements.screenshot.hidden = false;
+    };
+    image.onerror = () => {
+      if (image.dataset.fallback !== "true" && locale !== "en") {
+        image.dataset.fallback = "true";
+        show(fallbackPath);
+        return;
+      }
+      image.removeAttribute("src");
+      elements.screenshot.hidden = true;
+    };
+    image.dataset.fallback = "false";
+    show(path);
   }
 
   function showToast(message) {
