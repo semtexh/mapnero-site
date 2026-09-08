@@ -62,9 +62,14 @@ test('3D and report topics have complete localized platform-specific instruction
       assert.ok(topic.summary && topic.access && topic.note);
       assert.equal(topic.steps.length, stepCount);
       for (const step of topic.steps) assert.ok(step.title && step.body);
-      assert.equal(topic.tips.length, 1);
+      assert.equal(topic.tips.length, topicId === 'track-report' ? 2 : 1);
       assert.ok(topic.tips[0].q && topic.tips[0].a);
-      if (topicId === 'track-report') assert.match(topic.access, /Core/);
+      if (topicId === 'track-report') {
+        assert.match(topic.access, /Core/);
+        assert.ok(topic.tips[1].q && topic.tips[1].a);
+        assert.match(topic.tips[1].a, /PDF/);
+        if (id !== 'en') assert.notEqual(topic.tips[1].q, 'Can I decline location sharing?');
+      }
       assert.ok(!platforms.web.topics.some(t => t.id === topicId));
       if (topicId === 'track-3d') {
         if (id === 'ar') assert.ok(!topic.steps[2].body.includes('أعلى اليمين'));

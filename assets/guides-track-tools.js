@@ -160,6 +160,20 @@
       ], ["کیا موسم سفر کے وقت کا ہے؟", "رپورٹ بناتے وقت مقامات کے نام اور موسم آن لائن لیے جا سکتے ہیں۔ موسم سفر کے وقت کے حالات کا ریکارڈ نہیں۔ سروس دستیاب نہ ہو تو ناموں کی جگہ مختصات آ سکتے ہیں اور موسم غائب ہو سکتا ہے۔"]]
     }
   };
+  const reportConsentTips = {
+    en: ["Can I decline location sharing?", "Yes. After any first-visit help, the report asks before external location queries unless you already agreed. Cancel keeps the report local: coordinates replace place names and weather is omitted. You can still prepare the PDF and review it before sharing."],
+    tr: ["Konum paylaşımını reddedebilir miyim?", "Evet. İlk kullanım yardımı varsa kapattıktan sonra, daha önce onay vermediyseniz dış konum sorguları için izin sorulur. İptal seçimi raporu yerel tutar: yer adları yerine koordinatlar gösterilir, hava durumu eklenmez. PDF’yi yine hazırlayıp paylaşmadan önce inceleyebilirsiniz."],
+    de: ["Kann ich die Standortweitergabe ablehnen?", "Ja. Nach einer eventuellen Einführung fragt der Bericht vor externen Standortabfragen nach Ihrer Zustimmung, sofern diese nicht bereits vorliegt. Abbrechen hält den Bericht lokal: Koordinaten ersetzen Ortsnamen, Wetter entfällt. Das PDF kann trotzdem erstellt und vor dem Teilen geprüft werden."],
+    es: ["¿Puedo rechazar compartir la ubicación?", "Sí. Tras la ayuda inicial, si aparece, el informe pide permiso antes de consultar ubicaciones externas, salvo que ya lo haya concedido. Cancelar mantiene el informe local: muestra coordenadas en vez de nombres y omite el tiempo. Puede crear el PDF y revisarlo antes de compartirlo."],
+    fr: ["Puis-je refuser le partage de position ?", "Oui. Après l’aide de première visite, si elle apparaît, le rapport demande votre accord avant les requêtes de localisation externes, sauf accord déjà donné. Annuler conserve un rapport local : coordonnées au lieu des noms de lieux, sans météo. Vous pouvez toujours créer et vérifier le PDF avant de le partager."],
+    it: ["Posso rifiutare la condivisione della posizione?", "Sì. Dopo l’eventuale guida iniziale, il rapporto chiede il consenso prima delle richieste esterne sulla posizione, se non è già stato concesso. Annulla mantiene il rapporto locale: coordinate al posto dei nomi e nessun dato meteo. Puoi comunque creare e controllare il PDF prima di condividerlo."],
+    pt: ["Posso recusar a partilha da localização?", "Sim. Após a ajuda inicial, caso apareça, o relatório pede autorização antes de consultas externas de localização, se ainda não a tiver dado. Cancelar mantém o relatório local: coordenadas em vez de nomes e sem meteorologia. Pode criar o PDF e revê-lo antes de partilhar."],
+    ru: ["Можно отказаться от передачи координат?", "Да. После вводной справки, если она появится, отчёт запросит разрешение на внешние запросы местоположения, если согласие ещё не дано. Отмена оставляет отчёт локальным: вместо названий — координаты, без погоды. PDF всё равно можно создать и проверить перед отправкой."],
+    uk: ["Чи можна відмовитися від передавання координат?", "Так. Після початкової довідки, якщо вона з’явиться, звіт запитає дозвіл на зовнішні запити місцеположення, якщо згоди ще немає. Скасування залишає звіт локальним: координати замість назв, без погоди. PDF можна створити й перевірити перед надсиланням."],
+    ar: ["هل يمكنني رفض مشاركة الموقع؟", "نعم. بعد إغلاق إرشادات الزيارة الأولى إن ظهرت، يطلب التقرير الإذن قبل استعلامات الموقع الخارجية ما لم توافق سابقاً. يحافظ الإلغاء على التقرير محلياً: تظهر الإحداثيات بدلاً من أسماء الأماكن ولا تُضاف بيانات الطقس. يمكنك إنشاء PDF ومراجعته قبل مشاركته."],
+    hi: ["क्या मैं स्थान साझा करने से मना कर सकता हूँ?", "हाँ। पहली बार की सहायता दिखे तो उसे बंद करने के बाद, पहले सहमति न दी हो तो बाहरी स्थान अनुरोधों के लिए अनुमति माँगी जाती है। रद्द करने पर रिपोर्ट स्थानीय रहती है: स्थानों के नाम की जगह निर्देशांक आते हैं और मौसम नहीं जुड़ता। आप फिर भी PDF बनाकर साझा करने से पहले जाँच सकते हैं।"],
+    ur: ["کیا میں مقام شیئر کرنے سے انکار کر سکتا ہوں؟", "جی ہاں۔ پہلی بار کی رہنمائی ظاہر ہو تو اسے بند کرنے کے بعد، پہلے رضامندی نہ دی ہو تو بیرونی مقام کی درخواستوں کے لیے اجازت مانگی جاتی ہے۔ منسوخ کرنے سے رپورٹ مقامی رہتی ہے: جگہوں کے نام کے بجائے مختصات آتے ہیں اور موسم شامل نہیں ہوتا۔ PDF پھر بھی بنا کر شیئر کرنے سے پہلے دیکھ سکتے ہیں۔"]
+  };
   for (const {id} of window.MAPNERO_GUIDE_LOCALES) {
     if (!content[id]) throw new Error("Missing track-tools locale: " + id);
     for (const [key, topicId] of [["threeD", "track-3d"], ["report", "track-report"]]) {
@@ -167,7 +181,8 @@
       window.MAPNERO_GUIDES[id].platforms.apple.topics.push({
         id: topicId, title, summary, access, note,
         steps: steps.map(([title, body]) => ({title, body})),
-        tips: [{q: tip[0], a: tip[1]}]
+        tips: [{q: tip[0], a: tip[1]}, ...(key === "report"
+          ? [{q: reportConsentTips[id][0], a: reportConsentTips[id][1]}] : [])]
       });
     }
   }

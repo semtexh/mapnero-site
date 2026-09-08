@@ -1,5 +1,19 @@
 # Real guide captures
 
+## Saved-track report — 2026-09-08
+
+- Added twelve unedited iPhone `track-report.png` captures; total: 96.
+  Same simulator and resolution as below, app includes `57f9b0e`.
+- Each language reached the saved synthetic track's report through More.
+  First-visit help was dismissed and external location-query consent declined.
+  Coordinate-only results completed without granting external-service access.
+- All twelve images were individually reviewed. Urdu was scrolled slightly
+  farther to show the full PDF button; the first report rows are above its viewport.
+- The app-generated two-page Turkish PDF was rendered and visually inspected;
+  the native share sheet also opened. No file was sent. This is sample layout
+  and workflow verification, not validation of every track statistic or locale's PDF.
+- Android, iPad, macOS and web captures remain separate pending work.
+
 ## Saved-track 3D viewer — 2026-09-08
 
 - Added 12 unedited `apple/<language>/track-3d.png` captures, one per app

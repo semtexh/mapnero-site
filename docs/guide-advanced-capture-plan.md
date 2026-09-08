@@ -8,6 +8,13 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Güncel durum
 
+- **Son durum (rapor):** Apple `track-report` 12 dilde çekildi, tek tek
+  incelendi; toplam 96 gerçek iPhone karesi. `57f9b0e` rapor izin/panel
+  sıralamasını düzeltiyor. İzin reddiyle koordinat sonuçları, iki sayfalık
+  Türkçe PDF ve yerel paylaşım paneli kontrol edildi; dışarı paylaşım yapılmadı.
+  Sayısal istatistiklerin bütün veri türleri için doğruluğu bu kontrole dahil değil.
+  Android 2.1.5 / 2057 güncel derleme Pixel 7 emülatöre kuruldu; çekimler sürüyor.
+
 - **Son çekim güncellemesi:** Apple `track-3d` gerçek iPhone ekranları 12 dilde
   tamamlandı ve tek tek incelendi; toplam 84 kare. `a4d763e` içeren uygulamada
   kısa, sıfır yükseklikli demo iz portrait kadraja sığıyor. Diğer izler/yatay
