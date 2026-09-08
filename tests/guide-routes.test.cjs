@@ -114,3 +114,29 @@ test('each Apple import workflow clip has an exact localized caption', () => {
     assert.ok(motion?.caption, id);
   }
 });
+
+test('manual photo reference guidance is complete and localized in all Apple guides', () => {
+  const context = {window: {}};
+  vm.createContext(context);
+  const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
+  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s?]+\.js)(?:\?[^"\s]*)?"><\/script>/g)]
+    .map(match => match[1]).filter(file => file !== 'assets/guides.js');
+  for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
+
+  const titles = new Set();
+  for (const {id} of context.window.MAPNERO_GUIDE_LOCALES) {
+    const platforms = context.window.MAPNERO_GUIDES[id].platforms;
+    const matches = platforms.apple.topics.filter(topic => topic.id === 'photo-georeference');
+    assert.equal(matches.length, 1, id);
+    const topic = matches[0];
+    titles.add(topic.title);
+    assert.ok(topic.summary && topic.access && topic.note, id);
+    assert.equal(topic.steps.length, 3, id);
+    assert.equal(topic.tips.length, 1, id);
+    for (const step of topic.steps) assert.ok(step.title && step.body, id);
+    assert.ok(topic.tips[0].q && topic.tips[0].a, id);
+    assert.ok(!platforms.android.topics.some(topic => topic.id === 'photo-georeference'), id + ':android');
+    assert.ok(!platforms.web.topics.some(topic => topic.id === 'photo-georeference'), id + ':web');
+  }
+  assert.equal(titles.size, 12);
+});
