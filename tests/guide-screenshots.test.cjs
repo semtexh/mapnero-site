@@ -5,10 +5,10 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-test('all twelve Android import captures are distinct full-resolution PNG files', () => {
+for (const topic of ['import-map', 'quick-start']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
-    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/import-map.png`));
+    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/${topic}.png`));
     assert.equal(data.subarray(1,4).toString(), 'PNG');
     assert.equal(data.readUInt32BE(16), 1080);
     assert.equal(data.readUInt32BE(20), 2400);

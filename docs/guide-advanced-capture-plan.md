@@ -8,6 +8,12 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Güncel durum
 
+- **Android çekimleri:** Güncel 2.1.5 (2057) Pixel 7 emülatöründen `import-map`
+  ve `quick-start` 12'şer dilde çekildi ve tek tek incelendi: 24 gerçek Android
+  karesi. Apple 96 ile toplam 120. Dil değişimi uygulama ayarlarından yapıldı;
+  Arapça/Urdu RTL. Bunlar kaynak/mod seçim ekranlarıdır, bütün import türlerinin
+  veya harita araçlarının uçtan uca testi değildir. Diğer platformlar açık.
+
 - **Son durum (rapor):** Apple `track-report` 12 dilde çekildi, tek tek
   incelendi; toplam 96 gerçek iPhone karesi. `57f9b0e` rapor izin/panel
   sıralamasını düzeltiyor. İzin reddiyle koordinat sonuçları, iki sayfalık

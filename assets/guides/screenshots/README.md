@@ -1,5 +1,17 @@
 # Real guide captures
 
+## Android mode picker — 2026-09-08
+
+- Added twelve unedited `android/<language>/quick-start.png` captures from the
+  same Pixel 7 emulator / 2.1.5 (2057) build described below.
+- Reached through Settings → Usage Mode, after selecting each language in the
+  app. The localized heading was verified before capture; all twelve PNGs were
+  individually reviewed, including Arabic/Urdu RTL and long wrapped headings.
+- These show the mode chooser and Simple Map card, not the map viewer itself.
+  No paid mode was activated. The lower skip button still uses General wording.
+- Current total: 96 iPhone + 24 Android = 120 real captures. Remaining Android
+  map-tool screens, iPad, Mac and web captures are not complete.
+
 ## Android Add Map — 2026-09-08
 
 - Twelve unedited `android/<language>/import-map.png` captures from Pixel 7
