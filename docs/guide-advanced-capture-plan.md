@@ -27,6 +27,10 @@ talebi olarak yorumlanmadı. Aşağıdaki maddeler henüz tamamlanmış kılavuz
   `route_elevation_preview_screen.dart` ve `elevation_profile_view.dart`.
 - iOS önizlemesi arazi yükseklik verisi örnekliyor; veri alınamaması/yeniden
   deneme durumu anlatılacak. Offline çalışma ve doğruluk iddiası çıkarılmayacak.
+- Canlı kontrolde ilk rota noktası eklenince `Location Sharing Consent`
+  açıldı: yükseklik/hava durumu/nüfus için koordinatın üçüncü taraf servise
+  gönderilmesini onaylatıyor. İzin kendiliğinden verilmedi; Serhan'a yalnızca
+  demo koordinatları için soruldu. İzin gereksinimi rehberde atlanmayacak.
 
 ## Track raporu
 
