@@ -3,7 +3,23 @@
 Tarih: 2026-09-08. Serhan'ın doğrudan isteği: rota oluşturma, 3D çizim/görünüm,
 track raporu ve bu araçların ayrıntıları da gerçek, her dile özel ekranlarla
 anlatılacak. Karar: mevcut kılavuz işine dahil; yeni uygulama özelliği geliştirme
-talebi olarak yorumlanmadı. Aşağıdaki maddeler henüz tamamlanmış kılavuz değildir.
+talebi olarak yorumlanmadı. Kapsamın tamamı henüz bitmedi; doğrulanan ilerleme
+aşağıdaki güncel durum bölümünde ayrılıyor.
+
+## Güncel durum
+
+- Apple `route-builder` konusu 12 dilde yerel kılavuza eklendi. Nokta ekleme,
+  mesafe kontrolü, tek noktayı kaldırma, taslağı temizleme/kapama ve katmana
+  kaydetme anlatılıyor. Android/web için aynı akış varsayılmadı.
+- 12 dilin konu yüklemesi ve dört adımı test edildi; Türkçe/Arapça görsel
+  kontrol, diğer dillerin tarayıcı başlık/adım/taşma kontrolü geçti.
+- iOS çekimi sırasında iki hata bulundu ve uygulama commit'i `2aac157` ile
+  düzeltildi: iki noktalı rotada başlık/düğmeler sıkışıyordu; yükseklik izni
+  reddedildiğinde göstergeler dönmeye devam ediyordu. Ayrı başlık/işlem satırı
+  ve istek yaşam döngüsü takibi eklendi. Dar regresyon testi ve imzasız generic
+  iOS Simulator derlemesi geçti; yeni uygulamada iki nokta + izin reddi görüldü.
+- Ayrı 3D ve track raporu konuları/görüntüleri henüz tamamlanmadı. Üçüncü
+  taraf yükseklik izni verilmedi; demo rota noktaları yükseklik olmadan çizildi.
 
 ## Rota oluşturma
 
@@ -39,7 +55,8 @@ talebi olarak yorumlanmadı. Aşağıdaki maddeler henüz tamamlanmış kılavuz
   ayrılacak. Çizilmiş rotaya gerçek yürüyüş süresi/hızı yakıştırılmayacak.
 - Kaynak: `MapNeroApp/UI/Features/TrackDetailView.swift` ve
   `mapnero_flutter/lib/features/map/track_report/track_report_screen.dart`.
-- Kaynakta iOS PDF paylaşımı Core+, Android rapor ekranı Core+ kontrolü var.
+- Kaynakta iOS ayrıntılı rapor bölümü ve PDF paylaşımı Core+, Android rapor
+  ekranı Core+ kontrolü var; iOS temel track istatistikleri bu kapıdan ayrı.
   Bunlar aynı erişim sınırı kabul edilmeden cihazda ayrı teyit edilecek.
 - Rapor çekimi için boş/sıfır noktalı kayıt değil, açıkça örnek olarak
   tanımlanmış geçerli demo iz kullanılacak; kişisel saha izi yayınlanmayacak.
