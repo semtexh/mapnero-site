@@ -21,6 +21,19 @@ const renderer = source.slice(source.indexOf('  function renderScreenshot(topic)
 function harness() {
   const requests = [];
   const motionLoads = [];
+  let motionPlays = 0;
+  function createMotionVideo(src) {
+    const video = {
+      pause() {},
+      play() { motionPlays += 1; return Promise.resolve(); },
+      load() { motionLoads.push(this); },
+      removeAttribute(key) { delete this[key]; },
+      cloneNode() { return createMotionVideo(); },
+      replaceWith() {}
+    };
+    if (src) video.src = src;
+    return video;
+  }
   const context = {
     screenshotRequest: 0, motionRequest: 0, locale: 'tr', platform: 'apple',
     window: { MAPNERO_GUIDE_MOTION: {} },
@@ -30,13 +43,13 @@ function harness() {
       screenshotImage: {src: 'old.png', alt: 'old', removeAttribute(key) { delete this[key]; }},
       motion: {hidden: false},
       motionCaption: {textContent: 'old'},
-      motionVideo: {src: 'old.mp4', pause() {}, load() { motionLoads.push(this); }, removeAttribute(key) { delete this[key]; }}
+      motionVideo: createMotionVideo('old.mp4')
     },
     Image: class { constructor() { requests.push(this); } }
   };
   vm.createContext(context);
   vm.runInContext(renderer, context);
-  return {context, requests, motionLoads};
+  return {context, requests, motionLoads, getMotionPlays: () => motionPlays};
 }
 test('uses the exact language and hides a missing capture', () => {
   const {context, requests} = harness();
@@ -60,8 +73,8 @@ test('a delayed previous-language image cannot replace the current capture', () 
   requests[0].onload();
   assert.equal(context.elements.screenshotImage.src, 'assets/guides/screenshots/apple/ar/import-map.png');
 });
-test('only shows a localized motion clip after that exact clip loads', () => {
-  const {context, motionLoads} = harness();
+test('only shows and autoplays a localized motion clip after that exact clip loads', () => {
+  const {context, motionLoads, getMotionPlays} = harness();
   context.renderMotion({id:'photo-georeference', title:'Photo', motion:{caption:'Place known control points'}});
   assert.equal(context.elements.motion.hidden, true);
   assert.equal(context.elements.motionVideo.src, 'assets/guides/videos/apple/tr/photo-georeference.mp4');
@@ -69,6 +82,19 @@ test('only shows a localized motion clip after that exact clip loads', () => {
   motionLoads.at(-1).onloadeddata();
   assert.equal(context.elements.motion.hidden, false);
   assert.equal(context.elements.motionCaption.textContent, 'Place known control points');
+  assert.equal(getMotionPlays(), 1);
+});
+test('a delayed previous-language motion clip cannot appear or autoplay', () => {
+  const {context, motionLoads, getMotionPlays} = harness();
+  context.renderMotion({id:'import-map', motion:{caption:'Turkish'}});
+  context.locale = 'ar';
+  context.renderMotion({id:'import-map', motion:{caption:'Arabic'}});
+  motionLoads[1].onloadeddata();
+  assert.equal(context.elements.motion.hidden, true);
+  assert.equal(getMotionPlays(), 0);
+  motionLoads[3].onloadeddata();
+  assert.equal(context.elements.motionCaption.textContent, 'Arabic');
+  assert.equal(getMotionPlays(), 1);
 });
 test('does not request or expose a motion clip when the topic has none', () => {
   const {context, motionLoads} = harness();

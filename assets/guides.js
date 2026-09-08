@@ -326,12 +326,18 @@
 
   function renderMotion(topic) {
     const request = ++motionRequest;
-    const video = elements.motionVideo;
+    // A pending media event belongs to the element that initiated it. Replacing
+    // the element prevents a late event from an old topic/language from making
+    // the newly selected topic's figure visible with the wrong first frame.
+    const previousVideo = elements.motionVideo;
     elements.motion.hidden = true;
     elements.motionCaption.textContent = "";
-    video.pause();
-    video.removeAttribute("src");
-    video.load();
+    previousVideo.pause();
+    previousVideo.removeAttribute("src");
+    previousVideo.load();
+    const video = previousVideo.cloneNode(false);
+    previousVideo.replaceWith(video);
+    elements.motionVideo = video;
 
     // Motion is opt-in per topic. A guide must never fall back to a clip from
     // another language: captions and on-screen app text need to match.
