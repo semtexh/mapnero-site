@@ -1,5 +1,15 @@
 # Real guide captures
 
+## Apple manual-reference Library state — 2026-09-09
+
+- Added twelve `apple/<language>/photo-georeference.png` captures from the
+  iPhone simulator at 1206 × 2622. Each uses the app's localized Library view.
+- The controlled sample map uses four independently verified GeoTIFF corner
+  coordinates and an RMSE of 0 m; it is a test fixture, not a claim that an
+  arbitrary historical illustration has been georeferenced.
+- The Library's `MAN` badge and localized “manually referenced” status are
+  visible. Arabic and Urdu were checked as RTL layouts.
+
 ## Android mode picker — 2026-09-08
 
 - Added twelve unedited `android/<language>/quick-start.png` captures from the

@@ -102,7 +102,7 @@ test('all twelve Apple import workflow clips are valid exact-locale MP4 assets',
     assert.ok(data.length > 100000, locale);
   }
 });
-for (const topic of ['quick-start', 'import-map', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
+for (const topic of ['quick-start', 'import-map', 'photo-georeference', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/${topic}.png`));

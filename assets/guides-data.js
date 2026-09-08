@@ -88,6 +88,21 @@ window.MAPNERO_GUIDES = {
             ]
           },
           {
+            id: "photo-georeference",
+            title: "Reference a photo manually",
+            summary: "Turn an unreferenced image into a map by matching known positions on the image to real-world coordinates.",
+            access: "Core or higher",
+            note: "Use at least three well-spaced, non-collinear points whose real coordinates you know. Do not guess control points.",
+            steps: [
+              { title: "Import the image", body: "Choose Import Photo as Map, then begin the manual reference option." },
+              { title: "Place known control points", body: "For each point, tap the same identifiable place on the image and on the base map. Spread points around the image rather than along one edge." },
+              { title: "Check before relying on it", body: "Review the fit and open the saved map. In Library, the MAN badge confirms that the map was referenced manually." }
+            ],
+            tips: [
+              { q: "Can I reference any historical illustration?", a: "Only when you can identify reliable real-world locations in it. A decorative or fictional map must remain unreferenced until its control points are independently verified." }
+            ]
+          },
+          {
             id: "location-track",
             title: "Find your location and record a track",
             summary: "Keep the map centred on your position and save your movement as a track.",
@@ -484,6 +499,24 @@ window.MAPNERO_GUIDE_MOTION = {
   ur: { apple: { "import-map": { caption: "ماخذ منتخب کریں، پھر ویب سے نقشہ درآمد کرتے وقت لنک پینل کھولیں۔" } } }
 };
 
+// This Apple-only workflow is supplied here so it remains complete in every
+// supported guide language while the platform-specific locale files keep their
+// existing shared mobile-topic structure.
+const PHOTO_REFERENCE_TRANSLATIONS = {
+  en: { title:"Reference a photo manually", summary:"Turn an unreferenced image into a map by matching known positions to real-world coordinates.", access:"Core or higher", note:"Use at least three well-spaced, non-collinear points whose real coordinates you know. Do not guess control points.", steps:[["Import the image","Choose Import Photo as Map, then begin manual reference."],["Place known control points","Tap the same identifiable place on the image and on the base map. Spread points around the image."],["Check before relying on it","Review the fit and open the saved map. MAN in Library confirms manual referencing."]], tips:[["Can I reference any historical illustration?","Only when reliable real-world locations can be identified. Keep decorative or fictional maps unreferenced until control points are independently verified."]] },
+  tr: { title:"Bir fotoğrafı elle referanslayın", summary:"Bilinen noktaları gerçek dünya koordinatlarıyla eşleştirerek referanssız bir görseli haritaya dönüştürün.", access:"Core veya üstü", note:"Gerçek koordinatlarını bildiğiniz, iyi dağılmış ve aynı doğru üzerinde olmayan en az üç nokta kullanın. Kontrol noktalarını tahmin etmeyin.", steps:[["Görseli içe aktarın","Fotoğrafı Harita Olarak İçe Aktar seçeneğini seçip elle referanslamayı başlatın."],["Bilinen kontrol noktalarını yerleştirin","Görseldeki ve altlık haritadaki aynı tanınabilir yere dokunun. Noktaları görselin çevresine dağıtın."],["Kullanmadan önce kontrol edin","Uyumu inceleyin ve kaydedilen haritayı açın. Kütüphane’deki MAN etiketi elle referansı doğrular."]], tips:[["Her tarihî görsel referanslanabilir mi?","Yalnızca güvenilir gerçek dünya konumları belirlenebiliyorsa. Dekoratif veya kurgusal haritaları noktalar bağımsız doğrulanana kadar referanssız bırakın."]] },
+  ar: { title:"إسناد صورة يدويًا", summary:"حوّل صورة غير مسندة إلى خريطة بمطابقة مواقع معروفة مع إحداثيات حقيقية.", access:"Core أو أعلى", note:"استخدم ثلاث نقاط معروفة على الأقل، متباعدة وليست على خط واحد. لا تخمّن نقاط التحكم.", steps:[["استورد الصورة","اختر استيراد صورة كخريطة ثم ابدأ الإسناد اليدوي."],["ضع نقاط التحكم المعروفة","المس الموضع نفسه الواضح في الصورة والخريطة الأساسية، ووزع النقاط حول الصورة."],["تحقق قبل الاعتماد عليها","راجع المطابقة وافتح الخريطة المحفوظة. تشير MAN في المكتبة إلى الإسناد اليدوي."]], tips:[["هل يمكن إسناد أي رسم تاريخي؟","فقط عندما يمكن تحديد مواقع حقيقية موثوقة فيه. اترك الخرائط الزخرفية أو الخيالية بلا إسناد حتى التحقق المستقل من النقاط."]] },
+  de: { title:"Ein Foto manuell referenzieren", summary:"Machen Sie aus einem nicht referenzierten Bild eine Karte, indem Sie bekannte Orte echten Koordinaten zuordnen.", access:"Core oder höher", note:"Verwenden Sie mindestens drei gut verteilte, nicht kollineare Punkte mit bekannten echten Koordinaten. Raten Sie keine Kontrollpunkte.", steps:[["Bild importieren","Wählen Sie Foto als Karte importieren und starten Sie die manuelle Referenzierung."],["Bekannte Kontrollpunkte setzen","Tippen Sie dieselbe erkennbare Stelle im Bild und auf der Basiskarte an. Verteilen Sie die Punkte über das Bild."],["Vor Nutzung prüfen","Prüfen Sie die Anpassung und öffnen Sie die gespeicherte Karte. MAN in der Bibliothek bestätigt die manuelle Referenzierung."]], tips:[["Kann jede historische Illustration referenziert werden?","Nur wenn zuverlässige reale Orte identifiziert werden können. Dekorative oder fiktive Karten bleiben unreferenziert, bis die Punkte unabhängig geprüft sind."]] },
+  es: { title:"Georreferenciar una foto manualmente", summary:"Convierta una imagen sin referencia en mapa haciendo coincidir lugares conocidos con coordenadas reales.", access:"Core o superior", note:"Use al menos tres puntos conocidos, bien separados y no colineales. No adivine puntos de control.", steps:[["Importe la imagen","Elija Importar foto como mapa e inicie la referencia manual."],["Coloque puntos de control conocidos","Toque el mismo lugar identificable en la imagen y en el mapa base. Distribuya los puntos por toda la imagen."],["Compruebe antes de usar","Revise el ajuste y abra el mapa guardado. MAN en Biblioteca confirma la referencia manual."]], tips:[["¿Se puede referenciar cualquier ilustración histórica?","Solo si se pueden identificar ubicaciones reales fiables. Mantenga los mapas decorativos o ficticios sin referencia hasta verificar los puntos."]] },
+  fr: { title:"Référencer une photo manuellement", summary:"Transformez une image non référencée en carte en associant des lieux connus à de vraies coordonnées.", access:"Core ou supérieur", note:"Utilisez au moins trois points connus, bien répartis et non alignés. Ne devinez pas les points de contrôle.", steps:[["Importez l’image","Choisissez Importer une photo comme carte puis le référencement manuel."],["Placez des points connus","Touchez le même endroit identifiable sur l’image et la carte de base. Répartissez les points sur l’image."],["Vérifiez avant utilisation","Contrôlez l’ajustement et ouvrez la carte enregistrée. MAN dans la Bibliothèque confirme le référencement manuel."]], tips:[["Toute illustration historique peut-elle être référencée ?","Seulement si des lieux réels fiables peuvent être identifiés. Laissez les cartes décoratives ou fictives non référencées jusqu’à vérification indépendante."]] },
+  hi: { title:"फ़ोटो को मैन्युअली संदर्भित करें", summary:"ज्ञात स्थानों को वास्तविक निर्देशांकों से मिलाकर बिना संदर्भ वाली छवि को नक्शे में बदलें।", access:"Core या ऊपर", note:"कम से कम तीन अच्छी तरह फैले, गैर-रेखीय बिंदु इस्तेमाल करें जिनके वास्तविक निर्देशांक ज्ञात हों। नियंत्रण बिंदुओं का अनुमान न लगाएँ।", steps:[["छवि आयात करें","फ़ोटो को नक्शे के रूप में आयात करें चुनें, फिर मैन्युअल संदर्भ शुरू करें।"],["ज्ञात नियंत्रण बिंदु रखें","छवि और बेस मैप पर उसी पहचान योग्य जगह को टैप करें। बिंदुओं को पूरी छवि में फैलाएँ।"],["उपयोग से पहले जाँचें","फिट जाँचें और सहेजा नक्शा खोलें। लाइब्रेरी में MAN मैन्युअल संदर्भ की पुष्टि करता है।"]], tips:[["क्या हर ऐतिहासिक चित्र संदर्भित हो सकता है?","केवल तभी जब विश्वसनीय वास्तविक स्थान पहचाने जा सकें। सजावटी या काल्पनिक नक्शों को स्वतंत्र सत्यापन तक बिना संदर्भ रखें।"]] },
+  it: { title:"Riferire una foto manualmente", summary:"Trasforma un’immagine non riferita in una mappa associando luoghi noti a coordinate reali.", access:"Core o superiore", note:"Usa almeno tre punti noti, ben distribuiti e non allineati. Non indovinare i punti di controllo.", steps:[["Importa l’immagine","Scegli Importa foto come mappa e avvia il riferimento manuale."],["Inserisci punti noti","Tocca lo stesso luogo riconoscibile nell’immagine e nella mappa base. Distribuisci i punti sull’immagine."],["Verifica prima dell’uso","Controlla l’adattamento e apri la mappa salvata. MAN nella Libreria conferma il riferimento manuale."]], tips:[["Ogni illustrazione storica può essere riferita?","Solo se si possono identificare luoghi reali affidabili. Lascia le mappe decorative o fittizie senza riferimento finché i punti non sono verificati."]] },
+  pt: { title:"Referenciar uma fotografia manualmente", summary:"Transforme uma imagem sem referência num mapa associando locais conhecidos a coordenadas reais.", access:"Core ou superior", note:"Use pelo menos três pontos conhecidos, bem distribuídos e não colineares. Não adivinhe pontos de controlo.", steps:[["Importe a imagem","Escolha Importar fotografia como mapa e inicie a referência manual."],["Coloque pontos conhecidos","Toque no mesmo local identificável na imagem e no mapa base. Distribua os pontos pela imagem."],["Verifique antes de usar","Analise o ajuste e abra o mapa guardado. MAN na Biblioteca confirma a referência manual."]], tips:[["Qualquer ilustração histórica pode ser referenciada?","Apenas se locais reais fiáveis puderem ser identificados. Mantenha mapas decorativos ou fictícios sem referência até verificar os pontos."]] },
+  ru: { title:"Привязать фото вручную", summary:"Превратите непривязанное изображение в карту, сопоставив известные места с реальными координатами.", access:"Core или выше", note:"Используйте не менее трёх известных, хорошо разнесённых и неколлинеарных точек. Не угадывайте контрольные точки.", steps:[["Импортируйте изображение","Выберите импорт фото как карты и начните ручную привязку."],["Поставьте известные точки","Коснитесь одного узнаваемого места на изображении и базовой карте. Распределите точки по изображению."],["Проверьте перед использованием","Проверьте соответствие и откройте сохранённую карту. MAN в Библиотеке подтверждает ручную привязку."]], tips:[["Можно привязать любую историческую иллюстрацию?","Только если в ней можно определить надёжные реальные места. Оставьте декоративные или вымышленные карты без привязки до независимой проверки точек."]] },
+  uk: { title:"Прив’язати фото вручну", summary:"Перетворіть неприв’язане зображення на карту, зіставивши відомі місця з реальними координатами.", access:"Core або вище", note:"Використовуйте щонайменше три відомі, добре рознесені й неколінеарні точки. Не вгадуйте контрольні точки.", steps:[["Імпортуйте зображення","Оберіть імпорт фото як карти та почніть ручну прив’язку."],["Поставте відомі точки","Торкніться того самого впізнаваного місця на зображенні та базовій карті. Розподіліть точки по зображенню."],["Перевірте перед використанням","Перевірте відповідність і відкрийте збережену карту. MAN у Бібліотеці підтверджує ручну прив’язку."]], tips:[["Чи можна прив’язати будь-яку історичну ілюстрацію?","Лише якщо можна визначити надійні реальні місця. Залишайте декоративні або вигадані карти без прив’язки до незалежної перевірки точок."]] },
+  ur: { title:"تصویر کو دستی حوالہ دیں", summary:"معلوم مقامات کو حقیقی کوآرڈینیٹس سے ملا کر غیر حوالہ شدہ تصویر کو نقشہ بنائیں۔", access:"Core یا زیادہ", note:"کم از کم تین معلوم، اچھی طرح پھیلے اور غیر خطی نقاط استعمال کریں۔ کنٹرول پوائنٹس کا اندازہ نہ لگائیں۔", steps:[["تصویر درآمد کریں","تصویر کو نقشہ کے طور پر درآمد کریں منتخب کر کے دستی حوالہ شروع کریں۔"],["معلوم کنٹرول پوائنٹس رکھیں","تصویر اور بیس میپ پر ایک ہی قابل شناخت جگہ کو چھوئیں۔ نقاط کو پوری تصویر میں پھیلائیں۔"],["استعمال سے پہلے جانچیں","مطابقت کا جائزہ لیں اور محفوظ نقشہ کھولیں۔ لائبریری میں MAN دستی حوالہ کی تصدیق کرتا ہے۔"]], tips:[["کیا ہر تاریخی تصویر کو حوالہ دیا جا سکتا ہے؟","صرف تب جب قابل اعتماد حقیقی مقامات شناخت ہو سکیں۔ آرائشی یا خیالی نقشوں کو آزاد تصدیق تک غیر حوالہ شدہ رکھیں۔"]] }
+};
+
 window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId, payload) {
   const english = window.MAPNERO_GUIDES.en;
   const platformIds = ["apple", "android", "web"];
@@ -510,7 +543,7 @@ window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId
       description: translatedPlatform.description,
       icon: sourcePlatform.icon,
       topics: sourcePlatform.topics.map((sourceTopic) => {
-        const translatedTopic = translatedTopics[sourceTopic.id];
+        const translatedTopic = translatedTopics[sourceTopic.id] || (sourceTopic.id === "photo-georeference" ? PHOTO_REFERENCE_TRANSLATIONS[localeId] : null);
         if (!translatedTopic) fail(`missing ${platformId}/${sourceTopic.id}`);
         if (translatedTopic.steps?.length !== sourceTopic.steps.length) {
           fail(`wrong step count for ${platformId}/${sourceTopic.id}`);
@@ -560,7 +593,7 @@ window.registerMapNeroCompactGuideLocale = function registerMapNeroCompactGuideL
     if (!translatedPlatform) throw new Error(`[MapNero guides:${localeId}] missing ${platformId}`);
     const entries = platformId === "web" ? payload.web : { ...mobileShared, ...(payload[platformId] || {}) };
     const topics = source.topics.map((sourceTopic) => {
-      const entry = entries[sourceTopic.id];
+      const entry = entries[sourceTopic.id] || (sourceTopic.id === "photo-georeference" ? PHOTO_REFERENCE_TRANSLATIONS[localeId] : null);
       if (!entry || !entry.title || !entry.summary || !entry.steps?.length) {
         throw new Error(`[MapNero guides:${localeId}] missing ${platformId}/${sourceTopic.id}`);
       }
@@ -568,7 +601,7 @@ window.registerMapNeroCompactGuideLocale = function registerMapNeroCompactGuideL
         id: sourceTopic.id,
         title: entry.title,
         summary: entry.summary,
-        access: payload.access[accessKeys[sourceTopic.id]],
+        access: sourceTopic.id === "photo-georeference" ? entry.access : payload.access[accessKeys[sourceTopic.id]],
         ...(entry.note ? { note: entry.note } : {}),
         ...(entry.motion?.caption ? { motion: entry.motion } : {}),
         steps: entry.steps.map(([title, body]) => ({ title, body })),
