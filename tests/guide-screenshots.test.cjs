@@ -41,10 +41,10 @@ test('a delayed previous-language image cannot replace the current capture', () 
   requests[0].onload();
   assert.equal(context.elements.screenshotImage.src, 'assets/guides/screenshots/apple/ar/import-map.png');
 });
-test('all twelve import captures are distinct full-resolution PNG files', () => {
+for (const topic of ['import-map', 'team-gnss']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
-    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/import-map.png`));
+    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/${topic}.png`));
     assert.equal(data.subarray(1,4).toString(), 'PNG');
     assert.equal(data.readUInt32BE(16), 1206);
     assert.equal(data.readUInt32BE(20), 2622);

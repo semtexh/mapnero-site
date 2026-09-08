@@ -257,6 +257,7 @@ h1 {
 }
 
 .topic-panel {
+  min-width: 0;
   padding: 1.25rem;
   border-inline-end: 1px solid var(--border-soft);
   background: rgba(8, 20, 31, 0.9);
@@ -490,9 +491,9 @@ h1 {
 :focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 3px; }
 
 @media (max-width: 900px) {
-  .guide-intro { grid-template-columns: 1fr; gap: 1.25rem; }
+  .guide-intro { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .quiet-button { justify-self: start; }
-  .workspace { grid-template-columns: 1fr; }
+  .workspace { grid-template-columns: minmax(0, 1fr); }
   .topic-panel { border-inline-end: 0; border-bottom: 1px solid var(--border-soft); }
   .topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
