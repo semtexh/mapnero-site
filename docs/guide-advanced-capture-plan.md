@@ -23,6 +23,12 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Rota oluşturma
 
+- 2026-09-08: Apple rota konusu 12 dilde eklendi. Her dilde gerçek iPhone
+  simülatöründen iki farklı noktalı, sıfırdan büyük mesafeli ekran çekildi ve
+  görsel olarak incelendi. Taslaklar kaydedilmeden kapatıldı; bu ekranlar
+  navigasyon, 3D sonuç veya kaydet/yeniden aç testi olarak gösterilmiyor.
+- iPhone ekran toplamı 72 oldu. Android, iPad, Mac ve web için aynı tamamlanma
+  iddiası yok. Yükseklik paylaşım izni verilmedi; eksik yükseklik `—` görünüyor.
 - Harita → More → Route Builder yolu iPhone simülatöründe görüldü.
 - Crosshair ile nokta ekleme, noktaları sıralama/düzenleme seçenekleri, toplam
   mesafe, katmana kaydetme, tekrar açma ve varsa platforma özgü navigasyon.

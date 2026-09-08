@@ -63,3 +63,25 @@ Seven automated screenshot tests cover the five topics. iPad, macOS, Android,
 web and the remaining iPhone topics still need their own capture verification.
 All 24 new topic/language combinations were also checked in the running local
 guide: exact image path, 1206-pixel natural width, and RTL for Arabic/Urdu.
+
+## Route creation — 2026-09-08
+
+Added `route-builder.png` in all twelve languages: 12 individually inspected,
+unedited 1206 × 2622 simulator captures, bringing the iPhone total to 72.
+Each capture shows a localized route panel, two distinct demo waypoints, a
+nonzero distance, and the connecting line. Drafts were closed after capture;
+they were not saved as journeys and no GPS recording was started.
+
+The elevation-sharing consent was declined. Missing heights correctly show
+an em dash rather than a permanent loading indicator. These captures illustrate
+manual route creation, not an elevation/3D result, navigation, or a successful
+save-and-reopen test. Save instructions were checked against source code.
+An initial zero-distance Spanish frame and an inconsistent Turkish test-map
+frame were rejected and replaced before publishing these assets.
+
+Eight screenshot tests now cover six topics; the separate route-content test
+checks all twelve translations. Other platforms and the remaining iPhone
+topics, including dedicated 3D and track-report walkthroughs, remain pending.
+Local browser verification waited for each image to load and confirmed all
+twelve exact-locale paths, natural width 1206, no horizontal page overflow,
+and RTL for Arabic and Urdu.
