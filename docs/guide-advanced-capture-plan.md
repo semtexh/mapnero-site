@@ -44,6 +44,28 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
   iOS 3D kadraj düzeltmesinin cihaz kabulü bekliyor. Yeni çizim/rapor ekranları,
   Android/iPad/Mac/web çekimleri ve canlı yayın tamamlanma kapsamı dışında.
 
+## Android 3D/rapor metinleri — 2026-09-08
+
+- Android `track-report` (4 adım) ve `track-3d` (3 adım) 12 dilde eklendi.
+  Apple talimatları taşınmadı: Android rapor ekranının görseli üstten 2D;
+  Route Builder panel 3D'si statik kabartma görüntü + yükseklik profili;
+  toolbar 3D ayrı Core+ kamera eğim kontrolü. Serbest 3D editör iddiası yok.
+- Kaynaklar: `feature_attribute_sheet.dart`, `track_report_screen.dart`,
+  `track_report_builder.dart`, `track_report_pdf_exporter.dart`,
+  `track_3d_snapshot_painter.dart`, `route_elevation_preview_screen.dart`,
+  `map_toolbar.dart`. Kaynak yorumları yerine çalışan çağrılar esas alındı.
+- PDF/GPX ayrımı, paylaşmadan konum kontrolü, ilk PDF font yüklemesi,
+  dış hizmet/izin ve yolculuk tarihine ait olmayan hava durumu açıklandı.
+- Mevcut movingTime ilk/son GPS noktası aralığıdır. İç duruşlar tümüyle
+  çıkarılmadığı için kullanıcıya gerçek duruş tespiti diye anlatılmadı.
+  Bu bir hesap düzeltmesi değil, mevcut sınırlamanın açıklamasıdır;
+  ayrı istatistik doğrulama işi Obsidian aktif hatalarına kaydedildi.
+- 10 test + JS sözdizimi + diff kontrolleri geçti. Tarayıcıda 24 dil/konu
+  kombinasyonu, 3/4 adım, RTL ve 621 px'te taşma olmaması doğrulandı.
+  Türkçe 3D adım kartları görsel kontrol edildi. Android uygulama/PDF
+  çıktısı cihazda doğrulanmadı; bu konularda screenshot yok ve alan gizli.
+  Toplam gerçek iPhone ekranı 72 olarak kaldı. Canlı yayın yapılmadı.
+
 ## Rota oluşturma
 
 - 2026-09-08: Apple rota konusu 12 dilde eklendi. Her dilde gerçek iPhone

@@ -43,13 +43,13 @@ test('route guides load for 12 locales with separate Apple and Android flows', (
   assert.equal(titles.size, 12);
 });
 
-test('3D and report topics have complete localized Apple instructions without platform leakage', () => {
+test('3D and report topics have complete localized platform-specific instructions', () => {
   const context = {window: {}};
   vm.createContext(context);
   const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
   const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s]+\.js)"><\/script>/g)]
     .map(match => match[1]).filter(file => file !== 'assets/guides.js');
-  assert.equal(scripts.at(-1), 'assets/guides-track-tools.js');
+  assert.ok(scripts.indexOf('assets/guides-track-tools.js') < scripts.indexOf('assets/guides-android-reports.js'));
   for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
   for (const [topicId, stepCount] of [['track-3d', 3], ['track-report', 4]]) {
     const titles = new Set();
@@ -65,7 +65,29 @@ test('3D and report topics have complete localized Apple instructions without pl
       assert.equal(topic.tips.length, 1);
       assert.ok(topic.tips[0].q && topic.tips[0].a);
       if (topicId === 'track-report') assert.match(topic.access, /Core/);
-      for (const p of ['android','web']) assert.ok(!platforms[p].topics.some(t => t.id === topicId));
+      assert.ok(!platforms.web.topics.some(t => t.id === topicId));
+      if (topicId === 'track-3d') {
+        const android = platforms.android.topics.filter(t => t.id === topicId);
+        assert.equal(android.length, 1, id + ':android-3d');
+        assert.equal(android[0].steps.length, 3);
+        assert.notEqual(android[0].title, topic.title);
+        assert.match(android[0].steps[2].body, /Core/);
+        assert.ok(android[0].note && android[0].summary && android[0].access);
+        for (const step of android[0].steps) assert.ok(step.title && step.body);
+      }
+      if (topicId === 'track-report') {
+        const android = platforms.android.topics.filter(t => t.id === topicId);
+        assert.equal(android.length, 1, id + ':android-report');
+        assert.equal(android[0].steps.length, 4);
+        assert.match(android[0].access, /Core/);
+        assert.match(android[0].steps[1].body, /2D|2D’|ثنائي|двумер|двовимір/);
+        assert.match(android[0].steps[3].body, /GPX/);
+        assert.ok(android[0].tips[0].q && android[0].tips[0].a);
+        for (let i = 0; i < 4; i++) {
+          assert.ok(android[0].steps[i].title && android[0].steps[i].body);
+          assert.notEqual(android[0].steps[i].body, topic.steps[i].body);
+        }
+      }
     }
     assert.equal(titles.size, 12);
   }
