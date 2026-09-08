@@ -16,6 +16,7 @@
   let query = "";
   let toastTimer;
   let screenshotRequest = 0;
+  let motionRequest = 0;
 
   const elements = {
     language: document.getElementById("language-select"),
@@ -32,6 +33,9 @@
     noteText: document.getElementById("guide-note-text"),
     screenshot: document.getElementById("guide-screenshot"),
     screenshotImage: document.getElementById("guide-screenshot-image"),
+    motion: document.getElementById("guide-motion"),
+    motionVideo: document.getElementById("guide-motion-video"),
+    motionCaption: document.getElementById("guide-motion-caption"),
     steps: document.getElementById("step-list"),
     tipsSection: document.getElementById("tips-section"),
     tips: document.getElementById("tips-list"),
@@ -248,6 +252,7 @@
     elements.noteText.textContent = topic.note || "";
     elements.steps.innerHTML = "";
     renderScreenshot(topic);
+    renderMotion(topic);
 
     const progress = loadProgress();
     topic.steps.forEach((step, index) => {
@@ -317,6 +322,34 @@
       elements.screenshot.hidden = false;
     };
     capture.src = path;
+  }
+
+  function renderMotion(topic) {
+    const request = ++motionRequest;
+    const video = elements.motionVideo;
+    elements.motion.hidden = true;
+    elements.motionCaption.textContent = "";
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+
+    // Motion is opt-in per topic. A guide must never fall back to a clip from
+    // another language: captions and on-screen app text need to match.
+    if (!topic.motion) return;
+
+    const path = `assets/guides/videos/${platform}/${locale}/${topic.id}.mp4`;
+    const caption = topic.motion.caption || topic.title;
+    video.onloadeddata = () => {
+      if (request !== motionRequest) return;
+      elements.motionCaption.textContent = caption;
+      elements.motion.hidden = false;
+    };
+    video.onerror = () => {
+      if (request !== motionRequest) return;
+      elements.motion.hidden = true;
+    };
+    video.src = path;
+    video.load();
   }
 
   function showToast(message) {
