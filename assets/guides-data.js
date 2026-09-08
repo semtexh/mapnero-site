@@ -511,6 +511,7 @@ window.registerMapNeroGuideLocale = function registerMapNeroGuideLocale(localeId
           summary: translatedTopic.summary,
           access: translatedTopic.access,
           ...(Object.hasOwn(translatedTopic, "note") ? { note: translatedTopic.note } : {}),
+          ...(translatedTopic.motion?.caption ? { motion: translatedTopic.motion } : {}),
           steps: translatedTopic.steps.map(([title, body]) => ({ title, body })),
           ...(sourceTopic.tips?.length ? {
             tips: translatedTopic.tips.map(([q, a]) => ({ q, a }))
@@ -552,6 +553,7 @@ window.registerMapNeroCompactGuideLocale = function registerMapNeroCompactGuideL
         summary: entry.summary,
         access: payload.access[accessKeys[sourceTopic.id]],
         ...(entry.note ? { note: entry.note } : {}),
+        ...(entry.motion?.caption ? { motion: entry.motion } : {}),
         steps: entry.steps.map(([title, body]) => ({ title, body })),
         ...(entry.tips?.length ? { tips: entry.tips.map(([q, a]) => ({ q, a })) } : {})
       };

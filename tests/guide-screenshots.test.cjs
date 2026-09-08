@@ -81,6 +81,11 @@ test('the English Apple import workflow clip is a valid local MP4 asset', () => 
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');
   assert.ok(data.length > 100000);
 });
+test('the Turkish Apple import workflow clip is a valid local MP4 asset', () => {
+  const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/tr/import-map.mp4'));
+  assert.equal(data.subarray(4, 8).toString(), 'ftyp');
+  assert.ok(data.length > 500000);
+});
 for (const topic of ['quick-start', 'import-map', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {

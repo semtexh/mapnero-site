@@ -99,3 +99,18 @@ test('3D and report topics have complete localized platform-specific instruction
     assert.equal(titles.size, 12);
   }
 });
+
+test('workflow videos only appear for the locales that have an exact localized clip', () => {
+  const context = {window: {}};
+  vm.createContext(context);
+  const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
+  const scripts = [...html.matchAll(/<script src="(assets\/guides[^"\s?]+\.js)(?:\?[^"\s]*)?"><\/script>/g)]
+    .map(match => match[1]).filter(file => file !== 'assets/guides.js');
+  for (const file of scripts) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
+  for (const {id} of context.window.MAPNERO_GUIDE_LOCALES) {
+    const topic = context.window.MAPNERO_GUIDES[id].platforms.apple.topics.find(item => item.id === 'import-map');
+    assert.ok(topic, id);
+    if (id === 'en' || id === 'tr') assert.ok(topic.motion?.caption, id);
+    else assert.equal(topic.motion, undefined, id);
+  }
+});

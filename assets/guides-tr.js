@@ -55,6 +55,9 @@
             summary: "GeoPDF, PDF, GeoTIFF, KMZ veya görüntüyü yükleyip harita ekranında açın.",
             access: "Ücretsiz · bazı biçimler Core veya Pro gerektirir",
             note: "Çok sayfalı PDF için Pro gerekir. Bir fotoğrafı harita olarak coğrafi referanslamak Core veya üstünü gerektirir.",
+            motion: {
+              caption: "Bir kaynak seçin; webden harita alırken bağlantı giriş panelini açın."
+            },
             steps: [
               ["İçe Aktar’ı açın", "Haritadan veya Kütüphane’den Harita İçe Aktar’ı açın."],
               ["Kaynağı seçin", "PDF/GeoPDF, GeoTIFF, görüntü, KMZ, web bağlantısı veya QR kodu seçin."],
