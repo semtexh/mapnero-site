@@ -489,17 +489,50 @@ window.MAPNERO_GUIDE_MOTION = {
     "import-map": { caption: "Choose a source, then open the link panel when you are importing a map from the web." },
     "collections-atlas": { caption: "Open a map collection, fit the active sheet, then pan across the edge. MapNero keeps the view scale and activates the neighbouring sheet under the centre crosshair." }
   } },
-  tr: { apple: { "import-map": { caption: "Bir kaynak seçin; webden harita alırken bağlantı giriş panelini açın." } } },
-  ar: { apple: { "import-map": { caption: "اختر مصدرًا ثم افتح لوحة الرابط عند استيراد خريطة من الويب." } } },
-  de: { apple: { "import-map": { caption: "Wählen Sie eine Quelle und öffnen Sie beim Import einer Karte aus dem Web das Linkfeld." } } },
-  es: { apple: { "import-map": { caption: "Elija una fuente y abra el panel de enlace al importar un mapa desde la web." } } },
-  fr: { apple: { "import-map": { caption: "Choisissez une source, puis ouvrez le panneau de lien pour importer une carte depuis le Web." } } },
-  hi: { apple: { "import-map": { caption: "स्रोत चुनें; वेब से नक्शा आयात करते समय लिंक पैनल खोलें।" } } },
-  it: { apple: { "import-map": { caption: "Scegli una fonte, poi apri il pannello del link per importare una mappa dal web." } } },
-  pt: { apple: { "import-map": { caption: "Escolha uma origem e abra o painel de ligação ao importar um mapa da web." } } },
-  ru: { apple: { "import-map": { caption: "Выберите источник, затем откройте панель ссылки при импорте карты из интернета." } } },
-  uk: { apple: { "import-map": { caption: "Виберіть джерело, а потім відкрийте панель посилання для імпорту карти з інтернету." } } },
-  ur: { apple: { "import-map": { caption: "ماخذ منتخب کریں، پھر ویب سے نقشہ درآمد کرتے وقت لنک پینل کھولیں۔" } } }
+  tr: { apple: {
+    "import-map": { caption: "Bir kaynak seçin; webden harita alırken bağlantı giriş panelini açın." },
+    "collections-atlas": { caption: "Bir harita koleksiyonunu açın, aktif sayfayı ekrana sığdırın ve kenarın ötesine kaydırın. MapNero ölçeği korur ve merkez nişangâhının altındaki komşu sayfayı etkinleştirir." }
+  } },
+  ar: { apple: {
+    "import-map": { caption: "اختر مصدرًا ثم افتح لوحة الرابط عند استيراد خريطة من الويب." },
+    "collections-atlas": { caption: "افتح مجموعة خرائط، واضبط الورقة النشطة لتناسب العرض، ثم حرّك الخريطة عبر الحافة. يحافظ MapNero على المقياس ويفعّل الورقة المجاورة تحت علامة التصويب المركزية." }
+  } },
+  de: { apple: {
+    "import-map": { caption: "Wählen Sie eine Quelle und öffnen Sie beim Import einer Karte aus dem Web das Linkfeld." },
+    "collections-atlas": { caption: "Öffnen Sie eine Kartensammlung, passen Sie das aktive Blatt ein und schwenken Sie über den Rand. MapNero behält den Maßstab bei und aktiviert das Nachbarblatt unter dem Fadenkreuz." }
+  } },
+  es: { apple: {
+    "import-map": { caption: "Elija una fuente y abra el panel de enlace al importar un mapa desde la web." },
+    "collections-atlas": { caption: "Abra una colección, ajuste la hoja activa y desplace el mapa más allá del borde. MapNero mantiene la escala y activa la hoja vecina bajo la retícula central." }
+  } },
+  fr: { apple: {
+    "import-map": { caption: "Choisissez une source, puis ouvrez le panneau de lien pour importer une carte depuis le Web." },
+    "collections-atlas": { caption: "Ouvrez une collection, ajustez la feuille active à l’écran, puis franchissez son bord. MapNero conserve l’échelle et active la feuille voisine sous le réticule central." }
+  } },
+  hi: { apple: {
+    "import-map": { caption: "स्रोत चुनें; वेब से नक्शा आयात करते समय लिंक पैनल खोलें।" },
+    "collections-atlas": { caption: "मैप कलेक्शन खोलें, सक्रिय शीट को स्क्रीन में फिट करें और किनारे के पार पैन करें। MapNero स्केल बनाए रखता है और बीच के क्रॉसहेयर के नीचे वाली पड़ोसी शीट सक्रिय करता है।" }
+  } },
+  it: { apple: {
+    "import-map": { caption: "Scegli una fonte, poi apri il pannello del link per importare una mappa dal web." },
+    "collections-atlas": { caption: "Apri una raccolta, adatta il foglio attivo allo schermo e supera il bordo. MapNero mantiene la scala e attiva il foglio vicino sotto il mirino centrale." }
+  } },
+  pt: { apple: {
+    "import-map": { caption: "Escolha uma origem e abra o painel de ligação ao importar um mapa da web." },
+    "collections-atlas": { caption: "Abra uma coleção, ajuste a folha ativa ao ecrã e arraste para além do limite. O MapNero mantém a escala e ativa a folha vizinha sob a mira central." }
+  } },
+  ru: { apple: {
+    "import-map": { caption: "Выберите источник, затем откройте панель ссылки при импорте карты из интернета." },
+    "collections-atlas": { caption: "Откройте коллекцию, впишите активный лист в экран и переместите карту за его край. MapNero сохраняет масштаб и активирует соседний лист под центральным прицелом." }
+  } },
+  uk: { apple: {
+    "import-map": { caption: "Виберіть джерело, а потім відкрийте панель посилання для імпорту карти з інтернету." },
+    "collections-atlas": { caption: "Відкрийте колекцію, впишіть активний аркуш в екран і перемістіть карту за його край. MapNero зберігає масштаб та активує сусідній аркуш під центральним прицілом." }
+  } },
+  ur: { apple: {
+    "import-map": { caption: "ماخذ منتخب کریں، پھر ویب سے نقشہ درآمد کرتے وقت لنک پینل کھولیں۔" },
+    "collections-atlas": { caption: "نقشوں کا مجموعہ کھولیں، فعال صفحہ اسکرین میں فٹ کریں اور کنارے سے آگے پین کریں۔ MapNero پیمانہ برقرار رکھتا ہے اور مرکزی نشانے کے نیچے والا قریبی صفحہ فعال کرتا ہے۔" }
+  } }
 };
 
 // This Apple-only workflow is supplied here so it remains complete in every

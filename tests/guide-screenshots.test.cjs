@@ -122,6 +122,17 @@ test('the English Apple Atlas workflow clip is a valid local MP4 asset', () => {
   assert.notEqual(data.indexOf(Buffer.from('moov')), -1);
   assert.ok(data.length > 1000000);
 });
+test('all twelve Apple Atlas workflow clips are valid exact-locale MP4 assets', () => {
+  const hashes = new Set();
+  for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
+    const data = fs.readFileSync(path.join(root, `assets/guides/videos/apple/${locale}/collections-atlas.mp4`));
+    assert.equal(data.subarray(4, 8).toString(), 'ftyp', locale);
+    assert.notEqual(data.indexOf(Buffer.from('moov')), -1, `${locale} must contain MP4 metadata`);
+    assert.ok(data.length > 1000000, locale);
+    hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
+  }
+  assert.equal(hashes.size, 12);
+});
 test('the Turkish Apple import workflow clip is a valid local MP4 asset', () => {
   const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/tr/import-map.mp4'));
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');
