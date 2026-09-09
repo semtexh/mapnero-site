@@ -116,6 +116,12 @@ test('the English Apple import workflow clip is a valid local MP4 asset', () => 
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');
   assert.ok(data.length > 100000);
 });
+test('the English Apple Atlas workflow clip is a valid local MP4 asset', () => {
+  const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/en/collections-atlas.mp4'));
+  assert.equal(data.subarray(4, 8).toString(), 'ftyp');
+  assert.notEqual(data.indexOf(Buffer.from('moov')), -1);
+  assert.ok(data.length > 1000000);
+});
 test('the Turkish Apple import workflow clip is a valid local MP4 asset', () => {
   const data = fs.readFileSync(path.join(root, 'assets/guides/videos/apple/tr/import-map.mp4'));
   assert.equal(data.subarray(4, 8).toString(), 'ftyp');

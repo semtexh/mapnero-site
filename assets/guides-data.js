@@ -485,7 +485,10 @@ window.MAPNERO_GUIDES = {
 // Short workflow clips are intentionally opt-in per exact locale. The guide
 // renderer never substitutes a different language when a clip is unavailable.
 window.MAPNERO_GUIDE_MOTION = {
-  en: { apple: { "import-map": { caption: "Choose a source, then open the link panel when you are importing a map from the web." } } },
+  en: { apple: {
+    "import-map": { caption: "Choose a source, then open the link panel when you are importing a map from the web." },
+    "collections-atlas": { caption: "Open a map collection, fit the active sheet, then pan across the edge. MapNero keeps the view scale and activates the neighbouring sheet under the centre crosshair." }
+  } },
   tr: { apple: { "import-map": { caption: "Bir kaynak seçin; webden harita alırken bağlantı giriş panelini açın." } } },
   ar: { apple: { "import-map": { caption: "اختر مصدرًا ثم افتح لوحة الرابط عند استيراد خريطة من الويب." } } },
   de: { apple: { "import-map": { caption: "Wählen Sie eine Quelle und öffnen Sie beim Import einer Karte aus dem Web das Linkfeld." } } },
