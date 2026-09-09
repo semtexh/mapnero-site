@@ -122,11 +122,17 @@ test('the Turkish Apple import workflow clip is a valid local MP4 asset', () => 
   assert.ok(data.length > 500000);
 });
 test('all twelve Apple import workflow clips are valid exact-locale MP4 assets', () => {
+  const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/videos/apple/${locale}/import-map.mp4`));
     assert.equal(data.subarray(4, 8).toString(), 'ftyp', locale);
+    assert.notEqual(data.indexOf(Buffer.from('moov')), -1, `${locale} must contain MP4 metadata`);
     assert.ok(data.length > 100000, locale);
+    hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
   }
+  // Every guide language must have its own capture. Do not quietly reuse an
+  // English clip in a translated guide just because it is technically valid.
+  assert.equal(hashes.size, 12);
 });
 for (const topic of ['quick-start', 'import-map', 'photo-georeference', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
