@@ -1,5 +1,21 @@
 # Real guide captures
 
+## Apple Atlas walkthrough — 2026-09-10
+
+- Added one exact-language `collections-atlas.mp4` workflow clip for each of
+  the twelve supported Apple guide languages. The clips use the app's real
+  1206 × 2622 iPhone frames and show the active atlas sheet changing beneath
+  the centre crosshair while the view scale is retained.
+- All twelve clips are H.264 at 12 fps and full iPhone capture resolution.
+  Eleven run for 31 seconds; the Turkish clip runs for 36 seconds so its
+  localized guidance remains readable.
+- Live guide verification loaded and autoplayed every exact-language clip with
+  its matching caption. Arabic and Urdu used RTL; every locale had zero
+  horizontal page overflow. No locale falls back to an English video.
+- These clips demonstrate Apple atlas browsing only. They do not prove GPS
+  auto-switch, offline source generation, Android parity, or every overlap and
+  priority edge case.
+
 ## Apple manual-reference Library state — 2026-09-09
 
 - Added twelve `apple/<language>/photo-georeference.png` captures from the

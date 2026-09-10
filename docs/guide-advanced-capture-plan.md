@@ -8,6 +8,14 @@ aşağıdaki güncel durum bölümünde ayrılıyor.
 
 ## Güncel durum
 
+- **Apple Atlas videosu:** `collections-atlas` akışı 12 desteklenen dilin her
+  biri için ayrı MP4 olarak tamamlandı. Canlı yerel kılavuzda her dilin kendi
+  videosu ve altyazısı yüklendi, otomatik oynatma başladı, Arapça/Urdu RTL ve
+  tüm dillerde yatay taşma olmadığı doğrulandı. Dosyalar 1206 × 2622 H.264,
+  12 fps; 11 dil 31 saniye, Türkçe okunabilirlik için 36 saniye. Bu yalnız
+  Apple atlas browse akışının görsel anlatımıdır; Android atlas videosu ve
+  cihazdaki GPS auto-switch kabulü hâlâ açıktır.
+
 - **Android çekimleri:** Güncel 2.1.5 (2057) Pixel 7 emülatöründen `import-map`
   ve `quick-start` 12'şer dilde çekildi ve tek tek incelendi: 24 gerçek Android
   karesi. Apple 96 ile toplam 120. Dil değişimi uygulama ayarlarından yapıldı;
