@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-for (const topic of ['import-map', 'quick-start', 'location-track', 'pins-layers']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
+for (const topic of ['import-map', 'quick-start', 'location-track', 'pins-layers', 'cluster-analysis']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/${topic}.png`));
