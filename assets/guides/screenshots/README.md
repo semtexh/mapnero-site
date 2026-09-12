@@ -1,5 +1,16 @@
 # Real guide captures
 
+## Apple Atlas still frames — 2026-09-12
+
+- Added one `collections-atlas.png` for each of the twelve Apple guide
+  languages. Every image is an unedited 1206 × 2622 frame extracted at the
+  same point from that locale's previously verified real-app Atlas video.
+- The frames show the localized Library and the three-sheet Kuwait Atlas
+  collection. Arabic and Urdu retain the real right-to-left layout.
+- The screenshot test now requires twelve distinct, full-resolution Atlas
+  PNGs. These still frames inherit the scope of the source walkthrough: they
+  demonstrate the collection setup, not field GPS switching or Android parity.
+
 ## Apple Atlas walkthrough — 2026-09-10
 
 - Added one exact-language `collections-atlas.mp4` workflow clip for each of
