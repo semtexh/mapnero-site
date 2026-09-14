@@ -37,3 +37,11 @@ test('attribute form guide is complete for every locale and both mobile platform
     }
   }
 });
+
+test('German Android attribute forms capture is a full device PNG', () => {
+  const imagePath = path.join(root, 'assets/guides/screenshots/android/de/attribute-forms.png');
+  const image = fs.readFileSync(imagePath);
+  assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(image.readUInt32BE(16), 1080);
+  assert.equal(image.readUInt32BE(20), 2340);
+});
