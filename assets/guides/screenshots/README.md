@@ -1,5 +1,21 @@
 # Real guide captures
 
+## Android external GNSS settings — 2026-09-16
+
+- Added twelve unedited `android/<language>/team-gnss.png` screenshots from
+  a physical Samsung SM-A175F running the current debug app build. The native
+  screen is 1080 × 2340, so these intentionally retain that device's actual
+  height instead of being padded or reused from the earlier 1080 × 2400
+  emulator captures.
+- Each image was captured after selecting its exact in-app language and shows
+  Settings → Location & Navigation with the external GNSS receiver disabled
+  and the phone's internal GPS as the source. Arabic and Urdu are real RTL
+  frames; the device was restored to English after the capture set.
+- These frames demonstrate the initial GNSS configuration only. They do not
+  demonstrate a paired receiver, a live Team Session, a field location fix,
+  or Android/iOS feature parity. The screenshot test requires all twelve
+  distinct, full-resolution files.
+
 ## Apple Atlas still frames — 2026-09-12
 
 - Added one `collections-atlas.png` for each of the twelve Apple guide

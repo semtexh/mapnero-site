@@ -5,6 +5,17 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
+test('all twelve Android GNSS captures are distinct real-device PNG files', () => {
+  const hashes = new Set();
+  for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
+    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/team-gnss.png`));
+    assert.equal(data.subarray(1,4).toString(), 'PNG');
+    assert.equal(data.readUInt32BE(16), 1080);
+    assert.equal(data.readUInt32BE(20), 2340);
+    hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
+  }
+  assert.equal(hashes.size, 12);
+});
 for (const topic of ['import-map', 'quick-start', 'location-track', 'pins-layers', 'offline-maps', 'cluster-analysis', 'route-builder', 'track-report']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
