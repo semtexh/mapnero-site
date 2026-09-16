@@ -162,7 +162,7 @@ test('all twelve Apple import workflow clips are valid exact-locale MP4 assets',
   // English clip in a translated guide just because it is technically valid.
   assert.equal(hashes.size, 12);
 });
-for (const topic of ['quick-start', 'import-map', 'photo-georeference', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'collections-atlas', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
+for (const topic of ['quick-start', 'import-map', 'photo-georeference', 'team-gnss', 'measure-cogo-buffer', 'location-track', 'pins-layers', 'collections-atlas', 'route-builder', 'track-3d', 'track-report']) test(`all twelve ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/${topic}.png`));

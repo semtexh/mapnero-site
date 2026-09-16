@@ -1,5 +1,18 @@
 # Real guide captures
 
+## Apple pins and layers — 2026-09-16
+
+- Added twelve unedited `apple/<language>/pins-layers.png` screenshots from
+  the current iPhone 17 Pro simulator build at 1206 × 2622. Each image opens
+  the built-in Base Map, then the Layers panel, after selecting that exact
+  in-app language.
+- The frames show linked layers, their feature counts and the localized layer
+  search field. Arabic and Urdu are real right-to-left captures. Every final
+  image was checked against the live accessibility tree; the screenshots do
+  not claim that every layer type is writable or that a field edit succeeded.
+- A guide regression test requires all twelve full-resolution, distinct files
+  and does not use one language as a fallback for another.
+
 ## Android external GNSS settings — 2026-09-16
 
 - Added twelve unedited `android/<language>/team-gnss.png` screenshots from
