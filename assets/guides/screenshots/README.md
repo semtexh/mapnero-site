@@ -1,5 +1,20 @@
 # Real guide captures
 
+## Android attribute forms — 2026-09-16
+
+- Added twelve unedited `android/<language>/attribute-forms.png` screenshots
+  from a physical Samsung SM-A175F at 1080 × 2340. Each image opens the same
+  empty, public MapNero Template Store example, `Wildlife Observation Log`,
+  after selecting that exact in-app language.
+- The template has 20 fields and shows GPS, date, selection and text controls.
+  GPS was not captured, no value was entered, and the form was never submitted.
+  The template's author-provided field names stay in English; MapNero controls
+  such as GPS capture, selections, Back and Submit are shown in the selected
+  application language.
+- Arabic and Urdu are real RTL frames reviewed visually. The regression test
+  requires twelve distinct full-device captures; this evidence covers the
+  empty-form presentation, not successful field-data submission or sync.
+
 ## Android measurement — 2026-09-16
 
 - Added twelve unedited `android/<language>/measure-cogo-buffer.png` screenshots
