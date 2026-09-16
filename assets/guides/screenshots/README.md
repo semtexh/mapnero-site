@@ -1,5 +1,18 @@
 # Real guide captures
 
+## Android Atlas collections — 2026-09-16
+
+- Added twelve unedited `android/<language>/collections-atlas.png` screenshots
+  from a physical Samsung SM-A175F at 1080 × 2340. Each frame opens the same
+  existing `Atlas demo` collection with its three Kusadasi sheets after the
+  exact in-app language was selected.
+- The collection, its maps and their order were already on the device. No map
+  was added, edited, regrouped, deleted or opened for this capture. Arabic and
+  Urdu are real RTL frames reviewed from the live device UI.
+- The regression test requires twelve distinct full-device images. These
+  frames demonstrate Library collection browsing only; they do not claim GPS
+  auto-switch, offline generation, overlap priority or field acceptance.
+
 ## Android attribute forms — 2026-09-16
 
 - Added twelve unedited `android/<language>/attribute-forms.png` screenshots
