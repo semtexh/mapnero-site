@@ -1,0 +1,103 @@
+(function () {
+  "use strict";
+  // This is a derived GIS polygon, not the two-point circle drawing tool.
+  // Exact-locale media is loaded by the ordinary guide renderer when present.
+  const copy = {
+    en: ["Create and edit a buffer", "Make a separate polygon around a point, line, track or polygon.",
+      "Select the source", "Tap a feature on the map, or open Layers and select a feature. In its detail card, choose Buffer; scroll the action row if necessary. This tool requires Pro or Team access.",
+      "Set the distance", "Enter a positive distance and choose metres or feet. You can give the output a name; leaving it empty keeps the automatic name.",
+      "Preview and style", "Use Preview to see how many sources and polygons can be processed. Preview does not save anything. Choose the fill colour and opacity before creating the buffer.",
+      "Create the polygon", "Choose Create Buffer. The result goes into the separate Derived Buffers layer. Close the feature card to inspect it on the map; the original feature remains unchanged.",
+      "Edit or buffer several features", "Select the saved buffer to change its colour, opacity or distance. Distance updates need the original source. For several features, use lasso selection and Buffer; check processed and skipped counts.",
+      "The circle drawing tool is different: use a point feature plus Buffer for a radius around a location. A buffer is a geometric area, not a certified safety boundary."],
+    tr: ["Buffer oluşturma ve düzenleme", "Nokta, çizgi, iz veya poligonun çevresinde ayrı bir poligon oluşturun.",
+      "Kaynağı seçin", "Haritada bir objeye dokunun veya Katmanlar’dan objeyi seçin. Detay kartında Buffer’ı açın; gerekirse işlem satırını kaydırın. Bu araç Pro veya Team erişimi gerektirir.",
+      "Mesafeyi belirleyin", "Pozitif bir mesafe girip metre veya feet seçin. Çıktıya ad verebilirsiniz; boş bırakırsanız otomatik ad kullanılır.",
+      "Önizleyin ve görünümü seçin", "Önizleme ile işlenebilecek kaynak ve poligon sayısını görün. Önizleme kayıt oluşturmaz. Oluşturmadan önce dolgu rengini ve opaklığı seçin.",
+      "Poligonu oluşturun", "Buffer Oluştur’a basın. Sonuç ayrı Derived Buffers katmanına eklenir. Haritada görmek için detay kartını kapatın; kaynak obje değişmez.",
+      "Düzenleyin veya çoklu oluşturun", "Kaydedilmiş buffer’ı seçip rengini, opaklığını veya mesafesini değiştirin. Mesafe güncellemesi için kaynak obje gerekir. Birden fazla obje için lasso seçimi ve Buffer kullanın; işlenen ve atlanan sayıları kontrol edin.",
+      "Daire çizim aracı farklıdır: bir konum çevresinde yarıçap oluşturmak için nokta obje ve Buffer kullanın. Buffer geometrik bir alandır; doğrulanmış bir emniyet sınırı değildir."],
+    de: ["Puffer erstellen und bearbeiten", "Erstellen Sie ein separates Polygon um einen Punkt, eine Linie, einen Track oder ein Polygon.",
+      "Quelle auswählen", "Tippen Sie auf ein Objekt auf der Karte oder wählen Sie es unter Ebenen aus. Öffnen Sie in der Detailkarte Puffer; scrollen Sie bei Bedarf die Aktionsleiste. Pro- oder Team-Zugriff ist erforderlich.",
+      "Abstand festlegen", "Geben Sie einen positiven Abstand ein und wählen Sie Meter oder Fuß. Ein Ausgabename ist optional; ohne Eingabe bleibt der automatische Name erhalten.",
+      "Vorschau und Darstellung", "Die Vorschau zeigt die verarbeitbaren Quellen und Polygone, ohne etwas zu speichern. Wählen Sie vor dem Erstellen Füllfarbe und Deckkraft.",
+      "Polygon erstellen", "Wählen Sie Puffer erstellen. Das Ergebnis wird in der separaten Ebene Derived Buffers gespeichert. Schließen Sie die Detailkarte zur Kartenansicht; das Quellobjekt bleibt unverändert.",
+      "Bearbeiten oder Mehrfachauswahl", "Wählen Sie einen gespeicherten Puffer, um Farbe, Deckkraft oder Abstand zu ändern. Für einen neuen Abstand wird die Quelle benötigt. Für mehrere Objekte nutzen Sie Lasso und Puffer und prüfen die verarbeiteten und übersprungenen Anzahlen.",
+      "Das Kreiszeichenwerkzeug ist etwas anderes: Für einen Radius um einen Ort verwenden Sie ein Punktobjekt und Puffer. Ein Puffer ist eine geometrische Fläche, keine zertifizierte Sicherheitsgrenze."],
+    es: ["Crear y editar un búfer", "Cree un polígono independiente alrededor de un punto, línea, recorrido o polígono.",
+      "Seleccione el origen", "Toque un elemento en el mapa o selecciónelo en Capas. Abra Búfer en su ficha; deslice la fila de acciones si es necesario. Se requiere acceso Pro o Team.",
+      "Defina la distancia", "Introduzca una distancia positiva y seleccione metros o pies. Puede asignar un nombre al resultado; si lo deja vacío se usa el nombre automático.",
+      "Vista previa y estilo", "La vista previa muestra cuántos elementos y polígonos se pueden procesar sin guardar nada. Elija el color de relleno y la opacidad antes de crear el búfer.",
+      "Cree el polígono", "Pulse Crear búfer. El resultado se guarda en la capa independiente Derived Buffers. Cierre la ficha para verlo en el mapa; el elemento original no cambia.",
+      "Edite o seleccione varios", "Seleccione el búfer guardado para cambiar color, opacidad o distancia. Actualizar la distancia requiere el elemento original. Para varios elementos use la selección con lazo y Búfer; revise los procesados y omitidos.",
+      "Dibujar un círculo es otra herramienta: para un radio alrededor de una ubicación use un punto y Búfer. Un búfer es un área geométrica, no un límite de seguridad certificado."],
+    fr: ["Créer et modifier une zone tampon", "Créez un polygone distinct autour d’un point, d’une ligne, d’une trace ou d’un polygone.",
+      "Choisir la source", "Touchez un objet sur la carte ou sélectionnez-le dans Couches. Dans sa fiche, choisissez Zone tampon ; faites défiler les actions si nécessaire. Un accès Pro ou Team est requis.",
+      "Définir la distance", "Saisissez une distance positive et choisissez mètres ou pieds. Le nom du résultat est facultatif ; un champ vide conserve le nom automatique.",
+      "Aperçu et style", "L’aperçu indique combien de sources et de polygones peuvent être traités, sans rien enregistrer. Choisissez la couleur de remplissage et l’opacité avant la création.",
+      "Créer le polygone", "Choisissez Créer la zone tampon. Le résultat rejoint la couche distincte Derived Buffers. Fermez la fiche pour le voir sur la carte ; la source reste inchangée.",
+      "Modifier ou sélectionner plusieurs objets", "Sélectionnez la zone enregistrée pour modifier couleur, opacité ou distance. Une nouvelle distance nécessite la source d’origine. Pour plusieurs objets, utilisez le lasso puis Zone tampon et vérifiez les nombres traités et ignorés.",
+      "L’outil de dessin de cercle est différent : pour un rayon autour d’un lieu, utilisez un point puis Zone tampon. Il s’agit d’une surface géométrique, pas d’une limite de sécurité certifiée."],
+    it: ["Creare e modificare un buffer", "Crea un poligono separato attorno a un punto, una linea, una traccia o un poligono.",
+      "Seleziona l’origine", "Tocca un elemento sulla mappa o selezionalo in Livelli. Nella scheda scegli Buffer; scorri la riga delle azioni se necessario. È richiesto l’accesso Pro o Team.",
+      "Imposta la distanza", "Inserisci una distanza positiva e scegli metri o piedi. Puoi assegnare un nome al risultato; lasciando il campo vuoto viene usato quello automatico.",
+      "Anteprima e stile", "L’anteprima mostra quante origini e quanti poligoni possono essere elaborati senza salvare nulla. Scegli colore di riempimento e opacità prima della creazione.",
+      "Crea il poligono", "Scegli Crea buffer. Il risultato viene salvato nel livello separato Derived Buffers. Chiudi la scheda per vederlo sulla mappa; l’elemento originale non cambia.",
+      "Modifica o seleziona più elementi", "Seleziona il buffer salvato per cambiare colore, opacità o distanza. Una nuova distanza richiede l’origine. Per più elementi usa la selezione lazo e Buffer e controlla i conteggi elaborati e saltati.",
+      "Il disegno di cerchi è uno strumento diverso: per un raggio attorno a una posizione usa un punto e Buffer. Il buffer è un’area geometrica, non un confine di sicurezza certificato."],
+    pt: ["Criar e editar um buffer", "Crie um polígono separado ao redor de um ponto, linha, trilha ou polígono.",
+      "Selecione a origem", "Toque num elemento do mapa ou selecione-o em Camadas. Na ficha, escolha Buffer; deslize a linha de ações se necessário. É necessário acesso Pro ou Team.",
+      "Defina a distância", "Introduza uma distância positiva e escolha metros ou pés. Pode dar um nome ao resultado; um campo vazio mantém o nome automático.",
+      "Pré-visualização e estilo", "A pré-visualização indica quantas origens e polígonos podem ser processados sem guardar nada. Escolha a cor de preenchimento e a opacidade antes de criar.",
+      "Crie o polígono", "Escolha Criar buffer. O resultado fica na camada separada Derived Buffers. Feche a ficha para o ver no mapa; a origem mantém-se inalterada.",
+      "Edite ou selecione vários", "Selecione o buffer guardado para alterar cor, opacidade ou distância. Atualizar a distância exige a origem. Para vários elementos use a seleção por laço e Buffer; verifique os totais processados e ignorados.",
+      "A ferramenta de desenho de círculos é diferente: para um raio em torno de um local use um ponto e Buffer. Um buffer é uma área geométrica, não um limite de segurança certificado."],
+    ru: ["Создание и изменение буфера", "Создайте отдельный полигон вокруг точки, линии, трека или полигона.",
+      "Выберите источник", "Нажмите объект на карте или выберите его в слоях. В карточке откройте «Буфер»; при необходимости прокрутите ряд действий. Нужен доступ Pro или Team.",
+      "Задайте расстояние", "Введите положительное расстояние и выберите метры или футы. Имя результата необязательно: пустое поле сохраняет автоматическое имя.",
+      "Просмотр и оформление", "Предпросмотр показывает число обрабатываемых источников и полигонов, ничего не сохраняя. До создания выберите цвет заливки и непрозрачность.",
+      "Создайте полигон", "Нажмите «Создать буфер». Результат попадёт в отдельный слой Derived Buffers. Закройте карточку, чтобы увидеть его на карте; исходный объект не изменится.",
+      "Изменение и множественный выбор", "Выберите сохранённый буфер для изменения цвета, непрозрачности или расстояния. Для нового расстояния нужен исходный объект. Для нескольких объектов используйте лассо и «Буфер»; проверьте числа обработанных и пропущенных объектов.",
+      "Рисование окружности — другой инструмент: для радиуса вокруг места используйте точечный объект и «Буфер». Буфер — геометрическая область, а не сертифицированная граница безопасности."],
+    uk: ["Створення та редагування буфера", "Створіть окремий полігон навколо точки, лінії, треку або полігона.",
+      "Виберіть джерело", "Натисніть об’єкт на карті або виберіть його в шарах. У картці відкрийте «Буфер»; за потреби прокрутіть ряд дій. Потрібен доступ Pro або Team.",
+      "Задайте відстань", "Введіть додатну відстань і виберіть метри або фути. Назва результату необов’язкова: порожнє поле зберігає автоматичну назву.",
+      "Перегляд і вигляд", "Попередній перегляд показує кількість джерел і полігонів для обробки, нічого не зберігаючи. Перед створенням виберіть колір заливки та непрозорість.",
+      "Створіть полігон", "Натисніть «Створити буфер». Результат з’явиться в окремому шарі Derived Buffers. Закрийте картку, щоб побачити його на карті; вихідний об’єкт не зміниться.",
+      "Редагування та множинний вибір", "Виберіть збережений буфер, щоб змінити колір, непрозорість або відстань. Для нової відстані потрібне джерело. Для кількох об’єктів використайте ласо та «Буфер» і перевірте кількість оброблених і пропущених об’єктів.",
+      "Малювання кола — інший інструмент: для радіуса навколо місця використовуйте точковий об’єкт і «Буфер». Буфер — геометрична область, а не сертифікована межа безпеки."],
+    ar: ["إنشاء نطاق عازل وتعديله", "أنشئ مضلعًا منفصلًا حول نقطة أو خط أو مسار أو مضلع.",
+      "اختر العنصر الأصلي", "اضغط على عنصر في الخريطة أو اختره من الطبقات. افتح النطاق العازل من بطاقة التفاصيل، ومرّر صف الإجراءات عند الحاجة. تتطلب الأداة وصول Pro أو Team.",
+      "حدد المسافة", "أدخل مسافة موجبة واختر الأمتار أو الأقدام. يمكنك تسمية النتيجة؛ ترك الحقل فارغًا يُبقي الاسم التلقائي.",
+      "عاين واختر المظهر", "توضح المعاينة عدد العناصر والمضلعات القابلة للمعالجة دون حفظ أي شيء. اختر لون التعبئة ودرجة التعتيم قبل الإنشاء.",
+      "أنشئ المضلع", "اختر إنشاء نطاق عازل. تُحفظ النتيجة في طبقة Derived Buffers المنفصلة. أغلق بطاقة التفاصيل لرؤيتها على الخريطة؛ يبقى العنصر الأصلي دون تغيير.",
+      "عدّل أو اختر عدة عناصر", "اختر النطاق المحفوظ لتغيير اللون أو التعتيم أو المسافة. يتطلب تحديث المسافة العنصر الأصلي. لمعالجة عدة عناصر، استخدم التحديد الحر ثم النطاق العازل، وراجع أعداد العناصر المعالجة والمتجاوزة.",
+      "أداة رسم الدائرة مختلفة: لإنشاء نصف قطر حول موقع، استخدم عنصر نقطة ثم النطاق العازل. هذا نطاق هندسي، وليس حدًا معتمدًا للسلامة."],
+    hi: ["बफ़र बनाएँ और बदलें", "बिंदु, रेखा, ट्रैक या बहुभुज के चारों ओर अलग बहुभुज बनाएँ।",
+      "मूल फ़ीचर चुनें", "मानचित्र पर फ़ीचर टैप करें या Layers से चुनें। विवरण कार्ड में Buffer खोलें; ज़रूरत पर कार्रवाई पंक्ति स्क्रॉल करें। इसके लिए Pro या Team पहुँच चाहिए।",
+      "दूरी तय करें", "शून्य से बड़ी दूरी दर्ज करें और मीटर या फ़ीट चुनें। परिणाम का नाम दे सकते हैं; खाली छोड़ने पर स्वचालित नाम रहेगा।",
+      "पूर्वावलोकन और शैली", "पूर्वावलोकन बताता है कि कितने स्रोत और बहुभुज संसाधित होंगे; इससे कुछ सहेजा नहीं जाता। बनाने से पहले भराव का रंग और अपारदर्शिता चुनें।",
+      "बहुभुज बनाएँ", "Create Buffer चुनें। परिणाम अलग Derived Buffers लेयर में सहेजा जाएगा। मानचित्र पर देखने के लिए विवरण कार्ड बंद करें; मूल फ़ीचर नहीं बदलेगा।",
+      "बदलें या कई फ़ीचर चुनें", "सहेजा गया बफ़र चुनकर रंग, अपारदर्शिता या दूरी बदलें। दूरी बदलने के लिए मूल स्रोत चाहिए। कई फ़ीचर के लिए लासो चयन और Buffer उपयोग करें; संसाधित और छोड़ी गई संख्या जाँचें।",
+      "वृत्त बनाने का उपकरण अलग है: किसी स्थान के चारों ओर त्रिज्या के लिए बिंदु फ़ीचर और Buffer उपयोग करें। बफ़र एक ज्यामितीय क्षेत्र है, प्रमाणित सुरक्षा सीमा नहीं।"],
+    ur: ["بفر بنائیں اور ترمیم کریں", "نقطے، لکیر، ٹریک یا کثیرالاضلاع کے گرد الگ کثیرالاضلاع بنائیں۔",
+      "اصل فیچر منتخب کریں", "نقشے پر فیچر کو چھوئیں یا Layers سے منتخب کریں۔ تفصیلی کارڈ میں Buffer کھولیں؛ ضرورت ہو تو کارروائیوں کی قطار سکرول کریں۔ اس کے لیے Pro یا Team رسائی ضروری ہے۔",
+      "فاصلہ مقرر کریں", "صفر سے زیادہ فاصلہ درج کریں اور میٹر یا فٹ منتخب کریں۔ نتیجے کا نام اختیاری ہے؛ خالی چھوڑنے پر خودکار نام برقرار رہتا ہے۔",
+      "پیش منظر اور انداز", "پیش منظر بتاتا ہے کہ کتنے ماخذ اور کثیرالاضلاع پر کارروائی ہوسکتی ہے؛ اس سے کچھ محفوظ نہیں ہوتا۔ بنانے سے پہلے بھرائی کا رنگ اور غیر شفافیت منتخب کریں۔",
+      "کثیرالاضلاع بنائیں", "Create Buffer منتخب کریں۔ نتیجہ الگ Derived Buffers تہہ میں محفوظ ہوتا ہے۔ نقشے پر دیکھنے کے لیے تفصیلی کارڈ بند کریں؛ اصل فیچر تبدیل نہیں ہوتا۔",
+      "ترمیم یا متعدد انتخاب", "محفوظ بفر منتخب کرکے رنگ، غیر شفافیت یا فاصلہ بدلیں۔ فاصلے کی تبدیلی کے لیے اصل ماخذ ضروری ہے۔ متعدد فیچرز کے لیے لاسو انتخاب اور Buffer استعمال کریں؛ مکمل اور چھوڑے گئے فیچرز کی تعداد دیکھیں۔",
+      "دائرہ بنانے کا آلہ الگ ہے: کسی مقام کے گرد رداس کے لیے نقطے کا فیچر اور Buffer استعمال کریں۔ بفر ایک ہندسی علاقہ ہے، تصدیق شدہ حفاظتی حد نہیں۔"]
+  };
+  for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
+    const c = copy[id];
+    if (!c || c.length !== 13) throw new Error("Missing buffer translation: " + id);
+    for (const platform of ["apple", "android"]) {
+      const topics = window.MAPNERO_GUIDES[id].platforms[platform].topics;
+      const next = topics.findIndex(t => t.id === "measure-cogo-buffer") + 1;
+      topics.splice(next, 0, {
+        id: "buffer-workflow", title: c[0], summary: c[1], access: "Pro / Team", note: c[12],
+        steps: [2,4,6,8,10].map(i => ({title: c[i], body: c[i + 1]})), tips: []
+      });
+    }
+  }
+})();
