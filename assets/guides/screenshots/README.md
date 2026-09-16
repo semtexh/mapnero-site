@@ -1,5 +1,23 @@
 # Real guide captures
 
+## Android measurement — 2026-09-16
+
+- Added twelve unedited `android/<language>/measure-cogo-buffer.png` screenshots
+  from a physical Samsung SM-A175F running the current debug build at
+  1080 × 2340. Each image was captured only after that exact in-app language
+  was selected.
+- Every capture shows one temporary measurement point, a live nonzero distance
+  label to the crosshair, and the localized Add control. The temporary
+  measurement was discarded before moving to the next language; no pin, route,
+  track, or map data was saved or cleared.
+- Arabic and Urdu are independently verified RTL captures. The PDF toolbar's
+  compact point counter was found to be hard-coded as `pts` during this run,
+  fixed in the Android source, then verified on-device in English, Turkish,
+  German, Hindi, Arabic, Russian, Ukrainian, and Urdu.
+- The screenshot regression test requires all twelve distinct full-resolution
+  captures. This demonstrates temporary distance measurement only, not COGO,
+  buffering, survey accuracy, or a saved feature.
+
 ## Apple pins and layers — 2026-09-16
 
 - Added twelve unedited `apple/<language>/pins-layers.png` screenshots from

@@ -16,13 +16,14 @@ test('all twelve Android GNSS captures are distinct real-device PNG files', () =
   }
   assert.equal(hashes.size, 12);
 });
-for (const topic of ['import-map', 'quick-start', 'location-track', 'pins-layers', 'offline-maps', 'cluster-analysis', 'route-builder', 'track-report']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
+for (const topic of ['import-map', 'quick-start', 'measure-cogo-buffer', 'location-track', 'pins-layers', 'offline-maps', 'cluster-analysis', 'route-builder', 'track-report']) test(`all twelve Android ${topic} captures are distinct full-resolution PNG files`, () => {
   const hashes = new Set();
+  const expectedHeight = topic === 'measure-cogo-buffer' ? 2340 : 2400;
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
     const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/${topic}.png`));
     assert.equal(data.subarray(1,4).toString(), 'PNG');
     assert.equal(data.readUInt32BE(16), 1080);
-    assert.equal(data.readUInt32BE(20), 2400);
+    assert.equal(data.readUInt32BE(20), expectedHeight);
     hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
   }
   assert.equal(hashes.size, 12);
