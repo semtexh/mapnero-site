@@ -318,9 +318,23 @@ h1 {
 .article-header h2 { max-width: 48rem; margin: 0.5rem 0 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.08; letter-spacing: -0.03em; }
 .article-header > p { max-width: 50rem; margin: 0.9rem 0 0; color: var(--muted); font-size: 1.03rem; }
 
-.guide-screenshot {
+.guide-screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
   width: min(100%, 34rem);
   margin: 1.4rem 0 0;
+}
+
+/* Keep every existing one-image guide at its established readable width;
+   the Team/GNSS pair gets room for both real-device captures. */
+.guide-screenshot-gallery:has(> #guide-screenshot-secondary:not([hidden])) {
+  width: min(100%, 70rem);
+}
+
+.guide-screenshot {
+  width: 100%;
+  margin: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -359,7 +373,7 @@ h1 {
   font-size: 0.84rem;
 }
 
-[dir="rtl"] .guide-screenshot,
+[dir="rtl"] .guide-screenshot-gallery,
 [dir="rtl"] .guide-motion { margin-inline-start: auto; }
 
 .access-badge {

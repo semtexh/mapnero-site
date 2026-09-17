@@ -16,6 +16,17 @@ test('all twelve Android GNSS captures are distinct real-device PNG files', () =
   }
   assert.equal(hashes.size, 12);
 });
+test('all twelve Android GNSS settings captures are distinct real-device PNG files', () => {
+  const hashes = new Set();
+  for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
+    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/android/${locale}/team-gnss-gnss.png`));
+    assert.equal(data.subarray(1,4).toString(), 'PNG');
+    assert.equal(data.readUInt32BE(16), 1080);
+    assert.equal(data.readUInt32BE(20), 2340);
+    hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
+  }
+  assert.equal(hashes.size, 12);
+});
 test('all twelve Android Atlas captures are distinct real-device PNG files', () => {
   const hashes = new Set();
   for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
@@ -64,6 +75,8 @@ function harness() {
     elements: {
       screenshot: {hidden: false},
       screenshotImage: {src: 'old.png', alt: 'old', removeAttribute(key) { delete this[key]; }},
+      screenshotSecondary: {hidden: false},
+      screenshotSecondaryImage: {src: 'old-secondary.png', alt: 'old', removeAttribute(key) { delete this[key]; }},
       motion: {hidden: false},
       motionCaption: {textContent: 'old'},
       motionVideo: createMotionVideo('old.mp4')
@@ -95,6 +108,20 @@ test('a delayed previous-language image cannot replace the current capture', () 
   requests[1].onload();
   requests[0].onload();
   assert.equal(context.elements.screenshotImage.src, 'assets/guides/screenshots/apple/ar/import-map.png');
+});
+test('Android Team/GNSS shows a second exact-locale capture only after it loads', () => {
+  const {context, requests} = harness();
+  context.platform = 'android';
+  context.currentPlatform = () => ({label: 'Android'});
+  context.renderScreenshot({id:'team-gnss', title:'Team and GNSS'});
+  assert.equal(requests[0].src, 'assets/guides/screenshots/android/tr/team-gnss.png');
+  assert.equal(requests[1].src, 'assets/guides/screenshots/android/tr/team-gnss-gnss.png');
+  requests[0].onload();
+  assert.equal(context.elements.screenshot.hidden, false);
+  assert.equal(context.elements.screenshotSecondary.hidden, true);
+  requests[1].onload();
+  assert.equal(context.elements.screenshotSecondary.hidden, false);
+  assert.equal(context.elements.screenshotSecondaryImage.alt, 'Android: Team and GNSS — GNSS settings');
 });
 test('only shows and autoplays a localized motion clip after that exact clip loads', () => {
   const {context, motionLoads, getMotionPlays} = harness();

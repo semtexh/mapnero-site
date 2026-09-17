@@ -33,6 +33,8 @@
     noteText: document.getElementById("guide-note-text"),
     screenshot: document.getElementById("guide-screenshot"),
     screenshotImage: document.getElementById("guide-screenshot-image"),
+    screenshotSecondary: document.getElementById("guide-screenshot-secondary"),
+    screenshotSecondaryImage: document.getElementById("guide-screenshot-secondary-image"),
     motion: document.getElementById("guide-motion"),
     motionVideo: document.getElementById("guide-motion-video"),
     motionCaption: document.getElementById("guide-motion-caption"),
@@ -305,23 +307,44 @@
 
   function renderScreenshot(topic) {
     const request = ++screenshotRequest;
-    const image = elements.screenshotImage;
-    const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}.png`;
-    const alt = `${currentPlatform().label}: ${topic.title}`;
     elements.screenshot.hidden = true;
-    image.removeAttribute("src");
-    image.alt = "";
+    elements.screenshotSecondary.hidden = true;
 
-    // Only show a successfully loaded capture for this exact language and topic.
-    // A late response from a previous selection must not replace the current one.
-    const capture = new Image();
-    capture.onload = () => {
-      if (request !== screenshotRequest) return;
-      image.src = path;
-      image.alt = alt;
-      elements.screenshot.hidden = false;
-    };
-    capture.src = path;
+    const captures = [{
+      image: elements.screenshotImage,
+      suffix: "",
+      secondary: false,
+    }];
+
+    // Android Team/GNSS requires two separate real-device captures: one for
+    // Team Sessions and one for the external receiver setting. A single image
+    // would make the guide claim a path it does not actually show.
+    if (platform === "android" && topic.id === "team-gnss") {
+      captures.push({
+        image: elements.screenshotSecondaryImage,
+        suffix: "-gnss",
+        secondary: true,
+      });
+    }
+
+    captures.forEach(({image, suffix, secondary}) => {
+      image.removeAttribute("src");
+      image.alt = "";
+      const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}${suffix}.png`;
+      const alt = `${currentPlatform().label}: ${topic.title}${suffix ? " — GNSS settings" : ""}`;
+
+      // Only show a successfully loaded capture for this exact language and topic.
+      // A late response from a previous selection must not replace the current one.
+      const capture = new Image();
+      capture.onload = () => {
+        if (request !== screenshotRequest) return;
+        image.src = path;
+        image.alt = alt;
+        if (secondary) elements.screenshotSecondary.hidden = false;
+        elements.screenshot.hidden = false;
+      };
+      capture.src = path;
+    });
   }
 
   function renderMotion(topic) {
