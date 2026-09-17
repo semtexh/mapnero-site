@@ -336,7 +336,7 @@ window.MAPNERO_GUIDES = {
               { title: "Sign in", body: "Open Settings → Account, enter your email and complete the six-digit one-time code." },
               { title: "Join the organization", body: "Accept an invitation or enter the organization join code." },
               { title: "Share the layer", body: "Open the layer and enable Share with organization. Synchronization needs internet access." },
-              { title: "Connect GNSS", body: "Open External GNSS, allow Bluetooth access, choose the receiver and verify fix type, accuracy and satellite status." }
+              { title: "Connect GNSS", body: "Open Settings, scroll to Location & Navigation, enable Use external GNSS receiver, then choose the receiver and verify fix type, accuracy and satellite status." }
             ],
             tips: [
               { q: "Can one GLO 2 feed two phones?", a: "That depends on the receiver’s connection support. Pair each device according to the receiver manual and confirm MapNero shows the external fix before recording." }

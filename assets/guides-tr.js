@@ -269,7 +269,7 @@
               ["Giriş yapın", "Ayarlar → Hesap’ı açın, e-postanızı girip altı haneli tek kullanımlık kodu tamamlayın."],
               ["Kuruluşa katılın", "Davet kabul edin veya kuruluş katılım kodunu girin."],
               ["Katmanı paylaşın", "Katmanı açıp Kuruluşla Paylaş’ı etkinleştirin. Eşitleme için internet gerekir."],
-              ["GNSS bağlayın", "Harici GNSS’i açın, Bluetooth’a izin verin, alıcıyı seçip konum türü, doğruluk ve uydu durumunu doğrulayın."]
+              ["GNSS bağlayın", "Ayarlar’ı açın, Konum ve Navigasyon bölümüne inin, Harici GNSS alıcısını kullan seçeneğini etkinleştirin; ardından Bluetooth izni verip alıcıyı seçin ve konum türü, doğruluk ile uydu durumunu doğrulayın."]
             ],
             tips: [["Bir GLO 2 iki telefonu besleyebilir mi?", "Bu, alıcının bağlantı desteğine bağlıdır. Her cihazı alıcı kılavuzuna göre eşleştirin ve kayıt öncesi MapNero’nun harici konumu gösterdiğini doğrulayın."]]
           },
