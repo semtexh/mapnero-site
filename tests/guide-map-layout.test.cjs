@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
@@ -35,5 +36,40 @@ test('map layout guide is localized and keeps platform entitlement distinct', ()
     assert.match(android[0].access, /Pro/);
     assert.match(apple[0].steps[2].body, /MBTiles/);
     assert.match(android[0].steps[2].body, /MBTiles/);
+    assert.ok(
+      fs.existsSync(path.join(
+        root,
+        'assets',
+        'guides',
+        'screenshots',
+        'android',
+        id,
+        'map-layout-export.png',
+      )),
+      `${id}: Android Create Map screenshot`,
+    );
   }
+});
+
+test('all twelve Android Create Map captures are distinct full-resolution PNG files', () => {
+  const guides = loadGuides();
+  const fingerprints = new Set();
+  for (const { id } of guides.MAPNERO_GUIDE_LOCALES) {
+    const file = path.join(
+      root,
+      'assets',
+      'guides',
+      'screenshots',
+      'android',
+      id,
+      'map-layout-export.png',
+    );
+    const data = fs.readFileSync(file);
+    assert.ok(data.length > 100000, `${id}: non-trivial PNG`);
+    assert.match(data.subarray(0, 24).toString('hex'), /^89504e470d0a1a0a/);
+    assert.equal(data.readUInt32BE(16), 1080, `${id}: PNG width`);
+    assert.equal(data.readUInt32BE(20), 2340, `${id}: PNG height`);
+    fingerprints.add(crypto.createHash('sha256').update(data).digest('hex'));
+  }
+  assert.equal(fingerprints.size, 12, 'localized captures must not reuse one image');
 });
