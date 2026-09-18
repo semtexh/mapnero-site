@@ -1,6 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 const test = require('node:test');
 const vm = require('node:vm');
 
@@ -25,4 +26,29 @@ test('mobile export guidance is localized once per mobile platform', () => {
       assert.ok(matches[0].access.includes('Geo'), `${id}:${platform}:tier-boundary`);
     }
   }
+});
+
+test('Android mobile export screenshots are real, full-size, and locale-specific', () => {
+  const expectedLocales = ['ar', 'de', 'en', 'es', 'fr', 'hi', 'it', 'pt', 'ru', 'tr', 'uk', 'ur'];
+  const hashes = new Set();
+
+  for (const locale of expectedLocales) {
+    const file = path.join(
+      root,
+      'assets',
+      'guides',
+      'screenshots',
+      'android',
+      locale,
+      'mobile-export.png',
+    );
+    const bytes = fs.readFileSync(file);
+    assert.ok(bytes.length > 100000, `${locale}: substantial PNG`);
+    assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10], `${locale}: PNG`);
+    assert.equal(bytes.readUInt32BE(16), 1080, `${locale}: width`);
+    assert.equal(bytes.readUInt32BE(20), 2340, `${locale}: height`);
+    hashes.add(crypto.createHash('sha256').update(bytes).digest('hex'));
+  }
+
+  assert.equal(hashes.size, expectedLocales.length, 'each locale has its own capture');
 });
