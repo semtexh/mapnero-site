@@ -10,6 +10,11 @@
   const locales = window.MAPNERO_GUIDE_LOCALES || [];
   const guides = window.MAPNERO_GUIDES || {};
   const platformIds = ["apple", "android", "web"];
+  // The encrypted Web GIS offline reopening implementation is intentionally
+  // not enabled for public production users yet. Keep its detailed guide out
+  // of the public navigation until the production key and rollout acceptance
+  // are complete; otherwise the guide would promise a screen users cannot use.
+  const hiddenTopicIds = new Set(["offline-snapshot"]);
   let locale = selectInitialLocale();
   let platform = storageGet(STORAGE.platform) || "apple";
   let topicId = "";
@@ -102,7 +107,9 @@
   }
 
   function currentTopics() {
-    return currentPlatform()?.topics || [];
+    return (currentPlatform()?.topics || []).filter(
+      (topic) => !hiddenTopicIds.has(topic.id)
+    );
   }
 
   function progressKey(topic, index) {
