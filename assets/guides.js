@@ -326,6 +326,16 @@
         secondary: true,
       });
     }
+    // Geofence creation has a distinct permission/GPS-waiting state. Keep it
+    // next to the empty/list state rather than implying the list alone shows
+    // radius and entry/exit choices.
+    if (platform === "android" && topic.id === "geofences") {
+      captures.push({
+        image: elements.screenshotSecondaryImage,
+        suffix: "-create",
+        secondary: true,
+      });
+    }
 
     captures.forEach(({image, suffix, secondary}) => {
       image.removeAttribute("src");
