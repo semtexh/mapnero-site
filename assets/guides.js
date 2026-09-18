@@ -341,7 +341,8 @@
       image.removeAttribute("src");
       image.alt = "";
       const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}${suffix}.png`;
-      const alt = `${currentPlatform().label}: ${topic.title}${suffix ? " — GNSS settings" : ""}`;
+      const secondaryLabel = topic.id === "geofences" ? "Geofence creation" : "GNSS settings";
+      const alt = `${currentPlatform().label}: ${topic.title}${suffix ? ` — ${secondaryLabel}` : ""}`;
 
       // Only show a successfully loaded capture for this exact language and topic.
       // A late response from a previous selection must not replace the current one.

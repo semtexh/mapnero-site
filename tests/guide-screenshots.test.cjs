@@ -123,6 +123,17 @@ test('Android Team/GNSS shows a second exact-locale capture only after it loads'
   assert.equal(context.elements.screenshotSecondary.hidden, false);
   assert.equal(context.elements.screenshotSecondaryImage.alt, 'Android: Team and GNSS — GNSS settings');
 });
+test('Android Geofences shows its verified creation screen as a second capture', () => {
+  const {context, requests} = harness();
+  context.platform = 'android';
+  context.currentPlatform = () => ({label: 'Android'});
+  context.renderScreenshot({id:'geofences', title:'Create a geofence'});
+  assert.equal(requests[0].src, 'assets/guides/screenshots/android/tr/geofences.png');
+  assert.equal(requests[1].src, 'assets/guides/screenshots/android/tr/geofences-create.png');
+  requests[1].onload();
+  assert.equal(context.elements.screenshotSecondary.hidden, false);
+  assert.equal(context.elements.screenshotSecondaryImage.alt, 'Android: Create a geofence — Geofence creation');
+});
 test('only shows and autoplays a localized motion clip after that exact clip loads', () => {
   const {context, motionLoads, getMotionPlays} = harness();
   context.renderMotion({id:'photo-georeference', title:'Photo', motion:{caption:'Place known control points'}});
