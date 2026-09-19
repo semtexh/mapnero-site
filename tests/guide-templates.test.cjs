@@ -98,6 +98,7 @@ test('verified Android field-template captures are full-device PNG assets', () =
   for (const capture of [
     'assets/guides/screenshots/android/ar/field-templates.png',
     'assets/guides/screenshots/android/de/field-templates.png',
+    'assets/guides/screenshots/android/en/field-templates.png',
     'assets/guides/screenshots/android/es/field-templates.png',
     'assets/guides/screenshots/android/fr/field-templates.png',
     'assets/guides/screenshots/android/hi/field-templates.png',
@@ -105,10 +106,15 @@ test('verified Android field-template captures are full-device PNG assets', () =
     'assets/guides/screenshots/android/pt/field-templates-selection.png',
     'assets/guides/screenshots/android/pt/field-templates.png',
     'assets/guides/screenshots/android/ru/field-templates.png',
-    'assets/guides/screenshots/android/uk/field-templates.png'
+    'assets/guides/screenshots/android/tr/field-templates.png',
+    'assets/guides/screenshots/android/uk/field-templates.png',
+    'assets/guides/screenshots/android/ur/field-templates.png'
   ]) {
     const file = path.join(root, capture);
     assert.ok(fs.existsSync(file), `missing ${capture}`);
-    assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
+    assert.ok(fs.statSync(file).size > 50000, `unexpectedly small ${capture}`);
+    const png = fs.readFileSync(file);
+    assert.equal(png.readUInt32BE(16), 1080, `unexpected width ${capture}`);
+    assert.equal(png.readUInt32BE(20), 2340, `unexpected height ${capture}`);
   }
 });
