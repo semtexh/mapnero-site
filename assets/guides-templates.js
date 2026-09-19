@@ -54,6 +54,21 @@
     ur: "Manual templates مفت ہیں · AI اور import آپشنز tier پر منحصر ہیں"
   };
 
+  const appleFieldTemplateSelectionLabels = {
+    ar: "اختر قالبًا",
+    de: "Vorlage auswählen",
+    en: "Choose a template",
+    es: "Selecciona una plantilla",
+    fr: "Choisir un modèle",
+    hi: "टेम्पलेट चुनें",
+    it: "Scegli un modello",
+    pt: "Selecionar um modelo",
+    ru: "Выберите шаблон",
+    tr: "Bir şablon seçin",
+    uk: "Виберіть шаблон",
+    ur: "ایک سانچہ منتخب کریں"
+  };
+
   for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
     const entry = content[id];
     if (!entry) throw new Error("Missing template guide: " + id);
@@ -74,10 +89,10 @@
           label: "Selecionar um modelo"
         };
       }
-      if (platform === "apple" && id === "en") {
+      if (platform === "apple") {
         fieldTemplateTopic.secondaryCapture = {
           suffix: "-selection",
-          label: "Choose a template"
+          label: appleFieldTemplateSelectionLabels[id]
         };
       }
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push(fieldTemplateTopic);
