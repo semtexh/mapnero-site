@@ -96,7 +96,12 @@
       const next = topics.findIndex(t => t.id === "measure-cogo-buffer") + 1;
       topics.splice(next, 0, {
         id: "buffer-workflow", title: c[0], summary: c[1], access: "Pro / Team", note: c[12],
-        steps: [2,4,6,8,10].map(i => ({title: c[i], body: c[i + 1]})), tips: []
+        steps: [2,4,6,8,10].map(i => ({title: c[i], body: c[i + 1]})), tips: [],
+        // The English iOS guide has a second exact capture for controls below
+        // the first viewport. Other locales retain their own single capture.
+        ...(platform === "apple" && id === "en" ? {
+          secondaryCapture: {suffix: "-appearance", label: "Fill color and opacity"}
+        } : {})
       });
     }
   }

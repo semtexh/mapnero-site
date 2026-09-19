@@ -44,3 +44,24 @@ test('Buffer has twelve distinct full-resolution Android emulator captures', () 
   // File checks complement, never replace, the device integration test and
   // visual review recorded in docs/GUIDE_BUFFER_CAPTURE_2026-09-16.md.
 });
+
+test('Apple English Buffer guide has focused workflow and appearance captures', () => {
+  for (const name of ['buffer-workflow.png', 'buffer-workflow-appearance.png']) {
+    const png = fs.readFileSync(path.join(root, 'assets/guides/screenshots/apple/en', name));
+    assert.deepEqual([...png.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+    assert.equal(png.readUInt32BE(16), 1206);
+    assert.equal(png.readUInt32BE(20), 2622);
+    assert.ok(png.length > 100000, `${name} should be a full-resolution capture`);
+  }
+
+  const html = fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
+  const context = vm.createContext({window: {}});
+  for (const [, file] of html.matchAll(/<script src="(assets\/guides[^"?]*\.js)(?:\?[^\"]*)?"><\/script>/g)) {
+    if (file !== 'assets/guides.js') vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
+  }
+  const entry = context.window.MAPNERO_GUIDES.en.platforms.apple.topics
+    .find(topic => topic.id === 'buffer-workflow');
+  assert.deepEqual(JSON.parse(JSON.stringify(entry.secondaryCapture)), {
+    suffix: '-appearance', label: 'Fill color and opacity'
+  });
+});
