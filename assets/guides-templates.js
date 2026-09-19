@@ -63,7 +63,7 @@
         id: "field-templates",
         title,
         summary,
-        access,
+        access: manualTemplateAccess[id] || access,
         note,
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }]
