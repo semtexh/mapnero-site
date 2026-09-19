@@ -41,7 +41,7 @@
   // precise: assisted and imported creation methods are the tiered options.
   const manualTemplateAccess = {
     en: "Manual templates are free · AI and import options depend on tier",
-    tr: "Manuel şablonlar ücretsizdir · AI ve içe aktarma seçenekleri katmana bağlıdır",
+    tr: "Manuel şablonlar ücretsizdir · Yapay zekâ ve içe aktarma seçenekleri abonelik düzeyine bağlıdır",
     ar: "النماذج اليدوية مجانية · خيارات الذكاء الاصطناعي والاستيراد تعتمد على المستوى",
     de: "Manuelle Vorlagen sind kostenlos · KI- und Importoptionen sind stufenabhängig",
     es: "Las plantillas manuales son gratis · las opciones de IA e importación dependen del nivel",
