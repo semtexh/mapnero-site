@@ -112,7 +112,10 @@
         es: "Selector de tipos de campo",
         fr: "Sélecteur de types de champ",
         it: "Selettore dei tipi di campo",
-        tr: "Alan türü seçici"
+        pt: "Seletor de tipos de campo",
+        ru: "Выбор типа поля",
+        tr: "Alan türü seçici",
+        uk: "Вибір типу поля"
       };
       if (platform === "apple" && appleFieldPickerLabels[id]) {
         builderTopic.secondaryCapture = {
