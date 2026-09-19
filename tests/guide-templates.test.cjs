@@ -35,3 +35,19 @@ test('field template guide is available once on both mobile platforms in every l
     }
   }
 });
+
+test('template creation and editing guide is available once on both mobile platforms in every locale', () => {
+  const window = loadGuideData();
+  for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
+    for (const platform of ['apple', 'android']) {
+      const matches = window.MAPNERO_GUIDES[id].platforms[platform].topics
+        .filter((topic) => topic.id === 'create-edit-templates');
+      assert.equal(matches.length, 1, `${id}:${platform}`);
+      const topic = matches[0];
+      assert.ok(topic.title && topic.summary && topic.access && topic.note, `${id}:${platform}:copy`);
+      assert.equal(topic.steps.length, 4, `${id}:${platform}:steps`);
+      assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);
+      for (const step of topic.steps) assert.ok(step.title && step.body, `${id}:${platform}:step`);
+    }
+  }
+});
