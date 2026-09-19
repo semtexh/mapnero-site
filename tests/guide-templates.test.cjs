@@ -96,11 +96,16 @@ test('template-builder captures are full-device PNG assets', () => {
 
 test('verified Android field-template captures are full-device PNG assets', () => {
   for (const capture of [
+    'assets/guides/screenshots/android/ar/field-templates.png',
     'assets/guides/screenshots/android/de/field-templates.png',
     'assets/guides/screenshots/android/es/field-templates.png',
     'assets/guides/screenshots/android/fr/field-templates.png',
+    'assets/guides/screenshots/android/hi/field-templates.png',
+    'assets/guides/screenshots/android/it/field-templates.png',
     'assets/guides/screenshots/android/pt/field-templates-selection.png',
-    'assets/guides/screenshots/android/pt/field-templates.png'
+    'assets/guides/screenshots/android/pt/field-templates.png',
+    'assets/guides/screenshots/android/ru/field-templates.png',
+    'assets/guides/screenshots/android/uk/field-templates.png'
   ]) {
     const file = path.join(root, capture);
     assert.ok(fs.existsSync(file), `missing ${capture}`);
