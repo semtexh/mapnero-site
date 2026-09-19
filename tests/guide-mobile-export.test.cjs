@@ -52,3 +52,20 @@ test('Android mobile export screenshots are real, full-size, and locale-specific
 
   assert.equal(hashes.size, expectedLocales.length, 'each locale has its own capture');
 });
+
+test('verified English Apple Export & Share capture is a full-device PNG', () => {
+  const file = path.join(
+    root,
+    'assets',
+    'guides',
+    'screenshots',
+    'apple',
+    'en',
+    'mobile-export.png',
+  );
+  const bytes = fs.readFileSync(file);
+  assert.ok(bytes.length > 100000, 'English Apple Export & Share PNG is substantial');
+  assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(bytes.readUInt32BE(16), 1206, 'English Apple Export & Share width');
+  assert.equal(bytes.readUInt32BE(20), 2622, 'English Apple Export & Share height');
+});
