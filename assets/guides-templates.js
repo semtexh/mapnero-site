@@ -108,6 +108,7 @@
       // do not reuse a translated screenshot for another locale.
       const appleFieldPickerLabels = {
         en: "Field type picker",
+        de: "Auswahl der Feldtypen",
         tr: "Alan türü seçici"
       };
       if (platform === "apple" && appleFieldPickerLabels[id]) {
