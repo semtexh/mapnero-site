@@ -107,15 +107,18 @@
       // Keep these exact-locale iOS captures scoped to their own language;
       // do not reuse a translated screenshot for another locale.
       const appleFieldPickerLabels = {
+        ar: "منتقي نوع الحقل",
         en: "Field type picker",
         de: "Auswahl der Feldtypen",
         es: "Selector de tipos de campo",
         fr: "Sélecteur de types de champ",
+        hi: "फ़ील्ड प्रकार चयनकर्ता",
         it: "Selettore dei tipi di campo",
         pt: "Seletor de tipos de campo",
         ru: "Выбор типа поля",
         tr: "Alan türü seçici",
-        uk: "Вибір типу поля"
+        uk: "Вибір типу поля",
+        ur: "فیلڈ کی قسم منتخب کریں"
       };
       if (platform === "apple" && appleFieldPickerLabels[id]) {
         builderTopic.secondaryCapture = {

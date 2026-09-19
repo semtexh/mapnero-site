@@ -53,7 +53,7 @@ test('template creation and editing guide is available once on both mobile platf
       assert.equal(topic.steps.length, 4, `${id}:${platform}:steps`);
       assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);
       for (const step of topic.steps) assert.ok(step.title && step.body, `${id}:${platform}:step`);
-      if (platform === 'android' && ['en', 'tr', 'ar', 'ru', 'uk', 'ur'].includes(id)) {
+      if (platform === 'apple' || (platform === 'android' && ['en', 'tr', 'ar', 'ru', 'uk', 'ur'].includes(id))) {
         assert.equal(topic.secondaryCapture?.suffix, '-fields', `${id}:${platform}:field-picker`);
       } else {
         assert.equal(topic.secondaryCapture, undefined, `${id}:${platform}:no borrowed field-picker`);
@@ -63,8 +63,14 @@ test('template creation and editing guide is available once on both mobile platf
 });
 
 test('template-builder captures are full-device PNG assets', () => {
-  const captures = [
-    'assets/guides/screenshots/apple/tr/create-edit-templates.png',
+  const captures = [];
+  for (const locale of ['ar', 'de', 'en', 'es', 'fr', 'hi', 'it', 'pt', 'ru', 'tr', 'uk', 'ur']) {
+    captures.push(
+      `assets/guides/screenshots/apple/${locale}/create-edit-templates.png`,
+      `assets/guides/screenshots/apple/${locale}/create-edit-templates-fields.png`
+    );
+  }
+  captures.push(
     'assets/guides/screenshots/android/en/create-edit-templates.png',
     'assets/guides/screenshots/android/tr/create-edit-templates.png',
     'assets/guides/screenshots/android/ar/create-edit-templates.png',
@@ -83,11 +89,16 @@ test('template-builder captures are full-device PNG assets', () => {
     'assets/guides/screenshots/android/ru/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/uk/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/ur/create-edit-templates-fields.png'
-  ];
+  );
   for (const capture of captures) {
     const file = path.join(root, capture);
     assert.ok(fs.existsSync(file), `missing ${capture}`);
     assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
+    if (capture.startsWith('assets/guides/screenshots/apple/')) {
+      const png = fs.readFileSync(file);
+      assert.equal(png.readUInt32BE(16), 1206, `unexpected width ${capture}`);
+      assert.equal(png.readUInt32BE(20), 2622, `unexpected height ${capture}`);
+    }
   }
   const selection = path.join(root, 'assets/guides/screenshots/android/pt/field-templates-selection.png');
   assert.ok(fs.existsSync(selection), 'missing Portuguese template selection capture');
