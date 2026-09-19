@@ -104,13 +104,16 @@
           label: androidFieldPickerLabels[id]
         };
       }
-      // A current, clean iOS capture of the field picker is available for
-      // Turkish. Keep this locale-scoped until each remaining Apple locale has
-      // its own device capture rather than reusing a translated screenshot.
-      if (platform === "apple" && id === "tr") {
+      // Keep these exact-locale iOS captures scoped to their own language;
+      // do not reuse a translated screenshot for another locale.
+      const appleFieldPickerLabels = {
+        en: "Field type picker",
+        tr: "Alan türü seçici"
+      };
+      if (platform === "apple" && appleFieldPickerLabels[id]) {
         builderTopic.secondaryCapture = {
           suffix: "-fields",
-          label: "Alan türü seçici"
+          label: appleFieldPickerLabels[id]
         };
       }
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push(builderTopic);
