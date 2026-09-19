@@ -86,6 +86,7 @@
       const androidFieldPickerLabels = {
         en: "Field type picker",
         tr: "Alan türü seçici",
+        ar: "منتقي نوع الحقل",
         uk: "Вибір типу поля"
       };
       if (platform === "android" && androidFieldPickerLabels[id]) {
