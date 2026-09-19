@@ -94,8 +94,11 @@ test('template-builder captures are full-device PNG assets', () => {
   assert.ok(fs.statSync(selection).size > 100000, 'unexpectedly small Portuguese template selection capture');
 });
 
-test('Portuguese field-template captures show both selection and the live form', () => {
+test('verified Android field-template captures are full-device PNG assets', () => {
   for (const capture of [
+    'assets/guides/screenshots/android/de/field-templates.png',
+    'assets/guides/screenshots/android/es/field-templates.png',
+    'assets/guides/screenshots/android/fr/field-templates.png',
     'assets/guides/screenshots/android/pt/field-templates-selection.png',
     'assets/guides/screenshots/android/pt/field-templates.png'
   ]) {
