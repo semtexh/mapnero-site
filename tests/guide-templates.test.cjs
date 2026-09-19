@@ -32,7 +32,7 @@ test('field template guide is available once on both mobile platforms in every l
       assert.equal(topic.steps.length, 3, `${id}:${platform}:steps`);
       assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);
       for (const step of topic.steps) assert.ok(step.title && step.body, `${id}:${platform}:step`);
-      if (platform === 'android' && id === 'pt') {
+      if ((platform === 'android' && id === 'pt') || (platform === 'apple' && id === 'en')) {
         assert.equal(topic.secondaryCapture?.suffix, '-selection', `${id}:${platform}:template-selection`);
       } else {
         assert.equal(topic.secondaryCapture, undefined, `${id}:${platform}:no borrowed template-selection`);
@@ -103,6 +103,12 @@ test('template-builder captures are full-device PNG assets', () => {
   const selection = path.join(root, 'assets/guides/screenshots/android/pt/field-templates-selection.png');
   assert.ok(fs.existsSync(selection), 'missing Portuguese template selection capture');
   assert.ok(fs.statSync(selection).size > 100000, 'unexpectedly small Portuguese template selection capture');
+  const appleSelection = path.join(root, 'assets/guides/screenshots/apple/en/field-templates-selection.png');
+  assert.ok(fs.existsSync(appleSelection), 'missing English Apple template selection capture');
+  assert.ok(fs.statSync(appleSelection).size > 100000, 'unexpectedly small English Apple template selection capture');
+  const appleSelectionPng = fs.readFileSync(appleSelection);
+  assert.equal(appleSelectionPng.readUInt32BE(16), 1206, 'unexpected English Apple selection width');
+  assert.equal(appleSelectionPng.readUInt32BE(20), 2622, 'unexpected English Apple selection height');
 });
 
 test('verified Android field-template captures are full-device PNG assets', () => {
@@ -127,5 +133,19 @@ test('verified Android field-template captures are full-device PNG assets', () =
     const png = fs.readFileSync(file);
     assert.equal(png.readUInt32BE(16), 1080, `unexpected width ${capture}`);
     assert.equal(png.readUInt32BE(20), 2340, `unexpected height ${capture}`);
+  }
+});
+
+test('verified English Apple field-template captures are full-device PNG assets', () => {
+  for (const capture of [
+    'assets/guides/screenshots/apple/en/field-templates.png',
+    'assets/guides/screenshots/apple/en/field-templates-selection.png'
+  ]) {
+    const file = path.join(root, capture);
+    assert.ok(fs.existsSync(file), `missing ${capture}`);
+    assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
+    const png = fs.readFileSync(file);
+    assert.equal(png.readUInt32BE(16), 1206, `unexpected width ${capture}`);
+    assert.equal(png.readUInt32BE(20), 2622, `unexpected height ${capture}`);
   }
 });

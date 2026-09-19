@@ -74,6 +74,12 @@
           label: "Selecionar um modelo"
         };
       }
+      if (platform === "apple" && id === "en") {
+        fieldTemplateTopic.secondaryCapture = {
+          suffix: "-selection",
+          label: "Choose a template"
+        };
+      }
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push(fieldTemplateTopic);
 
       const builder = builderContent[id];
