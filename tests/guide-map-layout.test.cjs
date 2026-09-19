@@ -73,3 +73,20 @@ test('all twelve Android Create Map captures are distinct full-resolution PNG fi
   }
   assert.equal(fingerprints.size, 12, 'localized captures must not reuse one image');
 });
+
+test('verified English Apple PDF Map Export capture is a full-device PNG', () => {
+  const file = path.join(
+    root,
+    'assets',
+    'guides',
+    'screenshots',
+    'apple',
+    'en',
+    'map-layout-export.png',
+  );
+  const data = fs.readFileSync(file);
+  assert.ok(data.length > 100000, 'English Apple PDF Map Export PNG is non-trivial');
+  assert.match(data.subarray(0, 24).toString('hex'), /^89504e470d0a1a0a/);
+  assert.equal(data.readUInt32BE(16), 1206, 'English Apple PDF Map Export width');
+  assert.equal(data.readUInt32BE(20), 2622, 'English Apple PDF Map Export height');
+});
