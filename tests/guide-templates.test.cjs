@@ -93,3 +93,14 @@ test('template-builder captures are full-device PNG assets', () => {
   assert.ok(fs.existsSync(selection), 'missing Portuguese template selection capture');
   assert.ok(fs.statSync(selection).size > 100000, 'unexpectedly small Portuguese template selection capture');
 });
+
+test('Portuguese field-template captures show both selection and the live form', () => {
+  for (const capture of [
+    'assets/guides/screenshots/android/pt/field-templates-selection.png',
+    'assets/guides/screenshots/android/pt/field-templates.png'
+  ]) {
+    const file = path.join(root, capture);
+    assert.ok(fs.existsSync(file), `missing ${capture}`);
+    assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
+  }
+});
