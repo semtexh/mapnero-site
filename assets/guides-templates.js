@@ -82,11 +82,16 @@
         tips: [{ q: builderTip[0], a: builderTip[1] }]
       };
       // The second Android reference image is an actual field-type picker.
-      // Keep it English-only until every translation has its own real capture.
-      if (platform === "android" && ["en", "tr"].includes(id)) {
+      // Add a locale only after its own clean device capture is available.
+      const androidFieldPickerLabels = {
+        en: "Field type picker",
+        tr: "Alan türü seçici",
+        uk: "Вибір типу поля"
+      };
+      if (platform === "android" && androidFieldPickerLabels[id]) {
         builderTopic.secondaryCapture = {
           suffix: "-fields",
-          label: id === "tr" ? "Alan türü seçici" : "Field type picker"
+          label: androidFieldPickerLabels[id]
         };
       }
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push(builderTopic);
