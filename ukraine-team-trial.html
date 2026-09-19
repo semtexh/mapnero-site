@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="uk" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Короткий посібник MapNero для адміністратора організації та команди.">
+  <link rel="icon" type="image/png" href="image.png">
+  <link rel="apple-touch-icon" href="image.png">
+  <link rel="stylesheet" href="assets/guides.css?v=20260908">
+  <title>MapNero — посібник для команди</title>
+  <style>
+    .onboarding-shell { width:min(960px, calc(100% - 32px)); margin:0 auto 64px; }
+    .onboarding-hero { padding:56px 0 28px; }
+    .onboarding-hero h1 { max-width:780px; margin:8px 0 14px; font-size:clamp(2rem, 5vw, 3.35rem); line-height:1.05; }
+    .onboarding-hero p { max-width:720px; color:var(--muted); font-size:1.05rem; line-height:1.65; }
+    .onboarding-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; }
+    .onboarding-card { border:1px solid var(--line); border-radius:18px; padding:24px; background:var(--surface); box-shadow:0 20px 55px rgba(0,0,0,.14); }
+    .onboarding-card h2 { margin:0 0 10px; font-size:1.15rem; }
+    .onboarding-card p, .onboarding-card li { color:var(--muted); line-height:1.58; }
+    .onboarding-card ol, .onboarding-card ul { margin:14px 0 0; padding-inline-start:24px; }
+    .onboarding-card li + li { margin-top:10px; }
+    .onboarding-card.wide { grid-column:1 / -1; }
+    .onboarding-card strong { color:var(--text); }
+    .onboarding-callout { border-color:rgba(226,181,37,.55); background:linear-gradient(135deg, rgba(226,181,37,.12), var(--surface)); }
+    .onboarding-cta { display:inline-flex; margin-top:14px; border-radius:10px; padding:10px 14px; background:var(--gold); color:#17120a; font-weight:800; text-decoration:none; }
+    .onboarding-small { font-size:.9rem; }
+    @media (max-width:700px) { .onboarding-grid { grid-template-columns:1fr; } .onboarding-card.wide { grid-column:auto; } .onboarding-hero { padding-top:34px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="MapNero">
+      <img src="image.png" alt="" width="38" height="38">
+      <span>MapNero</span>
+    </a>
+    <div class="header-actions"><a class="home-link" href="guides.html#web/sign-in">Повний посібник</a></div>
+  </header>
+
+  <main class="onboarding-shell">
+    <section class="onboarding-hero">
+      <p class="eyebrow">MAPNERO · TEAM TRIAL</p>
+      <h1>Швидкий старт для адміністратора команди</h1>
+      <p>Цей короткий посібник пояснює, як увійти до робочого простору MapNero, запросити колег і почати безпечну спільну роботу з шарами та картами.</p>
+    </section>
+
+    <section class="onboarding-grid" aria-label="Кроки для початку роботи">
+      <article class="onboarding-card onboarding-callout wide">
+        <h2>Спершу: доступ адміністратора</h2>
+        <p>MapNero надає доступ адміністратору організації окремим запрошенням. Після його отримання використовуйте <strong>ту саму адресу електронної пошти</strong> у мобільному застосунку та на вебсайті. Не пересилайте коди входу або запрошення іншим людям.</p>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>1. Увійдіть до вебробочого простору</h2>
+        <ol>
+          <li>Відкрийте <strong>app.mapnero.com</strong>.</li>
+          <li>Введіть адресу, на яку надійшло запрошення.</li>
+          <li>Оберіть вхід за паролем або отримайте шестизначний код на цю адресу.</li>
+          <li>Введіть код на сторінці входу. Код одноразовий і не призначений для пересилання.</li>
+        </ol>
+        <p class="onboarding-small">Вебсайт призначений для входу до наявного облікового запису; він не створює новий обліковий запис для незапрошеної адреси.</p>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>2. Відкрийте «Адміністрування»</h2>
+        <ol>
+          <li>У лівому меню натисніть <strong>Адміністрування</strong> (значок ⚙).</li>
+          <li>Переконайтеся, що вгорі відображається назва вашої організації.</li>
+          <li>Перевірте кількість доступних місць у блоці <strong>Використано місць</strong>.</li>
+        </ol>
+        <p class="onboarding-small">Розділ доступний лише ролям <strong>Власник</strong> та <strong>Адміністратор</strong>.</p>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>3. Запросіть колег електронною поштою</h2>
+        <ol>
+          <li>У блоці <strong>Запросити електронною поштою</strong> введіть адресу колеги.</li>
+          <li>Оберіть роль: <strong>Учасник</strong> для звичайної польової роботи, <strong>Переглядач</strong> для читання, <strong>Адміністратор</strong> лише для людини, якій ви довіряєте керування командою.</li>
+          <li>Натисніть <strong>Надіслати запрошення</strong>.</li>
+          <li>Перевірте адресу та статус у розділі <strong>Очікують підтвердження</strong>.</li>
+        </ol>
+        <p class="onboarding-small">Не надсилайте більше запрошень, ніж дозволяє кількість місць вашого пробного доступу.</p>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>4. Що має зробити запрошена людина</h2>
+        <ol>
+          <li>Використати ту саму адресу, на яку отримано запрошення.</li>
+          <li>Якщо облікового запису ще немає: установити MapNero на iPhone, iPad або Android, відкрити розділ організації та прийняти запрошення, створивши пароль.</li>
+          <li>Після цього увійти до <strong>app.mapnero.com</strong> з тією самою адресою — організація приєднається автоматично.</li>
+        </ol>
+        <p class="onboarding-small">Якщо запрошення не з’являється, перевірте адресу символ за символом. Адміністратор може скасувати старе запрошення та надіслати нове.</p>
+      </article>
+
+      <article class="onboarding-card wide">
+        <h2>5. Почніть роботу з даними</h2>
+        <ol>
+          <li>Відкрийте <strong>GIS</strong> у лівому меню для карт, шарів, таблиці атрибутів та імпорту даних.</li>
+          <li>На телефоні або планшеті створіть чи відкрийте шар, а потім увімкніть <strong>Поділитися з організацією</strong>, коли дані мають бути доступні команді.</li>
+          <li>Перед польовою роботою перевірте на двох облікових записах, що спільний шар видно та його можна редагувати відповідно до призначеної ролі.</li>
+        </ol>
+        <a class="onboarding-cta" href="guides.html#web/sign-in">Відкрити повний посібник MapNero</a>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>6. Постійно діліться шарами з організацією</h2>
+        <ol>
+          <li>У мобільному застосунку відкрийте <strong>Шари</strong> та створіть новий шар або виберіть свій наявний доступний для запису шар.</li>
+          <li>Відкрийте меню <strong>…</strong> шару й оберіть <strong>Поділитися з організацією</strong>.</li>
+          <li>Підтвердьте організацію та дочекайтеся синхронізації онлайн. Шар стає спільними даними організації, а не копією лише на одному телефоні.</li>
+          <li>Інші учасники відкривають <strong>Шари</strong>, знаходять його в розділі організації, вмикають видимість і працюють у межах своєї ролі.</li>
+        </ol>
+        <p class="onboarding-small">Це <strong>не</strong> Team Session. Синхронізація організації постійна, потребує інтернету й використовується для спільних шарів та їхніх об’єктів. Перед польовою роботою перевірте нову точку на другому обліковому записі.</p>
+      </article>
+
+      <article class="onboarding-card">
+        <h2>7. Використовуйте Team Session для живої польової роботи</h2>
+        <ol>
+          <li>На телефоні відкрийте <strong>Team</strong> і створіть сесію. Її може створити обліковий запис рівня <strong>Team</strong>; організація для цього не є обов’язковою.</li>
+          <li>Задайте назву, код доступу та своє ім’я на карті. За потреби прив’яжіть сесію до своєї організації, але це окрема опція.</li>
+          <li>Надішліть код або QR-код тільки запрошеним учасникам. Оплачені Core, Pro або Team облікові записи можуть приєднатися; Free — ні.</li>
+          <li>Учасник обирає <strong>Приєднатися до сесії</strong> або сканує QR-код, вводить код, пароль і своє відображуване ім’я.</li>
+          <li>Після завершення роботи ведучий завершує сесію та не повторно використовує код для іншої групи.</li>
+        </ol>
+        <p class="onboarding-small">Team Session призначений для тимчасової живої координації. Веброзділ <strong>Team Live</strong> відкриває перегляд за кодом, але не створює мобільну сесію та не замінює GPS-запис на телефоні.</p>
+      </article>
+
+      <article class="onboarding-card wide">
+        <h2>8. Створіть і редагуйте шаблони польових форм</h2>
+        <ol>
+          <li>У мобільному застосунку відкрийте <strong>Бібліотека → Шаблони</strong> і натисніть <strong>Створити</strong>.</li>
+          <li>Назвіть шаблон, додайте потрібні поля: текст, вибір, число, GPS, дату, фото, прапорець або розділ. Позначте лише справді обов’язкові поля.</li>
+          <li>Перетягніть поля в робочий порядок і збережіть шаблон. Перед широким використанням зробіть один тестовий запис.</li>
+          <li>Щоб змінити форму, відкрийте шаблон у Бібліотеці, натисніть <strong>… → Редагувати</strong>, змініть поля або їхній порядок і збережіть.</li>
+          <li>Щоб збирати дані, натисніть <strong>Запустити</strong> або <strong>Використати шаблон</strong>. MapNero автоматично створить або використає пов’язаний шар результатів — не створюйте для цього другий порожній шар.</li>
+        </ol>
+        <p class="onboarding-small">Зміна шаблону впливає на наступні записи; вона не переписує вже збережені польові дані. Для спільної роботи спочатку поділіться пов’язаним шаром результатів з організацією, як описано вище.</p>
+      </article>
+
+      <article class="onboarding-card wide">
+        <h2>Як прибрати доступ або виправити помилку</h2>
+        <ul>
+          <li>Щоб скасувати ще не прийняте запрошення, натисніть <strong>Скасувати</strong> поруч із ним у «Очікують підтвердження».</li>
+          <li>Щоб змінити роль або прибрати активного учасника, використайте <strong>Керування</strong> в таблиці «Учасники».</li>
+          <li>Не видаляйте польові дані для перевірки доступу. Спершу перевірте роль, підключення до інтернету та правильну адресу електронної пошти.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 MapNero</span><a href="support.html">Підтримка</a></footer>
+</body>
+</html>
