@@ -134,6 +134,22 @@ test('Android Geofences shows its verified creation screen as a second capture',
   assert.equal(context.elements.screenshotSecondary.hidden, false);
   assert.equal(context.elements.screenshotSecondaryImage.alt, 'Android: Create a geofence — Geofence creation');
 });
+test('a topic-declared second capture uses its exact suffix and label', () => {
+  const {context, requests} = harness();
+  context.platform = 'android';
+  context.locale = 'en';
+  context.currentPlatform = () => ({label: 'Android'});
+  context.renderScreenshot({
+    id: 'create-edit-templates',
+    title: 'Create and edit a field template',
+    secondaryCapture: {suffix: '-fields', label: 'Field type picker'}
+  });
+  assert.equal(requests[0].src, 'assets/guides/screenshots/android/en/create-edit-templates.png');
+  assert.equal(requests[1].src, 'assets/guides/screenshots/android/en/create-edit-templates-fields.png');
+  requests[1].onload();
+  assert.equal(context.elements.screenshotSecondary.hidden, false);
+  assert.equal(context.elements.screenshotSecondaryImage.alt, 'Android: Create and edit a field template — Field type picker');
+});
 test('only shows and autoplays a localized motion clip after that exact clip loads', () => {
   const {context, motionLoads, getMotionPlays} = harness();
   context.renderMotion({id:'photo-georeference', title:'Photo', motion:{caption:'Place known control points'}});

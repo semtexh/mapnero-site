@@ -72,7 +72,7 @@
       const builder = builderContent[id];
       if (!builder) throw new Error("Missing template builder guide: " + id);
       const [builderTitle, builderSummary, builderAccess, builderNote, builderSteps, builderTip] = builder;
-      window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
+      const builderTopic = {
         id: "create-edit-templates",
         title: builderTitle,
         summary: builderSummary,
@@ -80,7 +80,13 @@
         note: builderNote,
         steps: builderSteps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: builderTip[0], a: builderTip[1] }]
-      });
+      };
+      // The second Android reference image is an actual field-type picker.
+      // Keep it English-only until every translation has its own real capture.
+      if (platform === "android" && id === "en") {
+        builderTopic.secondaryCapture = { suffix: "-fields", label: "Field type picker" };
+      }
+      window.MAPNERO_GUIDES[id].platforms[platform].topics.push(builderTopic);
     }
   }
 })();

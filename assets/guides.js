@@ -341,14 +341,25 @@
         image: elements.screenshotSecondaryImage,
         suffix: "-create",
         secondary: true,
+        label: "Geofence creation",
+      });
+    }
+    // A topic can opt into a second, exact-locale reference image without
+    // teaching the renderer about another feature-specific filename.
+    if (topic.secondaryCapture) {
+      captures.push({
+        image: elements.screenshotSecondaryImage,
+        suffix: topic.secondaryCapture.suffix,
+        secondary: true,
+        label: topic.secondaryCapture.label,
       });
     }
 
-    captures.forEach(({image, suffix, secondary}) => {
+    captures.forEach(({image, suffix, secondary, label}) => {
       image.removeAttribute("src");
       image.alt = "";
       const path = `assets/guides/screenshots/${platform}/${locale}/${topic.id}${suffix}.png`;
-      const secondaryLabel = topic.id === "geofences" ? "Geofence creation" : "GNSS settings";
+      const secondaryLabel = label || (topic.id === "geofences" ? "Geofence creation" : "GNSS settings");
       const alt = `${currentPlatform().label}: ${topic.title}${suffix ? ` — ${secondaryLabel}` : ""}`;
 
       // Only show a successfully loaded capture for this exact language and topic.
