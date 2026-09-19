@@ -87,7 +87,8 @@
         en: "Field type picker",
         tr: "Alan türü seçici",
         ar: "منتقي نوع الحقل",
-        uk: "Вибір типу поля"
+        uk: "Вибір типу поля",
+        ur: "فیلڈ قسم چننے والا"
       };
       if (platform === "android" && androidFieldPickerLabels[id]) {
         builderTopic.secondaryCapture = {
