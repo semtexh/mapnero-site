@@ -51,3 +51,15 @@ test('template creation and editing guide is available once on both mobile platf
     }
   }
 });
+
+test('template-builder captures are full-device PNG assets', () => {
+  const captures = [
+    'assets/guides/screenshots/apple/tr/create-edit-templates.png',
+    'assets/guides/screenshots/android/en/create-edit-templates.png'
+  ];
+  for (const capture of captures) {
+    const file = path.join(root, capture);
+    assert.ok(fs.existsSync(file), `missing ${capture}`);
+    assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
+  }
+});
