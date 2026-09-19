@@ -1,5 +1,17 @@
 # Real guide captures
 
+## Apple Offline Maps — 2026-09-19
+
+- Added twelve unedited `apple/<language>/offline-maps.png` screenshots from
+  the current iPhone 17 Pro simulator build at 1206 × 2622. Each image opens
+  the same Base Map Offline Maps panel after the exact in-app language was
+  selected.
+- Arabic and Urdu were checked as real RTL layouts. The Hindi frame was also
+  used to reproduce and verify the Urdu → LTR layout-direction regression;
+  the final capture was taken after the iOS fix and has LTR toolbar ordering.
+- The frames show the download extent and zoom controls only. No map download
+  was started, and they do not demonstrate successful offline navigation.
+
 ## Android Atlas collections — 2026-09-16
 
 - Added twelve unedited `android/<language>/collections-atlas.png` screenshots
