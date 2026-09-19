@@ -48,7 +48,7 @@ test('template creation and editing guide is available once on both mobile platf
       assert.equal(topic.steps.length, 4, `${id}:${platform}:steps`);
       assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);
       for (const step of topic.steps) assert.ok(step.title && step.body, `${id}:${platform}:step`);
-      if (platform === 'android' && ['en', 'tr', 'ar', 'uk', 'ur'].includes(id)) {
+      if (platform === 'android' && ['en', 'tr', 'ar', 'ru', 'uk', 'ur'].includes(id)) {
         assert.equal(topic.secondaryCapture?.suffix, '-fields', `${id}:${platform}:field-picker`);
       } else {
         assert.equal(topic.secondaryCapture, undefined, `${id}:${platform}:no borrowed field-picker`);
@@ -63,11 +63,13 @@ test('template-builder captures are full-device PNG assets', () => {
     'assets/guides/screenshots/android/en/create-edit-templates.png',
     'assets/guides/screenshots/android/tr/create-edit-templates.png',
     'assets/guides/screenshots/android/ar/create-edit-templates.png',
+    'assets/guides/screenshots/android/ru/create-edit-templates.png',
     'assets/guides/screenshots/android/uk/create-edit-templates.png',
     'assets/guides/screenshots/android/ur/create-edit-templates.png',
     'assets/guides/screenshots/android/en/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/tr/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/ar/create-edit-templates-fields.png',
+    'assets/guides/screenshots/android/ru/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/uk/create-edit-templates-fields.png',
     'assets/guides/screenshots/android/ur/create-edit-templates-fields.png'
   ];
