@@ -32,6 +32,11 @@ test('field template guide is available once on both mobile platforms in every l
       assert.equal(topic.steps.length, 3, `${id}:${platform}:steps`);
       assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);
       for (const step of topic.steps) assert.ok(step.title && step.body, `${id}:${platform}:step`);
+      if (platform === 'android' && id === 'pt') {
+        assert.equal(topic.secondaryCapture?.suffix, '-selection', `${id}:${platform}:template-selection`);
+      } else {
+        assert.equal(topic.secondaryCapture, undefined, `${id}:${platform}:no borrowed template-selection`);
+      }
     }
   }
 });
@@ -84,4 +89,7 @@ test('template-builder captures are full-device PNG assets', () => {
     assert.ok(fs.existsSync(file), `missing ${capture}`);
     assert.ok(fs.statSync(file).size > 100000, `unexpectedly small ${capture}`);
   }
+  const selection = path.join(root, 'assets/guides/screenshots/android/pt/field-templates-selection.png');
+  assert.ok(fs.existsSync(selection), 'missing Portuguese template selection capture');
+  assert.ok(fs.statSync(selection).size > 100000, 'unexpectedly small Portuguese template selection capture');
 });

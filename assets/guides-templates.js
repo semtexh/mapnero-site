@@ -59,7 +59,7 @@
     if (!entry) throw new Error("Missing template guide: " + id);
     const [title, summary, access, note, steps, tip] = entry;
     for (const platform of ["apple", "android"]) {
-      window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
+      const fieldTemplateTopic = {
         id: "field-templates",
         title,
         summary,
@@ -67,7 +67,14 @@
         note,
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }]
-      });
+      };
+      if (platform === "android" && id === "pt") {
+        fieldTemplateTopic.secondaryCapture = {
+          suffix: "-selection",
+          label: "Selecionar um modelo"
+        };
+      }
+      window.MAPNERO_GUIDES[id].platforms[platform].topics.push(fieldTemplateTopic);
 
       const builder = builderContent[id];
       if (!builder) throw new Error("Missing template builder guide: " + id);
