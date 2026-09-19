@@ -109,6 +109,9 @@
       const appleFieldPickerLabels = {
         en: "Field type picker",
         de: "Auswahl der Feldtypen",
+        es: "Selector de tipos de campo",
+        fr: "Sélecteur de types de champ",
+        it: "Selettore dei tipi di campo",
         tr: "Alan türü seçici"
       };
       if (platform === "apple" && appleFieldPickerLabels[id]) {
