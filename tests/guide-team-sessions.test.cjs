@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
@@ -35,13 +36,19 @@ test('Team Session guide keeps host and participant access explicit in every loc
   }
 });
 
-test('verified English Apple Team Session entry capture is a full-device PNG', () => {
-  const capture = path.join(root, 'assets/guides/screenshots/apple/en/team-session.png');
-  assert.ok(fs.existsSync(capture), 'missing English Apple Team Session capture');
-  assert.ok(fs.statSync(capture).size > 100000, 'unexpectedly small English Apple Team Session capture');
-  const png = fs.readFileSync(capture);
-  assert.equal(png.readUInt32BE(16), 1206, 'unexpected English Apple Team Session width');
-  assert.equal(png.readUInt32BE(20), 2622, 'unexpected English Apple Team Session height');
+test('verified Apple Team Session entry captures are localized full-device PNGs', () => {
+  const window = loadGuideData();
+  const hashes = new Set();
+  for (const locale of window.MAPNERO_GUIDE_LOCALES.map(({ id }) => id)) {
+    const capture = path.join(root, `assets/guides/screenshots/apple/${locale}/team-session.png`);
+    assert.ok(fs.existsSync(capture), `missing ${locale} Apple Team Session capture`);
+    assert.ok(fs.statSync(capture).size > 100000, `unexpectedly small ${locale} Apple Team Session capture`);
+    const png = fs.readFileSync(capture);
+    assert.equal(png.readUInt32BE(16), 1206, `unexpected ${locale} Apple Team Session width`);
+    assert.equal(png.readUInt32BE(20), 2622, `unexpected ${locale} Apple Team Session height`);
+    hashes.add(crypto.createHash('sha256').update(png).digest('hex'));
+  }
+  assert.equal(hashes.size, window.MAPNERO_GUIDE_LOCALES.length, 'localized captures must remain distinct');
 });
 
 test('verified Android Team Session captures are full-device PNGs', () => {
