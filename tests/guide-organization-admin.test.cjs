@@ -31,6 +31,7 @@ test('organization administration gives each supported locale a complete first-a
 
     const topic = matches[0];
     assert.ok(topic.title && topic.summary && topic.access && topic.note, `${id}: explanatory copy`);
+    assert.equal(topic.capture, false, `${id}: no missing administration screenshot request`);
     assert.equal(topic.steps.length, 4, `${id}: safe administration sequence`);
     assert.ok(topic.steps[2].title && topic.steps[2].body, `${id}: first-access guidance`);
     firstAccessBodies.add(topic.steps[2].body);

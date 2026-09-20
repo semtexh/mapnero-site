@@ -24,6 +24,9 @@
     const [title, summary, access, note, steps, tip] = entry;
     window.MAPNERO_GUIDES[id].platforms.web.topics.push({
       id: "organization-admin",
+      // Administration is a text-led web workflow. Do not request a fictional
+      // per-locale screenshot until a safe, non-vendor capture exists.
+      capture: false,
       title,
       summary,
       access,
