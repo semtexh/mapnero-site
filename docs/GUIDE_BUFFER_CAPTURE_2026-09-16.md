@@ -8,8 +8,11 @@
   integration-test screenshot API from the production Library, feature card and
   Buffer sheet. These are emulator screenshots, **not physical-phone evidence**.
 - Languages: en, tr, ar, de, es, fr, hi, it, pt, ru, uk, ur.
-- Apple instructions were checked against source. Apple Buffer captures and
-  physical-device acceptance are still outstanding; no Android image substitutes
+- Apple instructions were checked against source. English has two iOS simulator
+  captures of the Buffer panel (workflow and fill/opacity); Spanish has an iOS
+  simulator capture of the localized feature-detail entry point where Buffer is
+  selected. The remaining exact-locale Apple Buffer-panel captures and all
+  physical-device acceptance are still outstanding. No Android image substitutes
   for an Apple screenshot.
 
 ## Reproduction and isolation
@@ -57,9 +60,9 @@ Focused checks: 23 Flutter fixture/form/geometry tests passed; analysis of the
 four capture-related Dart files was clean. All 45 site guide tests passed.
 Chrome at 390 × 844 loaded exact-locale PNGs in Turkish, English, Arabic and
 Urdu, with no horizontal page overflow. Urdu → English reset RTL to LTR.
-The complete Turkish page was visually reviewed. The Apple Buffer topic hid
-its missing screenshot rather than displaying an Android or wrong-language
-fallback. Viewport overrides were reset afterward.
+The complete Turkish page was visually reviewed. The Apple Buffer topic uses an
+exact-locale capture only where one exists; it does not display an Android or
+wrong-language fallback. Viewport overrides were reset afterward.
 
 An initial browser load logged an existing `Missing Android 3D guide: en`
 error and omitted route topics; a reload showed all 18 Android topics and no

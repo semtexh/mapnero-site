@@ -66,7 +66,7 @@ test('Apple English Buffer guide has focused workflow and appearance captures', 
   });
 });
 
-test('Apple Spanish Buffer guide has its own localized workflow capture', () => {
+test('Apple Spanish Buffer guide has its own localized Buffer entry-card capture', () => {
   const png = fs.readFileSync(path.join(
     root,
     'assets/guides/screenshots/apple/es/buffer-workflow.png'
