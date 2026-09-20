@@ -52,12 +52,24 @@ test('verified Apple Team Session entry captures are localized full-device PNGs'
 });
 
 test('verified Android Team Session captures are full-device PNGs', () => {
-  for (const locale of ['en', 'tr', 'ar', 'de', 'ru']) {
+  const capturedLocales = ['en', 'tr', 'ar', 'de', 'ru'];
+  const window = loadGuideData();
+  for (const locale of capturedLocales) {
     const capture = path.join(root, `assets/guides/screenshots/android/${locale}/team-session.png`);
     assert.ok(fs.existsSync(capture), `missing ${locale} Android Team Session capture`);
     assert.ok(fs.statSync(capture).size > 100000, `unexpectedly small ${locale} Android Team Session capture`);
     const png = fs.readFileSync(capture);
     assert.equal(png.readUInt32BE(16), 1080, `unexpected ${locale} Android Team Session width`);
     assert.equal(png.readUInt32BE(20), 2340, `unexpected ${locale} Android Team Session height`);
+    const topic = window.MAPNERO_GUIDES[locale].platforms.android.topics
+      .find((candidate) => candidate.id === 'team-session');
+    assert.notEqual(topic.capture, false, `${locale} should show its verified capture`);
+  }
+
+  for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
+    if (capturedLocales.includes(id)) continue;
+    const topic = window.MAPNERO_GUIDES[id].platforms.android.topics
+      .find((candidate) => candidate.id === 'team-session');
+    assert.equal(topic.capture, false, `${id} must not request a missing Android capture`);
   }
 });

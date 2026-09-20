@@ -19,12 +19,17 @@
     hi: ["लाइव Team Session चलाएँ", "स्थायी संगठन साझाकरण से अलग रखते हुए फील्ड समूह के लिए अस्थायी लाइव मानचित्र सत्र बनाएँ।", "होस्ट: Team · शामिल: Core, Pro या Team", "Team Session अस्थायी है। किसी लेयर को संगठन के साथ साझा करना अलग, स्थायी ऑनलाइन कार्यप्रवाह है। Free खाते Team Session में शामिल नहीं हो सकते।", [["सत्र बनाएँ", "फोन या टैबलेट पर Team खोलें और Create session चुनें। Team खाता होस्ट कर सकता है। संगठन वैकल्पिक है; केवल संगठन का सत्र होने पर उसे जोड़ें।"], ["पहुँच विवरण तय करें", "सत्र को स्पष्ट फील्ड नाम दें, कोड या पासवर्ड चुनें और मानचित्र पर दिखने वाला नाम तय करें। कोड या QR केवल आमंत्रित प्रतिभागियों को भेजें।"], ["सुरक्षित रूप से शामिल हों और समाप्त करें", "हर प्रतिभागी Join session चुनता है या QR स्कैन करता है, फिर कोड, पासवर्ड और दिखने वाला नाम दर्ज करता है। Core, Pro और Team खाते शामिल हो सकते हैं। फील्ड कार्य के बाद होस्ट सत्र समाप्त करे और कोड दोबारा उपयोग न करे।"]], ["स्थायी साझा लेयर कहाँ हैं?", "स्थायी संगठन डेटा के लिए ऑनलाइन रहते हुए लेयर मेनू से Share with organization सक्रिय करें। तैनाती से पहले दूसरे खाते से नए परीक्षण रिकॉर्ड की जाँच करें।"]]
   };
 
+  // Android captures exist only for the locales listed below. Never reuse one
+  // language's field screen for another: show the localized written workflow
+  // until its own clean capture is available.
+  const androidCaptureLocales = new Set(["en", "tr", "ar", "de", "ru"]);
+
   for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
     const entry = content[id];
     if (!entry) throw new Error("Missing Team Session guide: " + id);
     const [title, summary, access, note, steps, tip] = entry;
     for (const platform of ["apple", "android"]) {
-      window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
+      const topic = {
         id: "team-session",
         title,
         summary,
@@ -32,7 +37,11 @@
         note,
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }]
-      });
+      };
+      if (platform === "android" && !androidCaptureLocales.has(id)) {
+        topic.capture = false;
+      }
+      window.MAPNERO_GUIDES[id].platforms[platform].topics.push(topic);
     }
   }
 })();
