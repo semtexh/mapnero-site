@@ -65,3 +65,14 @@ test('Apple English Buffer guide has focused workflow and appearance captures', 
     suffix: '-appearance', label: 'Fill color and opacity'
   });
 });
+
+test('Apple Spanish Buffer guide has its own localized workflow capture', () => {
+  const png = fs.readFileSync(path.join(
+    root,
+    'assets/guides/screenshots/apple/es/buffer-workflow.png'
+  ));
+  assert.deepEqual([...png.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(png.readUInt32BE(16), 1206);
+  assert.equal(png.readUInt32BE(20), 2622);
+  assert.ok(png.length > 100000, 'Spanish capture should be full resolution');
+});
