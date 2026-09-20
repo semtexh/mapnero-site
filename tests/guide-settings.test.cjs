@@ -48,3 +48,17 @@ test('localized Apple settings captures are full-device PNG assets', () => {
     assert.equal(png.readUInt32BE(20), 2622, `unexpected height ${capture}`);
   }
 });
+
+test('localized Android settings captures are distinct full-device PNG assets', () => {
+  const hashes = new Set();
+  for (const locale of locales) {
+    const capture = `assets/guides/screenshots/android/${locale}/settings-workspace.png`;
+    const png = fs.readFileSync(path.join(root, capture));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG', `invalid ${capture}`);
+    assert.equal(png.readUInt32BE(16), 1080, `unexpected width ${capture}`);
+    assert.equal(png.readUInt32BE(20), 2340, `unexpected height ${capture}`);
+    assert.ok(png.length > 100000, `unexpectedly small ${capture}`);
+    hashes.add(require('node:crypto').createHash('sha256').update(png).digest('hex'));
+  }
+  assert.equal(hashes.size, locales.length, 'each locale needs its own physical-device capture');
+});
