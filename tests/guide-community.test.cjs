@@ -52,3 +52,20 @@ test('Community Trails guide states the privacy and safety boundaries', () => {
   assert.match(allText, /inaccurate, outdated or unsafe/);
   assert.match(allText, /CC BY-SA/);
 });
+
+test('Community Trails has a distinct localized Apple capture for every guide language', () => {
+  const window = loadGuides();
+  const hashes = new Set();
+  for (const {id} of window.MAPNERO_GUIDE_LOCALES) {
+    const image = path.join(root, 'assets', 'guides', 'screenshots', 'apple', id,
+      'community-trails.png');
+    assert.ok(fs.existsSync(image), `Missing Apple Community Trails capture: ${id}`);
+    const bytes = fs.readFileSync(image);
+    assert.ok(bytes.length > 10_000, `Unexpectedly small Apple Community Trails capture: ${id}`);
+    assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10],
+      `Invalid PNG header: ${id}`);
+    hashes.add(require('node:crypto').createHash('sha256').update(bytes).digest('hex'));
+  }
+  assert.equal(hashes.size, window.MAPNERO_GUIDE_LOCALES.length,
+    'Each locale needs its own capture; do not reuse a different language image');
+});
