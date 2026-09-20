@@ -43,3 +43,12 @@ test('verified English Apple Team Session entry capture is a full-device PNG', (
   assert.equal(png.readUInt32BE(16), 1206, 'unexpected English Apple Team Session width');
   assert.equal(png.readUInt32BE(20), 2622, 'unexpected English Apple Team Session height');
 });
+
+test('verified Turkish Android Team Session join capture is a full-device PNG', () => {
+  const capture = path.join(root, 'assets/guides/screenshots/android/tr/team-session.png');
+  assert.ok(fs.existsSync(capture), 'missing Turkish Android Team Session capture');
+  assert.ok(fs.statSync(capture).size > 100000, 'unexpectedly small Turkish Android Team Session capture');
+  const png = fs.readFileSync(capture);
+  assert.equal(png.readUInt32BE(16), 1080, 'unexpected Turkish Android Team Session width');
+  assert.equal(png.readUInt32BE(20), 2340, 'unexpected Turkish Android Team Session height');
+});
