@@ -28,6 +28,7 @@ test('Track Navigation guide documents the real cross-platform corridor workflow
         .filter((topic) => topic.id === 'track-navigation');
       assert.equal(matches.length, 1, `${id}:${platform}`);
       const topic = matches[0];
+      assert.equal(topic.capture, false, `${id}:${platform}:capture-pending`);
       assert.ok(topic.title && topic.summary && topic.access && topic.note, `${id}:${platform}:copy`);
       assert.equal(topic.steps.length, 3, `${id}:${platform}:steps`);
       assert.equal(topic.tips.length, 1, `${id}:${platform}:tips`);

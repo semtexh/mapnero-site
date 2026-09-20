@@ -317,6 +317,11 @@
     elements.screenshot.hidden = true;
     elements.screenshotSecondary.hidden = true;
 
+    // Some guide topics are published before their device-specific captures
+    // are ready. Keep their written instructions available without asking the
+    // browser for a known-missing image on every navigation.
+    if (topic.capture === false) return;
+
     const captures = [{
       image: elements.screenshotImage,
       suffix: "",

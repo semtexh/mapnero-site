@@ -26,6 +26,7 @@
     for (const platform of ["apple", "android"]) {
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
         id: "track-navigation",
+        capture: false,
         title,
         summary,
         access,
