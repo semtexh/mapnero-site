@@ -19,6 +19,28 @@
     hi: ["लाइव Team Session चलाएँ", "स्थायी संगठन साझाकरण से अलग रखते हुए फील्ड समूह के लिए अस्थायी लाइव मानचित्र सत्र बनाएँ।", "होस्ट: Team · शामिल: Core, Pro या Team", "Team Session अस्थायी है। किसी लेयर को संगठन के साथ साझा करना अलग, स्थायी ऑनलाइन कार्यप्रवाह है। Free खाते Team Session में शामिल नहीं हो सकते।", [["सत्र बनाएँ", "फोन या टैबलेट पर Team खोलें और Create session चुनें। Team खाता होस्ट कर सकता है। संगठन वैकल्पिक है; केवल संगठन का सत्र होने पर उसे जोड़ें।"], ["पहुँच विवरण तय करें", "सत्र को स्पष्ट फील्ड नाम दें, कोड या पासवर्ड चुनें और मानचित्र पर दिखने वाला नाम तय करें। कोड या QR केवल आमंत्रित प्रतिभागियों को भेजें।"], ["सुरक्षित रूप से शामिल हों और समाप्त करें", "हर प्रतिभागी Join session चुनता है या QR स्कैन करता है, फिर कोड, पासवर्ड और दिखने वाला नाम दर्ज करता है। Core, Pro और Team खाते शामिल हो सकते हैं। फील्ड कार्य के बाद होस्ट सत्र समाप्त करे और कोड दोबारा उपयोग न करे।"]], ["स्थायी साझा लेयर कहाँ हैं?", "स्थायी संगठन डेटा के लिए ऑनलाइन रहते हुए लेयर मेनू से Share with organization सक्रिय करें। तैनाती से पहले दूसरे खाते से नए परीक्षण रिकॉर्ड की जाँच करें।"]]
   };
 
+  // The host chooses a password, not a session code. TeamSessionManager creates
+  // the code after successful creation and the host then shares both values.
+  // Keep this source-of-truth wording explicit in every guide language.
+  const generatedCodeStep = {
+    en: "Give the session a clear field name and set the name that will appear on the map. Choose a session password; MapNero generates the session code after creation. Send the generated code and password only to invited participants.",
+    tr: "Oturuma anlaşılır bir saha adı ve haritada görünecek adı verin. Bir oturum parolası belirleyin; MapNero oturum oluşturulduktan sonra kodu üretir. Oluşan kodu ve parolayı yalnız davetli katılımcılarla paylaşın.",
+    de: "Geben Sie der Sitzung einen eindeutigen Feldnamen und legen Sie den auf der Karte sichtbaren Namen fest. Legen Sie ein Sitzungspasswort fest; MapNero erzeugt den Sitzungscode nach dem Erstellen. Senden Sie den erzeugten Code und das Passwort nur an eingeladene Teilnehmende.",
+    es: "Dé a la sesión un nombre de campo claro y establezca el nombre que aparecerá en el mapa. Elija una contraseña de sesión; MapNero genera el código de sesión después de crearla. Envíe el código generado y la contraseña únicamente a participantes invitados.",
+    fr: "Donnez à la session un nom terrain explicite et définissez le nom affiché sur la carte. Choisissez un mot de passe de session ; MapNero génère le code de session après sa création. N’envoyez le code généré et le mot de passe qu’aux personnes invitées.",
+    it: "Assegna alla sessione un chiaro nome sul campo e imposta il nome mostrato sulla mappa. Scegli una password per la sessione; MapNero genera il codice della sessione dopo la creazione. Invia il codice generato e la password solo ai partecipanti invitati.",
+    pt: "Dê à sessão um nome de campo claro e defina o nome visível no mapa. Escolha uma palavra-passe da sessão; o MapNero gera o código da sessão após a criação. Envie o código gerado e a palavra-passe apenas aos participantes convidados.",
+    ru: "Дайте сессии понятное полевое название и задайте отображаемое на карте имя. Выберите пароль сессии; MapNero создаст код сессии после её создания. Отправляйте созданный код и пароль только приглашённым участникам.",
+    uk: "Дайте сесії зрозумілу польову назву й задайте ім’я, видиме на карті. Оберіть пароль сесії; MapNero створить код сесії після її створення. Надсилайте створений код і пароль лише запрошеним учасникам.",
+    ar: "امنح الجلسة اسمًا ميدانيًا واضحًا وحدد الاسم الذي يظهر على الخريطة. اختر كلمة مرور للجلسة؛ ينشئ MapNero رمز الجلسة بعد إنشائها. أرسل الرمز المُنشأ وكلمة المرور إلى المشاركين المدعوين فقط.",
+    ur: "session کو واضح field name دیں اور نقشے پر نظر آنے والا نام طے کریں۔ session کا password منتخب کریں؛ MapNero بننے کے بعد session code پیدا کرتا ہے۔ پیدا شدہ code اور password صرف invited participants کو بھیجیں۔",
+    hi: "सत्र को स्पष्ट फील्ड नाम दें और मानचित्र पर दिखने वाला नाम तय करें। सत्र का पासवर्ड चुनें; MapNero सत्र बनने के बाद उसका कोड बनाता है। बना हुआ कोड और पासवर्ड केवल आमंत्रित प्रतिभागियों को भेजें।"
+  };
+
+  for (const [id, body] of Object.entries(generatedCodeStep)) {
+    content[id][4][1][1] = body;
+  }
+
   // Android captures exist only for the locales listed below. Never reuse one
   // language's field screen for another: show the localized written workflow
   // until its own clean capture is available.

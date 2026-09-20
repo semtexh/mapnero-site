@@ -36,6 +36,26 @@ test('Team Session guide keeps host and participant access explicit in every loc
   }
 });
 
+test('Team Session host guidance says that MapNero generates the session code', () => {
+  const window = loadGuideData();
+  for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
+    for (const platform of ['apple', 'android']) {
+      const topic = window.MAPNERO_GUIDES[id].platforms[platform].topics
+        .find((candidate) => candidate.id === 'team-session');
+      const accessStep = topic.steps[1].body;
+      assert.ok(accessStep.length > 80, id + ':' + platform + ':host guidance');
+      assert.doesNotMatch(
+        accessStep,
+        /choose a code or password/i,
+        id + ':' + platform + ':stale host rule'
+      );
+    }
+  }
+  const english = window.MAPNERO_GUIDES.en.platforms.apple.topics
+    .find((candidate) => candidate.id === 'team-session');
+  assert.match(english.steps[1].body, /generates the session code after creation/i);
+});
+
 test('verified Apple Team Session entry captures are localized full-device PNGs', () => {
   const window = loadGuideData();
   const hashes = new Set();
