@@ -42,7 +42,23 @@ test('organization administration gives each supported locale a complete first-a
 
   const english = window.MAPNERO_GUIDES.en.platforms.web.topics
     .find((topic) => topic.id === 'organization-admin');
-  assert.match(english.steps[2].body, /6-digit code/i);
+  assert.match(english.steps[2].body, /invitation code from the email/i);
+  assert.match(english.steps[2].body, /Account & Access/i);
   assert.match(english.steps[2].body, /password/i);
-  assert.match(english.steps[2].body, /web workspace/i);
+  assert.match(english.steps[2].body, /app\.mapnero\.com/i);
+  assert.doesNotMatch(english.steps[2].body, /enter the 6-digit code/i);
+
+  const ukrainian = window.MAPNERO_GUIDES.uk.platforms.web.topics
+    .find((topic) => topic.id === 'organization-admin');
+  assert.match(ukrainian.steps[2].body, /код запрошення з листа/i);
+  assert.doesNotMatch(ukrainian.steps[2].body, /шестизначний код/i);
+});
+
+test('Ukrainian quick start uses the mobile invite, Team and template controls', () => {
+  const html = fs.readFileSync(path.join(root, 'ukraine-team-trial.html'), 'utf8');
+  assert.match(html, /Налаштування → Обліковий запис і доступ → Організація/);
+  assert.match(html, /Налаштування → Відстеження команди/);
+  assert.match(html, /MapNero створить код доступу після створення сесії/);
+  assert.match(html, /кнопками вгору\/вниз/);
+  assert.doesNotMatch(html, /Перетягніть поля/);
 });

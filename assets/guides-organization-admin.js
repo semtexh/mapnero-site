@@ -18,10 +18,32 @@
     hi: ["एक संगठन का प्रबंधन करें", "सही लोगों को आमंत्रित करें, भूमिकाएँ सावधानी से चुनें और तैनाती से पहले स्थायी फील्ड लेयरों की जाँच करें।", "संगठन स्वामी या व्यवस्थापक", "वेब कार्यस्थान मौजूदा आमंत्रित खाते में साइन इन करता है। यह बिना आमंत्रण वाले ईमेल के लिए संगठन खाता नहीं बनाता।", [["Administration खोलें", "आमंत्रित ईमेल से app.mapnero.com में साइन इन करें, फिर बाएँ नेविगेशन में Administration खोलें। यह क्षेत्र केवल संगठन स्वामियों और व्यवस्थापकों के लिए उपलब्ध है।"], ["न्यूनतम भूमिका के साथ आमंत्रित करें", "Invite by email में साथी का ईमेल दर्ज करें। केवल पढ़ने के लिए Viewer, सामान्य फील्ड कार्य के लिए Member, और केवल विश्वसनीय प्रबंधक के लिए Administrator चुनें। निमंत्रण और सीटों की संख्या की पुष्टि करें।"], ["मोबाइल पर पहला एक्सेस पूरा करें", "नया आमंत्रित व्यक्ति उसी ईमेल से iPhone, iPad या Android पर MapNero खोलता है। खाता सेटअप पूरा करें, ईमेल से आया छह अंकों का कोड दर्ज करें और फिर पासवर्ड चुनें। वही ईमेल और पासवर्ड वेब कार्यस्थान में भी काम करते हैं।"], ["एक्सेस की समीक्षा और हटाएँ", "अप्रयुक्त निमंत्रण रद्द करने के लिए लंबित सूची का उपयोग करें। सदस्य सूची में Manage से भूमिका बदलें या व्यक्ति हटाएँ, इससे पहले कि कोई डिवाइस या खाता परियोजना छोड़े।"]], ["संगठन खाली क्यों है?", "सदस्यता व्यक्तिगत फील्ड लेयरों को अपने आप प्रकाशित नहीं करती। मोबाइल पर ऑनलाइन रहते हुए लेयर मेनू से Share with organization सक्षम करें, फिर दूसरे खाते से परीक्षण रिकॉर्ड की जाँच करें।"]]
   };
 
+  // The emailed organization invitation is not the six-digit sign-in OTP.
+  // Both mobile clients ask for the invitation code, invited email, chosen
+  // password and display name in their Organization join form. An email
+  // verification prompt is only a separate fallback when the app requests it.
+  const invitedColleagueStep = {
+    en: "On iPhone, iPad or Android, open the invitation email, then open Organization under Account & Access in MapNero. Enter the invitation code from the email, the same email address, a password you choose and your display name; confirm the join. Use that email and password later at app.mapnero.com. If the app separately asks for email verification, follow its prompt; the sign-in code is not the organization invitation code.",
+    tr: "Davetli kişi iPhone, iPad veya Android'de davet e-postasını açar; MapNero'da Hesap ve Erişim altındaki Organizasyon/Kuruluş bölümüne gider. E-postadaki organizasyon davet kodunu, davetin geldiği e-postayı, seçtiği parolayı ve görünen adını girip katılımı onaylar. Daha sonra aynı e-posta ve parolayla app.mapnero.com'a girer. Uygulama ayrıca e-posta doğrulaması isterse ekrandaki adımları izler; giriş kodu organizasyon davet kodu değildir.",
+    ar: "يفتح المدعو رسالة الدعوة على iPhone أو iPad أو Android، ثم يفتح المؤسسة ضمن الحساب والوصول في MapNero. يُدخل رمز دعوة المؤسسة من الرسالة، وعنوان البريد المدعو نفسه، وكلمة مرور يختارها، واسمه الظاهر، ثم يؤكد الانضمام. يستخدم البريد وكلمة المرور نفسيهما لاحقًا في app.mapnero.com. إذا طلب التطبيق تحققًا منفصلًا من البريد، فاتبع التعليمات؛ رمز تسجيل الدخول ليس رمز دعوة المؤسسة.",
+    de: "Die eingeladene Person öffnet die Einladungs-E-Mail auf iPhone, iPad oder Android und in MapNero unter Konto & Zugriff den Bereich Organisation. Dort gibt sie den Organisations-Einladungscode aus der E-Mail, dieselbe E-Mail-Adresse, ein selbst gewähltes Passwort und ihren Anzeigenamen ein und bestätigt den Beitritt. Danach gelten E-Mail-Adresse und Passwort auch für app.mapnero.com. Falls die App zusätzlich eine E-Mail-Bestätigung verlangt, folgen Sie dieser Aufforderung; der Anmeldecode ist nicht der Organisations-Einladungscode.",
+    es: "La persona invitada abre el correo de invitación en iPhone, iPad o Android y entra en Organización desde Cuenta y acceso en MapNero. Introduce el código de invitación del correo, la misma dirección de correo, una contraseña elegida por ella y su nombre visible; después confirma la incorporación. Más adelante usa ese correo y contraseña en app.mapnero.com. Si la app solicita aparte verificar el correo, siga ese paso: el código de acceso no es el código de invitación a la organización.",
+    fr: "La personne invitée ouvre l’e-mail d’invitation sur iPhone, iPad ou Android, puis Organisation dans Compte et accès de MapNero. Elle saisit le code d’invitation reçu, la même adresse e-mail, le mot de passe de son choix et son nom affiché, puis confirme son adhésion. Cette adresse et ce mot de passe servent ensuite sur app.mapnero.com. Si l’app demande séparément une vérification de l’e-mail, suivez cette étape : le code de connexion n’est pas le code d’invitation à l’organisation.",
+    hi: "आमंत्रित व्यक्ति iPhone, iPad या Android पर निमंत्रण ईमेल खोलता है, फिर MapNero में खाता और पहुँच के अंतर्गत संगठन खोलता है। ईमेल में मिला संगठन निमंत्रण कोड, वही ईमेल पता, अपना चुना हुआ पासवर्ड और प्रदर्शित नाम दर्ज करके जुड़ने की पुष्टि करें। बाद में app.mapnero.com पर उसी ईमेल और पासवर्ड से प्रवेश करें। यदि ऐप अलग से ईमेल सत्यापन माँगे तो वह चरण पूरा करें; साइन-इन कोड संगठन निमंत्रण कोड नहीं है।",
+    it: "La persona invitata apre l’e-mail d’invito su iPhone, iPad o Android, poi apre Organizzazione in Account e accesso di MapNero. Inserisce il codice d’invito ricevuto, lo stesso indirizzo e-mail, una password scelta da lei e il nome visualizzato, quindi conferma l’adesione. In seguito usa quell’e-mail e password su app.mapnero.com. Se l’app chiede separatamente di verificare l’e-mail, segua la richiesta: il codice di accesso non è il codice d’invito dell’organizzazione.",
+    pt: "A pessoa convidada abre o e-mail de convite no iPhone, iPad ou Android e entra em Organização a partir de Conta e acesso no MapNero. Introduz o código do convite recebido, o mesmo endereço de e-mail, uma palavra-passe à sua escolha e o nome visível; depois confirma a adesão. Mais tarde usa esse e-mail e palavra-passe em app.mapnero.com. Se a aplicação pedir separadamente a verificação do e-mail, siga esse passo: o código de início de sessão não é o código do convite da organização.",
+    ru: "Приглашённый сотрудник открывает письмо на iPhone, iPad или Android, затем в MapNero переходит в раздел организации через «Аккаунт и доступ». Он вводит код приглашения из письма, тот же адрес электронной почты, выбранный им пароль и отображаемое имя, после чего подтверждает вступление. Позже тот же адрес и пароль используются на app.mapnero.com. Если приложение отдельно запросит подтверждение почты, выполните этот шаг: код входа не является кодом приглашения в организацию.",
+    uk: "Запрошена людина відкриває лист на iPhone, iPad або Android, а в MapNero переходить до розділу «Організація» через «Обліковий запис і доступ». Вона вводить код запрошення з листа, ту саму адресу електронної пошти, обраний нею пароль і своє відображуване ім’я, а потім підтверджує приєднання. Надалі ті самі адреса й пароль працюють на app.mapnero.com. Якщо застосунок окремо попросить підтвердити пошту, виконайте цей крок: код входу не є кодом запрошення до організації.",
+    ur: "مدعو شخص iPhone، iPad یا Android پر دعوتی ای میل کھولے، پھر MapNero میں اکاؤنٹ اور رسائی کے تحت تنظیم کا حصہ کھولے۔ ای میل میں دیا گیا تنظیم کا دعوتی کوڈ، وہی ای میل پتہ، اپنی منتخب کردہ پاس ورڈ اور ظاہر ہونے والا نام درج کر کے شمولیت کی تصدیق کرے۔ بعد میں اسی ای میل اور پاس ورڈ سے app.mapnero.com میں داخل ہو۔ اگر ایپ الگ سے ای میل کی تصدیق مانگے تو وہ مرحلہ مکمل کریں؛ سائن اِن کوڈ تنظیم کا دعوتی کوڈ نہیں ہے۔"
+  };
+
   for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
     const entry = content[id];
     if (!entry) throw new Error("Missing organization administration guide: " + id);
     const [title, summary, access, note, steps, tip] = entry;
+    if (!invitedColleagueStep[id]) throw new Error("Missing organization invite step: " + id);
+    const currentSteps = steps.map(([stepTitle, body]) => ({ title: stepTitle, body }));
+    currentSteps[2].body = invitedColleagueStep[id];
     window.MAPNERO_GUIDES[id].platforms.web.topics.push({
       id: "organization-admin",
       // Administration is a text-led web workflow. Do not request a fictional
@@ -31,7 +53,7 @@
       summary,
       access,
       note,
-      steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
+      steps: currentSteps,
       tips: [{ q: tip[0], a: tip[1] }]
     });
   }
