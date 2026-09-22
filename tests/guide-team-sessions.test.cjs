@@ -36,6 +36,24 @@ test('Team Session guide keeps host and participant access explicit in every loc
   }
 });
 
+test('Team Session entry names the actual Settings row on each platform', () => {
+  const window = loadGuideData();
+  for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
+    for (const platform of ['apple', 'android']) {
+      const topic = window.MAPNERO_GUIDES[id].platforms[platform].topics
+        .find((candidate) => candidate.id === 'team-session');
+      assert.match(topic.steps[0].body, /→/, `${id}:${platform}:settings path`);
+    }
+  }
+  const getEntry = (id, platform) => window.MAPNERO_GUIDES[id].platforms[platform].topics
+    .find((candidate) => candidate.id === 'team-session').steps[0].body;
+  assert.match(getEntry('en', 'apple'), /^Settings → Team Tracking\./);
+  assert.match(getEntry('en', 'android'), /^Settings → Team Tracking\./);
+  assert.match(getEntry('tr', 'apple'), /^Ayarlar → Takım Takibi\./);
+  assert.match(getEntry('tr', 'android'), /^Ayarlar → Ekip Takibi\./);
+  assert.notEqual(getEntry('es', 'apple').split('.')[0], getEntry('es', 'android').split('.')[0]);
+});
+
 test('Team Session host guidance says that MapNero generates the session code', () => {
   const window = loadGuideData();
   for (const { id } of window.MAPNERO_GUIDE_LOCALES) {

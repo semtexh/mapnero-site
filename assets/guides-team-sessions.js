@@ -41,6 +41,23 @@
     content[id][4][1][1] = body;
   }
 
+  // Use the actual Settings row labels from each mobile app. The row is not
+  // named simply "Team" and several locales differ between Apple and Android.
+  const settingsPath = {
+    en: { apple: "Settings → Team Tracking", android: "Settings → Team Tracking" },
+    tr: { apple: "Ayarlar → Takım Takibi", android: "Ayarlar → Ekip Takibi" },
+    ar: { apple: "الإعدادات → تتبع الفريق", android: "الإعدادات → تتبع الفريق" },
+    de: { apple: "Einstellungen → Team-Tracking", android: "Einstellungen → Team-Tracking" },
+    es: { apple: "Ajustes → Seguimiento de equipo", android: "Ajustes → Seguimiento del equipo" },
+    fr: { apple: "Paramètres → Suivi d'équipe", android: "Paramètres → Suivi d’équipe" },
+    hi: { apple: "सेटिंग्स → टीम ट्रैकिंग", android: "सेटिंग्स → टीम ट्रैकिंग" },
+    it: { apple: "Impostazioni → Tracciamento squadra", android: "Impostazioni → Monitoraggio del team" },
+    pt: { apple: "Configurações → Rastreamento de equipe", android: "Configurações → Rastreio da equipa" },
+    ru: { apple: "Настройки → Трекинг команды", android: "Настройки → Отслеживание команды" },
+    uk: { apple: "Налаштування → Відстеження команди", android: "Налаштування → Відстеження команди" },
+    ur: { apple: "ترتیبات → ٹیم ٹریکنگ", android: "ترتیبات → ٹیم ٹریکنگ" }
+  };
+
   // Android captures exist only for the locales listed below. Never reuse one
   // language's field screen for another: show the localized written workflow
   // until its own clean capture is available.
@@ -51,6 +68,8 @@
     if (!entry) throw new Error("Missing Team Session guide: " + id);
     const [title, summary, access, note, steps, tip] = entry;
     for (const platform of ["apple", "android"]) {
+      const path = settingsPath[id]?.[platform];
+      if (!path) throw new Error("Missing Team Settings path: " + id + ":" + platform);
       const topic = {
         id: "team-session",
         title,
@@ -60,6 +79,7 @@
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }]
       };
+      topic.steps[0].body = `${path}. ${topic.steps[0].body}`;
       if (platform === "android" && !androidCaptureLocales.has(id)) {
         topic.capture = false;
       }
