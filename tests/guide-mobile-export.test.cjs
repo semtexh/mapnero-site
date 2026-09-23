@@ -24,6 +24,9 @@ test('mobile export guidance is localized once per mobile platform', () => {
       assert.equal(matches[0].steps.length, 3, `${id}:${platform}:steps`);
       assert.equal(matches[0].tips.length, 1, `${id}:${platform}:tip`);
       assert.ok(matches[0].access.includes('Geo'), `${id}:${platform}:tier-boundary`);
+      assert.ok(matches[0].access.includes('Core+'), `${id}:${platform}:link-tier`);
+      assert.ok(matches[0].access.includes('Pro+'), `${id}:${platform}:advanced-export-tier`);
+      assert.ok(matches[0].access.endsWith('Core+'), `${id}:${platform}:separate-link-gate`);
     }
   }
 });

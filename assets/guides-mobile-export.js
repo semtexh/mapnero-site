@@ -18,12 +18,24 @@
     ur: ["فیلڈ ڈیٹا ایکسپورٹ اور محفوظ طریقے سے شیئر کریں", "درست فائل فارمیٹ منتخب کریں، نتیجہ چیک کریں اور لنک صرف تب استعمال کریں جب عوامی ڈاؤن لوڈ مناسب ہو۔", "KML/GPX/CSV/KMZ: مفت · GeoPDF/GeoTIFF: Core+ · SHP/GPKG/DXF/QGIS: Pro+", "Share via Link کے لیے انٹرنیٹ درکار ہے۔ لنک رکھنے والا ہر شخص میعاد ختم ہونے تک فائل ڈاؤن لوڈ کر سکتا ہے؛ رسائی ختم کرنے کے لیے My Shared Links سے ہٹا دیں۔", [["ایکسپورٹ کا ڈیٹا منتخب کریں", "layer، track، map یا report کھول کر Export منتخب کریں۔ صرف بھیجے جانے والے records منتخب کریں؛ recorded track کے لیے GPX اور vector features کے لیے GIS format استعمال کریں۔"], ["مطابق فارمیٹ منتخب کریں", "KML، GPX، CSV اور KMZ مفت ہیں۔ GeoPDF اور GeoTIFF کے لیے Core+ چاہیے۔ Shapefile، GeoPackage، DXF اور QGIS/QField bundle کے لیے Pro+ چاہیے۔"], ["چیک اور بھیجیں", "فائل بنانے سے پہلے layers، attributes، coordinates اور attachments چیک کریں۔ مقامی فائل کے لیے system share sheet استعمال کریں، یا Share via Link صرف جب عارضی عوامی ڈاؤن لوڈ مناسب ہو۔"]], ["کیا لنک واپس لیا جا سکتا ہے؟", "ہاں۔ Settings → My Shared Links کھول کر لنک ہٹا دیں۔ اس سے آئندہ downloads رک جائیں گے، مگر پہلے ڈاؤن لوڈ کی ہوئی فائل واپس نہیں آتی۔"]]
   };
 
+  // A local file export and the separate public-link upload have different
+  // access gates on both mobile clients. Keep the boundary visible in every
+  // locale so Free users are not sent into an unavailable link workflow.
+  const linkAccess = {
+    en: "Share via Link: Core+", tr: "Link ile Paylaş: Core+",
+    ar: "المشاركة عبر رابط: Core+", de: "Teilen per Link: Core+",
+    es: "Compartir mediante enlace: Core+", fr: "Partager par lien : Core+",
+    hi: "लिंक से शेयर करें: Core+", it: "Condividi tramite link: Core+",
+    pt: "Partilhar por ligação: Core+", ru: "Поделиться по ссылке: Core+",
+    uk: "Поділитися посиланням: Core+", ur: "لنک کے ذریعے شیئر کریں: Core+"
+  };
+
   for (const { id } of window.MAPNERO_GUIDE_LOCALES) {
     const [title, summary, access, note, steps, tip] = content[id] || [];
-    if (!title) throw new Error("Missing mobile export guide: " + id);
+    if (!title || !linkAccess[id]) throw new Error("Missing mobile export guide: " + id);
     for (const platform of ["apple", "android"]) {
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
-        id: "mobile-export", title, summary, access, note,
+        id: "mobile-export", title, summary, access: `${access} · ${linkAccess[id]}`, note,
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }]
       });
