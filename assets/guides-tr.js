@@ -102,8 +102,8 @@
             summary: "Mobil bağlantı veya Wi-Fi alanından ayrılmadan önce bir harita bölgesi hazırlayın.",
             access: "1 bölge Ücretsiz · Core+ ile sınırsız",
             steps: [
-              ["Çevrimdışı Haritalar’ı açın", "Daha Fazla veya Kütüphane’den çevrimdışı indirme ekranını açın."],
-              ["Çalışma alanını çerçeveleyin", "Gerekli saha alanı seçimin içinde kalana kadar haritayı taşıyıp yakınlaştırın."],
+              ["Çevrimdışı Haritalar’ı açın", "Temel Harita’da önce saha alanına taşıyıp yakınlaştırın. Ardından harita denetimlerindeki Çevrimdışı Haritalar’a dokunun; gerekirse Daha Fazla’yı açın."],
+              ["Çalışma alanını çerçeveleyin", "İndirme, Çevrimdışı Haritalar açıldığındaki görünen Temel Harita alanını kullanır. Yanlışsa ekranı kapatın, haritayı ayarlayıp yeniden açın."],
               ["Ayrıntıyı seçip indirin", "Yakınlaştırma aralığını seçin, tahmini boyutu kontrol edin ve çevrimiçiyken indirmeyi başlatın."],
               ["Sahaya çıkmadan deneyin", "Uçak Modu’nu açın, bölgeyi yeniden açın ve gerekli yakınlaştırma düzeylerinin göründüğünü doğrulayın."]
             ],
@@ -228,8 +228,8 @@
             summary: "Saha çalışmasından önce bölgeyi kaydedin ve bağlantısız çalıştığını doğrulayın.",
             access: "Ücretsiz sınır · Core+ ile sınırsız",
             steps: [
-              ["Çevrimdışı Haritalar’ı açın", "Daha Fazla’yı veya harita ekranındaki çevrimdışı denetimini kullanın."],
-              ["Alanı seçin", "Saha alanını çerçeveleyip çalışma için gereken yakınlaştırma düzeylerini seçin."],
+              ["Çevrimdışı Haritalar’ı açın", "Temel Harita’da önce saha alanına taşıyıp yakınlaştırın. Ardından harita denetimlerindeki Çevrimdışı Haritalar’ı veya Daha Fazla’yı kullanın."],
+              ["Alanı seçin", "İndirme, Çevrimdışı Haritalar açıldığındaki görünen Temel Harita alanını kullanır. Yanlışsa ekranı kapatın, haritayı ayarlayıp yeniden açın."],
               ["Çevrimiçiyken indirin", "Tahmini boyutu kontrol edin, indirmeyi başlatıp tamamlanmasını bekleyin."],
               ["Uçak Modu’nda deneyin", "Ağı kapatın, bölgeyi yeniden açın ve gereken düzeylerde yakınlaştırın."]
             ],

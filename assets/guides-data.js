@@ -140,8 +140,8 @@ window.MAPNERO_GUIDES = {
             summary: "Prepare a map region before leaving mobile or Wi-Fi coverage.",
             access: "1 region Free · unlimited Core+",
             steps: [
-              { title: "Open Offline Maps", body: "From More or the Library, open the offline download screen." },
-              { title: "Frame the work area", body: "Move and zoom the map until the required field area is inside the selection." },
+              { title: "Open Offline Maps", body: "On Base Map, move and zoom to the field area first. Then tap Offline Maps in the map controls; if needed, open More." },
+              { title: "Frame the work area", body: "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again." },
               { title: "Choose detail and download", body: "Select the zoom range, check the estimated size and start the download while online." },
               { title: "Test before leaving", body: "Turn on Airplane Mode, reopen the region and confirm the required zoom levels are visible." }
             ],
@@ -286,8 +286,8 @@ window.MAPNERO_GUIDES = {
             summary: "Save a region before field work and confirm it works without a network.",
             access: "Free limit · unlimited Core+",
             steps: [
-              { title: "Open Offline Maps", body: "Use More or the offline control from the map screen." },
-              { title: "Select the area", body: "Frame the field area and choose the zoom levels needed for your work." },
+              { title: "Open Offline Maps", body: "On Base Map, move and zoom to the field area first. Then use Offline Maps in the map controls or More." },
+              { title: "Select the area", body: "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again." },
               { title: "Download while online", body: "Check estimated size, start the download and wait for completion." },
               { title: "Test in Airplane Mode", body: "Disable the network, reopen the region and zoom through the levels you need." }
             ],
