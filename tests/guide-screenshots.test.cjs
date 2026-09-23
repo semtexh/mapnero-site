@@ -51,6 +51,50 @@ for (const topic of ['import-map', 'quick-start', 'measure-cogo-buffer', 'locati
   assert.equal(hashes.size, 12);
 });
 const source = fs.readFileSync(path.join(root, 'assets/guides.js'), 'utf8');
+const localeSelection = source.slice(source.indexOf('  function selectInitialLocale()'), source.indexOf('  function readHash()'));
+test('an app language deep link overrides a different saved browser language', () => {
+  const context = {
+    URLSearchParams,
+    window: {location: {search: '?lang=uk'}},
+    navigator: {language: 'de-DE'},
+    guides: {en: {}, de: {}, tr: {}, uk: {}},
+    STORAGE: {locale: 'guide-locale'},
+    storageGet: () => 'tr',
+  };
+  vm.createContext(context);
+  vm.runInContext(`${localeSelection}; result = selectInitialLocale();`, context);
+  assert.equal(context.result, 'uk');
+});
+test('an unsupported deep-link language falls back to the saved guide language', () => {
+  const context = {
+    URLSearchParams,
+    window: {location: {search: '?lang=xx'}},
+    navigator: {language: 'de-DE'},
+    guides: {en: {}, de: {}, tr: {}},
+    STORAGE: {locale: 'guide-locale'},
+    storageGet: () => 'tr',
+  };
+  vm.createContext(context);
+  vm.runInContext(`${localeSelection}; result = selectInitialLocale();`, context);
+  assert.equal(context.result, 'tr');
+});
+test('changing guide language updates a copied app deep link', () => {
+  let copiedUrl;
+  const localeSwitcher = source.slice(source.indexOf('  function setLocale(nextLocale)'), source.indexOf('  function setPlatform(nextPlatform'));
+  const context = {
+    URL,
+    guides: {tr: {}, de: {}},
+    locale: 'tr',
+    STORAGE: {locale: 'guide-locale'},
+    storageSet: () => {},
+    render: () => {},
+    window: {location: {href: 'https://www.mapnero.com/guides.html?lang=tr#apple/quick-start'}},
+    history: {replaceState: (_state, _title, url) => { copiedUrl = String(url); }},
+  };
+  vm.createContext(context);
+  vm.runInContext(`${localeSwitcher}; setLocale('de');`, context);
+  assert.equal(copiedUrl, 'https://www.mapnero.com/guides.html?lang=de#apple/quick-start');
+});
 const renderer = source.slice(source.indexOf('  function renderScreenshot(topic)'), source.indexOf('  function showToast(message)'));
 function harness() {
   const requests = [];

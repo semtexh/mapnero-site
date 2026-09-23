@@ -81,6 +81,10 @@
   }
 
   function selectInitialLocale() {
+    // A link opened by the app must use the app's selected language, even if
+    // this browser previously saved a different guide language.
+    const requested = new URLSearchParams(window.location.search).get("lang")?.toLowerCase();
+    if (requested && guides[requested]) return requested;
     const saved = storageGet(STORAGE.locale);
     if (saved && guides[saved]) return saved;
     const browserLocale = (navigator.language || "en").toLowerCase().split("-")[0];
@@ -137,6 +141,9 @@
     if (!guides[nextLocale]) return;
     locale = nextLocale;
     storageSet(STORAGE.locale, locale);
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", locale);
+    history.replaceState(null, "", url);
     render();
   }
 
