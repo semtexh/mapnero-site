@@ -72,3 +72,21 @@ test('verified English Apple Export & Share capture is a full-device PNG', () =>
   assert.equal(bytes.readUInt32BE(16), 1206, 'English Apple Export & Share width');
   assert.equal(bytes.readUInt32BE(20), 2622, 'English Apple Export & Share height');
 });
+
+test('Turkish Apple Export & Share capture is a distinct full-device PNG', () => {
+  const turkish = fs.readFileSync(path.join(
+    root, 'assets', 'guides', 'screenshots', 'apple', 'tr', 'mobile-export.png',
+  ));
+  const english = fs.readFileSync(path.join(
+    root, 'assets', 'guides', 'screenshots', 'apple', 'en', 'mobile-export.png',
+  ));
+  assert.ok(turkish.length > 100000, 'Turkish Apple screenshot is substantial');
+  assert.deepEqual([...turkish.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(turkish.readUInt32BE(16), 1179, 'iPhone 16 screenshot width');
+  assert.equal(turkish.readUInt32BE(20), 2556, 'iPhone 16 screenshot height');
+  assert.notEqual(
+    crypto.createHash('sha256').update(turkish).digest('hex'),
+    crypto.createHash('sha256').update(english).digest('hex'),
+    'Turkish capture is not an English copy',
+  );
+});
