@@ -56,37 +56,19 @@ test('Android mobile export screenshots are real, full-size, and locale-specific
   assert.equal(hashes.size, expectedLocales.length, 'each locale has its own capture');
 });
 
-test('verified English Apple Export & Share capture is a full-device PNG', () => {
-  const file = path.join(
-    root,
-    'assets',
-    'guides',
-    'screenshots',
-    'apple',
-    'en',
-    'mobile-export.png',
-  );
-  const bytes = fs.readFileSync(file);
-  assert.ok(bytes.length > 100000, 'English Apple Export & Share PNG is substantial');
-  assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
-  assert.equal(bytes.readUInt32BE(16), 1206, 'English Apple Export & Share width');
-  assert.equal(bytes.readUInt32BE(20), 2622, 'English Apple Export & Share height');
-});
+test('all twelve Apple Export & Share captures are distinct full-device PNG files', () => {
+  const expectedLocales = ['ar', 'de', 'en', 'es', 'fr', 'hi', 'it', 'pt', 'ru', 'tr', 'uk', 'ur'];
+  const hashes = new Set();
 
-test('Turkish Apple Export & Share capture is a distinct full-device PNG', () => {
-  const turkish = fs.readFileSync(path.join(
-    root, 'assets', 'guides', 'screenshots', 'apple', 'tr', 'mobile-export.png',
-  ));
-  const english = fs.readFileSync(path.join(
-    root, 'assets', 'guides', 'screenshots', 'apple', 'en', 'mobile-export.png',
-  ));
-  assert.ok(turkish.length > 100000, 'Turkish Apple screenshot is substantial');
-  assert.deepEqual([...turkish.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
-  assert.equal(turkish.readUInt32BE(16), 1179, 'iPhone 16 screenshot width');
-  assert.equal(turkish.readUInt32BE(20), 2556, 'iPhone 16 screenshot height');
-  assert.notEqual(
-    crypto.createHash('sha256').update(turkish).digest('hex'),
-    crypto.createHash('sha256').update(english).digest('hex'),
-    'Turkish capture is not an English copy',
-  );
+  for (const locale of expectedLocales) {
+    const file = path.join(root, 'assets', 'guides', 'screenshots', 'apple', locale, 'mobile-export.png');
+    const bytes = fs.readFileSync(file);
+    assert.ok(bytes.length > 100000, `${locale}: substantial PNG`);
+    assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10], `${locale}: PNG`);
+    assert.equal(bytes.readUInt32BE(16), locale === 'en' ? 1206 : 1179, `${locale}: width`);
+    assert.equal(bytes.readUInt32BE(20), locale === 'en' ? 2622 : 2556, `${locale}: height`);
+    hashes.add(crypto.createHash('sha256').update(bytes).digest('hex'));
+  }
+
+  assert.equal(hashes.size, expectedLocales.length, 'each Apple locale has its own capture');
 });
