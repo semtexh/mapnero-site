@@ -3,8 +3,8 @@
   const T = (title, summary, access, steps, tips = [], note) => ({ title, summary, access, steps, tips, ...(note ? { note } : {}) });
 
   const offline = T("Descargar y probar un mapa sin conexión", "Guarde una zona antes del trabajo de campo y compruebe que funciona sin red.", "Límite gratuito · ilimitado con Core+", [
-    ["Abra Mapas sin conexión", "Use Más o el control sin conexión de la pantalla del mapa."],
-    ["Seleccione la zona", "Encuadre la zona de trabajo y elija los niveles de zoom necesarios."],
+    ["Abra Mapas sin conexión", "En el mapa base, primero desplácese y haga zoom hasta el área. Luego abra Mapas sin conexión desde los controles del mapa o Más."],
+    ["Seleccione la zona", "La descarga usa el área visible del mapa base al abrir Mapas sin conexión. Si es incorrecta, cierre la pantalla, ajuste el mapa y vuelva a abrirla."],
     ["Descargue con conexión", "Revise el tamaño estimado, inicie la descarga y espere a que termine."],
     ["Pruebe en modo avión", "Desconecte la red, vuelva a abrir la zona y pruebe todos los niveles de zoom necesarios."]
   ], [["El mapa está vacío en algunos niveles", "Esos niveles quizá no se seleccionaron o no terminaron. Conéctese y descargue de nuevo la zona."]]);
