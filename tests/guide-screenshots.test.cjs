@@ -100,6 +100,14 @@ test('uses the exact language and hides a missing capture', () => {
   assert.equal(context.elements.screenshot.hidden, true);
   assert.equal(requests.length, 2); // no English fallback request
 });
+test('Apple EOD safety topic requests the matching language capture', () => {
+  const {context, requests} = harness();
+  context.locale = 'ur';
+  context.renderScreenshot({id:'eod-safety', title:'EOD safety'});
+  assert.equal(requests[0].src, 'assets/guides/screenshots/apple/ur/eod-safety.png');
+  requests[0].onload();
+  assert.equal(context.elements.screenshot.hidden, false);
+});
 test('a delayed previous-language image cannot replace the current capture', () => {
   const {context, requests} = harness();
   context.renderScreenshot({id:'import-map',title:'Turkish'});
@@ -235,6 +243,17 @@ for (const topic of ['quick-start', 'import-map', 'photo-georeference', 'team-gn
     assert.equal(data.subarray(1,4).toString(), 'PNG');
     assert.equal(data.readUInt32BE(16), 1206);
     assert.equal(data.readUInt32BE(20), 2622);
+    hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
+  }
+  assert.equal(hashes.size, 12);
+});
+test('all twelve Apple EOD safety captures are distinct full-resolution simulator PNG files', () => {
+  const hashes = new Set();
+  for (const locale of ['en','tr','ar','de','es','fr','hi','it','pt','ru','uk','ur']) {
+    const data = fs.readFileSync(path.join(root, `assets/guides/screenshots/apple/${locale}/eod-safety.png`));
+    assert.equal(data.subarray(1,4).toString(), 'PNG', locale);
+    assert.equal(data.readUInt32BE(16), 1179, locale);
+    assert.equal(data.readUInt32BE(20), 2556, locale);
     hashes.add(require('node:crypto').createHash('sha256').update(data).digest('hex'));
   }
   assert.equal(hashes.size, 12);
