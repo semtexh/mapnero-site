@@ -117,18 +117,18 @@
         ], [["¿Un GLO 2 puede servir a dos teléfonos?", "Depende del receptor. Empareje cada dispositivo según su manual y confirme la posición externa antes de grabar."]]),
         "eod-safety": safety
       }},
-      web: { label: "Web GIS", description: "Espacio de la organización", topics: {
-        "sign-in": T("Iniciar sesión y abrir el espacio", "Use la cuenta de su organización para abrir el panel y GIS.", "Acceso de organización", [
-          ["Abra app.mapnero.com", "Elija Iniciar sesión e introduzca el correo asociado a su organización."],
+      web: { label: "Web GIS", description: "Espacio personal y de organización", topics: {
+        "sign-in": T("Iniciar sesión y abrir el espacio", "Las cuentas Pro y Team pueden usar su propio espacio GIS; la organización es opcional.", "Pro o Team · organización opcional", [
+          ["Abra app.mapnero.com", "Elija Iniciar sesión e introduzca el correo de su cuenta MapNero. Use la misma cuenta que en móvil para ver sus capas."],
           ["Introduzca el código", "Use el código de seis dígitos recibido por correo. No lo comparta."],
-          ["Abra GIS · Capas", "Desde la navegación izquierda abra el espacio MapLibre GIS y las capas de la organización."]
-        ], [["No veo la organización", "Confirme que se invitó el mismo correo y pida al administrador que revise su membresía."]]),
-        "layers-features": T("Ver capas e inspeccionar entidades", "Controle la visibilidad, seleccione entidades y revise atributos.", "Acceso de organización", [
+          ["Abra GIS · Capas", "Desde la navegación izquierda abra MapLibre GIS. Sus capas son privadas por defecto; las capas de la organización aparecen cuando se comparten con usted."]
+        ], [["No veo la organización", "Puede trabajar con sus propias capas. Para ver las de la organización, confirme el correo invitado y pida al administrador que revise su membresía."]]),
+        "layers-features": T("Ver capas e inspeccionar entidades", "Controle la visibilidad, seleccione entidades y revise atributos.", "Pro o Team", [
           ["Elija mapa base", "Seleccione Estándar, OSM, Satélite, Híbrido, Topográfico u Oscuro."],
-          ["Active capas", "En el panel active las capas necesarias."],
+          ["Active capas", "En el panel active sus capas o las capas compartidas por una organización."],
           ["Inspeccione una entidad", "Haga clic en un punto, línea o polígono para abrir su tarjeta y atributos."],
           ["Use la tabla", "Abra la tabla para buscar, filtrar e inspeccionar registros."]
-        ], [["El mapa dice que aún no hay capas", "Un usuario móvil debe activar Compartir con la organización y dejar que termine la sincronización."]]),
+        ], [["El mapa dice que aún no hay capas", "Cree o importe una capa privada en web o móvil. Comparta con la organización solo si quiere dar acceso al equipo."]]),
         "import-export": T("Importar o exportar datos GIS", "Revise los archivos antes de escribirlos y exporte en formatos comunes.", "Importar requiere rol de escritura", [
           ["Inicie una importación", "En GIS elija Importar y seleccione GeoJSON, KML, GPX o Shapefile ZIP."],
           ["Revise el resumen", "Compruebe geometría, coordenadas y omisiones. No se escribe nada hasta confirmar."],
@@ -162,7 +162,7 @@
         "web-limits": T("Saber qué corresponde al móvil", "Use Web GIS para ver, editar e informar; las apps móviles para tracks y mapas base descargados.", "Todos los usuarios web", [
           ["Grabe tracks en móvil", "Web GIS no graba GPS ni conecta receptores GNSS externos."],
           ["Descargue mapas base en móvil", "El offline web es una instantánea GIS cifrada, no el descargador móvil."],
-          ["Comparta capas de campo", "Capture en iPhone, iPad o Android y active Compartir con la organización para verlas en web."],
+          ["Continúe sus capas en web", "Las capas de la misma cuenta móvil aparecen en web. Active Compartir con la organización solo para dar acceso al equipo."],
           ["Use web para supervisar", "Inspeccione capas, edite lo permitido, exporte y revise informes en una pantalla grande."]
         ])
       }}

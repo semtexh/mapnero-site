@@ -289,30 +289,30 @@
       },
       web: {
         label: "Web GIS",
-        description: "Kuruluş çalışma alanı",
+        description: "Kişisel ve kuruluş çalışma alanı",
         topics: {
           "sign-in": {
             title: "Giriş yapıp çalışma alanını açın",
-            summary: "Gösterge paneli ve GIS çalışma alanına kuruluş hesabınızla ulaşın.",
-            access: "Kuruluş erişimi",
+            summary: "Pro ve Team hesapları kendi GIS çalışma alanını kullanabilir; kuruluş erişimi isteğe bağlıdır.",
+            access: "Pro veya Team · kuruluş isteğe bağlı",
             steps: [
-              ["app.mapnero.com’u açın", "Giriş’i seçip kuruluşunuza bağlı e-posta adresini girin."],
+              ["app.mapnero.com’u açın", "Giriş’i seçip MapNero hesabınızdaki e-posta adresini girin. Kendi katmanlarınızı görmek için mobildeki aynı hesabı kullanın."],
               ["Tek kullanımlık kodu girin", "E-postanıza gelen altı haneli kodu kullanın. Kodu başka biriyle paylaşmayın."],
-              ["GIS · Katmanlar’ı açın", "Sol menüden MapLibre GIS çalışma alanını ve kuruluş katmanlarını açın."]
+              ["GIS · Katmanlar’ı açın", "Sol menüden MapLibre GIS’i açın. Kendi katmanlarınız varsayılan olarak özeldir; kuruluş katmanları yalnız sizinle paylaşılmışsa görünür."]
             ],
-            tips: [["Kuruluşu göremiyorum", "Aynı e-posta adresinin davet edildiğini doğrulayın ve kuruluş yöneticisinden üyeliğinizi kontrol etmesini isteyin."]]
+            tips: [["Kuruluşu göremiyorum", "Kendi katmanlarınızla yine çalışabilirsiniz. Kuruluş katmanları için aynı e-postanın davet edildiğini doğrulayın ve yöneticiden üyeliğinizi kontrol etmesini isteyin."]]
           },
           "layers-features": {
             title: "Katmanları görüntüleyip objeleri inceleyin",
             summary: "Harita görünürlüğünü yönetin, objeleri seçin ve özniteliklerini inceleyin.",
-            access: "Kuruluş erişimi",
+            access: "Pro veya Team",
             steps: [
               ["Altlık harita seçin", "Göreve uygun Standart, OSM, Uydu, Hibrit, Topografik veya Koyu görünümü seçin."],
-              ["Katmanları açın", "Gereken kuruluş katmanlarını katman panelinden etkinleştirin."],
+              ["Katmanları açın", "Kendi katmanlarınızı veya kuruluşla paylaşılan katmanları katman panelinden etkinleştirin."],
               ["Objeyi inceleyin", "Bilgi kartı ve özniteliklerini açmak için nokta, çizgi veya poligona tıklayın."],
               ["Öznitelik tablosunu kullanın", "Katman kayıtlarını aramak, filtrelemek ve incelemek için tabloyu açın."]
             ],
-            tips: [["Harita Henüz katman yok diyor", "Mobil kullanıcı bir katmanı açıp Kuruluşla Paylaş’ı etkinleştirmeli ve eşitlemenin bitmesini beklemelidir."]]
+            tips: [["Harita Henüz katman yok diyor", "Web veya mobilde özel bir katman oluşturun ya da içe aktarın. Ekip erişimi için yalnız istediğiniz katmanda Kuruluşla Paylaş’ı etkinleştirip eşitlemenin bitmesini bekleyin."]]
           },
           "import-export": {
             title: "GIS verisi içe veya dışa aktarın",
@@ -385,7 +385,7 @@
             steps: [
               ["İzleri mobilde kaydedin", "Web GIS GPS izi kaydetmez ve harici GNSS alıcısıyla eşleşmez."],
               ["Altlık bölgelerini mobilde indirin", "Web çevrimdışı, şifreli GIS anlık kopyasıdır; mobil çevrimdışı harita indiricisi değildir."],
-              ["Saha katmanlarını kuruluşa paylaşın", "iPhone, iPad veya Android’de veri toplayıp katmanın web’de görünmesi için Kuruluşla Paylaş’ı etkinleştirin."],
+              ["Kendi katmanlarınızı webde sürdürün", "Aynı mobil hesaptaki katmanlar webde görünür. Ekip erişimi istiyorsanız yalnız ilgili katmanda Kuruluşla Paylaş’ı etkinleştirin."],
               ["Web’i gözetim için kullanın", "Büyük ekranda katmanları inceleyin, izin verilen GIS objelerini düzenleyin, veri dışa aktarın ve kuruluş raporlarını gözden geçirin."]
             ]
           }

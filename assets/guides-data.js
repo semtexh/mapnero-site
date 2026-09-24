@@ -359,36 +359,36 @@ window.MAPNERO_GUIDES = {
       },
       web: {
         label: "Web GIS",
-        description: "Organization workspace",
+        description: "Personal and organization workspace",
         icon: "W",
         topics: [
           {
             id: "sign-in",
             title: "Sign in and open your workspace",
-            summary: "Use your organization account to reach the dashboard and GIS workspace.",
-            access: "Organization access",
+            summary: "Pro and Team accounts can use their own GIS workspace; organization access is optional.",
+            access: "Pro or Team · organization optional",
             steps: [
-              { title: "Open app.mapnero.com", body: "Choose Login and enter the email connected to your organization." },
+              { title: "Open app.mapnero.com", body: "Choose Login and enter the email for your MapNero account. Use the same account as mobile to see your own layers." },
               { title: "Enter the one-time code", body: "Use the six-digit code sent to your email. Never share it with another person." },
-              { title: "Open GIS · Layers", body: "Use the left navigation to open the MapLibre GIS workspace and organization layers." }
+              { title: "Open GIS · Layers", body: "Use the left navigation to open MapLibre GIS. Your own layers are private by default; organization layers appear only when they are shared with you." }
             ],
             tips: [
-              { q: "I cannot see the organization", a: "Confirm the same email was invited and ask an organization administrator to check your membership." }
+              { q: "I cannot see the organization", a: "You can still work with your own layers. To see organization layers, confirm that the same email was invited and ask an administrator to check membership." }
             ]
           },
           {
             id: "layers-features",
             title: "View layers and inspect features",
             summary: "Control map visibility, select features and review their attributes.",
-            access: "Organization access",
+            access: "Pro or Team",
             steps: [
               { title: "Choose a basemap", body: "Select Standard, OSM, Satellite, Hybrid, Topo or Dark for the current task." },
-              { title: "Turn layers on", body: "Use the layer panel to enable the organization layers you need." },
+              { title: "Turn layers on", body: "Use the layer panel to enable your own layers or layers shared by an organization." },
               { title: "Inspect a feature", body: "Click a point, line or polygon to open its information card and attributes." },
               { title: "Use the attribute table", body: "Open the table to search, filter and inspect the layer’s records." }
             ],
             tips: [
-              { q: "The map says No layers yet", a: "A mobile user must open a layer and enable Share with organization, then allow synchronization to finish." }
+              { q: "The map says No layers yet", a: "Create or import a private layer on web or mobile. To make it visible to a team, explicitly choose Share with organization and let synchronization finish." }
             ]
           },
           {
@@ -472,7 +472,7 @@ window.MAPNERO_GUIDES = {
             steps: [
               { title: "Record tracks on mobile", body: "Web GIS does not record GPS tracks or pair with external GNSS receivers." },
               { title: "Download basemap regions on mobile", body: "Web offline is an encrypted GIS snapshot, not the mobile offline-map downloader." },
-              { title: "Share field layers to the organization", body: "Capture on iPhone, iPad or Android, then enable Share with organization so the layer appears on web." },
+              { title: "Continue your own layers on web", body: "Layers from the same mobile account are available on web. Share with organization only when you want teammates to access a layer." },
               { title: "Use web for oversight", body: "Inspect layers, edit permitted GIS features, export data and review organization reports from a larger screen." }
             ]
           }
