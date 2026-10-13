@@ -27,3 +27,6 @@
 .app-report-table{border-collapse:collapse;width:100%;font:14px system-ui;table-layout:fixed}.app-report-table caption{text-align:left;font-weight:600;padding:12px 0}.app-report-table th,.app-report-table td{padding:10px 4px;border-bottom:1px solid #cbd6c6;text-align:left;overflow-wrap:anywhere;vertical-align:top}.app-report-table th{width:53%;font-weight:500}.app-report-table td{font-variant-numeric:tabular-nums}
 
 .app-import-preview img,.app-import-preview canvas{display:block;max-width:100%;height:auto;max-height:500px;object-fit:contain;margin:14px auto}.app-import-preview dl{font:14px system-ui;overflow-wrap:anywhere}.app-import-preview dt{font-weight:600;margin-top:8px}.app-import-preview dd{margin:4px 0 10px}
+
+.app-store-results{list-style:none;padding:0}.app-store-results li{display:flex;flex-direction:column;gap:7px;padding:14px 0;border-bottom:1px solid #d7e0d2}.app-store-results span{font-size:14px}.app-store-results button{align-self:flex-start;max-width:100%}
+.app-touchpoint[hidden]{display:none}

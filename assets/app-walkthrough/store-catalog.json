@@ -1,0 +1,309 @@
+{
+  "capturedAt": "2026-10-13",
+  "source": "MapNero-authored public template names read from real macOS category screens. Snapshot; no live downloads or ratings.",
+  "categories": [
+    "All",
+    "EOD",
+    "Survey",
+    "Navigation",
+    "Safety",
+    "CBRN",
+    "Medical",
+    "Nature",
+    "Infrastructure",
+    "Agriculture",
+    "SAR",
+    "Environment",
+    "Health",
+    "Heritage",
+    "Humanitarian",
+    "General"
+  ],
+  "templates": [
+    {
+      "name": "Battle Area Clearance Daily Log",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "UXO Site Survey",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "EOD Site Clearance Checklist",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "Render Safe Procedure — Artillery & Mortar",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "IED Incident Report",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "Cluster Munition Survey",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "UXO Demolition Log",
+      "category": "EOD",
+      "author": "MapNero"
+    },
+    {
+      "name": "Non-Technical Survey (NTS)",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Area Survey Form",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Mine Victim Data Collection",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Land Release Quality Control",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Route Survey Form",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Technical Survey Report",
+      "category": "Survey",
+      "author": "MapNero"
+    },
+    {
+      "name": "Patrol Debrief Report",
+      "category": "Navigation",
+      "author": "MapNero"
+    },
+    {
+      "name": "SALUTE / SALT Report",
+      "category": "Navigation",
+      "author": "MapNero"
+    },
+    {
+      "name": "Route Card",
+      "category": "Navigation",
+      "author": "MapNero"
+    },
+    {
+      "name": "Daily Safety Briefing",
+      "category": "Safety",
+      "author": "MapNero"
+    },
+    {
+      "name": "Vehicle Pre-Op Inspection",
+      "category": "Safety",
+      "author": "MapNero"
+    },
+    {
+      "name": "Incident / Near-Miss Report",
+      "category": "Safety",
+      "author": "MapNero"
+    },
+    {
+      "name": "Chemical Agent Survey Form",
+      "category": "CBRN",
+      "author": "MapNero"
+    },
+    {
+      "name": "CBRN Decontamination Procedure",
+      "category": "CBRN",
+      "author": "MapNero"
+    },
+    {
+      "name": "Radiological Monitoring Log",
+      "category": "CBRN",
+      "author": "MapNero"
+    },
+    {
+      "name": "9-Line MEDEVAC Request",
+      "category": "Medical",
+      "author": "MapNero"
+    },
+    {
+      "name": "Field Casualty Card",
+      "category": "Medical",
+      "author": "MapNero"
+    },
+    {
+      "name": "Water Source Quality Assessment",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Wildlife Observation Log",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Fire Observation Report",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Forest Inventory Form",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Trail Condition Assessment",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Habitat Restoration Monitoring",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Invasive Plant Inspection",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Erosion & Landslide Assessment",
+      "category": "Nature",
+      "author": "MapNero"
+    },
+    {
+      "name": "Building Damage Assessment",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Pipeline & Utility Route Survey",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Ground Investigation Form",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Road & Bridge Maintenance Checklist",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Public Asset Inventory & Maintenance",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Accessibility Barrier Survey",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Culvert & Stormwater Inspection",
+      "category": "Infrastructure",
+      "author": "MapNero"
+    },
+    {
+      "name": "Agricultural Parcel Survey",
+      "category": "Agriculture",
+      "author": "MapNero"
+    },
+    {
+      "name": "Irrigation Canal Inspection",
+      "category": "Agriculture",
+      "author": "MapNero"
+    },
+    {
+      "name": "Harvest Yield Record",
+      "category": "Agriculture",
+      "author": "MapNero"
+    },
+    {
+      "name": "SAR Sector Search Log",
+      "category": "SAR",
+      "author": "MapNero"
+    },
+    {
+      "name": "Missing Person Report",
+      "category": "SAR",
+      "author": "MapNero"
+    },
+    {
+      "name": "SAR Daily Operations Report",
+      "category": "SAR",
+      "author": "MapNero"
+    },
+    {
+      "name": "Illegal Dumping Report",
+      "category": "Environment",
+      "author": "MapNero"
+    },
+    {
+      "name": "Environmental Sample Record",
+      "category": "Environment",
+      "author": "MapNero"
+    },
+    {
+      "name": "Field Pollution Survey",
+      "category": "Environment",
+      "author": "MapNero"
+    },
+    {
+      "name": "Beach & Riverbank Litter Survey",
+      "category": "Environment",
+      "author": "MapNero"
+    },
+    {
+      "name": "Disease Outbreak Case Form",
+      "category": "Health",
+      "author": "MapNero"
+    },
+    {
+      "name": "Water & Sanitation Field Assessment",
+      "category": "Health",
+      "author": "MapNero"
+    },
+    {
+      "name": "Archaeological Site Survey",
+      "category": "Heritage",
+      "author": "MapNero"
+    },
+    {
+      "name": "Historic Structure Damage Report",
+      "category": "Heritage",
+      "author": "MapNero"
+    },
+    {
+      "name": "IDP / Refugee Camp Assessment",
+      "category": "Humanitarian",
+      "author": "MapNero"
+    },
+    {
+      "name": "Distribution Point Log",
+      "category": "Humanitarian",
+      "author": "MapNero"
+    },
+    {
+      "name": "Rapid Needs Assessment",
+      "category": "Humanitarian",
+      "author": "MapNero"
+    },
+    {
+      "name": "Field Work Completion Record",
+      "category": "General",
+      "author": "MapNero"
+    }
+  ]
+}
