@@ -588,7 +588,11 @@
         "body": "Add or edit a point, line or polygon in that layer and complete the form. Open the layer’s attribute table to search, filter and review saved records."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/layer-attribute-schema.png",
+      "assets/guides/screenshots/apple/en/layer-schema-builder.png",
+      "assets/guides/screenshots/apple/en/layer-template-binding.png"
+    ]
   },
   {
     "platform": "apple",
