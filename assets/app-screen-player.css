@@ -22,3 +22,4 @@
 /* Compact rows follow the captured sheet; the full-size format selector below
    provides the same choices without overlapping targets on narrow phones. */
 [data-app-frame=export] .app-touchpoint[aria-label^="Select "],[data-app-frame=export] .app-touchpoint[aria-label="Include demo media ZIP"]{min-height:0}
+.app-buffer-settings input[type=checkbox]{width:44px;accent-color:#355e47}.app-buffer-settings [hidden]{display:none}.app-buffer-settings input[type=file]{max-width:100%}.app-buffer-settings p{overflow-wrap:anywhere}
