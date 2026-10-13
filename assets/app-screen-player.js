@@ -184,5 +184,25 @@
  function show(id,push=true){const frame=frames[id];if(!frame)return;if(push&&id!==current)history.push(current);current=id;host.dataset.appFrame=id;image.src=frame.image.startsWith('assets/')?frame.image:root+frame.image;image.alt=`MapNero app capture: ${frame.title}`;title.textContent=frame.title;description.textContent=frame.description;picker.value=id;touch.replaceChildren();frame.hotspots.forEach(([label,x,y,w,h,target])=>{const b=document.createElement('button');b.type='button';b.className='app-touchpoint';b.setAttribute('aria-label',label);b.title=label;Object.assign(b.style,{left:(x+w/2)+'%',top:(y+h/2)+'%',width:w+'%',height:h+'%'});b.onclick=()=>target.startsWith('addField:')||target.startsWith('export:')||['exportDownload','exportMedia','bufferMeters','bufferFeet','previewBuffer','createBuffer','capture','submit','keepField','shareRoute','finishMeasure','wildlifeGPS','wildlifeSubmit'].includes(target)?act(target):show(target);touch.append(b);});if(id==='record')addFormInputs();if(id==='androidWildlife')addWildlifeForm();if(id==='forkEdit')addFieldEditor();host.classList.toggle('show-touch-hints',hints);find('[data-app-back]').disabled=!history.length;status.textContent=frame.hotspots.length?'Tap a highlighted control on the app screen.':'Use the feature menu or Back to explore another app screen.';if(id==='forkOneField'){title.textContent=`${fieldTypes[draftField.type]} field added · macOS`;description.textContent='One practice field is configured. The app capture remains fixed; use Edit Field below to change its settings.';addFieldActions();}if(id==='forkEdit')addFieldSettings();if(id==='buffer'||id==='bufferAppearance')addBufferSettings();if(id==='export')addExportSettings();}
  Object.entries(frames).forEach(([id,frame])=>{const o=document.createElement('option');o.value=id;o.textContent=frame.title;picker.append(o);});picker.onchange=()=>show(picker.value);find('[data-app-back]').onclick=()=>{if(history.length)show(history.pop(),false);};find('[data-app-reset]').onclick=()=>{history=[];exportGeneration++;delete demoDatasets.field;delete demoDatasets.wildlife;delete demoDatasets.buffer;exportPractice.dataset='route';exportPractice.format='KML';exportPractice.includeMedia=false;exportPractice.media=[];Object.assign(bufferPractice,{meters:50,unit:'m',name:'',color:'#ffcc00',opacity:0.22});Object.keys(wildlifeRecord).forEach(key=>wildlifeRecord[key]=key==='coordinate'?null:'');draftField.label='Text Field';draftField.hint='';draftField.required=false;draftField.type='text';draftField.options='';draftField.min='';draftField.max='';practice.text='';practice.number='';practice.coordinate=null;show('templates',false);};find('[data-app-hints]').onclick=()=>{hints=!hints;host.classList.toggle('show-touch-hints',hints);find('[data-app-hints]').setAttribute('aria-pressed',String(hints));};
  document.addEventListener('mapnero:open-screen',e=>{if(frames[e.detail]){show(e.detail);host.scrollIntoView({behavior:'smooth',block:'start'});}});
- let start=null;touch.addEventListener('pointerdown',e=>{if(e.target===touch)start={x:e.clientX,y:e.clientY};});touch.addEventListener('pointerup',e=>{if(start&&Math.abs(e.clientX-start.x)>75&&Math.abs(e.clientY-start.y)<50){const keys=Object.keys(frames),i=keys.indexOf(current);show(keys[(i+(e.clientX<start.x?1:-1)+keys.length)%keys.length]);}start=null;});touch.addEventListener('pointercancel',()=>start=null);show('templates',false);
+ function browseScreen(direction){const keys=Object.keys(frames),i=keys.indexOf(current);show(keys[(i+direction+keys.length)%keys.length]);}
+ find('[data-app-previous]').onclick=()=>browseScreen(-1);
+ find('[data-app-next]').onclick=()=>browseScreen(1);
+ let start=null;
+ touch.addEventListener('pointerdown',e=>{
+  if(e.target!==touch||!e.isPrimary||e.button!==0)return;
+  start={id:e.pointerId,x:e.clientX,y:e.clientY,frame:current};
+  touch.setPointerCapture(e.pointerId);
+ });
+ touch.addEventListener('pointerup',e=>{
+  if(!start||start.id!==e.pointerId)return;
+  const gesture=start;start=null;
+  if(touch.hasPointerCapture(e.pointerId))touch.releasePointerCapture(e.pointerId);
+  const dx=e.clientX-gesture.x,dy=e.clientY-gesture.y;
+  const threshold=Math.min(75,Math.max(40,touch.clientWidth*0.18));
+  if(gesture.frame===current&&Math.abs(dx)>threshold&&Math.abs(dy)<50&&Math.abs(dx)>Math.abs(dy)*1.5)browseScreen(dx<0?1:-1);
+ });
+ const clearGesture=e=>{if(start?.id===e.pointerId)start=null;};
+ touch.addEventListener('pointercancel',clearGesture);
+ touch.addEventListener('lostpointercapture',clearGesture);
+ show('templates',false);
 })();
