@@ -467,7 +467,7 @@
     "title": "Follow a track with corridor alerts",
     "summary": "Use live position against a saved line or track without changing its geometry.",
     "access": "A line or track with at least two points",
-    "note": "Track following is guidance, not track recording. It uses the device location you have permitted and may pause or show a GPS warning when a reliable fix is unavailable.",
+    "note": "Track following is guidance, not track recording. It uses the device location you have permitted and may pause or show a GPS warning when a reliable fix is unavailable. These are actual Simulator captures following a contour from the explicitly synthetic London DEM. The captured route, position and metrics are fixed examples; they are not live website GPS or measured London terrain.",
     "steps": [
       {
         "title": "Open the saved line or track",
@@ -482,7 +482,11 @@
         "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/track-follow-options.png",
+      "assets/guides/screenshots/apple/en/track-following.png",
+      "assets/guides/screenshots/apple/en/track-follow-paused.png"
+    ]
   },
   {
     "platform": "apple",
