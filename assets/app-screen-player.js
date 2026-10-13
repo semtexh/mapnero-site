@@ -15,7 +15,7 @@
  forkBuilder:{image:'assets/app-walkthrough/template-fork-builder.png',title:'Customize template · macOS',description:'Real app builder. Tap Add Field to choose and configure a practice field. Changes stay in the walkthrough.',hotspots:[['Cancel customization',2,1.5,15,7,'wildlife'],['Choose field type',5.5,42.3,89,8.5,'forkFields'],['Open builder help',91,1.5,7,7,'builderHelp']]},
  forkFields:{image:'assets/app-walkthrough/template-field-picker.png',title:'Add a field · macOS',description:'Tap any visible field type to open its real editor and configure a practice field.',hotspots:[['Close field picker',85,1.5,13,7,'forkBuilder'],...['text','multiline','number','dropdown','radio','checkbox','date','slider','gps','camera'].map((type,i)=>[['Text','Long Text','Number','Dropdown','Radio','Checkbox','Date','Slider','GPS','Photo'][i],i%2?50.8:2.8,[12.5,29.4,46.6,64,81][Math.floor(i/2)],46.5,15,`addField:${type}`]).map(([label,...rest])=>[`Add ${label} field`,...rest])]},
  forkOneField:{image:'assets/app-walkthrough/template-one-field.png',title:'Configured field · macOS',description:'The real app preview now has one item. Use Edit Text Field below to configure it.',hotspots:[['Cancel field builder',2,1.5,15,7,'wildlife'],['Open field builder help',91,1.5,7,7,'builderHelp']]},
- forkEdit:{image:'assets/app-walkthrough/template-edit-field.png',title:'Edit field · macOS',description:'Choose a field type, edit its label and settings, then tap Done. Each type uses its actual macOS editor capture. Edits stay in this practice template.',hotspots:[['Keep field edits',85,1.5,13,7,'keepField']]},
+ forkEdit:{image:'assets/app-walkthrough/template-edit-field.png',title:'Edit a field',description:'Choose a field type, edit its label and settings, then tap Done. Editors use real MapNero captures. Edits stay in this practice template.',hotspots:[['Keep field edits',85,1.5,13,7,'keepField']]},
  builderHelp:{image:'assets/app-walkthrough/template-builder-help.png',title:'Template builder guide · macOS',description:'Actual app help describes manual creation, AI, imports and field editing. Done returns to the practice builder.',hotspots:[['Close builder guide',85,1.5,13,7,'forkBuilder']]},
  store:{image:'assets/app-walkthrough/store-category-all.jpg',title:'Template Store · macOS',description:'Explore real category captures and search the captured public catalogue. Open Wildlife Observation Log to continue into its existing practice workflow.',hotspots:[['Close store',85,1.5,13,7,'templates'],['Search captured store',3,11,94,7,'storeSearch'],...[['All',2.5,7],['EOD',11,9],['Survey',21,11],['Navigation',34,15],['Safety',50,11],['CBRN',63,10],['Medical',74,13],['Nature',88,11]].map(([category,x,w])=>[`Browse ${category} templates`,x,19.5,w,5,`storeCategory:${category}`])]},
  storeNature:{image:'assets/app-walkthrough/store-nature.png',title:'Nature templates · macOS',description:'Tap Wildlife Observation Log to inspect the actual template details, or All to return to all categories.',hotspots:[['Close Nature store',85,1.5,13,7,'templates'],['Browse all templates',2.5,19.5,7,5,'store'],['Open Wildlife Observation Log',13,41,71,10,'wildlife']]},
@@ -43,7 +43,7 @@
   cyclist:{name:'Cyclist',summary:'Routes, speed and live tracking.',coordinate:'Decimal Degrees',distance:'Kilometers',screen:'route'}
  };
 
- const fieldTypes={text:'Text',multiline:'Long Text',number:'Number',dropdown:'Dropdown',radio:'Radio',checkbox:'Checkbox',date:'Date',slider:'Slider',gps:'GPS',camera:'Photo',section:'Section'};
+ const fieldTypes={text:'Text',multiline:'Long Text',number:'Number',dropdown:'Dropdown',radio:'Radio',checkbox:'Checkbox',date:'Date',slider:'Slider',gps:'GPS',camera:'Photo',symbol:'Symbol',section:'Section'};
  let templateFields=[],editingFieldId=null,templateName='Practice field template';
  const draftField={label:'Text Field',hint:'',required:false,type:'text',options:'',min:'',max:''};
  const wildlifeRecord={coordinate:null,date:'',habitat:'',subject:'',species:'',count:'',behaviour:''};
@@ -186,8 +186,8 @@
    if(field.type==='multiline'){input=document.createElement('textarea');input.rows=4;input.setAttribute('aria-label','Configured field value');input.required=field.required;label.append(input);}else makeInput(field.type);
    if(['text','multiline'].includes(field.type))input.maxLength=2000;
    if(field.type==='number'){input.step='any';input.inputMode='decimal';if(field.min!=='')input.min=field.min;if(field.max!=='')input.max=field.max;}
-  }else if(field.type==='dropdown'){
-   input=document.createElement('select');input.setAttribute('aria-label','Configured field value');input.required=field.required;const empty=document.createElement('option');empty.value='';empty.textContent='Select…';input.append(empty);field.options.forEach(option=>{const item=document.createElement('option');item.value=option;item.textContent=option;input.append(item);});label.append(input);
+  }else if(['dropdown','symbol'].includes(field.type)){
+   input=document.createElement('select');input.setAttribute('aria-label','Configured field value');input.required=field.required;const empty=document.createElement('option');empty.value='';empty.textContent='Select…';input.append(empty);field.options.forEach(option=>{const item=document.createElement('option');item.value=option;item.textContent=field.type==='symbol'?MapNeroTemplatePractice.symbols.find(symbol=>symbol.id===option)?.title||option:option;input.append(item);});label.append(input);
   }else if(field.type==='radio'){
    field.options.forEach((option,i)=>{const choice=document.createElement('label');const radio=document.createElement('input');radio.type='radio';radio.name='practice-choice';radio.value=option;radio.required=field.required;radio.setAttribute('aria-label',option);radio.onchange=()=>value=radio.value;choice.append(radio,document.createTextNode(option));form.append(choice);});
   }else if(field.type==='checkbox'){makeInput('checkbox');
@@ -200,18 +200,18 @@
   }else if(field.type==='section'){
    const note=document.createElement('p');note.textContent='A section is a heading; it does not collect a value.';form.append(note);
   }
-  if(['dropdown','radio'].includes(field.type)&&!field.options.length){message.textContent='Add choices in Edit Field before trying this choice field.';}
+  if(['dropdown','radio','symbol'].includes(field.type)&&!field.options.length){message.textContent='Add choices in Edit Field before trying this choice field.';}
   if(field.hint){const hint=document.createElement('p');hint.textContent=field.hint;form.append(hint);}
   const submit=document.createElement('button');submit.type='submit';submit.className='app-record-download';submit.textContent='Check practice value';if(!onResult)form.append(submit);form.append(message);
   const invalidateResult=()=>{if(onResult)onResult(null);if(form.querySelector('[data-trial-download]')){form.querySelector('[data-trial-download]').remove();message.textContent='Value changed. Check it again before downloading.';}};form.addEventListener('input',invalidateResult);form.addEventListener('change',invalidateResult);
   form.onsubmit=e=>{
    e.preventDefault();form.querySelector('[data-trial-download]')?.remove();let error='';
    if(input&&!input.validity.valid)error='Enter a valid value within the configured limits.';
-   if(['text','multiline','date','dropdown'].includes(field.type))value=input.value.trim()||null;
+   if(['text','multiline','date','dropdown','symbol'].includes(field.type))value=input.value.trim()||null;
    if(['number','slider'].includes(field.type)){value=input.value===''?null:Number(input.value);if(value!==null&&(!Number.isFinite(value)||(field.min!==''&&value<Number(field.min))||(field.max!==''&&value>Number(field.max))))error='Enter a number within the configured range.';}
    if(field.type==='checkbox')value=input.checked;
    if(field.type==='camera'){const photo=input.files[0];value=photo?{name:photo.name,type:photo.type,size:photo.size}:null;if(photo&&(!photo.type.startsWith('image/')||photo.size>20*1024*1024))error='Choose an image file no larger than 20 MB.';}
-   if(['dropdown','radio'].includes(field.type)&&value!==null&&!field.options.includes(value))error='Choose an option from the configured list.';
+   if(['dropdown','radio','symbol'].includes(field.type)&&value!==null&&!field.options.includes(value))error='Choose an option from the configured list.';
    if(field.required&&field.type!=='section'&&(value===null||value===''||(field.type==='checkbox'&&!value)))error='Complete the required field before continuing.';
    if(error){message.textContent=error;if(onResult)onResult(null);return;}
    message.textContent=onResult?'Value accepted.':'Practice value accepted. Download the field settings and your value.';
@@ -221,6 +221,11 @@
   };parent.append(form);return{check:()=>form.requestSubmit()};
  }
  function addFieldEditor(){
+  if(draftField.type==='symbol'){
+   image.width=1206;image.height=2622;image.src='assets/guides/screenshots/apple/en/template-edit-symbol.png';image.alt='MapNero actual iPhone Symbol field editor';title.textContent='Edit Symbol field · iPhone';description.textContent='Real iPhone editor capture. Set the label and allowed symbols in the practice settings below; no app account is changed.';
+   const done=touch.querySelector('[aria-label="Keep field edits"]');Object.assign(done.style,{left:'90%',top:'11.4%',width:'17%',height:'5%'});
+   return;
+  }
   image.src='assets/app-walkthrough/'+(draftField.type==='text'?'template-edit-field.png':`template-edit-${draftField.type}.png`);
   const typePicker=document.createElement('select');typePicker.className='app-field-type';typePicker.setAttribute('aria-label','Practice field type');Object.entries(fieldTypes).forEach(([key,label])=>{const option=document.createElement('option');option.value=key;option.textContent=label;typePicker.append(option);});typePicker.value=draftField.type;typePicker.onchange=()=>{draftField.type=typePicker.value;show('forkEdit',false);};touch.append(typePicker);
 
@@ -231,6 +236,17 @@
 
  }
  function addFieldSettings(){
+  status.querySelector('.app-field-settings')?.remove();
+  if(draftField.type==='symbol'){
+   const group=document.createElement('fieldset');group.className='app-field-settings app-symbol-settings';const legend=document.createElement('legend');legend.textContent='Practice Symbol field';group.append(legend);
+   const name=document.createElement('label');name.textContent='Label';const labelInput=document.createElement('input');labelInput.setAttribute('aria-label','Field label');labelInput.maxLength=120;labelInput.value=draftField.label;labelInput.oninput=()=>draftField.label=labelInput.value;name.append(labelInput);group.append(name);const hint=document.createElement('label');hint.textContent='Hint';const hintInput=document.createElement('input');hintInput.setAttribute('aria-label','Field hint');hintInput.maxLength=240;hintInput.value=draftField.hint;hintInput.oninput=()=>draftField.hint=hintInput.value;hint.append(hintInput);group.append(hint);
+   const type=document.createElement('label');type.textContent='Type';const picker=document.createElement('select');picker.setAttribute('aria-label','Practice field type');Object.entries(fieldTypes).forEach(([key,title])=>{const option=document.createElement('option');option.value=key;option.textContent=title;picker.append(option);});picker.value=draftField.type;picker.onchange=()=>{draftField.type=picker.value;show('forkEdit',false);};type.append(picker);group.append(type);
+   const required=document.createElement('label');required.className='app-symbol-choice';const requiredInput=document.createElement('input');requiredInput.type='checkbox';requiredInput.setAttribute('aria-label','Required practice field');requiredInput.checked=draftField.required;requiredInput.onchange=()=>draftField.required=requiredInput.checked;required.append(requiredInput,document.createTextNode('Required field'));group.append(required);
+   const note=document.createElement('p');note.textContent='Select at least one allowed symbol. These names and identifiers come from the MapNero app catalogue; the captured screen stays fixed.';group.append(note);
+   const selected=()=>Array.isArray(draftField.options)?draftField.options:draftField.options.split('\n').filter(Boolean);
+   MapNeroTemplatePractice.symbols.forEach(symbol=>{const label=document.createElement('label');label.className='app-symbol-choice';const input=document.createElement('input');input.type='checkbox';input.setAttribute('aria-label',`Allow ${symbol.title}`);input.checked=selected().includes(symbol.id);input.onchange=()=>{const options=selected().filter(id=>id!==symbol.id);if(input.checked)options.push(symbol.id);draftField.options=options.join('\n');};label.append(input,document.createTextNode(symbol.title));group.append(label);});
+   const save=document.createElement('button');save.type='button';save.className='app-record-download';save.textContent='Keep Symbol field';save.onclick=()=>act('keepField');group.append(save);status.append(group);return;
+  }
   if(!['number','slider','dropdown','radio'].includes(draftField.type))return;
   const group=document.createElement('fieldset');group.className='app-field-settings';const legend=document.createElement('legend');legend.textContent='Practice field settings';group.append(legend);
   const keys=['number','slider'].includes(draftField.type)?['min','max','hint']:['hint'];
