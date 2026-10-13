@@ -16,11 +16,8 @@
  }
  function renderDetail(t){
  detail.replaceChildren(el('span',t.platformLabel,'explorer-eyebrow'),el('h3',t.title),el('p',t.summary),el('p',t.access,'explorer-access'));
- if(window.renderMapNeroLab && t.id!=='template-store' && t.id!=='pins-layers')window.renderMapNeroLab(detail,t);
- if(t.id==='template-store')renderStore();
- else if(t.id==='pins-layers')renderMap();
- else if(t.images.length){const gallery=el('div',null,'explorer-captures');t.images.forEach(src=>{const img=el('img');img.src=src;img.alt=`${t.platformLabel}: ${t.title}`;img.loading='lazy';gallery.append(img);});detail.append(gallery,el('p','Actual app screens · explore the workflow below','explorer-caption'));}
- else detail.append(el('p','Screen capture coming next. The workflow below describes the app.','explorer-caption'));
+ if(t.images.length){const gallery=el('div',null,'explorer-captures');t.images.forEach(src=>{const img=el('img');img.src=src;img.alt=`${t.platformLabel}: ${t.title}`;img.loading='lazy';gallery.append(img);});detail.append(gallery,el('p','Actual MapNero app screens','explorer-caption'));}
+ else detail.append(el('p','This feature is awaiting its app screen capture.','explorer-caption'));
  const steps=el('ol',null,'explorer-steps');t.steps.forEach(s=>{const li=el('li');li.append(el('strong',s.title),el('p',s.body));steps.append(li);});detail.append(steps);
  if(t.note)detail.append(el('p',t.note,'explorer-note'));
  if(t.id!=='template-store'&&!t.extra){const a=el('a','Open the full guide →');a.href=`guides.html?lang=en#${t.platform}/${t.id}`;detail.append(a);}

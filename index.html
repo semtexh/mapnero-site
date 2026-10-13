@@ -713,7 +713,7 @@ footer {
 </style>
 <link rel="stylesheet" href="assets/site-modern.css">
 <link rel="stylesheet" href="assets/feature-explorer.css?v=20261013-vector-2">
-<link rel="stylesheet" href="assets/field-game.css">
+<link rel="stylesheet" href="assets/app-screen-player.css">
 </head>
 <body>
 
@@ -770,7 +770,7 @@ footer {
         Download on App Store
       </a>
       <a href="https://app.mapnero.com" class="btn-outline" target="_blank" rel="noopener noreferrer">Open Web App ↗</a>
-      <a href="#field-game" class="hero-team-link">Play the field mission →</a>
+      <a href="#field-game" class="hero-team-link">Try the app →</a>
       <a href="#organizations" class="hero-team-link">Plans for your team →</a>
     </div>
     <div class="hero-platforms">
@@ -800,43 +800,16 @@ footer {
 
 
 
-<section class="field-game" id="field-game">
- <div class="game-heading"><div><span class="section-tag">PLAY THE FIELD DEMO</span><h2>A small mission.<br>A real feel for fieldwork.</h2></div><p>Take a virtual walk along London's riverside. Choose a template, survey checkpoints and bring your observations back as a map dataset.</p></div>
- <div class="game-layout">
-  <div class="game-stage">
-   <div class="game-hud">LONDON · SAMPLE FIELD MISSION<span data-coordinate></span><span data-track-readout></span></div>
-   <svg class="game-map" data-game-map viewBox="0 0 900 560" role="application" aria-label="London sample field game map. After starting, use arrow keys or WASD to move. Checkpoint buttons also move your explorer." tabindex="0">
-    <defs><pattern id="game-grid" width="75" height="70" patternUnits="userSpaceOnUse"><path d="M75 0H0V70" fill="none" stroke="#d4ddcc" stroke-width="1"/></pattern></defs>
-    <rect width="900" height="560" fill="#e8ecde"/><rect width="900" height="560" fill="url(#game-grid)"/>
-    <path d="M-20 600 Q350 510 293 350 Q270 240 390 260 Q510 315 625 230 Q740 100 950 160" fill="none" stroke="#adc9d0" stroke-width="92"/>
-    <path d="M-20 600 Q350 510 293 350 Q270 240 390 260 Q510 315 625 230 Q740 100 950 160" fill="none" stroke="#d0e1e1" stroke-width="72"/>
-    <g fill="#ccd9b8"><path d="M80 80h130v100H80z"/><path d="M365 385h140v100H365z"/><path d="M700 305h110v110H700z"/></g>
-    <g fill="none" stroke="#f9faf4" stroke-width="16"><path d="M20 210L235 195 240 340 170 520M330 350L450 380 570 310 745 230 880 260M420 20L420 185 560 190 730 60M35 330L175 320M540 500L540 400 760 450 870 405"/></g>
-    <g fill="none" stroke="#b7c0ad" stroke-width="2"><path d="M20 210L235 195 240 340 170 520M330 350L450 380 570 310 745 230 880 260M420 20L420 185 560 190 730 60"/></g>
-    <g stroke="#eaf1eb" stroke-width="17"><path d="M229 375L355 340M400 210L405 326M601 182L669 261"/></g>
-    <text x="88" y="128" class="map-label">ST JAMES'S PARK</text><text x="455" y="80" class="map-label">CENTRAL LONDON</text><text x="490" y="278" fill="#688e9b" font-size="14" transform="rotate(-12 490 278)">THAMES</text><text x="376" y="455" class="map-label">SOUTH BANK</text>
-    <polyline data-track fill="none" stroke="#296b54" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <g fill="#d2ad50" stroke="#fff" stroke-width="3"><circle cx="252" cy="399" r="15"/><circle cx="335" cy="328" r="15"/><circle cx="657" cy="204" r="15"/></g>
-    <text x="155" y="432" class="map-landmark">Westminster</text><text x="344" y="319" class="map-landmark">South Bank</text><text x="672" y="198" class="map-landmark">Bankside</text>
-    <g data-records></g><g data-player><circle r="16" fill="#fff" opacity=".65"/><circle r="10" fill="#263c32" stroke="#fff" stroke-width="3"/><path d="M0 -17l-5 7h10z" fill="#263c32"/></g>
-    <text x="750" y="524" class="map-label">N ↑ · SAMPLE MAP</text>
-   </svg>
-   <div class="game-dock" data-game-controls hidden><button data-game-store type="button">▤ Templates</button><button data-game-inspect type="button">⌖ Inspect checkpoint</button><button data-game-track type="button">● Record track</button><button data-game-layer type="button">◉ Hide layer</button></div>
-   <div class="game-travel"><span>Visit</span><button data-visit="westminster" type="button">Westminster</button><button data-visit="eye" type="button">South Bank</button><button data-visit="tate" type="button">Bankside</button><div class="game-dpad" aria-label="Movement controls"><button data-step="-18,0" type="button" aria-label="Move west">←</button><button data-step="0,-18" type="button" aria-label="Move north">↑</button><button data-step="0,18" type="button" aria-label="Move south">↓</button><button data-step="18,0" type="button" aria-label="Move east">→</button></div></div>
-   <p class="game-keyboard">Click to walk · Arrow keys / WASD to steer · <span data-checkpoint-readout></span></p>
-   <p class="game-status" data-game-status role="status">Start your mission to explore the map.</p>
-  </div>
-  <aside class="game-sidebar" aria-label="Field mission">
-   <div><div class="game-progress">YOUR MISSION <strong data-game-progress>0 / 5</strong></div><ol data-game-tasks class="game-tasks"></ol><button data-game-start type="button">Start field mission →</button><div class="game-controls"><button data-game-export type="button" disabled>Export GeoJSON ↓</button><button data-game-reset type="button">Restart mission</button></div></div>
-   <div data-game-panel class="game-panel"><h3>Your first field mission</h3><p>Choose a template, explore the riverside and bring back a small field dataset.</p></div>
-   <div data-game-complete class="game-complete" hidden><strong>Field mission complete ✓</strong><p>You collected observations, recorded a track and exported your dataset.</p><a href="#explore">Explore the other MapNero tools →</a></div>
-  </aside>
- </div>
- <p class="game-footnote">Interactive website game inspired by MapNero workflows. Illustrative London map, simulated movement and sample templates; distances describe this demo, not a walking route. No GPS, account or live store connection. Records stay in this page until restart or reload.</p>
+<section id="field-game" class="app-player-section" data-app-player>
+ <div class="app-player-heading"><div><span class="section-tag">TRY MAPNERO</span><h2>The app.<br>At your fingertips.</h2></div><p>Explore real MapNero screens. Tap the highlighted app controls to move through the walkthrough on your phone or computer.</p></div>
+ <div class="app-player-layout">
+  <div class="app-phone"><img data-app-screen src="assets/guides/screenshots/apple/en/field-templates-selection.png" alt="MapNero template library"><div class="app-hotspots" data-app-hotspots></div></div>
+  <div class="app-player-tools"><label>Choose a feature<select data-app-feature aria-label="Choose app screen"></select></label><h3 data-app-title>Templates</h3><p data-app-description></p><div class="app-player-buttons"><button type="button" data-app-back>← Back</button><button type="button" data-app-reset>Start again</button><button type="button" data-app-hints aria-pressed="true">Touch hints</button></div><p class="app-player-status" data-app-status role="status"></p><a href="#explore">Browse all app screens →</a></div>
+ </div><p class="app-player-footnote">Interactive walkthrough using real app captures. Controls navigate the captured screens; this website does not run mobile GPS or connect to your app account.</p>
 </section>
 
 <section id="explore" class="explorer">
-  <div class="explorer-heading"><div><span class="section-tag">EXPLORE MAPNERO</span><h2>Put the tools<br>in your hands.</h2></div><p>Explore app workflows and actual screens. Try sample templates, save a pin and see how layers work — right here.</p></div>
+  <div class="explorer-heading"><div><span class="section-tag">EXPLORE MAPNERO</span><h2>Put the tools<br>in your hands.</h2></div><p>Explore the actual MapNero screens and the workflows behind them.</p></div>
   <div class="explorer-shell">
     <aside class="explorer-sidebar" aria-label="Choose a feature">
       <label>Platform<select data-feature-platform><option value="apple">iPhone · iPad · Mac</option><option value="android">Android</option><option value="web">Web</option></select></label>
@@ -1045,8 +1018,7 @@ document.querySelectorAll('.feature-card, .tier-card').forEach((el, i) => {
   el.style.transitionDelay = (i % 3) * 0.08 + 's';
 });
 </script>
-<script src="assets/field-game-engine.js" defer></script>
-<script src="assets/field-game.js" defer></script>
+<script src="assets/app-screen-player.js" defer></script>
 <script src="assets/map-pdf-engine.js" defer></script>
 <script src="assets/coordinate-lab-engine.js" defer></script>
 <script src="assets/feature-lab-engine.js" defer></script>

@@ -1,0 +1,22 @@
+(() => {
+ 'use strict';
+ const host=document.querySelector('[data-app-player]');if(!host)return;
+ const find=s=>host.querySelector(s),image=find('[data-app-screen]'),touch=find('[data-app-hotspots]'),picker=find('[data-app-feature]'),title=find('[data-app-title]'),description=find('[data-app-description]'),status=find('[data-app-status]');
+ const root='assets/guides/screenshots/apple/en/';
+ const frames={
+ map:{image:'location-track.png',title:'Map and track controls',description:'Tap Layers, Measure, Team, Stop recording or Back on the actual app capture.',hotspots:[['Layers',15,82.5,14,6,'layers'],['Measure',43.5,82.5,14,6,'measure'],['Team',83,51,14,7,'team'],['Stop recording',67,31,11,7,'report'],['Back to library',3,7.8,14,6,'templates']]},
+ layers:{image:'pins-layers.png',title:'Layers',description:'Review the linked layers. Tap Close to return to the map.',hotspots:[['Close layers',3,8.6,21,5.5,'map']]},
+ templates:{image:'field-templates-selection.png',title:'Templates',description:'Tap the saved template to open its form, or Create to inspect the builder.',hotspots:[['Open map',8,8,11,6,'map'],['Open layers',26,8,11,6,'layers'],['Open settings',80,8,12,6,'settings'],['Use Guide Demo template',75,32,10,5.5,'record'],['Create template',52,88,42,5.8,'builder']]},
+ record:{image:'field-templates.png',title:'Field form',description:'This capture shows GPS, text and number fields. Use Back to return to the template library.',hotspots:[['Cancel form',3,8.7,22,5.5,'templates']]},
+ builder:{image:'create-edit-templates.png',title:'Template builder',description:'Tap Add Field to inspect the field types available in the app.',hotspots:[['Cancel builder',3,8.6,22,6,'templates'],['Add field',7,40,85,7,'fields']]},
+ fields:{image:'create-edit-templates-fields.png',title:'Field types',description:'Text, number, choices, date, GPS, photo and symbols are shown in the actual field picker. Tap Done to return.',hotspots:[['Done choosing fields',76,10,18,6,'builder']]},
+ measure:{image:'measure-cogo-buffer.png',title:'Measure and bearing',description:'Actual app measurement controls.',hotspots:[]},
+ team:{image:'team-session.png',title:'Team session',description:'Actual app team-session screen. The website walkthrough does not join a live session.',hotspots:[]},
+ report:{image:'track-report.png',title:'Track report',description:'Actual app track statistics and report screen.',hotspots:[]},
+ settings:{image:'settings-workspace.png',title:'Settings',description:'Actual app settings screen.',hotspots:[]}
+ };
+ let current='templates',history=[],hints=true;
+ function show(id,push=true){const frame=frames[id];if(!frame)return;if(push&&id!==current)history.push(current);current=id;image.src=root+frame.image;image.alt=`MapNero app capture: ${frame.title}`;title.textContent=frame.title;description.textContent=frame.description;picker.value=id;touch.replaceChildren();frame.hotspots.forEach(([label,x,y,w,h,target])=>{const b=document.createElement('button');b.type='button';b.className='app-touchpoint';b.setAttribute('aria-label',label);b.title=label;Object.assign(b.style,{left:(x+w/2)+'%',top:(y+h/2)+'%',width:w+'%',height:h+'%'});b.onclick=()=>show(target);touch.append(b);});host.classList.toggle('show-touch-hints',hints);find('[data-app-back]').disabled=!history.length;status.textContent=frame.hotspots.length?'Tap a highlighted control on the app screen.':'Use the feature menu or Back to explore another app screen.';}
+ Object.entries(frames).forEach(([id,frame])=>{const o=document.createElement('option');o.value=id;o.textContent=frame.title;picker.append(o);});picker.onchange=()=>show(picker.value);find('[data-app-back]').onclick=()=>{if(history.length)show(history.pop(),false);};find('[data-app-reset]').onclick=()=>{history=[];show('templates',false);};find('[data-app-hints]').onclick=()=>{hints=!hints;host.classList.toggle('show-touch-hints',hints);find('[data-app-hints]').setAttribute('aria-pressed',String(hints));};
+ let start=null;touch.addEventListener('pointerdown',e=>{if(e.target===touch)start={x:e.clientX,y:e.clientY};});touch.addEventListener('pointerup',e=>{if(start&&Math.abs(e.clientX-start.x)>75&&Math.abs(e.clientY-start.y)<50){const keys=Object.keys(frames),i=keys.indexOf(current);show(keys[(i+(e.clientX<start.x?1:-1)+keys.length)%keys.length]);}start=null;});touch.addEventListener('pointercancel',()=>start=null);show('templates',false);
+})();
