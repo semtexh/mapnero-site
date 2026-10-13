@@ -1,0 +1,372 @@
+{
+  "source": "MapNeroApp/UI/EOD/EODClusterEngine.swift",
+  "source_sha256": "80bdf7ab0dad8ae2e3fe99208c3210151a6ec05864a4e944963cbec44a3a0ddc",
+  "fixtures": [
+    {
+      "points": [
+        {
+          "lat": 51.5074,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.12775
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.12775
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.12475
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.1248
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.12475
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.1248
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.12475
+        }
+      ],
+      "expected": {
+        "area_ha": 1.1266467703384027,
+        "bearing_degrees": 90,
+        "density_per_ha": 8.87589638853389,
+        "elongation": 0.9671866212444749,
+        "expected_neighbor_m": 16.782779644165046,
+        "gap_count": 14,
+        "group_counts": [
+          5,
+          5
+        ],
+        "imas_pattern_key": "eod_cluster_imas_clustered_linear",
+        "lambda1": 10852.042392418223,
+        "lambda2": 356.09217729343436,
+        "mean_neighbor_m": 13.784801634847781,
+        "nni_r": 0.8213658242030493,
+        "nni_z": -1.0806758177710596,
+        "pattern": "clustered",
+        "point_count": 10,
+        "risk": "critical",
+        "shape": "linear",
+        "standard_distance_m": 105.86847769620407
+      }
+    },
+    {
+      "points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.099
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.098
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.097
+        },
+        {
+          "lat": 51.501,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.501,
+          "lon": -0.099
+        },
+        {
+          "lat": 51.501,
+          "lon": -0.098
+        },
+        {
+          "lat": 51.501,
+          "lon": -0.097
+        },
+        {
+          "lat": 51.502,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.502,
+          "lon": -0.099
+        },
+        {
+          "lat": 51.502,
+          "lon": -0.098
+        },
+        {
+          "lat": 51.502,
+          "lon": -0.097
+        },
+        {
+          "lat": 51.503,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.503,
+          "lon": -0.099
+        },
+        {
+          "lat": 51.503,
+          "lon": -0.098
+        },
+        {
+          "lat": 51.503,
+          "lon": -0.097
+        }
+      ],
+      "expected": {
+        "area_ha": 6.927040513675373,
+        "bearing_degrees": 0,
+        "density_per_ha": 2.309788714013261,
+        "elongation": 0.6125010359667826,
+        "expected_neighbor_m": 32.8990893530775,
+        "gap_count": 38,
+        "group_counts": [
+          16
+        ],
+        "imas_pattern_key": "eod_cluster_imas_regular",
+        "lambda1": 15455.389639376812,
+        "lambda2": 5988.947473988234,
+        "mean_neighbor_m": 69.21819110024899,
+        "nni_r": 2.103954621886033,
+        "nni_z": 8.447770292975461,
+        "pattern": "regular",
+        "point_count": 16,
+        "risk": "high",
+        "shape": "moderate",
+        "standard_distance_m": 146.4388511064091
+      }
+    },
+    {
+      "points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1
+        }
+      ],
+      "expected": {
+        "area_ha": 0.0001,
+        "bearing_degrees": 0,
+        "density_per_ha": 80000,
+        "elongation": 0,
+        "expected_neighbor_m": 0.17677669529663687,
+        "gap_count": 0,
+        "group_counts": [
+          8
+        ],
+        "imas_pattern_key": "eod_cluster_imas_clustered_circular",
+        "lambda1": 0,
+        "lambda2": 0,
+        "mean_neighbor_m": 0,
+        "nni_r": 0,
+        "nni_z": -5.410979347922769,
+        "pattern": "clustered",
+        "point_count": 8,
+        "risk": "critical",
+        "shape": "circular",
+        "standard_distance_m": 0
+      }
+    },
+    {
+      "points": [
+        {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "eodType": "B"
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.12775,
+          "eodType": "A"
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.1278,
+          "eodType": "B"
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.12775,
+          "eodType": "A"
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.1278,
+          "eodType": "B"
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.12475,
+          "eodType": "A"
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.1248,
+          "eodType": "B"
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.12475,
+          "eodType": "A"
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.1248,
+          "eodType": "B"
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.12475,
+          "eodType": "A"
+        }
+      ],
+      "expected": {
+        "area_ha": 1.1266467703384027,
+        "bearing_degrees": 90,
+        "density_per_ha": 8.87589638853389,
+        "elongation": 0.9671866212444749,
+        "expected_neighbor_m": 16.782779644165046,
+        "gap_count": 14,
+        "group_counts": [
+          5,
+          5
+        ],
+        "imas_pattern_key": "eod_cluster_imas_clustered_linear",
+        "lambda1": 10852.042392418223,
+        "lambda2": 356.09217729343436,
+        "mean_neighbor_m": 13.784801634847781,
+        "nni_r": 0.8213658242030493,
+        "nni_z": -1.0806758177710596,
+        "pattern": "clustered",
+        "point_count": 10,
+        "risk": "critical",
+        "shape": "linear",
+        "standard_distance_m": 105.86847769620407
+      }
+    },
+    {
+      "points": [
+        {
+          "lat": 51.5074,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.12775
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.12775
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.1278
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.12475
+        },
+        {
+          "lat": 51.50752,
+          "lon": -0.1248
+        },
+        {
+          "lat": 51.507639999999995,
+          "lon": -0.12475
+        },
+        {
+          "lat": 51.50776,
+          "lon": -0.1248
+        },
+        {
+          "lat": 51.50788,
+          "lon": -0.12475
+        },
+        {
+          "lat": 51.52,
+          "lon": -0.11
+        },
+        {
+          "lat": 51.53,
+          "lon": -0.12
+        }
+      ],
+      "expected": {
+        "area_ha": 133.1936651880526,
+        "bearing_degrees": 18.928213004656925,
+        "density_per_ha": 0.09009437485677355,
+        "elongation": 0.9161789980110022,
+        "expected_neighbor_m": 166.5793512038961,
+        "gap_count": 19,
+        "group_counts": [
+          12
+        ],
+        "imas_pattern_key": "eod_cluster_imas_regular",
+        "lambda1": 630089.8004876169,
+        "lambda2": 52814.75841991976,
+        "mean_neighbor_m": 229.77335466829572,
+        "nni_r": 1.3793627661993295,
+        "nni_z": 2.5140633056210278,
+        "pattern": "regular",
+        "point_count": 12,
+        "risk": "low",
+        "shape": "linear",
+        "standard_distance_m": 826.3803960087247
+      }
+    }
+  ]
+}
