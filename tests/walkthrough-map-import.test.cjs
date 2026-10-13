@@ -9,6 +9,8 @@ test('ordinary images do not acquire an invented georeference',()=>{
  for(const bytes of [[137,80,78,71,13,10,26,10],[255,216,255,0,0,0,0,0],[82,73,70,70,0,0,0,0,87,69,66,80]])assert.equal(I.inspect(new Uint8Array(bytes).buffer).coordinates,null);
 });
 test('unsupported and oversized inputs fail instead of creating a map',()=>{
- assert.throws(()=>I.inspect(new ArrayBuffer(12000001)),/12 MB/);assert.throws(()=>I.inspect(new TextEncoder().encode('%PDF-1.7 fake').buffer),/PDF, KMZ/);
+ assert.throws(()=>I.inspect(new ArrayBuffer(12000001)),/12 MB/);assert.throws(()=>I.inspect(new TextEncoder().encode('unsupported file').buffer),/KMZ/);
  assert.throws(()=>I.inspect(new Uint8Array([73,73,42,0,255,255,255,255]).buffer));
 });
+
+test('PDF recognition keeps map coordinates unknown until verified',()=>{const result=I.inspect(new TextEncoder().encode('%PDF-1.7\n').buffer);assert.equal(result.mime,'application/pdf');assert.equal(result.coordinates,null);});
