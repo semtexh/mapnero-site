@@ -6,7 +6,7 @@
     "title": "Template Store",
     "summary": "Browse reusable templates by category, preview their fields and add them to your library.",
     "access": "Availability depends on template access and workspace permissions.",
-    "note": "The website uses sample templates. It does not download from the live store.",
+    "note": "Real macOS app captures. The walkthrough navigates captured results; it does not send downloads or ratings to the live store.",
     "steps": [
       {
         "title": "Browse",
@@ -21,7 +21,11 @@
         "body": "Download to your library, then use the template to collect records."
       }
     ],
-    "images": []
+    "images": [
+      "assets/app-walkthrough/store-all.png",
+      "assets/app-walkthrough/store-nature.png",
+      "assets/app-walkthrough/store-wildlife.png"
+    ]
   },
   {
     "platform": "android",
