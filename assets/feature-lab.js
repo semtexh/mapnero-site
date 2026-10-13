@@ -113,9 +113,7 @@
  if(mode==='limits'){
  const task=select('Choose a workflow',['Inspect shared layers','Create a mobile offline map','Record GPS in the background','Export GIS data']);action('Find the right platform',()=>{const mobile=[1,2].includes(task.selectedIndex);say(mobile?`${task.value}: use the mobile app. This web demo does not claim mobile GPS or tile-download behavior.`:`${task.value}: available in the web workspace; use the matching interactive layer/export demo.`);});return;
  }
- if(mode==='raster'){
- drawMap();const base=select('Raster sample',['Street illustration','Terrain illustration']),opacity=input('Overlay opacity (%)','60','number');opacity.min='0';opacity.max='100';action('Apply background',()=>{const n=Number(opacity.value);if(!Number.isFinite(n)||n<0||n>100){say('Opacity must be 0–100%.');return;}map.querySelector('rect').setAttribute('fill',base.selectedIndex?'#b9cea0':'#e9eddf');overlay.style.opacity=String(n/100);say(`${base.value} · overlay opacity ${n}%. No user raster is georeferenced here.`);});return;
- }
+ if(mode==='raster'){window.renderMapNeroRasterLab({intro,controls,surface,say,input,action});return;}
  if(mode==='reference'){
  drawMap([]);let anchors=[];const pixels=[{x:0,y:0},{x:700,y:0},{x:0,y:360}];const picker=select('Reference anchor',data.slice(0,3).map(p=>p.name));action('Add reference anchor',()=>{const p=data[picker.selectedIndex];if(anchors.some(a=>a.name===p.name)){say('Select a different anchor.');return;}anchors.push(p);drawMap(anchors);say(`${anchors.length}/3 sample image control points assigned: top-left, top-right, bottom-left.`);});
  action('Fit sample reference',()=>{if(anchors.length<3){say('Add three distinct anchors first.');return;}const fit=E.affine(pixels,anchors),corners=[...pixels,{x:700,y:360}].map(fit);drawMap(anchors);table([['Image pixel','Fitted geographic position'],...[...pixels,{x:700,y:360}].map((p,i)=>[`${p.x}, ${p.y}`,`${corners[i].lat.toFixed(5)}, ${corners[i].lon.toFixed(5)}`])]);});
