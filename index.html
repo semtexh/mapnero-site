@@ -8,7 +8,7 @@
 <title>MapNero — Professional GIS Mapping</title>
 <meta name="description" content="Professional GIS mapping for iOS and Android. Offline maps, GPS tracking, UTM/MGRS coordinates, NATO symbols, EOD/CBRN modules, and real-time team sessions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --gold: #c9973a;
@@ -465,7 +465,7 @@ h2 {
 }
 
 .tier-card.featured::before {
-  content: 'Most Popular';
+  content: 'Pro';
   position: absolute;
   top: -12px;
   left: 50%;
@@ -711,6 +711,7 @@ footer {
   .nav-dl { display: none; }
 }
 </style>
+<link rel="stylesheet" href="assets/site-modern.css">
 </head>
 <body>
 
@@ -722,12 +723,13 @@ footer {
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
-    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#pricing">For individuals</a></li>
+    <li><a href="#organizations">For organizations</a></li>
     <li><a href="guides.html">Guides</a></li>
     <li><a href="mailto:support@thenerolabs.com">Support</a></li>
   </ul>
   <div class="nav-dl">
-    <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="btn-store" target="_blank">
+    <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="btn-store" target="_blank" rel="noopener noreferrer">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       App Store
     </a>
@@ -756,20 +758,15 @@ footer {
   </svg>
 
   <div class="hero-content">
-    <div class="hero-badge">iOS · Android · Field Ready</div>
-    <h1>
-      Navigate with<br>
-      <span class="gold">precision</span>
-    </h1>
-    <p class="hero-sub">
-      Professional GIS mapping built for the field. Offline maps, GPS tracking, UTM/MGRS coordinates, NATO symbols, EOD & CBRN modules — engineered for those who cannot afford to be wrong.
-    </p>
+    <div class="hero-badge">MAPNERO / FIELD GIS</div>
+    <h1>One map.<br>Many ways.</h1>
+    <p class="hero-sub">Bring your own maps. Record what matters. Take your fieldwork from a single phone to the whole team.</p>
     <div class="hero-actions">
-      <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="btn-primary" target="_blank">
+      <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="btn-primary" target="_blank" rel="noopener noreferrer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Download on App Store
       </a>
-      <a href="#features" class="btn-outline">Explore Features →</a>
+      <a href="#organizations" class="btn-outline">Plans for your team →</a>
     </div>
     <div class="hero-platforms">
       <span class="platform-label">Available on</span>
@@ -785,46 +782,28 @@ footer {
       </div>
     </div>
   </div>
+  <figure class="hero-product">
+    <div class="product-screens">
+      <img class="screen-map" src="assets/guides/screenshots/apple/tr/location-track.png" alt="MapNero GPS recording view over a satellite map" width="1206" height="2622">
+      <img class="screen-layers" src="assets/guides/screenshots/android/en/pins-layers.png" alt="MapNero Android map and layer controls" width="1080" height="2400">
+    </div>
+    <figcaption>On the map. In the field.<span>MapNero on iOS and Android</span></figcaption>
+  </figure>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <div class="stat-num">175+</div>
-    <div class="stat-label">Countries</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">12</div>
-    <div class="stat-label">Languages</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">100+</div>
-    <div class="stat-label">NATO Symbols</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">5</div>
-    <div class="stat-label">Export Formats</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Offline Ready</div>
-  </div>
-</div>
-
-<div class="gold-divider"></div>
-
+<div class="field-strip"><span>YOUR FIELDWORK, CONNECTED</span><p>Own maps <b>/</b> GPS tracks <b>/</b> Field data <b>/</b> Team sessions</p></div>
 <!-- FEATURES -->
 <div id="features">
   <div class="section">
     <div class="section-tag reveal">Capabilities</div>
-    <h2 class="reveal">Everything the field demands</h2>
-    <p class="section-intro reveal">MapNero combines professional GIS tools with a clean mobile interface — offline-first, no account required, built to NATO standards.</p>
+    <h2 class="reveal">Built around your fieldwork</h2>
+    <p class="section-intro reveal">Work with maps, coordinates and field records in one app. Explore the guides for the tools and workflows available on each platform.</p>
 
     <div class="features-grid">
       <div class="feature-card reveal">
         <span class="feature-icon">🗺️</span>
         <h3>Offline Map Support</h3>
-        <p>Import GeoPDF, GeoTIFF, and XYZ tile caches. Full functionality with zero connectivity.</p>
+        <p>Import GeoPDF, GeoTIFF, and XYZ tile caches. Use downloaded and imported maps when you are offline.</p>
         <div class="tag-row"><span class="ftag">GeoPDF</span><span class="ftag">GeoTIFF</span><span class="ftag">XYZ</span></div>
       </div>
       <div class="feature-card reveal">
@@ -880,7 +859,7 @@ footer {
 <div id="pricing" class="pricing-section">
   <div class="section">
     <div class="section-tag reveal">Pricing</div>
-    <h2 class="reveal">Choose your tier</h2>
+    <h2 class="reveal">A plan for your own work</h2>
     <p class="section-intro reveal">Download free. Upgrade when you need more. Check your app store for local prices and subscription terms.</p>
 
     <div class="tiers-grid">
@@ -926,13 +905,13 @@ footer {
       <div class="tier-card reveal">
         <div class="tier-name">Team</div>
         <div class="tier-price"><sup>$</sup>99<span>.99/yr</span></div>
-        <div class="tier-desc">For team leads & coordinators</div>
+        <div class="tier-desc">Per-person license for team leads</div>
         <ul class="tier-features">
           <li>Everything in Pro</li>
-          <li>Persistent team workspaces</li>
+          <li>Team session tools</li>
           <li>Shared layer sync</li>
           <li>Real-time live positions</li>
-          <li>Admin controls</li>
+          <li>Individual Team license</li>
           <li>Priority support</li>
         </ul>
       </div>
@@ -942,14 +921,25 @@ footer {
 
 <div class="gold-divider"></div>
 
+<!-- ORGANIZATIONS -->
+<section id="organizations" class="organization-section">
+  <div class="section">
+    <div class="org-heading"><div><p class="section-tag">FOR ORGANIZATIONS</p><h2>The same tools.<br>A plan for your team.</h2></div><p>Annual corporate licenses with Team features for 10, 50, 100 or 250 named users. Choose your team size and talk to us about getting started.</p></div>
+    <div class="org-packages"><article class="org-package"><h3>10 users</h3><p class="org-price">$890<span>USD / year</span></p><p class="org-unit">$89 per user / year</p><a href="mailto:support@thenerolabs.com?subject=MapNero%20corporate%20license%20%E2%80%94%2010%20users&amp;body=Hello%2C%20I%20am%20interested%20in%20the%20MapNero%2010-user%20annual%20corporate%20package%20%28%24890%20USD/year%29.%0A%0AOrganization%3A%0ACountry%3A%0AIntended%20use%3A%0APreferred%20start%20date%3A%0A%0APlease%20contact%20me%20about%20licensing%20and%20activation.">Request this package <span aria-hidden="true">↗</span></a></article><article class="org-package"><h3>50 users</h3><p class="org-price">$3,950<span>USD / year</span></p><p class="org-unit">$79 per user / year</p><a href="mailto:support@thenerolabs.com?subject=MapNero%20corporate%20license%20%E2%80%94%2050%20users&amp;body=Hello%2C%20I%20am%20interested%20in%20the%20MapNero%2050-user%20annual%20corporate%20package%20%28%243%2C950%20USD/year%29.%0A%0AOrganization%3A%0ACountry%3A%0AIntended%20use%3A%0APreferred%20start%20date%3A%0A%0APlease%20contact%20me%20about%20licensing%20and%20activation.">Request this package <span aria-hidden="true">↗</span></a></article><article class="org-package"><h3>100 users</h3><p class="org-price">$6,900<span>USD / year</span></p><p class="org-unit">$69 per user / year</p><a href="mailto:support@thenerolabs.com?subject=MapNero%20corporate%20license%20%E2%80%94%20100%20users&amp;body=Hello%2C%20I%20am%20interested%20in%20the%20MapNero%20100-user%20annual%20corporate%20package%20%28%246%2C900%20USD/year%29.%0A%0AOrganization%3A%0ACountry%3A%0AIntended%20use%3A%0APreferred%20start%20date%3A%0A%0APlease%20contact%20me%20about%20licensing%20and%20activation.">Request this package <span aria-hidden="true">↗</span></a></article><article class="org-package"><h3>250 users</h3><p class="org-price">$14,750<span>USD / year</span></p><p class="org-unit">$59 per user / year</p><a href="mailto:support@thenerolabs.com?subject=MapNero%20corporate%20license%20%E2%80%94%20250%20users&amp;body=Hello%2C%20I%20am%20interested%20in%20the%20MapNero%20250-user%20annual%20corporate%20package%20%28%2414%2C750%20USD/year%29.%0A%0AOrganization%3A%0ACountry%3A%0AIntended%20use%3A%0APreferred%20start%20date%3A%0A%0APlease%20contact%20me%20about%20licensing%20and%20activation.">Request this package <span aria-hidden="true">↗</span></a></article></div>
+    <div class="org-custom"><div><h3>500+ users or a different team size?</h3><p>Tell us about your organization. We’ll prepare a tailored quote.</p></div><a class="btn-outline" href="mailto:support@thenerolabs.com?subject=MapNero%20custom%20corporate%20quote">Talk to us ↗</a></div>
+    <div class="org-details"><p><strong>What’s included</strong><br>Team app features for the named users in your package. Training, custom integrations and additional services are quoted separately.</p><p><strong>How to get started</strong><br>Send a request → agree the scope → receive a payment link or invoice → arrange license activation with us.</p></div>
+    <p class="org-note">Annual subscriptions renew until canceled. Prices are in USD; applicable taxes may be added. Corporate sales are handled by The Nero Labs LLC. Individual app-store purchases remain separate.</p>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-section">
   <div class="cta-inner">
     <div class="section-tag" style="color:var(--gold);margin-bottom:1rem;">Download Now</div>
-    <h2>Ready to map smarter?</h2>
-    <p>Join field professionals in 175+ countries.<br>Download MapNero free — no account required.</p>
+    <h2>Take MapNero into the field.</h2>
+    <p>Start with your own maps and field records.<br>Download MapNero free — no account required.</p>
     <div class="store-buttons">
-      <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="store-btn" target="_blank">
+      <a href="https://apps.apple.com/us/app/mapneroapp/id6758651027" class="store-btn" target="_blank" rel="noopener noreferrer">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold-light)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         <div class="store-btn-label">
           <span class="store-btn-small">Download on the</span>
