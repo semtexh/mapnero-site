@@ -796,7 +796,9 @@
         "body": "Keep the fence enabled and allow the requested location and notification permissions. Open Geofence History to review events; disable or remove a fence when it is no longer needed."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/london-geofences.png"
+    ]
   },
   {
     "platform": "apple",
