@@ -1,18 +1,28 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./app-walkthrough/store-catalog.json'));else root.MapNeroStorePractice=factory(null);})(typeof window==='undefined'?globalThis:window,function(initial){
  'use strict';
- let catalog=initial,state={category:'All',query:''};
+ let catalog=initial,schemas=null,state={category:'All',query:''};
  function filter(data,category,query){const term=String(query).trim().toLocaleLowerCase();return data.templates.filter(t=>(category==='All'||t.category===category)&&(!term||t.name.toLocaleLowerCase().includes(term)||t.author.toLocaleLowerCase().includes(term)));}
+ function checklistResult(source,values,notes){const steps=source.schema.steps||[];const missing=steps.filter(step=>step.requiresSignoff&&!values[step.id]);if(missing.length)throw Error(`${missing.length} required practice signoffs remain.`);return{demo:true,name:source.name,version:source.version,source:'captured store checklist practice',notes:String(notes),steps:steps.map(step=>({id:step.id,title:step.title,requiresSignoff:!!step.requiresSignoff,signedOff:!!values[step.id]}))};}
  function reset(){state={category:'All',query:''};}
- function mount(status,{initialCategory,onCapture,onWildlife}){
+ function mount(status,{initialCategory,onCapture,onWildlife,onTemplate}){
   if(initialCategory)state.category=initialCategory;
   const group=document.createElement('fieldset');group.className='app-buffer-settings';const legend=document.createElement('legend');legend.textContent='Explore the captured Template Store';group.append(legend);
-  const note=document.createElement('p');note.textContent='Browse MapNero-authored public templates captured on 13 October 2026. Categories use real app screenshots. Search filters the captured catalogue below; the screenshot stays fixed unless a matching real search capture is available. Downloads, ratings and your account are not changed.';group.append(note);
+  const note=document.createElement('p');note.textContent='Browse MapNero-authored public templates captured on 13 October 2026. Categories use real app screenshots. Search filters the captured catalogue below; the screenshot stays fixed unless a matching real search capture is available. Open a template to inspect its captured fields and try a local form or checklist. Results stay in this page; ratings and your account are not changed.';group.append(note);
   const searchLabel=document.createElement('label');searchLabel.textContent='Search by name or author';const search=document.createElement('input');search.type='search';search.maxLength=120;search.setAttribute('aria-label','Search captured store templates');search.value=state.query;searchLabel.append(search);group.append(searchLabel);
   const categoryLabel=document.createElement('label');categoryLabel.textContent='Category';const category=document.createElement('select');category.setAttribute('aria-label','Captured store category');categoryLabel.append(category);group.append(categoryLabel);
   const summary=document.createElement('p');summary.setAttribute('role','status');summary.dataset.storeResults='';group.append(summary);
-  const list=document.createElement('ul');list.className='app-store-results';group.append(list);
+  const detail=document.createElement('div');detail.dataset.storePractice='';group.append(detail);const list=document.createElement('ul');list.className='app-store-results';group.append(list);
   const clear=document.createElement('button');clear.type='button';clear.className='app-record-download';clear.textContent='Clear store filters';group.append(clear);
   let alive=true;
+  function openTemplate(source){
+   detail.replaceChildren();const heading=document.createElement('h4');heading.textContent=source.name;detail.append(heading);const description=document.createElement('p');description.textContent=source.description;detail.append(description);const info=document.createElement('p');info.textContent=`Captured version ${source.version} · ${(source.schema.fields||[]).length} fields · ${(source.schema.steps||[]).length} checklist items. Practice only; no account or live store write.`;detail.append(info);
+   const fields=document.createElement('ul');for(const field of source.schema.fields||[]){const li=document.createElement('li');li.textContent=`${field.label} · ${field.type}${field.required?' · required':''}`;fields.append(li);}detail.append(fields);
+   if(source.schema.fields?.length){const use=document.createElement('button');use.type='button';use.className='app-record-download';use.textContent='Use '+source.name+' fields';use.onclick=()=>onTemplate(source);detail.append(use);}
+   if(source.schema.steps?.length){const form=document.createElement('form');const values={};const feedback=document.createElement('p');feedback.setAttribute('role','status');const download=document.createElement('button');download.type='button';download.className='app-record-download';download.textContent='Download checklist practice result';download.hidden=true;let result=null;
+    for(const step of source.schema.steps){const label=document.createElement('label');label.className='app-symbol-choice';const check=document.createElement('input');check.type='checkbox';check.setAttribute('aria-label',step.title+' practice signoff');check.onchange=()=>{values[step.id]=check.checked;download.hidden=true;feedback.textContent='Checklist changed. Check it again before downloading.';};label.append(check,document.createTextNode(step.title+(step.requiresSignoff?' · signoff required':'')));form.append(label);if(step.description){const details=document.createElement('details'),summary=document.createElement('summary'),text=document.createElement('p');summary.textContent='Read captured item description';text.textContent=step.description;details.append(summary,text);form.append(details);}if(step.warningLevel){const warning=document.createElement('p');warning.textContent='Source warning level: '+step.warningLevel;form.append(warning);}}
+    const notes=document.createElement('textarea');notes.setAttribute('aria-label','Checklist practice notes');notes.placeholder='Practice notes';notes.oninput=()=>{download.hidden=true;feedback.textContent='Notes changed. Check it again before downloading.';};form.append(notes);const submit=document.createElement('button');submit.type='submit';submit.className='app-record-download';submit.textContent='Check practice checklist';form.append(submit,feedback,download);form.onsubmit=event=>{event.preventDefault();try{result=checklistResult(source,values,notes.value);}catch(error){feedback.textContent=error.message;download.hidden=true;return;}feedback.textContent='Practice checklist accepted. This is not operational clearance or clinical advice.';download.hidden=false;};download.onclick=()=>{if(!result)return;const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='mapnero-checklist-practice.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};detail.append(form);
+   }detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
   const render=()=>{
    if(!catalog||!alive)return;
    category.value=state.category;search.value=state.query;
@@ -20,7 +30,7 @@
    summary.textContent=`${results.length} captured template${results.length===1?'':'s'} · ${state.category}${state.query.trim()?` · “${state.query.trim()}”`:''}`;
    list.replaceChildren();
    for(const template of results){const item=document.createElement('li'),name=document.createElement('strong'),meta=document.createElement('span');name.textContent=template.name;meta.textContent=`${template.author} · ${template.category}`;item.append(name,meta);
-    if(template.name==='Wildlife Observation Log'){const open=document.createElement('button');open.type='button';open.className='app-record-download';open.textContent='Open Wildlife Observation Log';open.onclick=onWildlife;item.append(open);}
+    const source=schemas?.templates.find(t=>t.name===template.name);if(source){const open=document.createElement('button');open.type='button';open.className='app-record-download';open.textContent='Try '+template.name;open.onclick=()=>openTemplate(source);item.append(open);} if(template.name==='Wildlife Observation Log'){const open=document.createElement('button');open.type='button';open.className='app-record-download';open.textContent='Open Wildlife Observation Log';open.onclick=onWildlife;item.append(open);}
     list.append(item);
    }
    if(!results.length){const item=document.createElement('li');item.textContent='No matching templates in the captured catalogue.';list.append(item);}
@@ -30,8 +40,8 @@
   search.oninput=()=>{state.query=search.value;render();};category.onchange=()=>{state.category=category.value;render();};clear.onclick=()=>{reset();render();};
   status.append(group);summary.textContent='Loading captured catalogue…';search.disabled=category.disabled=clear.disabled=true;
   const ready=data=>{if(!alive)return;catalog=data;for(const label of catalog.categories){const option=document.createElement('option');option.value=option.textContent=label;category.append(option);}search.disabled=category.disabled=clear.disabled=false;render();};
-  if(catalog)ready(catalog);else fetch('assets/app-walkthrough/store-catalog.json').then(r=>{if(!r.ok)throw Error('Catalogue unavailable.');return r.json();}).then(ready).catch(error=>{if(alive)summary.textContent=error.message;});
+  Promise.all([catalog?Promise.resolve(catalog):fetch('assets/app-walkthrough/store-catalog.json').then(r=>{if(!r.ok)throw Error('Catalogue unavailable.');return r.json();}),schemas?Promise.resolve(schemas):fetch('assets/app-walkthrough/store-schemas.json').then(r=>{if(!r.ok)throw Error('Template fields unavailable.');return r.json();})]).then(([data,snapshot])=>{schemas=snapshot;ready(data);}).catch(error=>{if(alive)summary.textContent=error.message;});
   return{chooseCategory:value=>{if(catalog?.categories.includes(value)){state.category=value;render();group.scrollIntoView({behavior:'smooth',block:'nearest'});}},focusSearch:()=>{search.focus();group.scrollIntoView({behavior:'smooth',block:'nearest'});},cleanup:()=>{alive=false;}};
  }
- return{filter,mount,reset};
+ return{filter,mount,reset,checklistResult};
 });
