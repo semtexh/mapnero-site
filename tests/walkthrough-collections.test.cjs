@@ -15,3 +15,7 @@ test('camera browsing debounces, cancels active drags and changes only a safe ne
  currentSheet=current;candidates=[a,b];scheduler.idle(view);callback();assert.equal(retained,1);assert.equal(currentSheet,current);
  candidates=[a];scheduler.idle(view);const pending=callback;scheduler.dispose();pending();assert.equal(switched.length,1);
 });
+test('generated Atlas inserts all sheets atomically, retains PDF bytes and allows 64 sheets',()=>{
+ C.reset();const record=i=>({name:'Sheet '+i,kind:'PDF',original:new Blob(['PDF '+i],{type:'application/pdf'}),preview:new Blob(['map pixels'],{type:'image/png'}),coordinates:[[-.14,51.51],[-.13,51.51],[-.13,51.5],[-.14,51.5]]});
+ assert.throws(()=>C.addAtlas([record(1),{...record(2),coordinates:null}],'Rejected'),/bounds/);const untouched=C.addGroup('Rejected');assert.equal(untouched.id,1);assert.throws(()=>C.addAtlas([record(1)],'Rejected'),/existing/);C.reset();const inputs=Array.from({length:64},(_,i)=>record(i+1)),atlas=C.addAtlas(inputs,'Full Atlas');assert.equal(atlas.maps.length,64);assert.equal(atlas.maps[0].record.original,inputs[0].original);assert.deepEqual(atlas.maps.map(m=>m.rank),Array.from({length:64},(_,i)=>i));inputs[0].coordinates[0][0]=0;assert.equal(atlas.maps[0].record.coordinates[0][0],-.14);assert.throws(()=>C.addAtlas([record(65)],'Overflow'),/64 maps/);assert.equal(C.addGroup('Overflow').name,'Overflow');C.reset();assert.throws(()=>C.addAtlas([record(1),record(1)],'Duplicate'),/unique/);assert.equal(C.addGroup('Duplicate').id,1);C.reset();
+});
