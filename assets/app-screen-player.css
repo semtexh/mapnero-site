@@ -53,3 +53,6 @@
 .app-follow-warning{border-color:#b54d32!important;background:#fff3ed}.app-follow-warning [role=alert]{color:#8f341e;font-weight:600}
 
 .app-follow-manual-summary{cursor:pointer;padding:.75rem 0;min-height:44px;box-sizing:border-box;font-weight:500}
+
+.app-personal-workspace{min-width:0}.app-personal-workspace-table{max-width:100%;overflow-x:auto}.app-personal-workspace-table table{border-collapse:collapse;font:13px system-ui}.app-personal-workspace-table th,.app-personal-workspace-table td{padding:8px;border:1px solid #b7c6b0;min-width:100px;overflow-wrap:anywhere}
+.app-personal-workspace input[type=checkbox]{width:44px;min-height:44px}

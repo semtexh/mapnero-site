@@ -665,7 +665,7 @@
     "title": "Sync one layer with your account",
     "summary": "Choose exactly which layers are available in your signed-in Web GIS and on your other MapNero devices.",
     "access": "Signed-in Pro or Team account",
-    "note": "This is personal workspace sync. It does not share a layer with your organization or a Team Session.",
+    "note": "Actual signed-out Account & Access and blank Sign in captures. The working two-device practice uses local profiles and independent copies in this tab; it does not authenticate or contact MapNero cloud. The signed-in layer opt-in screen remains to be captured.",
     "steps": [
       {
         "title": "Open the layer editor",
@@ -680,7 +680,10 @@
         "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/account-access.png",
+      "assets/guides/screenshots/apple/en/account-sign-in.png"
+    ]
   },
   {
     "platform": "apple",
