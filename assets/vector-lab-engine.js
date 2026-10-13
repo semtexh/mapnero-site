@@ -1,0 +1,23 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.MapNeroVectorLab=factory();})(typeof window==='undefined'?globalThis:window,function(){
+ 'use strict';
+ const clone=x=>JSON.parse(JSON.stringify(x));
+ function vertices(g){if(!g)return[];if(g.type==='GeometryCollection')return g.geometries.flatMap(vertices);const depth={Point:0,MultiPoint:1,LineString:1,MultiLineString:2,Polygon:2,MultiPolygon:3}[g.type];const walk=(a,d)=>d?a.flatMap(x=>walk(x,d-1)):[a];return walk(g.coordinates,depth);}
+ function parse(text){
+  if(typeof text!=='string'||new TextEncoder().encode(text).length>1000000)throw Error('Choose GeoJSON under 1 MB.');const d=JSON.parse(text);let count=0;
+  function pos(p){if(!Array.isArray(p)||p.length<2||!p.every(Number.isFinite)||Math.abs(p[0])>180||Math.abs(p[1])>90)throw Error('Coordinates must be finite longitude / latitude values in range.');if(++count>20000)throw Error('This demo supports up to 20,000 coordinate positions.');}
+  function line(a,min){if(!Array.isArray(a)||a.length<min)throw Error('A line needs two positions; a ring needs four.');a.forEach(pos);}
+  function polygon(a){if(!Array.isArray(a)||!a.length)throw Error('A polygon needs a closed outer ring.');a.forEach(r=>{line(r,4);if(r[0].length!==r.at(-1).length||!r[0].every((x,i)=>x===r.at(-1)[i]))throw Error('Polygon rings must be closed.');});}
+  function geometry(g,depth=0){if(g===null)return;if(!g||typeof g!=='object'||depth>8)throw Error('Invalid geometry or excessive nesting.');const c=g.coordinates;switch(g.type){case'Point':pos(c);break;case'MultiPoint':if(!Array.isArray(c))throw Error('Invalid MultiPoint.');c.forEach(pos);break;case'LineString':line(c,2);break;case'MultiLineString':if(!Array.isArray(c))throw Error('Invalid MultiLineString.');c.forEach(a=>line(a,2));break;case'Polygon':polygon(c);break;case'MultiPolygon':if(!Array.isArray(c))throw Error('Invalid MultiPolygon.');c.forEach(polygon);break;case'GeometryCollection':if(!Array.isArray(g.geometries))throw Error('Invalid GeometryCollection.');g.geometries.forEach(x=>{if(x===null)throw Error('GeometryCollection members cannot be null.');geometry(x,depth+1);});break;default:throw Error('Unsupported GeoJSON geometry.');}}
+  const collection=d?.type==='FeatureCollection'?d:d?.type==='Feature'?{type:'FeatureCollection',features:[d]}:{type:'FeatureCollection',features:[{type:'Feature',properties:{},geometry:d}]};
+  if(!Array.isArray(collection.features)||collection.features.length>500)throw Error('Use a collection with up to 500 features.');collection.features.forEach(f=>{if(!f||f.type!=='Feature'||!Object.hasOwn(f,'geometry')||!(f.properties===null||typeof f.properties==='object'&&!Array.isArray(f.properties)))throw Error('Invalid feature or properties.');geometry(f.geometry);});return clone(collection);
+ }
+ function bounds(collection){const p=collection.features.flatMap(f=>vertices(f.geometry));if(!p.length)return[-.14,51.495,-.085,51.515];const x=p.map(p=>p[0]),y=p.map(p=>p[1]);let a=Math.min(...x),b=Math.min(...y),c=Math.max(...x),d=Math.max(...y);const dx=Math.max(c-a,.002)*.12,dy=Math.max(d-b,.002)*.12;return[a-dx,b-dy,c+dx,d+dy];}
+ function editVertex(collection,feature,index,lon,lat){const out=clone(collection),f=out.features[feature],p=f&&vertices(f.geometry)[index];if(!p)throw Error('Select a coordinate position.');if(!Number.isFinite(lon)||!Number.isFinite(lat)||Math.abs(lon)>180||Math.abs(lat)>90)throw Error('Use valid longitude / latitude values.');
+  function rings(g){if(!g)return[];if(g.type==='Polygon')return g.coordinates;if(g.type==='MultiPolygon')return g.coordinates.flat();if(g.type==='GeometryCollection')return g.geometries.flatMap(rings);return[];}
+  // Both ring endpoints describe the same position; move them together.
+  for(const r of rings(f.geometry)){if(p===r[0]||p===r.at(-1)){r[0][0]=r.at(-1)[0]=lon;r[0][1]=r.at(-1)[1]=lat;}}
+  p[0]=lon;p[1]=lat;delete out.bbox;delete f.bbox;function clear(g){if(!g)return;delete g.bbox;if(g.type==='GeometryCollection')g.geometries.forEach(clear);}clear(f.geometry);return parse(JSON.stringify(out));
+ }
+ function sample(){return{type:'FeatureCollection',features:[{type:'Feature',id:'checkpoint',properties:{name:'Westminster',condition:'Good'},geometry:{type:'Point',coordinates:[-.1246,51.5007,9]}},{type:'Feature',id:'walk',properties:{name:'Riverside route',status:'Draft'},geometry:{type:'LineString',coordinates:[[-.1246,51.5007],[-.1195,51.5033],[-.0994,51.5076]]}},{type:'Feature',id:'area',properties:{name:'Survey area',category:'Sample'},geometry:{type:'Polygon',coordinates:[[[-.128,51.508],[-.116,51.508],[-.116,51.504],[-.128,51.504],[-.128,51.508]]]} }]};}
+ return{parse,vertices,bounds,editVertex,sample};
+});

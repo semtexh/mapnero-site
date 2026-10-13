@@ -45,11 +45,11 @@
  }
  if(mode==='form'||mode==='builder'){recordForm(mode==='builder');return;}
  if(mode==='import'){
- drawMap([]);const file=input('Local GeoJSON file','','file');file.accept='.json,.geojson,.pdf';
- file.onchange=async()=>{const f=file.files[0];if(!f)return;if(f.size>1000000){say('Choose a file under 1 MB.');return;}try{const text=await f.text();if(f.name.toLowerCase().endswith('.pdf')){showPDF(text,new Blob([await f.arrayBuffer()],{type:'application/pdf'}));}else{data=E.parse(text);drawMap();say(`Imported ${data.length} points. Points outside this illustrative London view may not be visible.`);}}catch(e){say(e.message);}};
+ window.renderMapNeroVectorLab({controls,surface,say,input,select,action});
+ const file=input('Local GeoPDF file','','file');file.accept='.pdf';file.onchange=async()=>{const f=file.files[0];if(!f)return;if(f.size>1000000){say('Choose a PDF under 1 MB.');return;}try{showPDF(await f.text(),new Blob([await f.arrayBuffer()],{type:'application/pdf'}));}catch(e){say(e.message);}};
  function showPDF(text,blob){data=window.MapNeroSamplePDF.extract(text);surface.replaceChildren();const object=N('object');const url=URL.createObjectURL(blob);object.type='application/pdf';object.data=url;object.setAttribute('aria-label','Imported sample GeoPDF map');object.style.width='100%';object.style.height='350px';object.append(N('p','Use the download link to open the PDF in your reader.'));surface.append(object);say(`GeoPDF imported: ${data.length} geographic corner anchors read. This demo reads uncompressed GPTS metadata; full app import compatibility is broader.`);setTimeout(()=>URL.revokeObjectURL(url),60000);}
  action('Import sample GeoPDF',()=>{try{const pdf=window.MapNeroSamplePDF.create('London sample field map',E.points);showPDF(pdf,new Blob([pdf],{type:'application/pdf'}));}catch(e){say(e.message);}});
- action('Import sample dataset',()=>{data=E.parse(JSON.stringify(E.geojson(E.points)));drawMap();say(`${data.length} sample points imported; inspect or export them.`);});action('Export imported points',exportData);say('Try the sample GeoPDF or point-GeoJSON data. Other app import formats are outside this website parser.');return;
+ return;
  }
  if(mode==='map'||mode==='settings'){
  drawMap();const style=select('Basemap',['Street','Terrain','Dark']),units=select('Distance units',['Metres','Feet']),format=select('Coordinate display',['Decimal degrees','Degrees / minutes']);
