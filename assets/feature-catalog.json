@@ -772,7 +772,10 @@
         "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/watermark-edit.png",
+      "assets/guides/screenshots/apple/en/watermark-preview.png"
+    ]
   },
   {
     "platform": "apple",
