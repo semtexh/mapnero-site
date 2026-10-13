@@ -23,3 +23,5 @@
    provides the same choices without overlapping targets on narrow phones. */
 [data-app-frame=export] .app-touchpoint[aria-label^="Select "],[data-app-frame=export] .app-touchpoint[aria-label="Include demo media ZIP"]{min-height:0}
 .app-buffer-settings input[type=checkbox]{width:44px;accent-color:#355e47}.app-buffer-settings [hidden]{display:none}.app-buffer-settings input[type=file]{max-width:100%}.app-buffer-settings p{overflow-wrap:anywhere}
+
+.app-report-table{border-collapse:collapse;width:100%;font:14px system-ui;table-layout:fixed}.app-report-table caption{text-align:left;font-weight:600;padding:12px 0}.app-report-table th,.app-report-table td{padding:10px 4px;border-bottom:1px solid #cbd6c6;text-align:left;overflow-wrap:anywhere;vertical-align:top}.app-report-table th{width:53%;font-weight:500}.app-report-table td{font-variant-numeric:tabular-nums}
