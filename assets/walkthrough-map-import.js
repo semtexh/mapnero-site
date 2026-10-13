@@ -89,5 +89,6 @@
   render();status.append(group);
   return{chooseFiles:()=>{input.accept='.png,.jpg,.jpeg,.webp,.tif,.tiff,.pdf,.kmz';input.click();},choosePhoto:()=>{input.accept='image/png,image/jpeg,image/webp';input.click();},save:saveMap,cleanup:()=>{alive=false;revision++;releasePreview();}};
  }
- return{inspect,mount,reset};
+ async function offlineRecord(){if(!state.saved||!state.record)throw Error('Import and Save practice map first.');const r=state.record,name=state.saved.name,token=revision;if(r.kind==='PDF')throw Error('Offline PDF pages are not connected yet. Choose an image, KMZ raster or supported GeoTIFF.');let preview;if(r.rgba){const canvas=document.createElement('canvas');canvas.width=r.width;canvas.height=r.height;canvas.getContext('2d').putImageData(new ImageData(r.rgba,r.width,r.height),0,0);preview=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));}else preview=new Blob([r.previewBytes||r.bytes],{type:r.previewMime||r.mime});if(!preview||revision!==token)throw Error('Imported map changed; save it again before preparing offline use.');return{name,fileName:r.file.name,width:r.width,height:r.height,coordinates:r.coordinates||null,preview,original:new Blob([r.bytes],{type:r.mime}),savedAt:new Date().toISOString()};}
+ return{inspect,mount,reset,offlineRecord};
 });

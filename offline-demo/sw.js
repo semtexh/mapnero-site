@@ -1,0 +1,4 @@
+const CACHE='mapnero-local-map-viewer-v1';const FILES=['./','./index.html','./offline-page.js','../assets/walkthrough-offline-store.js','../assets/guides/screenshots/apple/en/offline-maps.png'];
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
+self.addEventListener('fetch',event=>{const u=new URL(event.request.url);if(u.origin!==self.location.origin||event.request.method!=='GET')return;event.respondWith(caches.open(CACHE).then(async cache=>{const saved=await cache.match(event.request);if(saved)return saved;if(event.request.mode==='navigate')return cache.match(new URL('./index.html',self.location));return fetch(event.request);}));});
