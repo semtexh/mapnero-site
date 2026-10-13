@@ -21,9 +21,11 @@ a:focus-visible,button:focus-visible{outline:3px solid #136b50;outline-offset:5p
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 
 /* Quiet contour lines echo the icon's warm metallic detail. */
-.hero::before{content:'';position:absolute;inset:0;background:url('topographic-lines.svg') center/cover no-repeat;opacity:.55;pointer-events:none;z-index:0}
+.hero::before{content:'';position:absolute;inset:0;background:url('topographic-lines.svg') center/cover no-repeat;opacity:.63;pointer-events:none;z-index:0}
 .hero-content,.hero-product{position:relative;z-index:1}.product-screens{background:rgba(232,238,229,.83)}
 .hero-team-link{width:100%;color:var(--gold);font-weight:600;font-size:.85rem;text-decoration:none;margin-top:10px}.hero-team-link:hover{text-decoration:underline}
 .nav-links{gap:1.15rem}.nav-web a{font-weight:700;color:var(--gold)}
 .cta-section{background-image:url('topographic-lines.svg');background-size:cover;background-position:center}
 @media(max-width:600px){.nav-links li:not(.nav-web){display:none}.nav-links .nav-web{display:list-item}.hero-team-link{font-size:.82rem;margin-top:6px}.hero::before{background-position:60% center;opacity:.45}}
+
+.hero-map-key{position:absolute;bottom:17px;right:6vw;z-index:1;font-size:.6rem;letter-spacing:.1em;color:#647568;pointer-events:none}.hero-map-key span{margin-left:12px;color:#86938a}@media(max-width:600px){.hero-map-key{position:relative;bottom:auto;right:auto;text-align:right;font-size:.55rem;margin-top:5px}}
