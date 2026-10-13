@@ -10,7 +10,7 @@
   if(starts([137,80,78,71,13,10,26,10]))return{kind:'PNG',mime:'image/png',coordinates:null};
   if(starts([255,216,255]))return{kind:'JPEG',mime:'image/jpeg',coordinates:null};
   if(starts([82,73,70,70])&&b.length>=12&&[87,69,66,80].every((value,i)=>b[8+i]===value))return{kind:'WebP',mime:'image/webp',coordinates:null};
-  throw Error('This practice importer supports PNG, JPEG, WebP, PDF and the supported GeoTIFF subset. KMZ raster overlays are supported; links and QR imports are not connected yet.');
+  throw Error('This practice importer supports PNG, JPEG, WebP, PDF and the supported GeoTIFF subset. KMZ raster overlays and direct browser-accessible file links are supported; QR PNG reading is connected through the link importer.');
  }
  function reset(){revision++;state={name:'',record:null,saved:null};}
  function mount(status){
@@ -23,7 +23,7 @@
   const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.dataset.importFeedback='';group.append(feedback);
   const save=document.createElement('button');save.type='button';save.className='app-record-download';save.textContent='Save practice map';group.append(save);
   const download=document.createElement('button');download.type='button';download.className='app-record-download';download.textContent='Download original selected file';group.append(download);
-  let pending=false,previewURL=null,alive=true,pdfDocument=null,pdfLoading=null,pdfRender=null,pdfTurn=0;
+  let linkController=null,pending=false,previewURL=null,alive=true,pdfDocument=null,pdfLoading=null,pdfRender=null,pdfTurn=0;
   const stopPDF=()=>{pdfTurn++;if(pdfRender)pdfRender.cancel();pdfRender=null;if(pdfLoading)pdfLoading.destroy().catch(()=>{});pdfLoading=null;pdfDocument=null;};
   const releasePreview=()=>{if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;stopPDF();preview.replaceChildren();};
   const update=()=>{save.disabled=pending||!state.record||!state.name.trim();download.disabled=!state.record||pending;};
@@ -71,8 +71,8 @@
    if(state.saved)feedback.textContent=`Saved in this walkthrough: ${state.saved.name}. This does not add a map to your app account.`;update();
   };
   name.oninput=()=>{state.name=name.value;state.saved=null;feedback.textContent='';update();};
-  input.onchange=async()=>{
-   const file=input.files?.[0];if(!file)return;const token=++revision;state.record=null;state.saved=null;pending=true;releasePreview();summary.textContent='Reading selected file…';feedback.textContent='';update();
+  const loadFile=async(file)=>{
+   if(!file)return;const token=++revision;state.record=null;state.saved=null;pending=true;releasePreview();summary.textContent='Reading selected file…';feedback.textContent='';update();
    let decodeURL=null;
    try{
     if(file.size>maxBytes)throw Error('Choose a file under 12 MB.');const bytes=await file.arrayBuffer();let details=inspect(bytes);if(details.kind==='KMZ'){const overlay=await MapNeroKMZ.parse(bytes,DOMParser),imageDetails=inspect(overlay.imageBytes.buffer);if(!['PNG','JPEG','WebP'].includes(imageDetails.kind))throw Error('KMZ overlay must contain a PNG, JPEG or WebP image.');details={...imageDetails,...overlay,kind:'KMZ',mime:'application/vnd.google-earth.kmz',previewMime:imageDetails.mime,previewBytes:overlay.imageBytes};}
@@ -83,11 +83,12 @@
    }catch(error){if(alive&&token===revision){pending=false;state.record=null;summary.textContent='File not imported.';feedback.textContent=error.message||'Unable to read this file.';update();}}
    finally{if(decodeURL)URL.revokeObjectURL(decodeURL);input.value='';}
   };
+  input.onchange=()=>{linkController?.cancel();return loadFile(input.files?.[0]);};
   const saveMap=()=>{if(pending){feedback.textContent='Please wait for the selected file to finish loading.';return;}if(!state.record){feedback.textContent='Choose a supported local file before saving.';return;}if(!state.name.trim()){feedback.textContent='Enter a map name before saving.';return;}state.saved={name:state.name.trim(),file:state.record.file.name,width:state.record.width,height:state.record.height,coordinates:state.record.coordinates};feedback.textContent=`Saved in this walkthrough: ${state.saved.name}. This does not add a map to your app account.`;};
   save.onclick=saveMap;
   download.onclick=()=>{if(!state.record||pending)return;const record=state.record,url=URL.createObjectURL(new Blob([record.bytes],{type:record.mime})),link=document.createElement('a');link.href=url;link.download=record.file.name;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);feedback.textContent='Original selected file downloaded without changing its bytes.';};
-  render();status.append(group);
-  return{chooseFiles:()=>{input.accept='.png,.jpg,.jpeg,.webp,.tif,.tiff,.pdf,.kmz';input.click();},choosePhoto:()=>{input.accept='image/png,image/jpeg,image/webp';input.click();},save:saveMap,cleanup:()=>{alive=false;revision++;releasePreview();}};
+  render();status.append(group);linkController=MapNeroMapLinkPractice.mount(group,loadFile);
+  return{chooseFiles:()=>{input.accept='.png,.jpg,.jpeg,.webp,.tif,.tiff,.pdf,.kmz';input.click();},choosePhoto:()=>{input.accept='image/png,image/jpeg,image/webp';input.click();},save:saveMap,focusLink:()=>linkController?.focus(),cleanup:()=>{alive=false;revision++;linkController?.cleanup();releasePreview();}};
  }
  async function offlineRecord(){if(!state.saved||!state.record)throw Error('Import and Save practice map first.');const r=state.record,name=state.saved.name,token=revision;let preview;if(r.kind==='PDF'){if(!(r.pagePreview instanceof Blob))throw Error('Wait for the PDF page to render, then save it.');preview=r.pagePreview;}else if(r.rgba){const canvas=document.createElement('canvas');canvas.width=r.width;canvas.height=r.height;canvas.getContext('2d').putImageData(new ImageData(r.rgba,r.width,r.height),0,0);preview=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));}else preview=new Blob([r.previewBytes||r.bytes],{type:r.previewMime||r.mime});if(!preview||revision!==token)throw Error('Imported map changed; save it again before preparing offline use.');return{name,kind:r.kind,page:r.page||null,pages:r.pages||null,fileName:r.file.name,width:r.width,height:r.height,coordinates:r.coordinates||null,preview,original:new Blob([r.bytes],{type:r.mime}),manualReference:r.manualReference||null,savedAt:new Date().toISOString()};}
  async function acceptManualReference(file,solution){const token=++revision;const bytes=await file.arrayBuffer();if(revision!==token)throw Error('Map changed before the reference could be saved.');const details=inspect(bytes);if(!['PNG','JPEG','WebP'].includes(details.kind))throw Error('Choose a supported image.');const verified=MapNeroGeoreference.solve(solution.points,solution.width,solution.height);state.name=file.name.replace(/\.[^.]+$/,'').slice(0,120);state.record={...details,file,bytes,width:verified.width,height:verified.height,coordinates:verified.coordinates,manualReference:verified};state.saved={name:state.name,file:file.name,width:verified.width,height:verified.height,coordinates:verified.coordinates};return state.name;}
