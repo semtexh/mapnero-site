@@ -3,3 +3,5 @@
 .app-form-input{position:absolute;box-sizing:border-box;background:#fff;color:#172720;border:0;border-radius:5px;font:16px system-ui;padding:0 8px;min-height:44px;touch-action:manipulation}.app-form-input:focus{outline:2px solid #dcae22;outline-offset:1px}.app-record-download{display:block;margin-top:12px;min-height:44px;padding:10px 14px;border:1px solid #b7c6b0;border-radius:5px;background:#fff;color:#172720;cursor:pointer;font:inherit;touch-action:manipulation}
 
 .app-sample-coordinate{position:absolute;left:8%;top:22.7%;width:56%;padding:3px 0;background:#f2f3f8;font:10px system-ui;color:#435744;pointer-events:none}
+
+.app-dark-input{background:#303030;color:#fff;border-radius:14px}.app-dark-input::placeholder{color:#aaa}.app-required-switch{position:absolute;min-width:44px;min-height:44px;border:0;border-radius:18px;background:#555;color:white;font:13px system-ui;cursor:pointer;touch-action:manipulation}.app-required-switch[aria-checked=true]{background:#9b7800}
