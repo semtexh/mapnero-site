@@ -65,7 +65,52 @@
    download.onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({type:'FeatureCollection',features:[feature]},null,2)],{type:'application/geo+json'}));const a=document.createElement('a');a.href=url;a.download='mapnero-practice-record.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};status.append(download);revealResult();
   }
  }
- function addFieldActions(){const edit=document.createElement('button');edit.type='button';edit.textContent=`Edit ${fieldTypes[draftField.type]} Field`;edit.className='app-record-download';edit.onclick=()=>show('forkEdit');status.append(edit);}
+ function addFieldActions(){const edit=document.createElement('button');edit.type='button';edit.textContent=`Edit ${fieldTypes[draftField.type]} Field`;edit.className='app-record-download';edit.onclick=()=>show('forkEdit');status.append(edit);const tryField=document.createElement('button');tryField.type='button';tryField.textContent='Try configured field';tryField.className='app-record-download';tryField.onclick=()=>{status.querySelector('.app-field-trial')?.remove();addFieldTrial();revealResult();};status.append(tryField);}
+ function addFieldTrial(){
+  const field={...draftField,options:[...new Set(draftField.options.split('\n').map(s=>s.trim()).filter(Boolean))]};
+  const form=document.createElement('form');form.className='app-field-trial';form.noValidate=true;
+  const heading=document.createElement('h4');heading.textContent='Try your configured field';form.append(heading);
+  const explanation=document.createElement('p');explanation.textContent='Practice form using your settings. The app screenshot above stays unchanged. Values remain in this page; nothing is sent to an app account.';form.append(explanation);
+  const label=document.createElement('label');label.textContent=(field.label||fieldTypes[field.type])+(field.required?' *':'');form.append(label);
+  let input=null,value=null;const message=document.createElement('p');message.setAttribute('role','status');
+  const makeInput=type=>{input=document.createElement('input');input.type=type;input.setAttribute('aria-label','Configured field value');input.required=field.required;label.append(input);};
+  if(['text','number','date','multiline'].includes(field.type)){
+   if(field.type==='multiline'){input=document.createElement('textarea');input.rows=4;input.setAttribute('aria-label','Configured field value');input.required=field.required;label.append(input);}else makeInput(field.type);
+   if(['text','multiline'].includes(field.type))input.maxLength=2000;
+   if(field.type==='number'){input.step='any';input.inputMode='decimal';if(field.min!=='')input.min=field.min;if(field.max!=='')input.max=field.max;}
+  }else if(field.type==='dropdown'){
+   input=document.createElement('select');input.setAttribute('aria-label','Configured field value');input.required=field.required;const empty=document.createElement('option');empty.value='';empty.textContent='Select…';input.append(empty);field.options.forEach(option=>{const item=document.createElement('option');item.value=option;item.textContent=option;input.append(item);});label.append(input);
+  }else if(field.type==='radio'){
+   field.options.forEach((option,i)=>{const choice=document.createElement('label');const radio=document.createElement('input');radio.type='radio';radio.name='practice-choice';radio.value=option;radio.required=field.required;radio.setAttribute('aria-label',option);radio.onchange=()=>value=radio.value;choice.append(radio,document.createTextNode(option));form.append(choice);});
+  }else if(field.type==='checkbox'){makeInput('checkbox');
+  }else if(field.type==='slider'){
+   makeInput('range');input.min=field.min||'0';input.max=field.max||'100';input.step='1';input.value=input.min;const readout=document.createElement('output');readout.textContent=input.value;input.oninput=()=>readout.textContent=input.value;label.append(readout);
+  }else if(field.type==='gps'){
+   const button=document.createElement('button');button.type='button';button.textContent='Use sample London coordinate';button.className='app-record-download';button.onclick=()=>{value=[-0.1195,51.5033];message.textContent='Sample coordinate: 51.5033, −0.1195. This does not use device GPS.';};form.append(button);
+  }else if(field.type==='camera'){
+   makeInput('file');input.accept='image/*';const note=document.createElement('p');note.textContent='Choose a local photo, up to 20 MB. Only its name, type and size go into the practice download; the photo is not uploaded or included.';form.append(note);
+  }else if(field.type==='section'){
+   const note=document.createElement('p');note.textContent='A section is a heading; it does not collect a value.';form.append(note);
+  }
+  if(['dropdown','radio'].includes(field.type)&&!field.options.length){message.textContent='Add choices in Edit Field before trying this choice field.';}
+  if(field.hint){const hint=document.createElement('p');hint.textContent=field.hint;form.append(hint);}
+  const submit=document.createElement('button');submit.type='submit';submit.className='app-record-download';submit.textContent='Check practice value';form.append(submit,message);
+  const invalidateResult=()=>{if(form.querySelector('[data-trial-download]')){form.querySelector('[data-trial-download]').remove();message.textContent='Value changed. Check it again before downloading.';}};form.addEventListener('input',invalidateResult);form.addEventListener('change',invalidateResult);
+  form.onsubmit=e=>{
+   e.preventDefault();form.querySelector('[data-trial-download]')?.remove();let error='';
+   if(input&&!input.validity.valid)error='Enter a valid value within the configured limits.';
+   if(['text','multiline','date','dropdown'].includes(field.type))value=input.value.trim()||null;
+   if(['number','slider'].includes(field.type)){value=input.value===''?null:Number(input.value);if(value!==null&&(!Number.isFinite(value)||(field.min!==''&&value<Number(field.min))||(field.max!==''&&value>Number(field.max))))error='Enter a number within the configured range.';}
+   if(field.type==='checkbox')value=input.checked;
+   if(field.type==='camera'){const photo=input.files[0];value=photo?{name:photo.name,type:photo.type,size:photo.size}:null;if(photo&&(!photo.type.startsWith('image/')||photo.size>20*1024*1024))error='Choose an image file no larger than 20 MB.';}
+   if(['dropdown','radio'].includes(field.type)&&value!==null&&!field.options.includes(value))error='Choose an option from the configured list.';
+   if(field.required&&field.type!=='section'&&(value===null||value===''||(field.type==='checkbox'&&!value)))error='Complete the required field before continuing.';
+   if(error){message.textContent=error;return;}
+   message.textContent='Practice value accepted. Download the field settings and your value.';
+   const result={demo:true,field,value,source:'website practice form',...(field.type==='gps'&&value?{location_source:'sample London coordinate'}:{}),...(field.type==='camera'?{photo_content_included:false}:{})};
+   const download=document.createElement('button');download.type='button';download.className='app-record-download';download.dataset.trialDownload='';download.textContent='Download configured field result';download.onclick=()=>downloadText('mapnero-configured-field.json',JSON.stringify(result,null,2),'application/json');form.append(download);
+  };status.append(form);
+ }
  function addFieldEditor(){
   image.src='assets/app-walkthrough/'+(draftField.type==='text'?'template-edit-field.png':`template-edit-${draftField.type}.png`);
   const typePicker=document.createElement('select');typePicker.className='app-field-type';typePicker.setAttribute('aria-label','Practice field type');Object.entries(fieldTypes).forEach(([key,label])=>{const option=document.createElement('option');option.value=key;option.textContent=label;typePicker.append(option);});typePicker.value=draftField.type;typePicker.onchange=()=>{draftField.type=typePicker.value;show('forkEdit',false);};touch.append(typePicker);
