@@ -5,7 +5,7 @@
  const list=host.querySelector('[data-feature-list]'), detail=host.querySelector('[data-feature-detail]');
  const search=host.querySelector('[data-feature-search]'), platform=host.querySelector('[data-feature-platform]');
  let catalog=[],selected='template-store';
- const playable={android:{'attribute-forms':'androidWildlife'},apple:{'import-map':'importMap','quick-start':'usageMode','template-store':'store','location-track':'map','pins-layers':'layers','field-templates':'record','create-edit-templates':'builder','measure-cogo-buffer':'measure','buffer-workflow':'buffer','mobile-export':'export','route-builder':'route','offline-maps':'offline','team-session':'team','track-report':'report','settings-workspace':'settings'}};
+ const playable={android:{'attribute-forms':'androidWildlife'},apple:{'template-import':'templateImport','import-map':'importMap','quick-start':'usageMode','template-store':'store','location-track':'map','pins-layers':'layers','field-templates':'record','create-edit-templates':'builder','measure-cogo-buffer':'measure','buffer-workflow':'buffer','mobile-export':'export','route-builder':'route','offline-maps':'offline','team-session':'team','track-report':'report','settings-workspace':'settings'}};
  const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
  function renderList(){
  const shown=catalog.filter(t=>t.platform===platform.value&&`${t.title} ${t.summary}`.toLowerCase().includes(search.value.toLowerCase()));
