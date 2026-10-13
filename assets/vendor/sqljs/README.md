@@ -1,0 +1,1 @@
+sql.js 1.14.2, MIT. Vendored from https://registry.npmjs.org/sql.js/-/sql.js-1.14.2.tgz. Official project: https://github.com/sql-js/sql.js. Used locally to read MBTiles; no uploaded data or package scripts.
