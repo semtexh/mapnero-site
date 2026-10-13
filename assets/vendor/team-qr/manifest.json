@@ -1,0 +1,22 @@
+[
+  {
+    "package": "jsqr",
+    "version": "1.4.0",
+    "registry": "https://registry.npmjs.org/jsqr/-/jsqr-1.4.0.tgz",
+    "integrity": "sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==",
+    "file": "jsQR.js",
+    "sha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+    "license": "Apache-2.0",
+    "license_source": "package"
+  },
+  {
+    "package": "qrcode-generator",
+    "version": "1.4.4",
+    "registry": "https://registry.npmjs.org/qrcode-generator/-/qrcode-generator-1.4.4.tgz",
+    "integrity": "sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==",
+    "file": "qrcode.js",
+    "sha256": "18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780",
+    "license": "MIT",
+    "license_source": "https://raw.githubusercontent.com/kazuhikoarase/qrcode-generator/master/LICENSE"
+  }
+]
