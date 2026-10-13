@@ -1867,5 +1867,137 @@
       }
     ],
     "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "coordinate-formats",
+    "title": "Convert coordinates",
+    "summary": "Convert WGS84 positions to UTM and MGRS.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Convert WGS84 positions to UTM and MGRS."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "Coordinate/UTMConverter.swift"
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "cogo-construction",
+    "title": "Construct a point by grid bearing",
+    "summary": "Create a local survey point from distance and grid bearing.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Create a local survey point from distance and grid bearing."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "Geo/COGO.swift"
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "military-symbols",
+    "title": "Choose map symbols",
+    "summary": "Preview sample identity frames and place a symbol on the map.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Preview sample identity frames and place a symbol on the map."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "UI/Map/MilSymbolPickerView.swift"
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "apple-watch",
+    "title": "Try the Watch field controls",
+    "summary": "Start a simulated Watch track, advance a position and save a pin.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Start a simulated Watch track, advance a position and save a pin."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "MapNeroWatch/Views/TrackView.swift"
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "template-import",
+    "title": "Import a template field list",
+    "summary": "Turn a sample CSV header into editable form fields.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Turn a sample CSV header into editable form fields."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "UI/Templates/TemplateLibraryView.swift"
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "Apple workflow preview",
+    "id": "team-chat",
+    "title": "Use a sample team chat",
+    "summary": "Exchange sample messages inside an illustrated team session.",
+    "access": "Website sample; app access depends on tool and plan.",
+    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "steps": [
+      {
+        "title": "Try the tool",
+        "body": "Exchange sample messages inside an illustrated team session."
+      },
+      {
+        "title": "Inspect the result",
+        "body": "Change the sample input and run the tool again."
+      }
+    ],
+    "images": [],
+    "extra": true,
+    "source": "UI/Map/TeamLibraryView.swift"
   }
 ]

@@ -11,18 +11,19 @@
  list.replaceChildren();host.querySelector('[data-feature-count]').textContent=`${shown.length} features`;
  if(!shown.length){list.append(el('p','No matching features. Try “map” or “template”.'));detail.replaceChildren();return;}
  if(!shown.some(t=>t.id===selected))selected=shown[0].id;
- shown.forEach(t=>{const b=el('button',t.title);b.type='button';b.setAttribute('aria-pressed',String(t.id===selected));b.onclick=()=>{selected=t.id;renderList();};list.append(b);});
+ shown.forEach(t=>{const b=el('button',t.title);b.type='button';b.dataset.featureId=t.id;b.setAttribute('aria-pressed',String(t.id===selected));b.onclick=()=>{selected=t.id;renderList();};list.append(b);});
  renderDetail(shown.find(t=>t.id===selected));
  }
  function renderDetail(t){
  detail.replaceChildren(el('span',t.platformLabel,'explorer-eyebrow'),el('h3',t.title),el('p',t.summary),el('p',t.access,'explorer-access'));
+ if(window.renderMapNeroLab && t.id!=='template-store' && t.id!=='pins-layers')window.renderMapNeroLab(detail,t);
  if(t.id==='template-store')renderStore();
  else if(t.id==='pins-layers')renderMap();
  else if(t.images.length){const gallery=el('div',null,'explorer-captures');t.images.forEach(src=>{const img=el('img');img.src=src;img.alt=`${t.platformLabel}: ${t.title}`;img.loading='lazy';gallery.append(img);});detail.append(gallery,el('p','Actual app screens · explore the workflow below','explorer-caption'));}
  else detail.append(el('p','Screen capture coming next. The workflow below describes the app.','explorer-caption'));
  const steps=el('ol',null,'explorer-steps');t.steps.forEach(s=>{const li=el('li');li.append(el('strong',s.title),el('p',s.body));steps.append(li);});detail.append(steps);
  if(t.note)detail.append(el('p',t.note,'explorer-note'));
- if(t.id!=='template-store'){const a=el('a','Open the full guide →');a.href=`guides.html?lang=en#${t.platform}/${t.id}`;detail.append(a);}
+ if(t.id!=='template-store'&&!t.extra){const a=el('a','Open the full guide →');a.href=`guides.html?lang=en#${t.platform}/${t.id}`;detail.append(a);}
  }
  function renderStore(){
  const box=el('div',null,'sample-store');box.append(el('span','INTERACTIVE PREVIEW · SAMPLE TEMPLATES','explorer-eyebrow'));

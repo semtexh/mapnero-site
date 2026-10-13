@@ -18,5 +18,14 @@ for(const [platform,data] of Object.entries(ctx.window.MAPNERO_GUIDES.en.platfor
 }
 catalog.unshift({platform:'apple',platformLabel:'iPhone · iPad · Mac',id:'template-store',title:'Template Store',summary:'Browse reusable templates by category, preview their fields and add them to your library.',access:'Availability depends on template access and workspace permissions.',note:'The website uses sample templates. It does not download from the live store.',steps:[{title:'Browse',body:'Choose Community or Organization and browse categories or search.'},{title:'Preview',body:'Open a template to review its fields before downloading.'},{title:'Use',body:'Download to your library, then use the template to collect records.'}],images:[]});
 catalog.splice(1,0,{...catalog[0],platform:'android',platformLabel:'Android'});
+const extras=[
+ ['coordinate-formats','Convert coordinates','Convert WGS84 positions to UTM and MGRS.','Coordinate/UTMConverter.swift'],
+ ['cogo-construction','Construct a point by grid bearing','Create a local survey point from distance and grid bearing.','Geo/COGO.swift'],
+ ['military-symbols','Choose map symbols','Preview sample identity frames and place a symbol on the map.','UI/Map/MilSymbolPickerView.swift'],
+ ['apple-watch','Try the Watch field controls','Start a simulated Watch track, advance a position and save a pin.','MapNeroWatch/Views/TrackView.swift'],
+ ['template-import','Import a template field list','Turn a sample CSV header into editable form fields.','UI/Templates/TemplateLibraryView.swift'],
+ ['team-chat','Use a sample team chat','Exchange sample messages inside an illustrated team session.','UI/Map/TeamLibraryView.swift']
+];
+for(const [id,title,summary,source]of extras)catalog.push({platform:'apple',platformLabel:'Apple workflow preview',id,title,summary,access:'Website sample; app access depends on tool and plan.',note:'This is a local workflow demo. It does not claim hardware connection, live communication or every app option.',steps:[{title:'Try the tool',body:summary},{title:'Inspect the result',body:'Change the sample input and run the tool again.'}],images:[],extra:true,source});
 fs.writeFileSync(path.join(root,'assets/feature-catalog.json'),JSON.stringify(catalog,null,2)+'\n');
 console.log(`${catalog.length} platform-specific feature guides`);
