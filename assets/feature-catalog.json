@@ -1,0 +1,1871 @@
+[
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "template-store",
+    "title": "Template Store",
+    "summary": "Browse reusable templates by category, preview their fields and add them to your library.",
+    "access": "Availability depends on template access and workspace permissions.",
+    "note": "The website uses sample templates. It does not download from the live store.",
+    "steps": [
+      {
+        "title": "Browse",
+        "body": "Choose Community or Organization and browse categories or search."
+      },
+      {
+        "title": "Preview",
+        "body": "Open a template to review its fields before downloading."
+      },
+      {
+        "title": "Use",
+        "body": "Download to your library, then use the template to collect records."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "template-store",
+    "title": "Template Store",
+    "summary": "Browse reusable templates by category, preview their fields and add them to your library.",
+    "access": "Availability depends on template access and workspace permissions.",
+    "note": "The website uses sample templates. It does not download from the live store.",
+    "steps": [
+      {
+        "title": "Browse",
+        "body": "Choose Community or Organization and browse categories or search."
+      },
+      {
+        "title": "Preview",
+        "body": "Open a template to review its fields before downloading."
+      },
+      {
+        "title": "Use",
+        "body": "Download to your library, then use the template to collect records."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "quick-start",
+    "title": "Start with Simple Map",
+    "summary": "Set up MapNero for a clear everyday workflow with four large map controls.",
+    "access": "Free",
+    "steps": [
+      {
+        "title": "Choose Simple Map",
+        "body": "On first launch, select Simple Map. Later, you can change it in Settings without deleting maps or records."
+      },
+      {
+        "title": "Allow location access",
+        "body": "Open the map and approve location access when asked. Go outdoors and wait briefly for the first accurate fix."
+      },
+      {
+        "title": "Learn the four controls",
+        "body": "Use Locate, Add Pin, Record and More. More contains measurement, basemap and offline map tools."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/quick-start.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "import-map",
+    "title": "Import a PDF or map file",
+    "summary": "Load a GeoPDF, PDF, GeoTIFF, KMZ or image and open it in the map viewer.",
+    "access": "Free · some formats require Core or Pro",
+    "note": "A multi-page PDF requires Pro. Georeferencing a photo as a map requires Core or higher.",
+    "steps": [
+      {
+        "title": "Open Import",
+        "body": "From the map or Library, open Import Map."
+      },
+      {
+        "title": "Choose the source",
+        "body": "Pick a PDF/GeoPDF, GeoTIFF, image, KMZ, web link or QR code."
+      },
+      {
+        "title": "Check the map position",
+        "body": "Open the imported map and tap Locate. If an older imported PDF is misaligned, delete that copy and import it again so the current georeference parser runs."
+      },
+      {
+        "title": "Use Open in MapNero",
+        "body": "You can also select a supported file in the Files app and share or open it with MapNero."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/import-map.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "photo-georeference",
+    "title": "Reference a photo manually",
+    "summary": "Turn an unreferenced image into a map by matching known positions on the image to real-world coordinates.",
+    "access": "Core or higher",
+    "note": "Use at least three well-spaced, non-collinear points whose real coordinates you know. Do not guess control points.",
+    "steps": [
+      {
+        "title": "Import the image",
+        "body": "Choose Import Photo as Map, then begin the manual reference option."
+      },
+      {
+        "title": "Place known control points",
+        "body": "For each point, tap the same identifiable place on the image and on the base map. Spread points around the image rather than along one edge."
+      },
+      {
+        "title": "Check before relying on it",
+        "body": "Review the fit and open the saved map. In Library, the MAN badge confirms that the map was referenced manually."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/photo-georeference.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "location-track",
+    "title": "Find your location and record a track",
+    "summary": "Keep the map centred on your position and save your movement as a track.",
+    "access": "Free limits · unlimited with Core+",
+    "steps": [
+      {
+        "title": "Centre the map",
+        "body": "Tap Locate. Tap it again to change the follow state if you want the map to remain centred while moving."
+      },
+      {
+        "title": "Start recording",
+        "body": "Tap Record, confirm the recording state, then begin moving."
+      },
+      {
+        "title": "Watch the live line",
+        "body": "The recording line updates on the Base Map and imported PDF maps while recording."
+      },
+      {
+        "title": "Stop and save",
+        "body": "Tap the square Stop button to finish recording; the track is saved automatically. Review it later in the Library or its layer."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/location-track.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "pins-layers",
+    "title": "Add pins and manage layers",
+    "summary": "Save a place, add field details and control what appears on the map.",
+    "access": "Free · advanced layer tools may require Core+",
+    "note": "MapNero will not save a pin into a hidden, locked, trashed or WMS/WMTS layer. Choose a visible writable layer first.",
+    "steps": [
+      {
+        "title": "Choose a visible layer",
+        "body": "Open Layers and select a normal writable layer. Turn its visibility on."
+      },
+      {
+        "title": "Add the pin",
+        "body": "Tap Add Pin or long-press the map, then choose the pin type."
+      },
+      {
+        "title": "Describe the record",
+        "body": "Add a name, notes, attributes or media, then save."
+      },
+      {
+        "title": "Edit later",
+        "body": "Tap the feature on the map and open Edit from its detail card."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/pins-layers.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "offline-maps",
+    "title": "Download a map for offline use",
+    "summary": "Prepare a map region before leaving mobile or Wi-Fi coverage.",
+    "access": "1 region Free · unlimited Core+",
+    "steps": [
+      {
+        "title": "Open Offline Maps",
+        "body": "On Base Map, move and zoom to the field area first. Then tap Offline Maps in the map controls; if needed, open More."
+      },
+      {
+        "title": "Frame the work area",
+        "body": "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again."
+      },
+      {
+        "title": "Choose detail and download",
+        "body": "Select the zoom range, check the estimated size and start the download while online."
+      },
+      {
+        "title": "Test before leaving",
+        "body": "Turn on Airplane Mode, reopen the region and confirm the required zoom levels are visible."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/offline-maps.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "collections-atlas",
+    "title": "Use map collections and Atlas",
+    "summary": "Browse adjoining GeoPDF sheets as one atlas and keep collection records visible across sheets.",
+    "access": "Collections Core+ · Atlas creation Pro",
+    "note": "Atlas creation needs an active downloaded raster MBTiles source. It does not create an atlas from an online-only or vector basemap.",
+    "steps": [
+      {
+        "title": "Group adjoining maps",
+        "body": "In the Library, move georeferenced sheets into the same collection and place preferred detailed maps above fallback maps."
+      },
+      {
+        "title": "Browse across sheet edges",
+        "body": "Open a collection map and pan the centre crosshair into a neighbouring sheet. The active sheet changes while the camera scale is preserved."
+      },
+      {
+        "title": "Choose GPS auto-switch only if needed",
+        "body": "Manual centre browsing is on by default. GPS-based Auto-switch is separate and off by default in Map Collections settings."
+      },
+      {
+        "title": "Create an Atlas",
+        "body": "With an offline raster MBTiles basemap active, open Create PDF Map, enable Atlas collection, choose scale and overlap, then create up to 64 sheets."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/collections-atlas.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "measure-cogo-buffer",
+    "title": "Measure, draw a bearing and create a buffer",
+    "summary": "Measure distance or area, construct a line by grid bearing, and create persistent buffer polygons.",
+    "access": "Measure Free · Buffer Pro",
+    "note": "The current COGO bearing is measured from UTM grid north. It is not a magnetic or true-north bearing.",
+    "steps": [
+      {
+        "title": "Measure on the map",
+        "body": "Open More → Measure, place points and read the live line length or area."
+      },
+      {
+        "title": "Create by bearing and distance",
+        "body": "Open More → COGO, enter a base point or use the current GPS fix, then enter a 0–360° grid bearing and a distance up to 100 km."
+      },
+      {
+        "title": "Create a buffer",
+        "body": "Open a point, line, track, polygon or circle, tap Buffer, enter metres, choose fill colour and opacity, then create."
+      },
+      {
+        "title": "Edit the result",
+        "body": "Open the buffer in Derived Buffers to change distance, fill colour or opacity. Changing distance rebuilds it from the original feature."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/measure-cogo-buffer.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "buffer-workflow",
+    "title": "Create and edit a buffer",
+    "summary": "Make a separate polygon around a point, line, track or polygon.",
+    "access": "Pro / Team",
+    "note": "The circle drawing tool is different: use a point feature plus Buffer for a radius around a location. A buffer is a geometric area, not a certified safety boundary.",
+    "steps": [
+      {
+        "title": "Select the source",
+        "body": "Tap a feature on the map, or open Layers and select a feature. In its detail card, choose Buffer; scroll the action row if necessary. This tool requires Pro or Team access."
+      },
+      {
+        "title": "Set the distance",
+        "body": "Enter a positive distance and choose metres or feet. You can give the output a name; leaving it empty keeps the automatic name."
+      },
+      {
+        "title": "Preview and style",
+        "body": "Use Preview to see how many sources and polygons can be processed. Preview does not save anything. Choose the fill colour and opacity before creating the buffer."
+      },
+      {
+        "title": "Create the polygon",
+        "body": "Choose Create Buffer. The result goes into the separate Derived Buffers layer. Close the feature card to inspect it on the map; the original feature remains unchanged."
+      },
+      {
+        "title": "Edit or buffer several features",
+        "body": "Select the saved buffer to change its colour, opacity or distance. Distance updates need the original source. For several features, use lasso selection and Buffer; check processed and skipped counts."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/buffer-workflow.png",
+      "assets/guides/screenshots/apple/en/buffer-workflow-appearance.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "team-gnss",
+    "title": "Connect a team or external GNSS",
+    "summary": "Sign in for organization sharing, or pair a supported receiver for higher-accuracy positioning.",
+    "access": "Team sharing · GNSS free during beta",
+    "steps": [
+      {
+        "title": "Sign in",
+        "body": "Open Settings → Account, enter your email and complete the six-digit one-time code."
+      },
+      {
+        "title": "Join your organization",
+        "body": "Accept an invitation or enter the organization code provided by its administrator."
+      },
+      {
+        "title": "Share a layer",
+        "body": "Open a layer and enable Share with organization. Internet access is required for synchronization."
+      },
+      {
+        "title": "Pair external GNSS",
+        "body": "Open Settings → External GNSS, enable Bluetooth, choose your receiver and wait for a valid position and accuracy reading."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/team-gnss.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "eod-safety",
+    "title": "Use EOD and mine-action records safely",
+    "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
+    "access": "Mode and tier dependent",
+    "note": "RESS, Chemical and Nuclear calculator outputs are unverified planning/training drafts. Do not use them as safe distances, casualty predictions or operational authority.",
+    "steps": [
+      {
+        "title": "Choose the correct mode",
+        "body": "Open Settings and select the EOD or mine-action mode needed for the task."
+      },
+      {
+        "title": "Capture the field record",
+        "body": "Use Spot Report, Certificate or Land Release forms and complete the required source and location fields."
+      },
+      {
+        "title": "Review before export",
+        "body": "Check coordinates, units, attachments and organization fields before creating PDF or IMSMA XML output."
+      },
+      {
+        "title": "Use an approved authority",
+        "body": "For safety distances or consequence analysis, follow your organization’s approved standard, qualified EOD/ESO review and authorized tools."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/eod-safety.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "route-builder",
+    "title": "Plan a route with waypoints",
+    "summary": "Place route points with the centre crosshair, inspect the distance and save the route to a layer.",
+    "access": "A visible, writable layer is required",
+    "note": "This connects the points you choose; it does not automatically find a road or a safe walking route. A drawn route is a plan, not a recorded trip with real travel times or speeds.",
+    "steps": [
+      {
+        "title": "Open Route Builder",
+        "body": "Choose a visible, unlocked layer, then open More → Route Builder on the map."
+      },
+      {
+        "title": "Place the first point",
+        "body": "Pan the map until the centre crosshair is over your starting point, then tap Add Waypoint. Your GPS position does not have to be there."
+      },
+      {
+        "title": "Extend and check the route",
+        "body": "Move the crosshair and add at least one more point. Check the waypoint list and total distance. Use a row’s minus button to remove a mistaken point; the trash button clears the whole draft."
+      },
+      {
+        "title": "Save the route",
+        "body": "With at least two points, use the green Save to Layer button. The builder closes and the route is stored in the target layer. Closing with X discards an unsaved draft."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/route-builder.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "track-3d",
+    "title": "Inspect a track in 3D",
+    "summary": "Compare elevation, speed and route shape without changing the saved track.",
+    "access": "Requires a track with at least two points",
+    "note": "This is a schematic viewer, not a 3D drawing editor or a to-scale terrain model. Missing elevation or speed data cannot be reconstructed from the picture.",
+    "steps": [
+      {
+        "title": "Open the track card",
+        "body": "In Layers, open the layer containing your track and select the track. Tap 3D in its action row."
+      },
+      {
+        "title": "Choose a display",
+        "body": "Use Elevation, Speed or Route Only. Speed mode represents recorded speed, not terrain height; Route Only removes the vertical profile."
+      },
+      {
+        "title": "Inspect and return",
+        "body": "The top-right rotation button stops or restarts automatic rotation. Drag to change the camera angle; use Back to return without editing the track."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/track-3d.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "track-report",
+    "title": "Read and share a track report",
+    "summary": "Review statistics and graphs, then prepare a PDF when your plan includes detailed reports.",
+    "access": "Detailed report and PDF: Core or higher",
+    "note": "Use a recorded track for travel analysis. A manually drawn route does not contain reliable journey times or speeds. Check data and units before sharing.",
+    "steps": [
+      {
+        "title": "Open Analysis or Report",
+        "body": "Select the track in its layer. Scroll the action row to More, then choose Analysis or Report. Report opens the detailed section; scroll up for the summary and graphs."
+      },
+      {
+        "title": "Compare the graphs",
+        "body": "Review distance, duration, average speed and maximum elevation. Switch between Combined, Speed and Elevation; missing or constant input data limits what these graphs can tell you."
+      },
+      {
+        "title": "Review the detailed figures",
+        "body": "With Core or higher, inspect moving/paused time, pace, speed, elevation gain/loss and point count. These are calculated from the available track data, not independent measurements."
+      },
+      {
+        "title": "Prepare and share the PDF",
+        "body": "Use Share PDF in the report section. Wait for preparation, then choose a destination in the system share sheet. At least two track points are needed. Review locations and other details before sending."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/track-report.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "track-navigation",
+    "title": "Follow a track with corridor alerts",
+    "summary": "Use live position against a saved line or track without changing its geometry.",
+    "access": "A line or track with at least two points",
+    "note": "Track following is guidance, not track recording. It uses the device location you have permitted and may pause or show a GPS warning when a reliable fix is unavailable.",
+    "steps": [
+      {
+        "title": "Open the saved line or track",
+        "body": "In Layers, select a line or track with at least two points. In its detail card choose Track Navigation / Navigate Track."
+      },
+      {
+        "title": "Set direction and alert corridor",
+        "body": "Choose Forward or Reverse, then set the alert distance from 5 m to 1000 m. The corridor is the distance from the line at which MapNero warns that you are off course."
+      },
+      {
+        "title": "Start, monitor and finish",
+        "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "terrain-contours",
+    "title": "Create contours from an elevation GeoTIFF",
+    "summary": "Turn a supported elevation raster into an editable contour layer without changing the source map.",
+    "access": "A supported elevation GeoTIFF is required",
+    "note": "This tool reads elevation pixels from a single-band DEM. An ordinary colour GeoTIFF, PDF, route or recorded track is not elevation data and may show an error or produce no contours.",
+    "steps": [
+      {
+        "title": "Open the GeoTIFF menu",
+        "body": "In Library, find the imported GeoTIFF, open its More menu and choose Create contours."
+      },
+      {
+        "title": "Choose an interval",
+        "body": "Select 5, 10, 20 or 50 metres. Use a wider interval for an overview and a tighter one only when the source resolution supports it."
+      },
+      {
+        "title": "Create and check the layer",
+        "body": "Choose Create contours and keep MapNero open while processing finishes. A new editable contour layer is added to the same map; inspect it before field use and keep the original GeoTIFF."
+      },
+      {
+        "title": "Use or export carefully",
+        "body": "You can style, edit, filter or export the resulting layer like other vector layers. Contours are derived data: verify their alignment, interval and source before sharing or using them for decisions."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "cluster-analysis",
+    "title": "Inspect point clusters",
+    "summary": "Explore point distribution in the EOD-oriented Cluster Analysis screen, not visual pin grouping.",
+    "access": "Pro+",
+    "note": "DBSCAN groups nearby points. A cluster alone does not establish its cause; results depend on the records supplied. The EOD-specific estimates and risk labels are not independently verified field conclusions.",
+    "steps": [
+      {
+        "title": "Choose the layer",
+        "body": "In Layers, choose the relevant point layer. Analysis needs at least 8 points; lines and polygons are not its input."
+      },
+      {
+        "title": "Open the analysis",
+        "body": "Open the layer’s (…) menu and choose Cluster Analysis. Pro or higher is required. Check the input point count before interpreting the distribution."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "community-trails",
+    "title": "Use Community Trails",
+    "summary": "Find shared routes, save a local copy, or publish one of your own tracks.",
+    "access": "Browse: signed-in session · Publish: confirmed Core+ account",
+    "note": "Public routes may be inaccurate, outdated or unsafe. Check local access rules, conditions and official sources before field use.",
+    "steps": [
+      {
+        "title": "Open the catalogue",
+        "body": "Open Settings → Community Trails. You can search by route name, description or general region."
+      },
+      {
+        "title": "Download a route",
+        "body": "Choose Download to add an independent copy to Track Records. Later changes or removal of the public item do not alter your local copy."
+      },
+      {
+        "title": "Publish your track",
+        "body": "Open a saved track, choose More → Community Trails, add a description, general region and licence, confirm the safety notice, then publish. Publishing requires a confirmed Core-or-higher account."
+      },
+      {
+        "title": "Control what you see",
+        "body": "Use the item menu to report a route or block its author. You can remove routes you published. Shared data is limited to route points, name, description, general region and licence; photos and private feature fields are not included."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/community-trails.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "attribute-forms",
+    "title": "Create attribute forms for a layer",
+    "summary": "Define the fields your team records, either in a layer or as a reusable template.",
+    "access": "Available with supported Layers and Templates access",
+    "note": "A template bound to a layer supplies that layer’s attribute fields. Review the fields before field collection; changing a schema later does not rewrite records that already exist.",
+    "steps": [
+      {
+        "title": "Start from the layer",
+        "body": "Open Layers, choose a writable layer, then open its settings and Attribute Schema. Add the fields that belong to every feature, such as species, cover, status, notes or a date."
+      },
+      {
+        "title": "Or create a reusable template",
+        "body": "Open Library → Templates and create a form with the fields your team needs. Use a template when the same form should be reused across more than one field workflow."
+      },
+      {
+        "title": "Bind the template to the layer",
+        "body": "Return to the layer’s settings, open Template Binding and choose the template. Its fields become the layer’s feature attribute schema."
+      },
+      {
+        "title": "Collect and review records",
+        "body": "Add or edit a point, line or polygon in that layer and complete the form. Open the layer’s attribute table to search, filter and review saved records."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "field-templates",
+    "title": "Collect field data with a template",
+    "summary": "Start a reusable field form, capture a record and find its results layer.",
+    "access": "Manual templates are free · AI and import options depend on tier",
+    "note": "A template guides collection; it does not turn an unreferenced image into a map or replace a project's data-validation procedure.",
+    "steps": [
+      {
+        "title": "Find the template",
+        "body": "Open Library → Templates, search or browse a category, then read the field list before starting. A template may include text, choices, numbers, GPS, date, photo and checklist fields."
+      },
+      {
+        "title": "Start the field workflow",
+        "body": "Tap Play or Use Template. You can begin from the template library before opening a map. Complete required fields and allow GPS or camera access only when the form asks for them."
+      },
+      {
+        "title": "Review the saved record",
+        "body": "Submit the form, then open the created or selected layer to see the new feature and its attributes. Use the layer table to search or review results, and export only after checking the records."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/field-templates.png",
+      "assets/guides/screenshots/apple/en/field-templates-selection.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "create-edit-templates",
+    "title": "Create and edit a field template",
+    "summary": "Design a reusable form, choose its field order and update it safely.",
+    "access": "Manual templates are free · AI and import options depend on tier",
+    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten.",
+    "steps": [
+      {
+        "title": "Create the template",
+        "body": "Open Library → Templates → Create. Choose Manual to build the form yourself; review every field before using an imported or store template."
+      },
+      {
+        "title": "Add the field structure",
+        "body": "Give the template a clear name, then add text, choice, number, date, GPS, photo, checkbox or icon fields. For a choice field, enter the permitted values."
+      },
+      {
+        "title": "Set the collection order",
+        "body": "Open each field to set its label, help text, required state and options. Use the up/down controls to put fields in field-work order, save, then run one test entry."
+      },
+      {
+        "title": "Edit safely",
+        "body": "In Library → Templates, open the template menu and choose Edit. Save the changes, reopen the template and use Play or Use Template for new records."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/create-edit-templates.png",
+      "assets/guides/screenshots/apple/en/create-edit-templates-fields.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "personal-workspace-sync",
+    "title": "Sync one layer with your account",
+    "summary": "Choose exactly which layers are available in your signed-in Web GIS and on your other MapNero devices.",
+    "access": "Signed-in Pro or Team account",
+    "note": "This is personal workspace sync. It does not share a layer with your organization or a Team Session.",
+    "steps": [
+      {
+        "title": "Open the layer editor",
+        "body": "Open Layers, select the layer, then choose Edit."
+      },
+      {
+        "title": "Enable Sync with my account",
+        "body": "Below Lock layer, turn on Sync with my account and save the layer."
+      },
+      {
+        "title": "Continue on another device",
+        "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "team-session",
+    "title": "Run a live Team Session",
+    "summary": "Create a temporary live map session for a field group without confusing it with permanent organization sharing.",
+    "access": "Host: Team · Join: Core, Pro or Team",
+    "note": "A Team Session is temporary. Sharing a layer with an organization is a separate, persistent online workflow. Free accounts cannot join a Team Session.",
+    "steps": [
+      {
+        "title": "Create the session",
+        "body": "Settings → Team Tracking. On a phone or tablet, open Team and choose Create session. A Team account can host. An organization is optional; attach one only when the session belongs to that organization."
+      },
+      {
+        "title": "Set the access details",
+        "body": "Give the session a clear field name and set the name that will appear on the map. Choose a session password; MapNero generates the session code after creation. Send the generated code and password only to invited participants."
+      },
+      {
+        "title": "Join and finish safely",
+        "body": "Each participant chooses Join session or scans the QR code, then enters the code, password and display name. Core, Pro and Team accounts can join. When field work ends, the host ends the session and does not reuse its code."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/team-session.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "mobile-export",
+    "title": "Export field data and share it safely",
+    "summary": "Choose the right file format, review the result and use a link only when public download is appropriate.",
+    "access": "KML/GPX/CSV/KMZ: Free · GeoPDF/GeoTIFF: Core+ · SHP/GPKG/DXF/QGIS: Pro+ · Share via Link: Core+",
+    "note": "A Share via Link upload needs internet. Anyone holding the link can download its file until it expires; remove it from My Shared Links when access must end.",
+    "steps": [
+      {
+        "title": "Choose what to export",
+        "body": "Open the layer, track, map or report and choose Export. Select only the records you intend to send; use a recorded track for GPX and a GIS format for vector features."
+      },
+      {
+        "title": "Choose a compatible format",
+        "body": "KML, GPX, CSV and KMZ are available on Free. GeoPDF and GeoTIFF need Core or higher. Shapefile, GeoPackage, DXF and QGIS/QField bundle need Pro or higher."
+      },
+      {
+        "title": "Review and deliver",
+        "body": "Check the selected layers, attributes, coordinates and attachments before generating the file. Use the system share sheet for a local file, or Share via Link only after checking that temporary public download is suitable."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/mobile-export.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "settings-workspace",
+    "title": "Configure MapNero settings",
+    "summary": "Choose a working mode and adjust language, display and units without changing your project data.",
+    "access": "Available to all users",
+    "note": "Some controls affect future display or new features only. Review the label before changing a field workflow or map preference.",
+    "steps": [
+      {
+        "title": "Choose a working mode",
+        "body": "Open Library → Settings → Usage Mode. Simple Map keeps the main workspace uncluttered; a specialist mode or Custom exposes the tools you choose. Your saved maps, layers and records remain intact."
+      },
+      {
+        "title": "Set language, appearance and units",
+        "body": "In Settings, choose Language, Appearance, Display and Units of Measurement. Pick the coordinate format and units your team uses before recording values or sharing screenshots."
+      },
+      {
+        "title": "Tune map and symbol preferences",
+        "body": "Use Map Display for labels, grids, PDF boundary locking, collection behaviour and raster background choices. In Tools and Symbols, enable only the controls and symbol packs you want to see."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/settings-workspace.png"
+    ]
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "watermarked-photos",
+    "title": "Capture a watermarked field photo",
+    "summary": "Take a field photo with the location details you choose, then review the final image before saving or sharing.",
+    "access": "Available to all users",
+    "note": "A watermark can reveal location, time, project or EOD details. Review the preview and your organization’s data-handling rules before saving or sharing.",
+    "steps": [
+      {
+        "title": "Open the field camera",
+        "body": "From the map, open the Camera control. You can set reusable defaults in Settings → Photo Watermark."
+      },
+      {
+        "title": "Choose what the watermark shows",
+        "body": "Turn fields such as timestamp, coordinate, heading, place name, project, note, compass, logo or mini-map on only when they are appropriate. Set the position and panel opacity."
+      },
+      {
+        "title": "Capture, review and save",
+        "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "geofences",
+    "title": "Create a geofence",
+    "summary": "Create a circular arrival or departure alert around a location.",
+    "access": "Tier limits apply",
+    "note": "A geofence is circular, depends on device location and notification permission, and is not a safety guarantee. iOS can monitor at most 20 active regions at once.",
+    "steps": [
+      {
+        "title": "Open Geofences",
+        "body": "Open Settings → Geofences, or select a feature and choose Notify. Use a known location or wait for GPS before creating the boundary."
+      },
+      {
+        "title": "Set the circle",
+        "body": "Give it a clear name, choose the radius and colour, then select alerts for entry, exit or both. Confirm the centre before you create it."
+      },
+      {
+        "title": "Monitor and review",
+        "body": "Keep the fence enabled and allow the requested location and notification permissions. Open Geofence History to review events; disable or remove a fence when it is no longer needed."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "raster-background",
+    "title": "GeoTIFF / PDF background",
+    "summary": "Choose geographic context or a clean canvas without changing the saved map.",
+    "access": "GeoTIFF · GeoPDF",
+    "note": "A basemap helps you compare alignment; it is not proof of surveying accuracy. Online backgrounds may need internet. Keep the map downloaded and use Blank Canvas when geographic context is unnecessary.",
+    "steps": [
+      {
+        "title": "Open the georeferenced map",
+        "body": "In Map Library, open a GeoTIFF, GeoPDF or manually referenced map. An image without a geographic reference needs georeferencing first."
+      },
+      {
+        "title": "Choose the background",
+        "body": "Open More (…). Under Map Background, choose Basemap to see the surrounding area or Blank Canvas to hide it."
+      },
+      {
+        "title": "Adjust visibility",
+        "body": "With Basemap selected, move the background visibility/opacity slider. A lower value makes the background less prominent. This does not edit the original file or your feature styles."
+      },
+      {
+        "title": "Find the map again",
+        "body": "Use Fit Map / fit to screen to return to the map’s extent. Locate centres on your current GPS position, which may be far outside this map."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "apple",
+    "platformLabel": "iPhone · iPad · Mac",
+    "id": "map-layout-export",
+    "title": "Create a GeoPDF map layout",
+    "summary": "Turn the current Base Map view and its visible field records into a new, printable map product.",
+    "access": "Pro",
+    "note": "A new map output — not PDF import. Use the Base Map, then open More → Create PDF Map. This creates a new file; it does not edit or convert an imported PDF.",
+    "steps": [
+      {
+        "title": "Set the map view",
+        "body": "On the Base Map, pan and zoom to the exact area you want on the page. Visible features are included; review sensitive pins and tracks before export."
+      },
+      {
+        "title": "Configure the layout",
+        "body": "Choose PDF, PNG or JPEG, page size and orientation. Add a title, author or project if needed, then choose elements such as legend, scale bar, north arrow, overview inset and UTM grid."
+      },
+      {
+        "title": "Export or build an Atlas",
+        "body": "Create the file and review it before sending. For a multi-page Atlas, enable Atlas collection, choose scale and page overlap, and use a downloaded raster MBTiles basemap. Atlas creation needs Pro."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/apple/en/map-layout-export.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "quick-start",
+    "title": "Start with Simple Map",
+    "summary": "Set up MapNero for a clear everyday workflow with four large map controls.",
+    "access": "Free",
+    "steps": [
+      {
+        "title": "Choose Simple Map",
+        "body": "On first launch, select Simple Map. You can change it later in Settings without deleting saved data."
+      },
+      {
+        "title": "Allow location access",
+        "body": "Approve precise location. MapNero asks separately before using background location for screen-off track recording."
+      },
+      {
+        "title": "Learn the four controls",
+        "body": "Use Locate, Add Pin, Record and More. More contains measurement, basemap and offline tools."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/quick-start.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "import-map",
+    "title": "Import a PDF or GIS file",
+    "summary": "Open PDF maps and common GIS formats from MapNero or Android’s Open with menu.",
+    "access": "Import availability depends on format and tier",
+    "steps": [
+      {
+        "title": "Open Add Map or Import",
+        "body": "Choose Import PDF Map, KMZ, photo, link or QR from Add Map, or use Import for vector data."
+      },
+      {
+        "title": "Choose the file",
+        "body": "Supported vector imports include GeoJSON, KML/KMZ, GPX and zipped Shapefile. Limited MBTiles and GeoTIFF handling is also available."
+      },
+      {
+        "title": "Review the import summary",
+        "body": "Check the parse-and-confirm screen. It lists features that will be imported and any skipped items with reasons."
+      },
+      {
+        "title": "Use Open with MapNero",
+        "body": "From Downloads or Files, select a supported file, tap Open with and choose MapNero."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/import-map.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "location-track",
+    "title": "Find your location and record in the background",
+    "summary": "Follow your position and keep an accurate track while the screen is off.",
+    "access": "Free limits · unlimited with Core+",
+    "note": "Android requires a visible foreground-service notification while a track records in the background. MapNero does not record secretly.",
+    "steps": [
+      {
+        "title": "Centre and follow",
+        "body": "Tap Locate to centre the map. Change the follow state if you want the map to remain centred while moving."
+      },
+      {
+        "title": "Accept the disclosure",
+        "body": "When starting background recording, read the explanation and allow background location in Android Settings."
+      },
+      {
+        "title": "Start recording",
+        "body": "Tap Record. Confirm the persistent recording notification, then lock the screen or use another app if needed."
+      },
+      {
+        "title": "Stop and save",
+        "body": "Return to MapNero or use the notification action, stop the recording and save the track."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/location-track.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "pins-layers",
+    "title": "Add pins and manage layers",
+    "summary": "Save field locations, use clear symbols and control layer visibility and order.",
+    "access": "Free · advanced tools may require Core+",
+    "note": "A hidden, locked, trashed or WMS/WMTS layer cannot receive new pins or editable features.",
+    "steps": [
+      {
+        "title": "Select a writable layer",
+        "body": "Open Layers, select a normal layer and make sure its visibility is on."
+      },
+      {
+        "title": "Add a pin",
+        "body": "Tap Add Pin or long-press the map. Choose a category-specific symbol when useful."
+      },
+      {
+        "title": "Add field details",
+        "body": "Enter a title, attributes, notes and attachments, then save."
+      },
+      {
+        "title": "Edit or export",
+        "body": "Tap the feature to open its detail card. Use Edit, or export the layer as GPX, KML, CSV, GeoJSON or Shapefile when allowed."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/pins-layers.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "offline-maps",
+    "title": "Download and test an offline map",
+    "summary": "Save a region before field work and confirm it works without a network.",
+    "access": "Free limit · unlimited Core+",
+    "steps": [
+      {
+        "title": "Open Offline Maps",
+        "body": "On Base Map, move and zoom to the field area first. Then use Offline Maps in the map controls or More."
+      },
+      {
+        "title": "Select the area",
+        "body": "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again."
+      },
+      {
+        "title": "Download while online",
+        "body": "Check estimated size, start the download and wait for completion."
+      },
+      {
+        "title": "Test in Airplane Mode",
+        "body": "Disable the network, reopen the region and zoom through the levels you need."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/offline-maps.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "collections-atlas",
+    "title": "Use map collections and Atlas",
+    "summary": "Pan across adjoining PDF sheets as one atlas while keeping collection features available.",
+    "access": "Collections Core+ · Atlas creation Pro",
+    "note": "Atlas creation requires an active downloaded raster MBTiles source and supports up to 64 north-up GeoPDF sheets.",
+    "steps": [
+      {
+        "title": "Create a collection",
+        "body": "In My Maps, place adjoining georeferenced maps in one collection and order detailed sheets above fallback sheets."
+      },
+      {
+        "title": "Browse with the crosshair",
+        "body": "Open a member sheet and pan the centre crosshair onto a neighbouring sheet. It becomes active without resetting your working scale."
+      },
+      {
+        "title": "Keep records shared",
+        "body": "Store pins, tracks and drawings in the collection layer when they must remain visible and editable on every member sheet."
+      },
+      {
+        "title": "Create an Atlas",
+        "body": "Activate an offline raster MBTiles map, open Create PDF Map, choose Atlas, scale and overlap, then create the sheet set."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/collections-atlas.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "measure-cogo-buffer",
+    "title": "Measure, construct and buffer",
+    "summary": "Read live distance, construct by UTM grid bearing, and save editable buffer polygons.",
+    "access": "Measure Free · Buffer Pro",
+    "note": "COGO currently uses UTM grid north. Do not enter a magnetic bearing as if it were a grid bearing.",
+    "steps": [
+      {
+        "title": "Measure distance or area",
+        "body": "Open Measure, place points and read the live length label on the rubber-band line."
+      },
+      {
+        "title": "Create a bearing line",
+        "body": "Open COGO, use the GPS fix or enter DD/UTM/MGRS, then enter a grid bearing and distance up to 100 km."
+      },
+      {
+        "title": "Buffer one or many features",
+        "body": "Open a feature, or select several with Lasso, then choose Buffer, distance, colour and opacity."
+      },
+      {
+        "title": "Edit Derived Buffers",
+        "body": "Open a saved buffer to change distance, fill colour or opacity. Distance changes regenerate the geometry from its source."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/measure-cogo-buffer.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "buffer-workflow",
+    "title": "Create and edit a buffer",
+    "summary": "Make a separate polygon around a point, line, track or polygon.",
+    "access": "Pro / Team",
+    "note": "The circle drawing tool is different: use a point feature plus Buffer for a radius around a location. A buffer is a geometric area, not a certified safety boundary.",
+    "steps": [
+      {
+        "title": "Select the source",
+        "body": "Tap a feature on the map, or open Layers and select a feature. In its detail card, choose Buffer; scroll the action row if necessary. This tool requires Pro or Team access."
+      },
+      {
+        "title": "Set the distance",
+        "body": "Enter a positive distance and choose metres or feet. You can give the output a name; leaving it empty keeps the automatic name."
+      },
+      {
+        "title": "Preview and style",
+        "body": "Use Preview to see how many sources and polygons can be processed. Preview does not save anything. Choose the fill colour and opacity before creating the buffer."
+      },
+      {
+        "title": "Create the polygon",
+        "body": "Choose Create Buffer. The result goes into the separate Derived Buffers layer. Close the feature card to inspect it on the map; the original feature remains unchanged."
+      },
+      {
+        "title": "Edit or buffer several features",
+        "body": "Select the saved buffer to change its colour, opacity or distance. Distance updates need the original source. For several features, use lasso selection and Buffer; check processed and skipped counts."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/buffer-workflow.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "team-gnss",
+    "title": "Connect a team or external GNSS",
+    "summary": "Share organization layers or use a Bluetooth receiver for improved positioning.",
+    "access": "Team sharing · GNSS free",
+    "steps": [
+      {
+        "title": "Sign in",
+        "body": "Open Settings → Account, enter your email and complete the six-digit one-time code."
+      },
+      {
+        "title": "Join the organization",
+        "body": "Accept an invitation or enter the organization join code."
+      },
+      {
+        "title": "Share the layer",
+        "body": "Open the layer and enable Share with organization. Synchronization needs internet access."
+      },
+      {
+        "title": "Connect GNSS",
+        "body": "Open Settings, scroll to Location & Navigation, enable Use external GNSS receiver, then choose the receiver and verify fix type, accuracy and satellite status."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/team-gnss.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "eod-safety",
+    "title": "Use EOD and mine-action records safely",
+    "summary": "Capture structured field data without treating unverified calculators as operational authority.",
+    "access": "Mode and tier dependent",
+    "note": "RESS, Chemical and Nuclear calculator outputs are unverified planning/training drafts. Never use them as operational safe distances or casualty predictions.",
+    "steps": [
+      {
+        "title": "Choose the correct mode",
+        "body": "Select EOD or mine-action mode in Settings."
+      },
+      {
+        "title": "Capture the record",
+        "body": "Complete the Spot Report, Certificate or Land Release fields, including source and location context."
+      },
+      {
+        "title": "Review the export",
+        "body": "Check coordinates, units, attachments and organization fields before producing PDF or IMSMA output."
+      },
+      {
+        "title": "Follow approved authority",
+        "body": "Use your organization’s approved standards, qualified EOD/ESO review and authorized tools for operational decisions."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "route-builder",
+    "title": "Plan a route with waypoints",
+    "summary": "Place route points with the centre crosshair, inspect the distance and save the route to a layer.",
+    "access": "A visible, writable layer is required",
+    "note": "This connects the points you choose; it does not automatically find a road or a safe walking route. A drawn route is a plan, not a recorded trip with real travel times or speeds.",
+    "steps": [
+      {
+        "title": "Open Route Builder",
+        "body": "Select a visible, unlocked, writable feature layer. Open Route from the map toolbar or More menu, depending on your toolbar layout."
+      },
+      {
+        "title": "Place the first point",
+        "body": "Pan the map until the centre crosshair is over your starting point, then tap Add Waypoint. Your GPS position does not have to be there."
+      },
+      {
+        "title": "Extend and check the route",
+        "body": "Move the crosshair and add at least one more point. Check the waypoint list and total distance. Use a row’s minus button to remove a mistaken point; the trash button clears the whole draft."
+      },
+      {
+        "title": "Save the route",
+        "body": "With at least two points, tap the green Save button (it may still say Save in another app language). The route is saved to the target layer. X closes the builder and discards an unsaved draft."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/route-builder.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "track-navigation",
+    "title": "Follow a track with corridor alerts",
+    "summary": "Use live position against a saved line or track without changing its geometry.",
+    "access": "A line or track with at least two points",
+    "note": "Track following is guidance, not track recording. It uses the device location you have permitted and may pause or show a GPS warning when a reliable fix is unavailable.",
+    "steps": [
+      {
+        "title": "Open the saved line or track",
+        "body": "In Layers, select a line or track with at least two points. In its detail card choose Track Navigation / Navigate Track."
+      },
+      {
+        "title": "Set direction and alert corridor",
+        "body": "Choose Forward or Reverse, then set the alert distance from 5 m to 1000 m. The corridor is the distance from the line at which MapNero warns that you are off course."
+      },
+      {
+        "title": "Start, monitor and finish",
+        "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "track-report",
+    "title": "Read and share a track report",
+    "summary": "Read a recorded track’s statistics and share a PDF report.",
+    "access": "Detailed report and PDF: Core or higher",
+    "note": "Use a recorded track for travel analysis. A manually drawn route does not contain reliable journey times or speeds. Check data and units before sharing.",
+    "steps": [
+      {
+        "title": "Open the recorded track",
+        "body": "Select the track in its layer or on the map to open its feature details. With at least two points, scroll to Track Analysis and tap Track Report. The detailed report requires Core or higher."
+      },
+      {
+        "title": "Review the report",
+        "body": "Check the top-down route sketch, distance, point count, start/end coordinates, speed and elevation sections. The sketch here is 2D, not Apple’s interactive 3D viewer. Missing or constant altitude/speed values limit the analysis."
+      },
+      {
+        "title": "Interpret time carefully",
+        "body": "In this version, moving time is the interval from the first GPS point to the last; paused time is the remaining part of the total recording duration. Stops within that point interval are not all removed. Do not interpret these as independently detected moving and stopped periods."
+      },
+      {
+        "title": "Share the PDF",
+        "body": "Tap Share PDF at the bottom or the share icon at the top. After preparation, choose a destination in the system share sheet. Review coordinates and other details before sending. The file is a report, not a GPX track; first-time PDF preparation may need internet to load fonts."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/track-report.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "track-3d",
+    "title": "Preview a route in 3D",
+    "summary": "Distinguish the route elevation preview from the map’s tilted view.",
+    "access": "At least two route waypoints",
+    "note": "This connects the points you choose; it does not automatically find a road or a safe walking route. A drawn route is a plan, not a recorded trip with real travel times or speeds.",
+    "steps": [
+      {
+        "title": "Prepare the route",
+        "body": "Open Route from the map toolbar or More and add at least two waypoints using the crosshair."
+      },
+      {
+        "title": "Open the preview",
+        "body": "Tap 3D inside the route panel. After elevation lookup, the screen shows a relief-style route image and elevation profile. This is not an interactive 3D drawing editor."
+      },
+      {
+        "title": "Return to the route",
+        "body": "Use Back to return to the draft; save it separately with Save. The map toolbar’s separate 3D button requires Core or higher and toggles map tilt; tap it again for a top-down view. You can also turn 3D Terrain on or off and set camera pitch in Settings > 3D & Terrain."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/track-3d.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "terrain-settings",
+    "title": "Configure 3D Terrain",
+    "summary": "Tilt the map camera without changing your maps, routes, or tracks.",
+    "access": "Core or higher",
+    "note": "3D Terrain changes the map perspective only. It does not turn an ordinary line or route into a 3D track.",
+    "steps": [
+      {
+        "title": "Open 3D Terrain",
+        "body": "From the Library, open Settings > 3D & Terrain > 3D Terrain."
+      },
+      {
+        "title": "Enable terrain view",
+        "body": "Turn on Enable 3D Terrain. Turn it off at any time to return the map to a top-down view."
+      },
+      {
+        "title": "Set camera pitch",
+        "body": "Use Camera pitch from 0° to 60°. Start with a low angle when reading labels or working with a PDF map."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/terrain-settings.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "cluster-analysis",
+    "title": "Inspect point clusters",
+    "summary": "Explore point distribution in the EOD-oriented Cluster Analysis screen, not visual pin grouping.",
+    "access": "Pro+",
+    "note": "DBSCAN groups nearby points. A cluster alone does not establish its cause; results depend on the records supplied. The EOD-specific estimates and risk labels are not independently verified field conclusions.",
+    "steps": [
+      {
+        "title": "Choose the layer",
+        "body": "In Layers, choose the relevant point layer. Analysis needs at least 8 points; lines and polygons are not its input."
+      },
+      {
+        "title": "Open the analysis",
+        "body": "Open the layer’s (…) menu and choose Cluster Analysis. Pro or higher is required. Check the input point count before interpreting the distribution."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/cluster-analysis.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "community-trails",
+    "title": "Use Community Trails",
+    "summary": "Find shared routes, save a local copy, or publish one of your own tracks.",
+    "access": "Browse: signed-in session · Publish: confirmed Core+ account",
+    "note": "Public routes may be inaccurate, outdated or unsafe. Check local access rules, conditions and official sources before field use.",
+    "steps": [
+      {
+        "title": "Open the catalogue",
+        "body": "Open Settings → Community Trails. You can search by route name, description or general region."
+      },
+      {
+        "title": "Download a route",
+        "body": "Choose Download to add an independent copy to Track Records. Later changes or removal of the public item do not alter your local copy."
+      },
+      {
+        "title": "Publish your track",
+        "body": "Open a saved track, choose More → Community Trails, add a description, general region and licence, confirm the safety notice, then publish. Publishing requires a confirmed Core-or-higher account."
+      },
+      {
+        "title": "Control what you see",
+        "body": "Use the item menu to report a route or block its author. You can remove routes you published. Shared data is limited to route points, name, description, general region and licence; photos and private feature fields are not included."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/community-trails.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "attribute-forms",
+    "title": "Create attribute forms for a layer",
+    "summary": "Define the fields your team records, either in a layer or as a reusable template.",
+    "access": "Available with supported Layers and Templates access",
+    "note": "A template bound to a layer supplies that layer’s attribute fields. Review the fields before field collection; changing a schema later does not rewrite records that already exist.",
+    "steps": [
+      {
+        "title": "Start from the layer",
+        "body": "Open Layers, choose a writable layer, then open its settings and Attribute Schema. Add the fields that belong to every feature, such as species, cover, status, notes or a date."
+      },
+      {
+        "title": "Or create a reusable template",
+        "body": "Open Library → Templates and create a form with the fields your team needs. Use a template when the same form should be reused across more than one field workflow."
+      },
+      {
+        "title": "Bind the template to the layer",
+        "body": "Return to the layer’s settings, open Template Binding and choose the template. Its fields become the layer’s feature attribute schema."
+      },
+      {
+        "title": "Collect and review records",
+        "body": "Add or edit a point, line or polygon in that layer and complete the form. Open the layer’s attribute table to search, filter and review saved records."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/attribute-forms.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "field-templates",
+    "title": "Collect field data with a template",
+    "summary": "Start a reusable field form, capture a record and find its results layer.",
+    "access": "Manual templates are free · AI and import options depend on tier",
+    "note": "A template guides collection; it does not turn an unreferenced image into a map or replace a project's data-validation procedure.",
+    "steps": [
+      {
+        "title": "Find the template",
+        "body": "Open Library → Templates, search or browse a category, then read the field list before starting. A template may include text, choices, numbers, GPS, date, photo and checklist fields."
+      },
+      {
+        "title": "Start the field workflow",
+        "body": "Tap Play or Use Template. You can begin from the template library before opening a map. Complete required fields and allow GPS or camera access only when the form asks for them."
+      },
+      {
+        "title": "Review the saved record",
+        "body": "Submit the form, then open the created or selected layer to see the new feature and its attributes. Use the layer table to search or review results, and export only after checking the records."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/field-templates.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "create-edit-templates",
+    "title": "Create and edit a field template",
+    "summary": "Design a reusable form, choose its field order and update it safely.",
+    "access": "Manual templates are free · AI and import options depend on tier",
+    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten.",
+    "steps": [
+      {
+        "title": "Create the template",
+        "body": "Open Library → Templates → Create. Choose Manual to build the form yourself; review every field before using an imported or store template."
+      },
+      {
+        "title": "Add the field structure",
+        "body": "Give the template a clear name, then add text, choice, number, date, GPS, photo, checkbox or icon fields. For a choice field, enter the permitted values."
+      },
+      {
+        "title": "Set the collection order",
+        "body": "Open each field to set its label, help text, required state and options. Use the up/down controls to put fields in field-work order, save, then run one test entry."
+      },
+      {
+        "title": "Edit safely",
+        "body": "In Library → Templates, open the template menu and choose Edit. Save the changes, reopen the template and use Play or Use Template for new records."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/create-edit-templates.png",
+      "assets/guides/screenshots/android/en/create-edit-templates-fields.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "personal-workspace-sync",
+    "title": "Sync one layer with your account",
+    "summary": "Choose exactly which layers are available in your signed-in Web GIS and on your other MapNero devices.",
+    "access": "Signed-in Pro or Team account",
+    "note": "This is personal workspace sync. It does not share a layer with your organization or a Team Session.",
+    "steps": [
+      {
+        "title": "Open the layer editor",
+        "body": "Open Layers, select the layer, then choose Edit."
+      },
+      {
+        "title": "Enable Sync with my account",
+        "body": "Below Lock layer, turn on Sync with my account and save the layer."
+      },
+      {
+        "title": "Continue on another device",
+        "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "team-session",
+    "title": "Run a live Team Session",
+    "summary": "Create a temporary live map session for a field group without confusing it with permanent organization sharing.",
+    "access": "Host: Team · Join: Core, Pro or Team",
+    "note": "A Team Session is temporary. Sharing a layer with an organization is a separate, persistent online workflow. Free accounts cannot join a Team Session.",
+    "steps": [
+      {
+        "title": "Create the session",
+        "body": "Settings → Team Tracking. On a phone or tablet, open Team and choose Create session. A Team account can host. An organization is optional; attach one only when the session belongs to that organization."
+      },
+      {
+        "title": "Set the access details",
+        "body": "Give the session a clear field name and set the name that will appear on the map. Choose a session password; MapNero generates the session code after creation. Send the generated code and password only to invited participants."
+      },
+      {
+        "title": "Join and finish safely",
+        "body": "Each participant chooses Join session or scans the QR code, then enters the code, password and display name. Core, Pro and Team accounts can join. When field work ends, the host ends the session and does not reuse its code."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/team-session.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "mobile-export",
+    "title": "Export field data and share it safely",
+    "summary": "Choose the right file format, review the result and use a link only when public download is appropriate.",
+    "access": "KML/GPX/CSV/KMZ: Free · GeoPDF/GeoTIFF: Core+ · SHP/GPKG/DXF/QGIS: Pro+ · Share via Link: Core+",
+    "note": "A Share via Link upload needs internet. Anyone holding the link can download its file until it expires; remove it from My Shared Links when access must end.",
+    "steps": [
+      {
+        "title": "Choose what to export",
+        "body": "Open the layer, track, map or report and choose Export. Select only the records you intend to send; use a recorded track for GPX and a GIS format for vector features."
+      },
+      {
+        "title": "Choose a compatible format",
+        "body": "KML, GPX, CSV and KMZ are available on Free. GeoPDF and GeoTIFF need Core or higher. Shapefile, GeoPackage, DXF and QGIS/QField bundle need Pro or higher."
+      },
+      {
+        "title": "Review and deliver",
+        "body": "Check the selected layers, attributes, coordinates and attachments before generating the file. Use the system share sheet for a local file, or Share via Link only after checking that temporary public download is suitable."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/mobile-export.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "settings-workspace",
+    "title": "Configure MapNero settings",
+    "summary": "Choose a working mode and adjust language, display and units without changing your project data.",
+    "access": "Available to all users",
+    "note": "Some controls affect future display or new features only. Review the label before changing a field workflow or map preference.",
+    "steps": [
+      {
+        "title": "Choose a working mode",
+        "body": "Open Library → Settings → Usage Mode. Simple Map keeps the main workspace uncluttered; a specialist mode or Custom exposes the tools you choose. Your saved maps, layers and records remain intact."
+      },
+      {
+        "title": "Set language, appearance and units",
+        "body": "In Settings, choose Language, Appearance, Display and Units of Measurement. Pick the coordinate format and units your team uses before recording values or sharing screenshots."
+      },
+      {
+        "title": "Tune map and symbol preferences",
+        "body": "Use Map Display for labels, grids, PDF boundary locking, collection behaviour and raster background choices. In Tools and Symbols, enable only the controls and symbol packs you want to see."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/settings-workspace.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "watermarked-photos",
+    "title": "Capture a watermarked field photo",
+    "summary": "Take a field photo with the location details you choose, then review the final image before saving or sharing.",
+    "access": "Available to all users",
+    "note": "A watermark can reveal location, time, project or EOD details. Review the preview and your organization’s data-handling rules before saving or sharing.",
+    "steps": [
+      {
+        "title": "Open the field camera",
+        "body": "From the map, open the Camera control. You can set reusable defaults in Settings → Photo Watermark."
+      },
+      {
+        "title": "Choose what the watermark shows",
+        "body": "Turn fields such as timestamp, coordinate, heading, place name, project, note, compass, logo or mini-map on only when they are appropriate. Set the position and panel opacity."
+      },
+      {
+        "title": "Capture, review and save",
+        "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "geofences",
+    "title": "Create a geofence",
+    "summary": "Create a circular arrival or departure alert around a location.",
+    "access": "Tier limits apply",
+    "note": "A geofence is circular, depends on device location and notification permission, and is not a safety guarantee. iOS can monitor at most 20 active regions at once.",
+    "steps": [
+      {
+        "title": "Open Geofences",
+        "body": "Open Settings → Geofences, or select a feature and choose Notify. Use a known location or wait for GPS before creating the boundary."
+      },
+      {
+        "title": "Set the circle",
+        "body": "Give it a clear name, choose the radius and colour, then select alerts for entry, exit or both. Confirm the centre before you create it."
+      },
+      {
+        "title": "Monitor and review",
+        "body": "Keep the fence enabled and allow the requested location and notification permissions. Open Geofence History to review events; disable or remove a fence when it is no longer needed."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/geofences.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "raster-background",
+    "title": "GeoTIFF / PDF background",
+    "summary": "Choose geographic context or a clean canvas without changing the saved map.",
+    "access": "GeoTIFF · GeoPDF",
+    "note": "A basemap helps you compare alignment; it is not proof of surveying accuracy. Online backgrounds may need internet. Keep the map downloaded and use Blank Canvas when geographic context is unnecessary.",
+    "steps": [
+      {
+        "title": "Open the georeferenced map",
+        "body": "In Map Library, open a GeoTIFF, GeoPDF or manually referenced map. An image without a geographic reference needs georeferencing first."
+      },
+      {
+        "title": "Choose the background",
+        "body": "Open More (…). Under Map Background, choose Basemap to see the surrounding area or Blank Canvas to hide it."
+      },
+      {
+        "title": "Adjust visibility",
+        "body": "With Basemap selected, move the background visibility/opacity slider. A lower value makes the background less prominent. This does not edit the original file or your feature styles."
+      },
+      {
+        "title": "Find the map again",
+        "body": "Use Fit Map / fit to screen to return to the map’s extent. Locate centres on your current GPS position, which may be far outside this map."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/raster-background.png"
+    ]
+  },
+  {
+    "platform": "android",
+    "platformLabel": "Android",
+    "id": "map-layout-export",
+    "title": "Create a GeoPDF map layout",
+    "summary": "Turn the current Base Map view and its visible field records into a new, printable map product.",
+    "access": "Pro",
+    "note": "A new map output — not PDF import. Use the Base Map, then open More → Create Map. This creates a new file; it does not edit or convert an imported PDF.",
+    "steps": [
+      {
+        "title": "Set the map view",
+        "body": "On the Base Map, pan and zoom to the exact area you want on the page. Visible features are included; review sensitive pins and tracks before export."
+      },
+      {
+        "title": "Configure the layout",
+        "body": "Choose PDF, PNG or JPEG, page size and orientation. Add a title, author or project if needed, then choose elements such as legend, scale bar, north arrow, overview inset and UTM grid."
+      },
+      {
+        "title": "Export or build an Atlas",
+        "body": "Create the file and review it before sending. For a multi-page Atlas, enable Atlas collection, choose scale and page overlap, and use a downloaded raster MBTiles basemap. Atlas creation needs Pro."
+      }
+    ],
+    "images": [
+      "assets/guides/screenshots/android/en/map-layout-export.png"
+    ]
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "sign-in",
+    "title": "Sign in and open your workspace",
+    "summary": "Pro and Team accounts can use their own GIS workspace; organization access is optional.",
+    "access": "Pro or Team · organization optional",
+    "steps": [
+      {
+        "title": "Open app.mapnero.com",
+        "body": "Choose Login and enter the email for your MapNero account. Use the same account as mobile to see your own layers."
+      },
+      {
+        "title": "Enter the one-time code",
+        "body": "Use the six-digit code sent to your email. Never share it with another person."
+      },
+      {
+        "title": "Open GIS · Layers",
+        "body": "Use the left navigation to open MapLibre GIS. Your own layers are private by default; organization layers appear only when they are shared with you."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "layers-features",
+    "title": "View layers and inspect features",
+    "summary": "Control map visibility, select features and review their attributes.",
+    "access": "Pro or Team",
+    "steps": [
+      {
+        "title": "Choose a basemap",
+        "body": "Select Standard, OSM, Satellite, Hybrid, Topo or Dark for the current task."
+      },
+      {
+        "title": "Turn layers on",
+        "body": "Use the layer panel to enable your own layers or layers shared by an organization."
+      },
+      {
+        "title": "Inspect a feature",
+        "body": "Click a point, line or polygon to open its information card and attributes."
+      },
+      {
+        "title": "Use the attribute table",
+        "body": "Open the table to search, filter and inspect the layer’s records."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "import-export",
+    "title": "Import or export GIS data",
+    "summary": "Review files before writing them, and export organization data in common formats.",
+    "access": "Write role required for import",
+    "steps": [
+      {
+        "title": "Start an import",
+        "body": "In GIS, choose Import and select GeoJSON, KML, GPX or a zipped Shapefile."
+      },
+      {
+        "title": "Review the parse summary",
+        "body": "Check detected geometry, coordinate handling and any skipped features. Nothing is written until you confirm."
+      },
+      {
+        "title": "Choose the destination",
+        "body": "Select or create the correct writable organization layer and confirm the import."
+      },
+      {
+        "title": "Export when needed",
+        "body": "Choose the current layer or feature set and export GeoJSON, KML, GPX or CSV."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "edit-online",
+    "title": "Create and edit features online",
+    "summary": "Draw point, line or polygon features and edit attributes with conflict protection.",
+    "access": "Online · write role",
+    "note": "Web editing requires an internet connection. The offline workspace is read-only.",
+    "steps": [
+      {
+        "title": "Select a writable layer",
+        "body": "Choose a normal organization layer. WMS/WMTS and read-only layers cannot receive features."
+      },
+      {
+        "title": "Enter edit mode",
+        "body": "Open the edit toolbar and choose point, line or polygon."
+      },
+      {
+        "title": "Draw and describe",
+        "body": "Place the geometry, complete its attributes and review the shape."
+      },
+      {
+        "title": "Save or resolve a conflict",
+        "body": "Save online. If another user changed the record, review the conflict instead of silently overwriting their work."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "offline-snapshot",
+    "title": "Prepare encrypted offline viewing",
+    "summary": "Create a protected read-only snapshot for viewing organization GIS data without a connection.",
+    "access": "Organization access",
+    "note": "The web offline workspace is encrypted and read-only. It does not download mobile basemap regions, edit data or synchronize while offline.",
+    "steps": [
+      {
+        "title": "Open Offline Access",
+        "body": "While signed in and online, open the GIS offline access panel."
+      },
+      {
+        "title": "Create a strong passphrase",
+        "body": "Enter at least 15 characters. The passphrase is never stored, so keep it in a secure password manager."
+      },
+      {
+        "title": "Save the current snapshot",
+        "body": "Wait until the encrypted envelope and offline shell are ready."
+      },
+      {
+        "title": "Test read-only access",
+        "body": "Disconnect the network, open the offline workspace and unlock it with the passphrase."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "reports",
+    "title": "Review reports and land-release records",
+    "summary": "Use dashboards, Spot Reports, Certificates and Land Release views for organization oversight.",
+    "access": "Role dependent",
+    "note": "Land-release classification is safety-relevant. Follow your organization’s approval workflow and qualified review.",
+    "steps": [
+      {
+        "title": "Open the right section",
+        "body": "Use Dashboard, Rollup, Spot Reports, Land Release or Certificates from the left navigation."
+      },
+      {
+        "title": "Filter the records",
+        "body": "Narrow by the available status, date, area or organization fields."
+      },
+      {
+        "title": "Open the record",
+        "body": "Review its source, location, status, attachments and audit context."
+      },
+      {
+        "title": "Edit only when authorized",
+        "body": "Use the edit action only when your role and organization procedure allow the change."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "team-live",
+    "title": "View a live team session",
+    "summary": "Open an active field session with its code and monitor shared team information.",
+    "access": "Team",
+    "steps": [
+      {
+        "title": "Get the session code",
+        "body": "Ask the field-team owner for the active session code through an approved channel."
+      },
+      {
+        "title": "Open Team Live",
+        "body": "Choose Team from the web navigation and enter the code."
+      },
+      {
+        "title": "Check freshness",
+        "body": "Confirm the session is active and review the last-update time before relying on a position."
+      },
+      {
+        "title": "End access when finished",
+        "body": "Close the session view and follow the team’s process for ending or rotating the session code."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "web-limits",
+    "title": "Know what belongs on mobile",
+    "summary": "Use Web GIS for organization viewing, editing and reporting, and mobile apps for field tracking and downloaded basemaps.",
+    "access": "All web users",
+    "steps": [
+      {
+        "title": "Record tracks on mobile",
+        "body": "Web GIS does not record GPS tracks or pair with external GNSS receivers."
+      },
+      {
+        "title": "Download basemap regions on mobile",
+        "body": "Web offline is an encrypted GIS snapshot, not the mobile offline-map downloader."
+      },
+      {
+        "title": "Continue your own layers on web",
+        "body": "Layers from the same mobile account are available on web. Share with organization only when you want teammates to access a layer."
+      },
+      {
+        "title": "Use web for oversight",
+        "body": "Inspect layers, edit permitted GIS features, export data and review organization reports from a larger screen."
+      }
+    ],
+    "images": []
+  },
+  {
+    "platform": "web",
+    "platformLabel": "Web GIS",
+    "id": "organization-admin",
+    "title": "Administer an organization",
+    "summary": "Invite the right people, choose roles carefully and verify that permanent field layers are shared before deployment.",
+    "access": "Organization owner or administrator",
+    "note": "The web workspace signs in to an existing invited account. It does not create an organization account for an uninvited email address.",
+    "steps": [
+      {
+        "title": "Open Administration",
+        "body": "Sign in at app.mapnero.com with the invited email, then open Administration in the left navigation. This area is available only to organization owners and administrators."
+      },
+      {
+        "title": "Invite with the minimum role",
+        "body": "In Invite by email, enter the colleague’s email and choose Viewer for read-only access, Member for normal field work, or Administrator only for a trusted manager. Confirm the invitation and seat count."
+      },
+      {
+        "title": "Complete first access on mobile",
+        "body": "On iPhone, iPad or Android, open the invitation email, then open Organization under Account & Access in MapNero. Enter the invitation code from the email, the same email address, a password you choose and your display name; confirm the join. Use that email and password later at app.mapnero.com. If the app separately asks for email verification, follow its prompt; the sign-in code is not the organization invitation code."
+      },
+      {
+        "title": "Review and remove access",
+        "body": "Use the pending list to cancel an unused invitation. Use Manage in the members list to change a role or remove a person. Do this before a device or account leaves the project."
+      }
+    ],
+    "images": []
+  }
+]

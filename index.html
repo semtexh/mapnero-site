@@ -712,6 +712,7 @@ footer {
 }
 </style>
 <link rel="stylesheet" href="assets/site-modern.css">
+<link rel="stylesheet" href="assets/feature-explorer.css">
 </head>
 <body>
 
@@ -768,6 +769,7 @@ footer {
         Download on App Store
       </a>
       <a href="https://app.mapnero.com" class="btn-outline" target="_blank" rel="noopener noreferrer">Open Web App ↗</a>
+      <a href="#explore" class="hero-team-link">Try the interactive preview →</a>
       <a href="#organizations" class="hero-team-link">Plans for your team →</a>
     </div>
     <div class="hero-platforms">
@@ -793,6 +795,18 @@ footer {
     <figcaption>On the map. In the field.<span>MapNero on iOS and Android</span></figcaption>
   </figure>
   <p class="hero-map-key">CONTOUR INTERVAL 20 m <span>ILLUSTRATIVE TERRAIN</span></p>
+</section>
+
+
+<section id="explore" class="explorer">
+  <div class="explorer-heading"><div><span class="section-tag">EXPLORE MAPNERO</span><h2>Put the tools<br>in your hands.</h2></div><p>Explore app workflows and actual screens. Try sample templates, save a pin and see how layers work — right here.</p></div>
+  <div class="explorer-shell">
+    <aside class="explorer-sidebar" aria-label="Choose a feature">
+      <label>Platform<select data-feature-platform><option value="apple">iPhone · iPad · Mac</option><option value="android">Android</option><option value="web">Web</option></select></label>
+      <label>Find a feature<input data-feature-search type="search" placeholder="Templates, tracks, maps…"></label>
+      <span data-feature-count class="explorer-eyebrow"></span><div data-feature-list></div>
+    </aside><div class="explorer-detail" data-feature-detail></div>
+  </div>
 </section>
 
 <div class="field-strip"><span>YOUR FIELDWORK, CONNECTED</span><p>Own maps <b>/</b> GPS tracks <b>/</b> Field data <b>/</b> Team sessions</p></div>
@@ -994,5 +1008,6 @@ document.querySelectorAll('.feature-card, .tier-card').forEach((el, i) => {
   el.style.transitionDelay = (i % 3) * 0.08 + 's';
 });
 </script>
+<script src="assets/feature-explorer.js" defer></script>
 </body>
 </html>
