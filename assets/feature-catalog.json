@@ -510,7 +510,9 @@
         "body": "You can style, edit, filter or export the resulting layer like other vector layers. Contours are derived data: verify their alignment, interval and source before sharing or using them for decisions."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/terrain-contours.png"
+    ]
   },
   {
     "platform": "apple",
