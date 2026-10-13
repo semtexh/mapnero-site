@@ -7,3 +7,6 @@
 .app-dark-input{background:#303030;color:#fff;border-radius:14px}.app-dark-input::placeholder{color:#aaa}.app-required-switch{position:absolute;min-width:44px;min-height:44px;border:0;border-radius:18px;background:#555;color:white;font:13px system-ui;cursor:pointer;touch-action:manipulation}.app-required-switch[aria-checked=true]{background:#9b7800}
 
 .explorer-try-screen{display:block;margin:18px 0;min-height:44px;padding:12px 18px;border:1px solid #b7c6b0;border-radius:5px;background:#eef2e8;color:#172720;font:inherit;cursor:pointer;touch-action:manipulation}
+
+.app-field-type{position:absolute;left:66%;top:33.6%;width:30%;height:10%;min-height:44px;border:0;border-radius:8px;background:#303030;color:#fff;font:13px system-ui;touch-action:manipulation}.app-range-input{text-align:right}.app-hotspots textarea{resize:none;font-size:16px;padding:8px}
+.app-range-input{min-height:0;font-size:12px}
