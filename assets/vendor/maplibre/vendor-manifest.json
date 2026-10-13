@@ -1,0 +1,13 @@
+{
+  "package": "maplibre-gl",
+  "version": "6.4.1",
+  "source": "installed MapNero Web dependency distribution",
+  "license": "BSD-3-Clause",
+  "files_sha256": {
+    "maplibre-gl-worker.mjs": "ce4957017fe705ac2f9ebef206cca966d08d8621756c39326a78cf09757e7d75",
+    "maplibre-gl.mjs": "97e8b9a39ab8b823d6a0caf9c312237262bc9138a6162d9e29606f5f8d24127d",
+    "maplibre-gl.css": "8e2dbbab312dc57656fbb76e9fa5308c75c9d7c7ba5808a7d55bcdb64cc813fa",
+    "maplibre-gl-shared.mjs": "fcf4d81450df235da0aea74897cc23926774b5228d38ae1de6a7d701c5905785",
+    "LICENSE.txt": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2"
+  }
+}
