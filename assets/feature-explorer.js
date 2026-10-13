@@ -5,6 +5,7 @@
  const list=host.querySelector('[data-feature-list]'), detail=host.querySelector('[data-feature-detail]');
  const search=host.querySelector('[data-feature-search]'), platform=host.querySelector('[data-feature-platform]');
  let catalog=[],selected='template-store';
+ const playable={apple:{'template-store':'store','location-track':'map','pins-layers':'layers','field-templates':'record','create-edit-templates':'builder','measure-cogo-buffer':'measure','route-builder':'route','offline-maps':'offline','team-session':'team','track-report':'report','settings-workspace':'settings'}};
  const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
  function renderList(){
  const shown=catalog.filter(t=>t.platform===platform.value&&`${t.title} ${t.summary}`.toLowerCase().includes(search.value.toLowerCase()));
@@ -18,6 +19,7 @@
  detail.replaceChildren(el('span',t.platformLabel,'explorer-eyebrow'),el('h3',t.title),el('p',t.summary),el('p',t.access,'explorer-access'));
  if(t.images.length){const gallery=el('div',null,'explorer-captures');t.images.forEach(src=>{const img=el('img');img.src=src;img.alt=`${t.platformLabel}: ${t.title}`;img.loading='lazy';gallery.append(img);});detail.append(gallery,el('p','Actual MapNero app screens','explorer-caption'));}
  else detail.append(el('p','This feature is awaiting its app screen capture.','explorer-caption'));
+ const screen=playable[t.platform]?.[t.id];if(screen){const tryScreen=el('button','Try this app screen →','explorer-try-screen');tryScreen.type='button';tryScreen.onclick=()=>document.dispatchEvent(new CustomEvent('mapnero:open-screen',{detail:screen}));detail.append(tryScreen);}
  const steps=el('ol',null,'explorer-steps');t.steps.forEach(s=>{const li=el('li');li.append(el('strong',s.title),el('p',s.body));steps.append(li);});detail.append(steps);
  if(t.note)detail.append(el('p',t.note,'explorer-note'));
  if(t.id!=='template-store'&&!t.extra){const a=el('a','Open the full guide →');a.href=`guides.html?lang=en#${t.platform}/${t.id}`;detail.append(a);}

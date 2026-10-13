@@ -5,3 +5,5 @@
 .app-sample-coordinate{position:absolute;left:8%;top:22.7%;width:56%;padding:3px 0;background:#f2f3f8;font:10px system-ui;color:#435744;pointer-events:none}
 
 .app-dark-input{background:#303030;color:#fff;border-radius:14px}.app-dark-input::placeholder{color:#aaa}.app-required-switch{position:absolute;min-width:44px;min-height:44px;border:0;border-radius:18px;background:#555;color:white;font:13px system-ui;cursor:pointer;touch-action:manipulation}.app-required-switch[aria-checked=true]{background:#9b7800}
+
+.explorer-try-screen{display:block;margin:18px 0;min-height:44px;padding:12px 18px;border:1px solid #b7c6b0;border-radius:5px;background:#eef2e8;color:#172720;font:inherit;cursor:pointer;touch-action:manipulation}
