@@ -1,0 +1,3 @@
+These 34 transparent glyph assets were rendered locally with AppKit from the SF symbol names in MapNeroApp/Core/Models/MilSymbolModels.swift, at semibold weight. They are used in the MapNero app walkthrough. They are macOS glyphs; they do not prove pixel-identical iOS rendering. Native frame geometry is implemented separately in symbol-renderer.js.
+
+Reproduce: obtain the distinct sfSymbol names plus the seven symbol-set defaults from assets/symbol-native-catalog.js, save them as a JSON array, compile scripts/export-native-symbol-glyphs.swift with swiftc, and pass that JSON file and this output directory to the compiled exporter. Generated images are 128 by 128 RGBA.

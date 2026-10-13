@@ -1928,7 +1928,7 @@
     "title": "Choose map symbols",
     "summary": "Choose from the native symbol options and save a practice point with its SIDC.",
     "access": "Website sample; app access depends on tool and plan.",
-    "note": "Real native picker capture. All current native code options are connected; dynamic map glyph rendering remains pending.",
+    "note": "Real native picker capture. All current native code options are connected to a live web map with native frame rules and SF glyph assets.",
     "steps": [
       {
         "title": "Try the tool",
