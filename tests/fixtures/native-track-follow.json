@@ -1,0 +1,1882 @@
+[
+  {
+    "coordinates": [
+      [
+        -0.128,
+        51.507,
+        0
+      ],
+      [
+        -0.126,
+        51.507,
+        10
+      ],
+      [
+        -0.124,
+        51.508,
+        5
+      ]
+    ],
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.127,
+          51.5072
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 102,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.124,
+          51.508
+        ],
+        "timestamp": 103,
+        "accuracy": 5,
+        "receipt": 103
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.124,
+          51.508
+        ],
+        "timestamp": 103,
+        "accuracy": 5,
+        "receipt": 103
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.124,
+          51.508
+        ],
+        "timestamp": 104,
+        "accuracy": 5,
+        "receipt": 104
+      },
+      {
+        "type": "stop"
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        1,
+        2
+      ],
+      "length": 316.7921801772386,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987804153556,
+            "coordinate": [
+              -0.1270000000043865,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 22.25111959725395,
+            "distanceToNextOnRouteMeters": 69.42987865509416,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537839630698,
+            "remainingAscentMeters": 5.000000022092744,
+            "remainingDescentMeters": 5,
+            "remainingOnRouteMeters": 247.36230213570303,
+            "segmentFraction": 0.4999999977907256,
+            "segmentIndex": 0,
+            "side": "left"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 102,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 248.69640974065388,
+            "coordinate": [
+              -0.124765421942584,
+              51.507617298248256
+            ],
+            "crossTrackDistanceMeters": 26.046828598060024,
+            "distanceToNextOnRouteMeters": 68.09577043658473,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.7850459238025176,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 1.9135289989462163,
+            "remainingOnRouteMeters": 68.09577043658473,
+            "segmentFraction": 0.6172942002107568,
+            "segmentIndex": 1,
+            "side": "left"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 103,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 316.79218017560163,
+            "coordinate": [
+              -0.12400000000002365,
+              51.508
+            ],
+            "crossTrackDistanceMeters": 0,
+            "distanceToNextOnRouteMeters": 1.6369767763535492e-9,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.9999999999948327,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 4.5999648534689186e-11,
+            "remainingOnRouteMeters": 1.6369767763535492e-9,
+            "segmentFraction": 0.9999999999908,
+            "segmentIndex": 1,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 103,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 316.79218017560163,
+            "coordinate": [
+              -0.12400000000002365,
+              51.508
+            ],
+            "crossTrackDistanceMeters": 0,
+            "distanceToNextOnRouteMeters": 1.6369767763535492e-9,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.9999999999948327,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 4.5999648534689186e-11,
+            "remainingOnRouteMeters": 1.6369767763535492e-9,
+            "segmentFraction": 0.9999999999908,
+            "segmentIndex": 1,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 104,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 316.79218017560163,
+            "coordinate": [
+              -0.12400000000002365,
+              51.508
+            ],
+            "crossTrackDistanceMeters": 0,
+            "distanceToNextOnRouteMeters": 1.6369767763535492e-9,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.9999999999948327,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 4.5999648534689186e-11,
+            "remainingOnRouteMeters": 1.6369767763535492e-9,
+            "segmentFraction": 0.9999999999908,
+            "segmentIndex": 1,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "arrived"
+        },
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "stopped"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        -0.128,
+        51.507,
+        0
+      ],
+      [
+        -0.126,
+        51.507,
+        10
+      ],
+      [
+        -0.124,
+        51.508,
+        5
+      ]
+    ],
+    "preferences": {
+      "direction": "reverse",
+      "corridor": 5
+    },
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.128,
+          51.507
+        ],
+        "timestamp": 102,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.128,
+          51.507
+        ],
+        "timestamp": 103,
+        "accuracy": 5,
+        "receipt": 103
+      }
+    ],
+    "expected": {
+      "indexes": [
+        2,
+        1,
+        0
+      ],
+      "length": 316.79218017710315,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 68.0954884126239,
+            "coordinate": [
+              -0.12476541877254022,
+              51.507617299833235
+            ],
+            "crossTrackDistanceMeters": 26.046828600363032,
+            "distanceToNextOnRouteMeters": 109.83693506784954,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21495318594845053,
+            "remainingAscentMeters": 3.0864789260823846,
+            "remainingDescentMeters": 10,
+            "remainingOnRouteMeters": 248.69669176447925,
+            "segmentFraction": 0.3827042147835231,
+            "segmentIndex": 0,
+            "side": "right"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 102,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 316.79218017710315,
+            "coordinate": [
+              -0.12799999999992906,
+              51.506999999999984
+            ],
+            "crossTrackDistanceMeters": 8.018983265792416e-9,
+            "distanceToNextOnRouteMeters": 0,
+            "nextSourceVertexIndex": 0,
+            "progressFraction": 1,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 0,
+            "remainingOnRouteMeters": 0,
+            "segmentFraction": 1,
+            "segmentIndex": 1,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 103,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 316.79218017710315,
+            "coordinate": [
+              -0.12799999999992906,
+              51.506999999999984
+            ],
+            "crossTrackDistanceMeters": 8.018983265792416e-9,
+            "distanceToNextOnRouteMeters": 0,
+            "nextSourceVertexIndex": 0,
+            "progressFraction": 1,
+            "remainingAscentMeters": 0,
+            "remainingDescentMeters": 0,
+            "remainingOnRouteMeters": 0,
+            "segmentFraction": 1,
+            "segmentIndex": 1,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "arrived"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        -0.128,
+        51.507,
+        0
+      ],
+      [
+        -0.126,
+        51.507,
+        10
+      ],
+      [
+        -0.124,
+        51.508,
+        5
+      ]
+    ],
+    "preferences": {
+      "startMode": "fromStart"
+    },
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.128,
+          51.507
+        ],
+        "timestamp": 102,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.127,
+          51.507
+        ],
+        "timestamp": 103,
+        "accuracy": 5,
+        "receipt": 103
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        1,
+        2
+      ],
+      "length": 316.7921801772386,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": true,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": true,
+          "progress": {
+            "chainageMeters": 0,
+            "coordinate": [
+              -0.128,
+              51.507
+            ],
+            "crossTrackDistanceMeters": 226.5081631259378,
+            "distanceToNextOnRouteMeters": 138.85975669662972,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0,
+            "remainingAscentMeters": 10,
+            "remainingDescentMeters": 5,
+            "remainingOnRouteMeters": 316.7921801772386,
+            "segmentFraction": 0,
+            "segmentIndex": 0,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 102,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 0,
+            "coordinate": [
+              -0.12800000000004275,
+              51.506999999999984
+            ],
+            "crossTrackDistanceMeters": 1.4143856916731971e-9,
+            "distanceToNextOnRouteMeters": 138.85975669662972,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0,
+            "remainingAscentMeters": 10,
+            "remainingDescentMeters": 5,
+            "remainingOnRouteMeters": 316.7921801772386,
+            "segmentFraction": 0,
+            "segmentIndex": 0,
+            "side": "unknown"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 103,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": 4.999999999923983,
+            "remainingDescentMeters": 5,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        -0.128,
+        51.507
+      ],
+      [
+        -0.126,
+        51.507
+      ],
+      [
+        -0.124,
+        51.508
+      ]
+    ],
+    "ops": [
+      {
+        "type": "begin",
+        "permission": false
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.127,
+          51.507
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 90,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 99,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 101,
+        "accuracy": 80,
+        "receipt": 102
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 99.5,
+        "accuracy": 5,
+        "receipt": 102
+      },
+      {
+        "type": "pause"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.124,
+          51.508
+        ],
+        "timestamp": 103,
+        "accuracy": 5,
+        "receipt": 103
+      },
+      {
+        "type": "resume"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.125,
+          51.5078
+        ],
+        "timestamp": 104,
+        "accuracy": 5,
+        "receipt": 104
+      },
+      {
+        "type": "stop"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.124,
+          51.508
+        ],
+        "timestamp": 105,
+        "accuracy": 5,
+        "receipt": 105
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        1,
+        2
+      ],
+      "length": 316.7921801772386,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": "permissionDenied",
+          "state": "degraded"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": "stale",
+          "state": "degraded"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": "outOfOrder",
+          "state": "degraded"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": "poorAccuracy",
+          "state": "degraded"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": "outOfOrder",
+          "state": "degraded"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "paused"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "paused"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.21916537936803193,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 247.36230182786818,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 104,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 248.69640974065388,
+            "coordinate": [
+              -0.124765421942584,
+              51.507617298248256
+            ],
+            "crossTrackDistanceMeters": 26.046828598060024,
+            "distanceToNextOnRouteMeters": 68.09577043658473,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.7850459238025176,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 68.09577043658473,
+            "segmentFraction": 0.6172942002107568,
+            "segmentIndex": 1,
+            "side": "left"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "stopped"
+        },
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "stopped"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        0,
+        0
+      ],
+      [
+        0.01,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0.01,
+        0
+      ]
+    ],
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          0.004,
+          0
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          0.0041,
+          0
+        ],
+        "timestamp": 101,
+        "accuracy": 5,
+        "receipt": 101
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          0.005,
+          0
+        ],
+        "timestamp": 102,
+        "accuracy": 5,
+        "receipt": 102
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "length": 3339.584723793754,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 445.27796316889555,
+            "coordinate": [
+              0.004000000000019099,
+              2.4658006024815394e-19
+            ],
+            "crossTrackDistanceMeters": 2.7265411594024577e-14,
+            "distanceToNextOnRouteMeters": 667.9169447623559,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.13333333333225386,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 2894.3067606248587,
+            "segmentFraction": 0.39999999999676156,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 101,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 456.4099122454297,
+            "coordinate": [
+              0.004099999999993997,
+              2.527445617424055e-19
+            ],
+            "crossTrackDistanceMeters": 2.7947046882553563e-14,
+            "distanceToNextOnRouteMeters": 656.7849956858217,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.13666666666475524,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 2883.174811548324,
+            "segmentFraction": 0.40999999999426573,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 102,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 556.5974539595379,
+            "coordinate": [
+              0.0049999999999954525,
+              3.082250751675314e-19
+            ],
+            "crossTrackDistanceMeters": 3.408176447675608e-14,
+            "distanceToNextOnRouteMeters": 556.5974539717135,
+            "nextSourceVertexIndex": 1,
+            "progressFraction": 0.16666666666484375,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 2782.987269834216,
+            "segmentFraction": 0.4999999999945312,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        179.999,
+        10
+      ],
+      [
+        -179.999,
+        10
+      ],
+      [
+        -179.998,
+        10.001
+      ]
+    ],
+    "preferences": {
+      "direction": "reverse"
+    },
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -179.9995,
+          10.0001
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      }
+    ],
+    "expected": {
+      "indexes": [
+        2,
+        1,
+        0
+      ],
+      "length": 375.01835645825395,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 210.5593120494848,
+            "coordinate": [
+              -179.99950000001536,
+              10.000000001126574
+            ],
+            "crossTrackDistanceMeters": 11.060651934965527,
+            "distanceToNextOnRouteMeters": 164.45904440876916,
+            "nextSourceVertexIndex": 0,
+            "progressFraction": 0.5614640148232949,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 164.45904440876916,
+            "segmentFraction": 0.2500000077050245,
+            "segmentIndex": 1,
+            "side": "right"
+          },
+          "reason": null,
+          "state": "following"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        -0.128,
+        51.507,
+        0
+      ],
+      [
+        -0.128,
+        51.507,
+        100
+      ],
+      [
+        -0.126,
+        51.507,
+        10
+      ]
+    ],
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.127,
+          51.507
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        2
+      ],
+      "length": 138.85975669662972,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 69.42987834937043,
+            "coordinate": [
+              -0.1269999999999527,
+              51.50700000426234
+            ],
+            "crossTrackDistanceMeters": 0.00047422089224701403,
+            "distanceToNextOnRouteMeters": 69.42987834725929,
+            "nextSourceVertexIndex": 2,
+            "progressFraction": 0.5000000000076017,
+            "remainingAscentMeters": 4.999999999923983,
+            "remainingDescentMeters": 0,
+            "remainingOnRouteMeters": 69.42987834725929,
+            "segmentFraction": 0.5000000000076017,
+            "segmentIndex": 0,
+            "side": "onRoute"
+          },
+          "reason": null,
+          "state": "following"
+        }
+      ]
+    }
+  },
+  {
+    "coordinates": [
+      [
+        -0.13,
+        51.5
+      ],
+      [
+        -0.12999,
+        51.5
+      ],
+      [
+        -0.12998,
+        51.5
+      ],
+      [
+        -0.12997,
+        51.5
+      ],
+      [
+        -0.12996,
+        51.5
+      ],
+      [
+        -0.12995,
+        51.5
+      ],
+      [
+        -0.12994,
+        51.5
+      ],
+      [
+        -0.12993000000000002,
+        51.5
+      ],
+      [
+        -0.12992,
+        51.5
+      ],
+      [
+        -0.12991,
+        51.5
+      ],
+      [
+        -0.12990000000000002,
+        51.5
+      ],
+      [
+        -0.12989,
+        51.5
+      ],
+      [
+        -0.12988,
+        51.5
+      ],
+      [
+        -0.12987,
+        51.5
+      ],
+      [
+        -0.12986,
+        51.5
+      ],
+      [
+        -0.12985,
+        51.5
+      ],
+      [
+        -0.12984,
+        51.5
+      ],
+      [
+        -0.12983,
+        51.5
+      ],
+      [
+        -0.12982,
+        51.5
+      ],
+      [
+        -0.12981,
+        51.5
+      ],
+      [
+        -0.1298,
+        51.5
+      ],
+      [
+        -0.12979000000000002,
+        51.5
+      ],
+      [
+        -0.12978,
+        51.5
+      ],
+      [
+        -0.12977,
+        51.5
+      ],
+      [
+        -0.12976000000000001,
+        51.5
+      ],
+      [
+        -0.12975,
+        51.5
+      ],
+      [
+        -0.12974,
+        51.5
+      ],
+      [
+        -0.12973,
+        51.5
+      ],
+      [
+        -0.12972,
+        51.5
+      ],
+      [
+        -0.12971,
+        51.5
+      ],
+      [
+        -0.1297,
+        51.5
+      ],
+      [
+        -0.12969,
+        51.5
+      ],
+      [
+        -0.12968000000000002,
+        51.5
+      ],
+      [
+        -0.12967,
+        51.5
+      ],
+      [
+        -0.12966,
+        51.5
+      ],
+      [
+        -0.12965000000000002,
+        51.5
+      ],
+      [
+        -0.12964,
+        51.5
+      ],
+      [
+        -0.12963,
+        51.5
+      ],
+      [
+        -0.12962,
+        51.5
+      ],
+      [
+        -0.12961,
+        51.5
+      ],
+      [
+        -0.1296,
+        51.5
+      ],
+      [
+        -0.12959,
+        51.5
+      ],
+      [
+        -0.12958,
+        51.5
+      ],
+      [
+        -0.12957,
+        51.5
+      ],
+      [
+        -0.12956,
+        51.5
+      ],
+      [
+        -0.12955,
+        51.5
+      ],
+      [
+        -0.12954000000000002,
+        51.5
+      ],
+      [
+        -0.12953,
+        51.5
+      ],
+      [
+        -0.12952,
+        51.5
+      ],
+      [
+        -0.12951000000000001,
+        51.5
+      ],
+      [
+        -0.1295,
+        51.5
+      ],
+      [
+        -0.12949,
+        51.5
+      ],
+      [
+        -0.12948,
+        51.5
+      ],
+      [
+        -0.12947,
+        51.5
+      ],
+      [
+        -0.12946,
+        51.5
+      ],
+      [
+        -0.12945,
+        51.5
+      ],
+      [
+        -0.12944,
+        51.5
+      ],
+      [
+        -0.12943000000000002,
+        51.5
+      ],
+      [
+        -0.12942,
+        51.5
+      ],
+      [
+        -0.12941,
+        51.5
+      ],
+      [
+        -0.12940000000000002,
+        51.5
+      ],
+      [
+        -0.12939,
+        51.5
+      ],
+      [
+        -0.12938,
+        51.5
+      ],
+      [
+        -0.12937,
+        51.5
+      ],
+      [
+        -0.12936,
+        51.5
+      ],
+      [
+        -0.12935,
+        51.5
+      ],
+      [
+        -0.12934,
+        51.5
+      ],
+      [
+        -0.12933,
+        51.5
+      ],
+      [
+        -0.12932,
+        51.5
+      ],
+      [
+        -0.12931,
+        51.5
+      ],
+      [
+        -0.1293,
+        51.5
+      ],
+      [
+        -0.12929000000000002,
+        51.5
+      ],
+      [
+        -0.12928,
+        51.5
+      ],
+      [
+        -0.12927,
+        51.5
+      ],
+      [
+        -0.12926,
+        51.5
+      ],
+      [
+        -0.12925,
+        51.5
+      ],
+      [
+        -0.12924,
+        51.5
+      ],
+      [
+        -0.12923,
+        51.5
+      ],
+      [
+        -0.12922,
+        51.5
+      ],
+      [
+        -0.12921,
+        51.5
+      ],
+      [
+        -0.1292,
+        51.5
+      ],
+      [
+        -0.12919,
+        51.5
+      ],
+      [
+        -0.12918000000000002,
+        51.5
+      ],
+      [
+        -0.12917,
+        51.5
+      ],
+      [
+        -0.12916,
+        51.5
+      ],
+      [
+        -0.12915000000000001,
+        51.5
+      ],
+      [
+        -0.12914,
+        51.5
+      ],
+      [
+        -0.12913,
+        51.5
+      ],
+      [
+        -0.12912,
+        51.5
+      ],
+      [
+        -0.12911,
+        51.5
+      ],
+      [
+        -0.1291,
+        51.5
+      ],
+      [
+        -0.12909,
+        51.5
+      ],
+      [
+        -0.12908,
+        51.5
+      ],
+      [
+        -0.12907000000000002,
+        51.5
+      ],
+      [
+        -0.12906,
+        51.5
+      ],
+      [
+        -0.12905,
+        51.5
+      ],
+      [
+        -0.12904000000000002,
+        51.5
+      ],
+      [
+        -0.12903,
+        51.5
+      ],
+      [
+        -0.12902,
+        51.5
+      ],
+      [
+        -0.12901,
+        51.5
+      ],
+      [
+        -0.129,
+        51.5
+      ],
+      [
+        -0.12899,
+        51.5
+      ],
+      [
+        -0.12898,
+        51.5
+      ],
+      [
+        -0.12897,
+        51.5
+      ],
+      [
+        -0.12896,
+        51.5
+      ],
+      [
+        -0.12895,
+        51.5
+      ],
+      [
+        -0.12894,
+        51.5
+      ],
+      [
+        -0.12893000000000002,
+        51.5
+      ],
+      [
+        -0.12892,
+        51.5
+      ],
+      [
+        -0.12891,
+        51.5
+      ],
+      [
+        -0.12890000000000001,
+        51.5
+      ],
+      [
+        -0.12889,
+        51.5
+      ],
+      [
+        -0.12888,
+        51.5
+      ],
+      [
+        -0.12887,
+        51.5
+      ],
+      [
+        -0.12886,
+        51.5
+      ],
+      [
+        -0.12885,
+        51.5
+      ],
+      [
+        -0.12884,
+        51.5
+      ],
+      [
+        -0.12883,
+        51.5
+      ],
+      [
+        -0.12882000000000002,
+        51.5
+      ],
+      [
+        -0.12881,
+        51.5
+      ],
+      [
+        -0.1288,
+        51.5
+      ],
+      [
+        -0.12879000000000002,
+        51.5
+      ],
+      [
+        -0.12878,
+        51.5
+      ],
+      [
+        -0.12877,
+        51.5
+      ],
+      [
+        -0.12876,
+        51.5
+      ],
+      [
+        -0.12875,
+        51.5
+      ],
+      [
+        -0.12874,
+        51.5
+      ],
+      [
+        -0.12873,
+        51.5
+      ],
+      [
+        -0.12872,
+        51.5
+      ],
+      [
+        -0.12871,
+        51.5
+      ]
+    ],
+    "ops": [
+      {
+        "type": "begin"
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.129315,
+          51.50001
+        ],
+        "timestamp": 100,
+        "accuracy": 5,
+        "receipt": 100
+      },
+      {
+        "type": "fix",
+        "coordinate": [
+          -0.128805,
+          51.50001
+        ],
+        "timestamp": 101,
+        "accuracy": 5,
+        "receipt": 101
+      }
+    ],
+    "expected": {
+      "indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "length": 89.57826623943612,
+      "states": [
+        {
+          "acceptedFixTimestamp": null,
+          "approaching": false,
+          "progress": null,
+          "reason": null,
+          "state": "awaitingFix"
+        },
+        {
+          "acceptedFixTimestamp": 100,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 47.566753749811895,
+            "coordinate": [
+              -0.12931500000036067,
+              51.50000000000011
+            ],
+            "crossTrackDistanceMeters": 1.1125783254443078,
+            "distanceToNextOnRouteMeters": 0.3472026108166588,
+            "nextSourceVertexIndex": 69,
+            "progressFraction": 0.5310077516199014,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 42.011512489624224,
+            "segmentFraction": 0.499999958967371,
+            "segmentIndex": 68,
+            "side": "left"
+          },
+          "reason": null,
+          "state": "following"
+        },
+        {
+          "acceptedFixTimestamp": 101,
+          "approaching": false,
+          "progress": {
+            "chainageMeters": 82.9814171442272,
+            "coordinate": [
+              -0.12880500000039774,
+              51.50000000000011
+            ],
+            "crossTrackDistanceMeters": 1.1125783254443078,
+            "distanceToNextOnRouteMeters": 0.3472026133877648,
+            "nextSourceVertexIndex": 120,
+            "progressFraction": 0.9263565888005018,
+            "remainingAscentMeters": null,
+            "remainingDescentMeters": null,
+            "remainingOnRouteMeters": 6.596849095208924,
+            "segmentFraction": 0.4999999552647764,
+            "segmentIndex": 119,
+            "side": "left"
+          },
+          "reason": null,
+          "state": "following"
+        }
+      ]
+    }
+  }
+]
