@@ -36,3 +36,5 @@
 .app-template-import [data-ocr-review]{grid-column:1/-1}.app-ocr-field{display:grid;gap:8px;margin:16px 0;padding-bottom:16px;border-bottom:1px solid #b7c6b0}.app-template-import pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:200px;overflow:auto}.app-template-import button[hidden]{display:none}
 
 [data-store-practice] textarea{box-sizing:border-box;width:100%;min-height:92px;padding:12px;font:inherit;font-size:16px;resize:vertical;border:1px solid #b7c1b5;border-radius:8px;margin:12px 0;}
+
+.app-route-waypoints li{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;} .app-route-waypoints strong{grid-column:1/-1;} .app-route-waypoints button{width:100%;min-height:44px;margin:0;font-size:14px;}
