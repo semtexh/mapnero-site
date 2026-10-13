@@ -829,7 +829,9 @@
         "body": "Use Fit Map / fit to screen to return to the map’s extent. Locate centres on your current GPS position, which may be far outside this map."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/raster-background.png"
+    ]
   },
   {
     "platform": "apple",
