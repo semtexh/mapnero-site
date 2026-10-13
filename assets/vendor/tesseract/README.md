@@ -1,0 +1,1 @@
+Local OCR runtime: tesseract.js 7.0.0 and tesseract.js-core 7.0.0 from official npm packages. English and Turkish tessdata_fast models from tesseract-ocr/tessdata_fast. Apache-2.0 licenses included in each directory. Loaded on demand; user images stay in the browser. SHA256.json records exact vendored bytes.
