@@ -37,13 +37,13 @@
    let drawing=false;
    const current=()=>alive&&turn===pdfTurn&&state.record===record;
    const draw=async(pageNumber)=>{
-    if(drawing||!current())return;drawing=true;previous.disabled=next.disabled=true;
+    if(drawing||!current())return;drawing=true;pending=true;state.saved=null;update();previous.disabled=next.disabled=true;
     try{
      const page=await pdfDocument.getPage(pageNumber);if(!current())return;
      const base=page.getViewport({scale:1});const scale=Math.min(900/base.width,Math.sqrt(4000000/(base.width*base.height)),2);
      const viewport=page.getViewport({scale});canvas.width=Math.ceil(viewport.width);canvas.height=Math.ceil(viewport.height);canvas.setAttribute('aria-label',`Actual PDF page ${pageNumber}`);
      pdfRender=page.render({canvasContext:canvas.getContext('2d'),viewport});await pdfRender.promise;if(!current())return;
-     record.page=pageNumber;record.pages=pdfDocument.numPages;record.width=canvas.width;record.height=canvas.height;
+     const pagePreview=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!current())return;if(!pagePreview)throw Error('PDF page preview could not be saved.');record.pagePreview=pagePreview;record.page=pageNumber;record.pages=pdfDocument.numPages;record.width=canvas.width;record.height=canvas.height;
      pageStatus.textContent=`Page ${pageNumber} of ${record.pages}`;summary.textContent=`${record.file.name}: PDF, ${record.pages} pages. No verified map placement: PDF coordinates are not extracted.`;
      pending=false;update();
     }catch(error){if(current()){pageStatus.textContent='PDF page could not be rendered.';feedback.textContent=error.message;pending=true;update();}}
@@ -89,6 +89,6 @@
   render();status.append(group);
   return{chooseFiles:()=>{input.accept='.png,.jpg,.jpeg,.webp,.tif,.tiff,.pdf,.kmz';input.click();},choosePhoto:()=>{input.accept='image/png,image/jpeg,image/webp';input.click();},save:saveMap,cleanup:()=>{alive=false;revision++;releasePreview();}};
  }
- async function offlineRecord(){if(!state.saved||!state.record)throw Error('Import and Save practice map first.');const r=state.record,name=state.saved.name,token=revision;if(r.kind==='PDF')throw Error('Offline PDF pages are not connected yet. Choose an image, KMZ raster or supported GeoTIFF.');let preview;if(r.rgba){const canvas=document.createElement('canvas');canvas.width=r.width;canvas.height=r.height;canvas.getContext('2d').putImageData(new ImageData(r.rgba,r.width,r.height),0,0);preview=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));}else preview=new Blob([r.previewBytes||r.bytes],{type:r.previewMime||r.mime});if(!preview||revision!==token)throw Error('Imported map changed; save it again before preparing offline use.');return{name,fileName:r.file.name,width:r.width,height:r.height,coordinates:r.coordinates||null,preview,original:new Blob([r.bytes],{type:r.mime}),savedAt:new Date().toISOString()};}
+ async function offlineRecord(){if(!state.saved||!state.record)throw Error('Import and Save practice map first.');const r=state.record,name=state.saved.name,token=revision;let preview;if(r.kind==='PDF'){if(!(r.pagePreview instanceof Blob))throw Error('Wait for the PDF page to render, then save it.');preview=r.pagePreview;}else if(r.rgba){const canvas=document.createElement('canvas');canvas.width=r.width;canvas.height=r.height;canvas.getContext('2d').putImageData(new ImageData(r.rgba,r.width,r.height),0,0);preview=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));}else preview=new Blob([r.previewBytes||r.bytes],{type:r.previewMime||r.mime});if(!preview||revision!==token)throw Error('Imported map changed; save it again before preparing offline use.');return{name,kind:r.kind,page:r.page||null,pages:r.pages||null,fileName:r.file.name,width:r.width,height:r.height,coordinates:r.coordinates||null,preview,original:new Blob([r.bytes],{type:r.mime}),savedAt:new Date().toISOString()};}
  return{inspect,mount,reset,offlineRecord};
 });
