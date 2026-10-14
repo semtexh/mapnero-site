@@ -1,8 +1,8 @@
-(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./certificate-engine.js'),require('./vendor/pdf-lib/pdf-lib.min.js'));else root.MapNeroCertificatePDF=factory(root.MapNeroCertificate,root.PDFLib);})(typeof window==='undefined'?globalThis:window,function(E,P){
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./certificate-engine.js'),require('./vendor/pdf-lib/pdf-lib.min.js'),require('./pdf-fonts.js'));else root.MapNeroCertificatePDF=factory(root.MapNeroCertificate,root.PDFLib,root.MapNeroPDFFonts);})(typeof window==='undefined'?globalThis:window,function(E,P,F){
 'use strict';
 function validate(input){if(input?.demo!==true||input.legalSignature!==false||input.fieldClearanceProof!==false)throw Error('Use a local DEMO certificate snapshot.');const r=E.save(input,input.id,input.createdAt);if(r.certNumber!==input.certNumber)throw Error('Invalid practice certificate number.');return r;}
 async function create(input){
- const r=validate(input),doc=await P.PDFDocument.create(),font=await doc.embedFont(P.StandardFonts.Helvetica),bold=await doc.embedFont(P.StandardFonts.HelveticaBold),rows=[];
+ const r=validate(input),doc=await P.PDFDocument.create(),fonts=await F.forDocument(doc,E.fields.map(([key])=>r[key])),font=fonts.font,bold=fonts.bold,rows=[];
  const add=(text,size=10,isBold=false,reserve=0)=>{const f=isBold?bold:font;for(const paragraph of String(text).replace(/\t/g,'    ').split(/\r?\n/)){
   f.encodeText(paragraph);let line='';for(const token of paragraph.split(/(\s+)/)){if(!token)continue;if(f.widthOfTextAtSize(line+token,size)<=491){line+=token;continue;}if(line.trim()){rows.push({text:line.trimEnd(),size,isBold,reserve});reserve=0;line='';}for(const ch of token){if(f.widthOfTextAtSize(line+ch,size)>491&&line){rows.push({text:line.trimEnd(),size,isBold,reserve});reserve=0;line='';}line+=ch;} }
   rows.push({text:line.trimEnd(),size,isBold,reserve});reserve=0;

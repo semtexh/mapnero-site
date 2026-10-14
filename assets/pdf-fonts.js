@@ -1,0 +1,7 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./vendor/pdf-lib/pdf-lib.min.js'),require('./vendor/fontkit/fontkit.umd.min.js'),async()=>new Uint8Array(require('node:fs').readFileSync(require('node:path').join(__dirname,'vendor/fonts/RobotoMono.ttf'))));else root.MapNeroPDFFonts=factory(root.PDFLib,root.fontkit,async()=>{const r=await fetch('assets/vendor/fonts/RobotoMono.ttf');if(!r.ok)throw Error('PDF font download failed; retry or use JSON.');return new Uint8Array(await r.arrayBuffer());});})(typeof window==='undefined'?globalThis:window,function(P,K,load){
+'use strict';let bytesPromise;
+async function forDocument(doc,texts){const regular=await doc.embedFont(P.StandardFonts.Helvetica),bold=await doc.embedFont(P.StandardFonts.HelveticaBold);try{for(const t of texts)regular.encodeText(String(t));return{font:regular,bold};}catch(e){/* A saved glyph needs the embedded font. */}
+if(!K)throw Error('PDF font engine unavailable; use JSON.');if(!bytesPromise)bytesPromise=load().catch(e=>{bytesPromise=null;throw e;});const bytes=await bytesPromise,source=K.create(bytes);for(const t of texts)for(const ch of String(t))if(!['\n','\r','\t'].includes(ch)&&!source.hasGlyphForCodePoint(ch.codePointAt(0)))throw Error('This PDF font cannot represent a saved character. Download JSON or CSV to preserve the exact text.');doc.registerFontkit(K);const font=await doc.embedFont(bytes,{subset:true});return{font,bold:font};
+}
+return{forDocument};
+});

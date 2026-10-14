@@ -1,0 +1,3 @@
+# Vendored fontkit
+
+Unmodified @pdf-lib/fontkit1.1.1 UMD from the installed npm package. Upstream README and package metadata declare MIT; they are preserved verbatim alongside the MIT terms. The upstream package/repository contains no standalone copyright/license file; no copyright date or ownership assertion was invented. Package author Andrew Dillon and contributor Devon Govett are recorded in package-provenance.json. Upstream https://github.com/Hopding/fontkit (fork of foliojs/fontkit). Bundled pako MIT notice retained separately. This is an unmodified source dependency, not executable installation from an unknown site.
