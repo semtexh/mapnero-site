@@ -1,0 +1,14 @@
+{
+  "shpjs": {
+    "version": "6.2.0",
+    "sha256": "3380a08babfcc8411e5fa7693a4cc443627e43200b0489c81173a55ff1439ca0",
+    "source": "existing MapNero web npm dependency",
+    "license": "MIT"
+  },
+  "proj4": {
+    "version": "2.21.0",
+    "sha256": "c3a3a85c5b52e012873fe13db6253e40e3c9cde124523965c57eec7f7c4cd756",
+    "source": "existing MapNero web npm dependency",
+    "license": "MIT"
+  }
+}
