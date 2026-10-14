@@ -1535,7 +1535,7 @@
     "title": "Export field data and share it safely",
     "summary": "Choose the right file format, review the result and use a link only when public download is appropriate.",
     "access": "KML/GPX/CSV/KMZ: Free · GeoPDF/GeoTIFF: Core+ · SHP/GPKG/DXF/QGIS: Pro+ · Share via Link: Core+",
-    "note": "A Share via Link upload needs internet. Anyone holding the link can download its file until it expires; remove it from My Shared Links when access must end.",
+    "note": "Actual Android layer selection capture plus local All/None/Next and selected-layer downloads. GPX/KML/KMZ/CSV/GeoJSON and 2D SHP work; GPKG/DXF/QGIS, native format/delivery captures, sharing and physical-device acceptance remain pending.",
     "steps": [
       {
         "title": "Choose what to export",

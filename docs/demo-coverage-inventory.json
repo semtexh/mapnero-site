@@ -1965,8 +1965,8 @@
       "platform": "android",
       "id": "mobile-export",
       "title": "Export field data and share it safely",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidExport",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/mobile-export.png",
