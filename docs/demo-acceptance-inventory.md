@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 24 | requires individual verification |
+| apple | eod-safety | eodRecords | 28 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -121,3 +121,7 @@ Serhan explicitly requested deferring Watch after phone Settings showed Apple Wa
 14 October: shared embedded font adds Turkish support to certificate/programme/checklist PDF engines. Actual two browser PDF downloads preserve Turkish codepoints, all3pages rendered/visually inspected. Checklist Turkish unit artifact verified; actual browser TurkishChecklist path still open.325tests, glyph preflight rejects unsupported CJK/emoji; all-language/native-parity/physical-touch goal incomplete.
 
 14 October: Evidence empty capture connected,82frames. Browser plus→local creation, required/partial-location reject, missing measurements stay missing; custody earlier-time reject then append; confirmed trash/restore retains byte-identical JSON. Native-script0coordinates/height remainknown.332tests,390nooverflow/44pxcontrols. Native form/detail/handover and durable persistence unverified. Evidence integration found programme:focus omitted from hotspot dispatch too: earlier share-focus claim not proven, separate CSV/PDF downloads valid; dispatch fixed, current actual DOM focus PDFbutton verified.
+
+## Real Land Release capture update
+
+Four actual native DEMO AREA editor/product/list/progression captures connected. Local capture controls choose first drawn area, then summary/progression/GeoJSON preserve geometry and independent SHA/workedOn/reduced values. Native product date missing stays dash and closed not reached.90 player frames total; new four mobile states44px/no overlap/no overflow. Native whole-polygon map view, restart durability, additional edit options and full catalog acceptance remain open.

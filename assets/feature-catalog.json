@@ -351,7 +351,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
     "access": "Mode and tier dependent",
-    "note": "Actual native Mine Action, Spot Report, Certificate and Evidence captures with local synthetic record practice. Native classified Land Release, durable storage, cloud, export parity and physical touch remain separate acceptance gates.",
+    "note": "Real native Mine Action, Spot Report, Certificate, Evidence and classified Land Release editor/list/progression references with local synthetic record practice. Durable storage, cloud, export parity and physical touch remain separate acceptance gates.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -394,7 +394,11 @@
       "assets/guides/screenshots/apple/en/evidence-list-sample.png",
       "assets/guides/screenshots/apple/en/evidence-detail.png",
       "assets/guides/screenshots/apple/en/evidence-handover.png",
-      "assets/guides/screenshots/apple/en/evidence-history.png"
+      "assets/guides/screenshots/apple/en/evidence-history.png",
+      "assets/guides/screenshots/apple/en/land-release-classification.png",
+      "assets/guides/screenshots/apple/en/land-release-products.png",
+      "assets/guides/screenshots/apple/en/land-release-released.png",
+      "assets/guides/screenshots/apple/en/land-release-progression.png"
     ]
   },
   {

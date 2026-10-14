@@ -40,5 +40,7 @@ for(const item of catalog){const prior=retainedCatalog.find(t=>t.platform===item
 for(const id of ['layers-features','import-export']){const item=catalog.find(t=>t.platform==='web'&&t.id===id);item.images=[`assets/guides/screenshots/web/en/${id}.jpg`,`assets/guides/screenshots/web/en/${id}-mobile.jpg`];}
 spotReport.images.push(...['evidence-form','evidence-list-sample','evidence-detail','evidence-handover','evidence-history'].map(id=>`assets/guides/screenshots/apple/en/${id}.png`).filter(p=>!spotReport.images.includes(p)));
 spotReport.note='Actual native Mine Action, Spot Report, Certificate and Evidence captures with local synthetic record practice. Native classified Land Release, durable storage, cloud, export parity and physical touch remain separate acceptance gates.';
+spotReport.images.push(...['land-release-classification','land-release-products','land-release-released','land-release-progression'].map(id=>`assets/guides/screenshots/apple/en/${id}.png`).filter(p=>!spotReport.images.includes(p)));
+spotReport.note='Real native Mine Action, Spot Report, Certificate, Evidence and classified Land Release editor/list/progression references with local synthetic record practice. Durable storage, cloud, export parity and physical touch remain separate acceptance gates.';
 fs.writeFileSync(path.join(root,'assets/feature-catalog.json'),JSON.stringify(catalog,null,2)+'\n');
 console.log(`${catalog.length} platform-specific feature guides`);
