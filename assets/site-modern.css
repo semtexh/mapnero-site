@@ -29,3 +29,5 @@ a:focus-visible,button:focus-visible{outline:3px solid #136b50;outline-offset:5p
 @media(max-width:600px){.nav-links li:not(.nav-web){display:none}.nav-links .nav-web{display:list-item}.hero-team-link{font-size:.82rem;margin-top:6px}.hero::before{background-position:60% center;opacity:.45}}
 
 .hero-map-key{position:absolute;bottom:17px;right:6vw;z-index:1;font-size:.6rem;letter-spacing:.1em;color:#647568;pointer-events:none}.hero-map-key span{margin-left:12px;color:#86938a}@media(max-width:600px){.hero-map-key{position:relative;bottom:auto;right:auto;text-align:right;font-size:.55rem;margin-top:5px}}
+.hero-actions > .btn-primary{min-width:210px;justify-content:center}
+@media(max-width:600px){.hero-actions > .btn-primary{width:100%;min-width:0;box-sizing:border-box}}
