@@ -495,6 +495,10 @@
         {
           "path": "assets/guides/screenshots/apple/en/certificate-project.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-empty.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
@@ -519,7 +523,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Durable Files save and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete; local Certificate full scalar form, immutable archive/reopen/JSON verified with real captures. Native save/PDF/map association and Land Release remain unverified; Certificate DEMO PDF browser download/render verified. Native PDF comparison, font-wide Unicode, map association and Land Release remain incomplete"
+      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Durable Files save and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete; local Certificate full scalar form, immutable archive/reopen/JSON verified with real captures. Native save/PDF/map association and Land Release remain unverified; Certificate DEMO PDF browser download/render verified. Native PDF comparison, font-wide Unicode, map association and Land Release remain incomplete; Land Release browser polygon drawing, SHA/workedOn/reduced independent fields, read-only released/closed grouping, progression dates and actual GeoJSON independently verified. New drawing preserves earlier classification. Native classified polygon/list/detail/editor, cloud and physical touch still unverified."
     },
     {
       "platform": "apple",

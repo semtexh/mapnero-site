@@ -351,7 +351,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
     "access": "Mode and tier dependent",
-    "note": "Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/reopen/PDF/JSON work; native PDF comparison, map association, Land Release, cloud and official acceptance remain incomplete.",
+    "note": "Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/reopen/PDF/JSON work; native PDF comparison, map association, Land Release, cloud and official acceptance remain incomplete. Land Release local polygon drawing, independent classification/status/product, read-only grouping, progression and DEMO GeoJSON work on the London map. Native classified polygon/list/detail/editor and cloud acceptance remain pending.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -386,7 +386,8 @@
       "assets/guides/screenshots/apple/en/certificate-area.png",
       "assets/guides/screenshots/apple/en/certificate-signatories.png",
       "assets/guides/screenshots/apple/en/certificate-declaration.png",
-      "assets/guides/screenshots/apple/en/certificate-project.png"
+      "assets/guides/screenshots/apple/en/certificate-project.png",
+      "assets/guides/screenshots/apple/en/land-release-empty.png"
     ]
   },
   {

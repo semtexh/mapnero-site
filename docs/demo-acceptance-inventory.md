@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 16 | requires individual verification |
+| apple | eod-safety | eodRecords | 17 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -109,3 +109,5 @@ Serhan explicitly requested deferring Watch after phone Settings showed Apple Wa
 14 October follow-through: Certificate DEMO PDF download/render independently verified (2A4 pages), long text preserved.308hosttests after strict-date fix. Native PDF/map association/font-wide Unicode/list filtering/retraction/Land Release still open.77frames does not prove all-feature acceptance.
 
 14 October: real type/project top capture added unchanged,78frames. Captured Handover/Completion/ICC controls change local type, project fields focus editable practice; initial title/type touch overlap corrected. Native saved-detail/PDF/map/list filters/Land Release remain open.
+
+14 October: native Land Release empty/read-only capture connected,80frames. Browser drawn polygon→SHA/workedOn/reduced→released overview/progression/GeoJSON independently verified; later new line retains area metadata; closed+no product yields closed bucket, preserving original dates and geometry.390px nooverflow,44px editor/overview controls.313tests; native populated list/editor/detail and physical touch remain unverified.
