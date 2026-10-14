@@ -22,7 +22,13 @@ Verified in the rendered browser:
   Source capture dimension override is 1080×2400, not the older default 2340.
 - Full tests: 275 pass. No browser errors/warnings in the verified flow.
 
-Pending requirements are preserved: vector GIS parse-and-confirm summaries,
+GeoJSON now has its own real-entry frame and local parse/review/confirm/map flow.
+All six geometry types and source attributes are retained; invalid batches reject
+without replacing the confirmed layer. The original download is byte-identical.
+The native Android parse-summary capture and model conversion remain unverified.
+Full suite after this addition: 280 pass.
+
+Pending requirements are preserved: other vector formats,
 OGC services, actual Android Open with intent, newer native GeoTIFF menu capture
 and physical/Safari touch acceptance. This entry is partial, not whole-feature
 acceptance. The native checklist Save and authenticated account captures are

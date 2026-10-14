@@ -1,0 +1,6 @@
+{
+  "cases": 32,
+  "nativeSourceSHA256": "cd1f439072adf25a00d7b27b7f675970f1071070c174bcdd8e725b99284ea123",
+  "method": "Execute actual unchanged Dart checkedGeoJSONFeatures helper and compare browser-engine geometry acceptance for supported/invalid rows and mixed batches.",
+  "limits": "This is geometry validation parity, not Android model conversion, styles, field lifting or OS import acceptance."
+}
