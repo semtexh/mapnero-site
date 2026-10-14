@@ -491,6 +491,10 @@
         {
           "path": "assets/guides/screenshots/apple/en/certificate-declaration.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-project.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
