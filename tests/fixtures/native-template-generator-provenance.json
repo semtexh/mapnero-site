@@ -1,0 +1,11 @@
+{
+  "nativeSource": "MapNeroApp/Core/Services/TemplateAIGenerator.swift",
+  "sourceSHA256": "f79e9ed6d2d992ebf5849d1879bd56830d41cce64716f36507a67cd506f5e3fd",
+  "fixtureSHA256": "6d7ef6df3ff35abc479fa9e1acf862b8db076e015c26cf3cf73e6cb2435d7aef",
+  "cases": 1435,
+  "method": "Compile unchanged Swift generator with pure stored native model fields; execute all prompts; normalize only UUID section identifiers.",
+  "randomIDNormalization": "section fields renamed sec-0, sec-1 in each generated schema.",
+  "comparedNonemptyPrompts": 1434,
+  "emptyPrompt": "Native output recorded; website rejects empty descriptions intentionally.",
+  "compiler": "Apple Swift 6.4 (swiftlang-6.4.0.34.1), arm64-apple-macosx27.0.0"
+}

@@ -634,7 +634,7 @@
     "title": "Create and edit a field template",
     "summary": "Design a reusable form, choose its field order and update it safely.",
     "access": "Manual templates are free · AI and import options depend on tier",
-    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten. Fresh actual iPhone captures show the AI prompt and its 20-item Field Survey Form preview. The website currently supports manual editing and local file import; prompt generation has not yet been connected.",
+    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten. The working prompt generator uses native offline rules for forms, checklists and styles; outputs are local to this browser. Real captures show the blank prompt and a 20-item Field Survey Form. Generated forms can be edited in the practice builder; checklist and style schemas can be reviewed and downloaded.",
     "steps": [
       {
         "title": "Create the template",
