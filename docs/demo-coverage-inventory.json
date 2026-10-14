@@ -1748,8 +1748,8 @@
       "platform": "android",
       "id": "create-edit-templates",
       "title": "Create and edit a field template",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidTemplateBuilder",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/create-edit-templates.png",
@@ -1782,7 +1782,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "not established by this source inventory"
+      "runtimeAcceptance": "Manual form builder local controls verified; native configured editor capture, AI and manual checklist still pending"
     },
     {
       "platform": "android",

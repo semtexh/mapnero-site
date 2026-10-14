@@ -56,7 +56,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | community-trails | MISSING | 1 | requires individual verification |
 | android | attribute-forms | androidWildlife | 1 | requires individual verification |
 | android | field-templates | MISSING | 1 | requires individual verification |
-| android | create-edit-templates | MISSING | 2 | requires individual verification |
+| android | create-edit-templates | androidTemplateBuilder | 2 | requires individual verification |
 | android | personal-workspace-sync | MISSING | 0 | requires individual verification |
 | android | team-session | MISSING | 1 | requires individual verification |
 | android | mobile-export | MISSING | 1 | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - Apple: EOD Spot Report local practice now has a connected menu entry; native form capture, Certificate and Land Release remain pending. Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
-- Android: 24 topics have no connected interactive entry. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
+- Android: 23 topics have no connected interactive entry. Manual template builder and field picker are connected to local form editing; native configured editor capture, AI and manual checklist remain pending. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
 - Web: all nine catalog entries have no connected interactive entry.
 - Native checklist player, confirmation and reopened result were captured in 51ef9f4. Local PDF export is now implemented; all-Unicode fonts and physical mobile acceptance remain open.
 - Native style templates currently show/generated/download rule schemas; TemplatePlayerView.stylePreview does not apply them to a map. Do not invent a native live-application claim.
