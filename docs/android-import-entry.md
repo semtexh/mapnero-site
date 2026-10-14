@@ -33,3 +33,29 @@ OGC services, actual Android Open with intent, newer native GeoTIFF menu capture
 and physical/Safari touch acceptance. This entry is partial, not whole-feature
 acceptance. The native checklist Save and authenticated account captures are
 still waiting for a usable Simulator UI or user action.
+
+## GPX and KML follow-through
+
+The same real Android entry now accepts GPX and KML. GPX uses direct children
+in the root namespace, validates all actual points, keeps track segments as
+separate features, retains explicit zero elevation and aligned raw time/null
+slots. Single-point segments display as points; they do not acquire an invented
+line. Empty segments and invalid coordinates fail before confirmation.
+
+KML supports Point, LineString, Polygon (including holes) and nested
+MultiGeometry. Mixed geometry parts share a placemark identifier; names and
+ExtendedData text fields remain attached. Network links, overlays, models and
+gx track geometry require other adapters. No external reference is fetched.
+Styles and additional XML metadata are retained in the original byte download;
+this does not claim that every XML field is mapped into GeoJSON/native models.
+
+Owned London fixtures were read with the browser's actual XML parser: GPX four
+features/seven positions, KML three features/thirteen positions. Independent
+readback verifies segment gaps, zero versus absent elevation, time null slots,
+polygon holes and escaped text fields. Original KML download is byte-identical.
+Malformed XML and invalid later rows reject without replacing the existing
+confirmed layer. At 390×844 scrollWidth equals390; browser warnings/errors none.
+285 full host checks passed before the polygon-outline addition; final checks
+are recorded with the source commit. Host element-contract tests are separate
+from actual-browser XML parser checks. Native app model/time/style conversion,
+Android install and physical/Safari touch are still unverified.
