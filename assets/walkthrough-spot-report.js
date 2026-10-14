@@ -26,9 +26,10 @@ function mount(parent,{onRecords,onNavigate,mode='form'}={}){
   i.oninput=()=>{state[key]=type==='checkbox'?i.checked:type==='number'?(i.value.trim()===''?null:Number(i.value)):i.value;};row.append(i);box.append(row);inputs[key]=i;return i;
  }
  if(mode==='form'){
+  button('Show lower native form fields',()=>onNavigate?.('lowerForm'));button('Show upper native form fields',()=>onNavigate?.('form'));
   field('dtg','Line 1 - Observation time (ISO 8601)');field('latitude','Line 2 - Latitude','number');field('longitude','Line 2 - Longitude','number');button('Pick captured London sample on map',pick);field('locationDescription','Location description');field('activityWhenFound','Line 3 - Activity when found');field('saedaConfirmed','Line 4 - Safety drill confirmation (practice only)','checkbox');field('uxoDescription','Line 5 - Observation description','textarea');const q=field('quantity','Line 6 - Quantity','number');q.min=1;q.max=999;q.step=1;
   const n=field('nbcContamination','Line 7 - Suspected NBC contamination','checkbox'),notes=field('nbcNotes','NBC notes');const toggle=()=>{notes.parentElement.style.display=n.checked?'':'none';};n.addEventListener('change',toggle);toggle();field('protectiveMeasures','Line 8 - Recorded protective measures');
-  const priority=make('label','Line 9 - Priority '),select=make('select');E.priorities.forEach(p=>{const o=make('option',p);o.value=p;select.append(o);});select.value=state.priority;select.onchange=()=>{state.priority=select.value;};priority.append(select);box.append(priority);
+  const priority=make('label','Line 9 - Priority '),select=make('select');E.priorities.forEach(p=>{const o=make('option',p);o.value=p;select.append(o);});select.value=state.priority;select.onchange=()=>{state.priority=select.value;};priority.append(select);box.append(priority);inputs.priority=select;
   for(const [k,l] of [['reporterName','Reporter name'],['reporterRole','Reporter role'],['reporterOrganization','Organization'],['reportingTo','Reporting to'],['missionRef','Mission reference']])field(k,l);
   button('Save local DEMO spot report',save);button('Review report and MGRS',()=>{const r=E.validate(state);status.textContent=`Ready to save: ${r.priority}, quantity ${r.quantity}, ${r.locationMGRS}. Coordinates are entered, not measured.`;});button('Browse saved local reports',()=>onNavigate?.('list'));
  }else if(mode==='picker'||mode==='marked'){
@@ -51,7 +52,7 @@ function mount(parent,{onRecords,onNavigate,mode='form'}={}){
   search.oninput=()=>{query=search.value;render();};priority.onchange=()=>{filterPriority=priority.value;render();};button('Clear report filters',()=>{query='';filterPriority='ALL';search.value='';priority.value='ALL';render();});render();
   button('New local practice report',fresh);
  }
- return {newRecord:safe(fresh),save:safe(save),focus,openLast:safe(openLast),download:safe(xml),showMap:safe(showMap),pick:safe(pick),mark:safe(mark),confirm:safe(confirm),cleanup:()=>{}};
+ return {choosePriority:safe(p=>{if(!E.priorities.includes(p)||!inputs.priority)throw Error('Open the editable form first.');state.priority=p;inputs.priority.value=p;inputs.priority.focus();}),toggleNBC:safe(()=>{if(!inputs.nbcContamination)throw Error('Open the editable form first.');inputs.nbcContamination.click();inputs.nbcContamination.focus();}),newRecord:safe(fresh),save:safe(save),focus,openLast:safe(openLast),download:safe(xml),showMap:safe(showMap),pick:safe(pick),mark:safe(mark),confirm:safe(confirm),cleanup:()=>{}};
 }
 return {mount,hasRecords:()=>records.length>0,reset:()=>{state=E.draft(new Date().toISOString());records=[];selected=null;marked=false;query='';filterPriority='ALL';}};
 });
