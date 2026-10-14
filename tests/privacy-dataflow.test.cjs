@@ -27,3 +27,10 @@ test('service and retention tables retain three cells per row and no new scripts
  assert.ok(html.includes('Last updated: October 14, 2026'));
  assert.ok(html.includes('delete-account.html'));
 });
+
+test('database project region is qualified separately from edge processing', () => {
+ assert.ok(!html.includes('Singapore'));
+ assert.ok(!html.includes('ap-southeast-1'));
+ assert.equal((html.match(/database project is configured in eu-central-1 \(Frankfurt\)/g)||[]).length,2);
+ assert.ok(html.includes('Edge functions and other providers may process requests in other regions.'));
+});
