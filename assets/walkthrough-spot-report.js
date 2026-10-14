@@ -54,5 +54,5 @@ function mount(parent,{onRecords,onNavigate,mode='form'}={}){
  }
  return {choosePriority:safe(p=>{if(!E.priorities.includes(p)||!inputs.priority)throw Error('Open the editable form first.');state.priority=p;inputs.priority.value=p;inputs.priority.focus();}),toggleNBC:safe(()=>{if(!inputs.nbcContamination)throw Error('Open the editable form first.');inputs.nbcContamination.click();inputs.nbcContamination.focus();}),newRecord:safe(fresh),save:safe(save),focus,openLast:safe(openLast),download:safe(xml),showMap:safe(showMap),pick:safe(pick),mark:safe(mark),confirm:safe(confirm),cleanup:()=>{}};
 }
-return {mount,hasRecords:()=>records.length>0,reset:()=>{state=E.draft(new Date().toISOString());records=[];selected=null;marked=false;query='';filterPriority='ALL';}};
+return {mount,getRecords:()=>JSON.parse(JSON.stringify(records)),hasRecords:()=>records.length>0,reset:()=>{state=E.draft(new Date().toISOString());records=[];selected=null;marked=false;query='';filterPriority='ALL';}};
 });

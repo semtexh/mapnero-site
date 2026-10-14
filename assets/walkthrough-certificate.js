@@ -20,5 +20,5 @@ function mount(parent,{onNavigate,mode='form'}={}){
  }
  return {save:safe(save),newRecord:safe(fresh),focus:key=>{inputs[key]?.focus();},chooseType:type=>{if(!E.types.includes(type))throw Error('Unknown certificate type');state.certType=type;if(inputs.certType)inputs.certType.value=type;if(typeSelect)typeSelect.value=type;},cleanup:()=>{}};
 }
-return {mount,reset:()=>{state=E.draft(new Date().toISOString());records=[];}};
+return {mount,getRecords:()=>JSON.parse(JSON.stringify(records)),reset:()=>{state=E.draft(new Date().toISOString());records=[];}};
 });
