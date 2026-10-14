@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 18 | requires individual verification |
+| apple | eod-safety | eodRecords | 19 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -119,3 +119,5 @@ Serhan explicitly requested deferring Watch after phone Settings showed Apple Wa
 14 October: Programme Rollup DEMO PDF actual browser download/render verified,2A4pages. Missing total unavailable,known123.5subtotal,missing1;project block together. Long4pagefixture450repeattext+snapshotimmutability verified.322tests/390nooverflow/44pxPDFbutton. Standard Helvetica unsupportedglyph fallback works; fullUnicode/nativeexportcomparison/legacytracker/physicaltouch/fullgoal remain open.
 
 14 October: shared embedded font adds Turkish support to certificate/programme/checklist PDF engines. Actual two browser PDF downloads preserve Turkish codepoints, all3pages rendered/visually inspected. Checklist Turkish unit artifact verified; actual browser TurkishChecklist path still open.325tests, glyph preflight rejects unsupported CJK/emoji; all-language/native-parity/physical-touch goal incomplete.
+
+14 October: Evidence empty capture connected,82frames. Browser plus→local creation, required/partial-location reject, missing measurements stay missing; custody earlier-time reject then append; confirmed trash/restore retains byte-identical JSON. Native-script0coordinates/height remainknown.332tests,390nooverflow/44pxcontrols. Native form/detail/handover and durable persistence unverified. Evidence integration found programme:focus omitted from hotspot dispatch too: earlier share-focus claim not proven, separate CSV/PDF downloads valid; dispatch fixed, current actual DOM focus PDFbutton verified.
