@@ -28,7 +28,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | community-trails | MISSING | 1 | requires individual verification |
 | apple | attribute-forms | layerAttributes | 3 | requires individual verification |
 | apple | field-templates | record | 2 | requires individual verification |
-| apple | create-edit-templates | templateGenerate | 5 | requires individual verification |
+| apple | create-edit-templates | templateGenerate | 8 | requires individual verification |
 | apple | personal-workspace-sync | personalWorkspace | 2 | requires individual verification |
 | apple | team-session | team | 1 | requires individual verification |
 | apple | mobile-export | export | 1 | requires individual verification |

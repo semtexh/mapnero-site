@@ -801,6 +801,18 @@
         {
           "path": "assets/guides/screenshots/apple/en/template-checklist-preview.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-checklist-player.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-checklist-confirm.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-checklist-result.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
