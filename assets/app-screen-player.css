@@ -56,3 +56,5 @@
 
 .app-personal-workspace{min-width:0}.app-personal-workspace-table{max-width:100%;overflow-x:auto}.app-personal-workspace-table table{border-collapse:collapse;font:13px system-ui}.app-personal-workspace-table th,.app-personal-workspace-table td{padding:8px;border:1px solid #b7c6b0;min-width:100px;overflow-wrap:anywhere}
 .app-personal-workspace input[type=checkbox]{width:44px;min-height:44px}
+
+[data-checklist-player]{min-width:0;overflow-wrap:anywhere}[data-checklist-player] legend{max-width:100%;overflow-wrap:anywhere}
