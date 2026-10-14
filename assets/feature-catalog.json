@@ -1832,7 +1832,7 @@
     "title": "Review reports and land-release records",
     "summary": "Use dashboards, Spot Reports, Certificates and Land Release views for organization oversight.",
     "access": "Role dependent",
-    "note": "Land-release classification is safety-relevant. Follow your organization’s approval workflow and qualified review.",
+    "note": "Actual Web list privacy crops and local synthetic review: search, date/status, selection, detail readback and CSV/GeoJSON. Native Web create/edit, populated detail/attachments, audit and authorization acceptance remain pending.",
     "steps": [
       {
         "title": "Open the right section",
@@ -1851,7 +1851,14 @@
         "body": "Use the edit action only when your role and organization procedure allow the change."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/web/en/reports-desktop.jpg",
+      "assets/guides/screenshots/web/en/reports-mobile.jpg",
+      "assets/guides/screenshots/web/en/areas-desktop.jpg",
+      "assets/guides/screenshots/web/en/areas-mobile.jpg",
+      "assets/guides/screenshots/web/en/certificates-desktop.jpg",
+      "assets/guides/screenshots/web/en/certificates-mobile.jpg"
+    ]
   },
   {
     "platform": "web",
