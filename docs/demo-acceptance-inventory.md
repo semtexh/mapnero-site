@@ -38,7 +38,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | raster-background | rasterBackground | 1 | requires individual verification |
 | apple | map-layout-export | mapLayout | 1 | requires individual verification |
 | android | quick-start | MISSING | 1 | requires individual verification |
-| android | import-map | MISSING | 1 | requires individual verification |
+| android | import-map | androidImportMap | 1 | requires individual verification |
 | android | location-track | MISSING | 1 | requires individual verification |
 | android | pins-layers | MISSING | 1 | requires individual verification |
 | android | offline-maps | MISSING | 1 | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - Apple: EOD field records, Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
-- Android: 25 topics have no connected interactive entry. The current four entries must still be checked for their full guide-step behavior.
+- Android: 24 topics have no connected interactive entry. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
 - Web: all nine catalog entries have no connected interactive entry.
 - Generated checklist execution works in local controls; its native player capture is pending the Simulator Save action.
 - Native style templates currently show/generated/download rule schemas; TemplatePlayerView.stylePreview does not apply them to a map. Do not invent a native live-application claim.
@@ -93,4 +93,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Mobile geometry verification
 
-57 current player frames were inspected at 390×844. Visible image hotspots meet 44px bounds without significant target overlap or horizontal overflow. Edge-clipped targets were clamped; closely packed export and Store controls open the larger working controls below on narrow/touch screens. This does not establish physical/Safari touch or individual workflow acceptance. Actual GPX download retains three London sample points; Store Nature filtering and Wildlife detail navigation were verified. See demo-touch-audit.json.
+57 original player frames passed the 390×844 visible-hotspot bounds/overlap/overflow audit; this is not workflow, Safari or physical-touch acceptance. Android Add Map is a subsequently verified 58th frame with five 44px targets and no horizontal overflow. See demo-touch-audit.json and android-import-entry.md.

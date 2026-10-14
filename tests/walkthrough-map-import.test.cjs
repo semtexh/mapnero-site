@@ -14,3 +14,5 @@ test('unsupported and oversized inputs fail instead of creating a map',()=>{
 });
 
 test('PDF recognition keeps map coordinates unknown until verified',()=>{const result=I.inspect(new TextEncoder().encode('%PDF-1.7\n').buffer);assert.equal(result.mime,'application/pdf');assert.equal(result.coordinates,null);});
+
+test('specific Android PDF, KMZ and photo pickers reject mismatched detected formats',()=>{const I=require('../assets/walkthrough-map-import.js');assert.equal(I.allowedKind('PDF','PDF'),true);assert.equal(I.allowedKind('PNG','PDF'),false);assert.equal(I.allowedKind('KMZ','KMZ'),true);assert.equal(I.allowedKind('JPEG','KMZ'),false);for(const kind of ['PNG','JPEG','WebP'])assert.equal(I.allowedKind(kind,'photo'),true);assert.equal(I.allowedKind('GeoTIFF','photo'),false);assert.equal(I.allowedKind('PDF',null),true);assert.throws(()=>I.allowedKind('PDF','unknown'));});

@@ -1123,8 +1123,8 @@
       "platform": "android",
       "id": "import-map",
       "title": "Import a PDF or GIS file",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidImportMap",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/import-map.png",

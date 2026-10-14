@@ -927,7 +927,8 @@
     ],
     "images": [
       "assets/guides/screenshots/android/en/import-map.png"
-    ]
+    ],
+    "note": "Actual captured Android Add Map menu. The browser practice connects PDF, KMZ raster overlays, photos, direct file links and QR PNG link reading, with local preview/save/download. It does not install files in Android. GIS vector summaries, OGC services and Android Open with remain pending; current native GeoTIFF has a separate action not shown in this older capture."
   },
   {
     "platform": "android",
