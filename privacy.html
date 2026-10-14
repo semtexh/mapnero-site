@@ -91,7 +91,7 @@ code{background:var(--surface);padding:2px 6px;border-radius:3px;font-size:.9em;
 <table>
 <thead><tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr></thead>
 <tbody>
-<tr><td data-label="Service"><strong>Supabase</strong></td><td data-label="Purpose">Backend for team sessions, real-time sync, push routing, submitted diagnostics and search relay</td><td data-label="Data Shared">Team session data, APNs token; submitted report text, crash details, device/app/system/language metadata and session/account identifier when available; submitted reference-location query, language and result limit. Singapore region (ap-southeast-1).</td></tr>
+<tr><td data-label="Service"><strong>Supabase</strong></td><td data-label="Purpose">Backend for team sessions, real-time sync, push routing, submitted diagnostics and search relay</td><td data-label="Data Shared">Team session data, APNs token; submitted report text, crash details, device/app/system/language metadata and session/account identifier when available; submitted reference-location query, language and result limit. Our current Supabase database project is configured in eu-central-1 (Frankfurt). Edge functions may process requests in other regions.</td></tr>
 <tr><td data-label="Service"><strong>Apple APNs</strong></td><td data-label="Purpose">Push notification delivery</td><td data-label="Data Shared">Device token + notification payload only.</td></tr>
 <tr><td data-label="Service"><strong>RevenueCat</strong></td><td data-label="Purpose">Subscription entitlement verification</td><td data-label="Data Shared">App Store receipt, anonymous user ID. No payment data.</td></tr>
 <tr><td data-label="Service"><strong>Apple StoreKit</strong></td><td data-label="Purpose">In-app purchase processing</td><td data-label="Data Shared">All payment data stays with Apple. We never see it.</td></tr>
@@ -105,7 +105,7 @@ code{background:var(--surface);padding:2px 6px;border-radius:3px;font-size:.9em;
 <tr><td data-label="Service"><strong>AWS Terrarium (elevation-tiles-prod)</strong></td><td data-label="Purpose">3D terrain relief tiles</td><td data-label="Data Shared">Map viewport tile coordinates.</td></tr>
 </tbody>
 </table>
-<p>We do not sell your data to any third party, ever. Because these providers operate in different regions (e.g. the United States and Singapore), your data may be transferred and processed outside your country of residence; we rely on appropriate safeguards (such as Standard Contractual Clauses) with our sub-processors where applicable.</p>
+<p>We do not sell your data to any third party, ever. Because these providers operate in different regions, your data may be transferred and processed outside your country of residence; we rely on appropriate safeguards (such as Standard Contractual Clauses) with our sub-processors where applicable.</p>
 
 <h2>4. Subscriptions and Payments</h2>
 <p>MapNero offers Core, Pro, and Team Solo subscriptions processed entirely by Apple via StoreKit 2.</p>
@@ -153,7 +153,7 @@ code{background:var(--surface);padding:2px 6px;border-radius:3px;font-size:.9em;
 </ul>
 
 <h2>10. International Data Transfers</h2>
-<p>Serhan UCAR operates MapNero from Kuwait. Supabase runs in Singapore (AWS ap-southeast-1). RevenueCat operates from the United States. By using MapNero you consent to transferring the limited data described above to these jurisdictions.</p>
+<p>Serhan UCAR operates MapNero from Kuwait. Our current Supabase database project is configured in eu-central-1 (Frankfurt). Edge functions and other providers may process requests in other regions. RevenueCat operates from the United States. By using MapNero you consent to transferring the limited data described above to these jurisdictions.</p>
 
 <h2>11. Changes to this Policy</h2>
 <p>Material changes will be notified via an in-app banner. The "Last updated" date always reflects the most recent revision.</p>
