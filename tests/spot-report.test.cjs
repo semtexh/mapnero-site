@@ -6,3 +6,22 @@ test('snapshot remains immutable; exact known zero coordinates are valid and unk
 test('XML escapes text, preserves false and optional notes, and labels source as local demo',()=>{const r=E.save({...input(),nbcNotes:'Retained when hidden'},id,now),x=E.xml(r);a.match(x,/&lt;test&gt; &amp; sample/);a.match(x,/<NBCContamination>false<\/NBCContamination>/);a.match(x,/<NBCNotes>Retained when hidden<\/NBCNotes>/);a.match(x,/MapNero website DEMO/);a.match(x,/<Quantity>1<\/Quantity>/);a.throws(()=>E.save(input(),'bad',now));});
 
 test('rejects XML-invalid controls and lone surrogate text while retaining valid Unicode',()=>{for(const t of ['bad\x00text','bad\ud800','bad\uffff'])a.throws(()=>E.save({...input(),reporterName:t},id,now));a.match(E.xml(E.save({...input(),reporterName:'Şerhan 🌍'},id,now)),/Şerhan 🌍/);});
+
+test('list search matches only native description, MGRS or mission reference and combines priority',()=>{
+ const one=E.save({...input(),activityWhenFound:'Not searchable activity',uxoDescription:'ALPHA synthetic object',missionRef:'CASE-42',priority:'IMMEDIATE'},id,now);
+ const two=E.save({...input(),uxoDescription:'Beta synthetic object',missionRef:'CASE-43'},'22345678-1234-1234-1234-123456789abc','2026-10-14T09:00:00Z');
+ a.deepEqual(E.filterRecords([one,two],{query:'alpha',priority:'ALL'}),[one]);
+ a.deepEqual(E.filterRecords([one,two],{query:'case-',priority:'ROUTINE'}),[two]);
+ a.deepEqual(E.filterRecords([one,two],{query:'Not searchable activity'}),[]);
+ a.deepEqual(E.filterRecords([one,two],{query:'XC 99316'}),[two,one]);
+ a.deepEqual(E.filterRecords([one,two],{query:'alpha',priority:'ROUTINE'}),[]);
+});
+test('native newest-first listing preserves stored order and hides retracted records',()=>{
+ const old=E.save(input(),id,now),recent=E.save(input(),'22345678-1234-1234-1234-123456789abc','2026-10-14T09:00:00Z'),tombstone={...recent,isTombstone:true};
+ const rows=[old,recent];a.deepEqual(E.filterRecords(rows),[recent,old]);a.deepEqual(rows,[old,recent]);a.deepEqual(E.filterRecords([old,tombstone]),[old]);
+ a.throws(()=>E.filterRecords(rows,{priority:'INVALID'}));a.throws(()=>E.filterRecords(rows,{query:'x'.repeat(5001)}));
+});
+test('report search normalizes canonically equivalent text without trimming meaningful spaces',()=>{
+ const r=E.save({...input(),uxoDescription:'Cafe\u0301 DEMO'},id,now);
+ a.equal(E.filterRecords([r],{query:'CAFÉ'}).length,1);a.equal(E.filterRecords([r],{query:'missing'}).length,0);a.equal(E.filterRecords([r],{query:' DEMO'}).length,1);a.equal(E.filterRecords([r],{query:'DEMO '}).length,0);
+});

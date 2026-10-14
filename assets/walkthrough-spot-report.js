@@ -1,6 +1,6 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./spot-report-engine.js'));else root.MapNeroSpotReportPractice=factory(root.MapNeroSpotReport);})(typeof window==='undefined'?globalThis:window,function(E){
 'use strict';
-let state=E.draft(new Date().toISOString()),records=[],selected=null,marked=false;
+let state=E.draft(new Date().toISOString()),records=[],selected=null,marked=false,query='',filterPriority='ALL';
 function mount(parent,{onRecords,onNavigate,mode='form'}={}){
  const box=document.createElement('fieldset');box.className='app-field-trial';
  const make=(tag,text)=>{const x=document.createElement(tag);if(text!==undefined)x.textContent=text;return x;};
@@ -10,7 +10,8 @@ function mount(parent,{onRecords,onNavigate,mode='form'}={}){
  const download=(data,name,type)=>{const u=URL.createObjectURL(new Blob([data],{type})),a=make('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);};
  const current=()=>{const r=records.find(r=>r.id===selected);if(!r)throw Error('Open a saved local report first. The captured example is not your practice record.');return r;};
  const open=(r)=>{selected=r.id;onNavigate?.('detail');};
- const openLast=()=>{if(!records.length)throw Error('Save a local practice report first.');open(records.at(-1));};
+ const matches=()=>E.filterRecords(records,{query,priority:filterPriority});
+ const openLast=()=>{const r=matches()[0];if(!r)throw Error('No saved local report matches the current search and priority.');open(r);};
  const xml=()=>download(E.xml(current()),'mapnero-DEMO-spot-report.xml','application/xml');
  const showMap=()=>{current();onNavigate?.('map');};
  const fresh=()=>{state=E.draft(new Date().toISOString());marked=false;onNavigate?.('form');};
@@ -43,11 +44,14 @@ function mount(parent,{onRecords,onNavigate,mode='form'}={}){
  }else if(mode==='map'){
   box.append(make('p','The captured native map shows the fixed DEMO example. Open the working map below to see all reports you have saved in this browser.'));button('Open working map with saved reports',()=>{current();onNavigate?.('workingMap');});button('Return to selected local report',()=>onNavigate?.('detail'));
  }else{
-  box.append(make('p',`${records.length} saved local practice reports. Native screenshot counts remain fixed.`));
-  records.forEach((r,i)=>{const item=make('section');item.append(make('h4',`Saved DEMO report ${i+1} - ${r.priority}`),make('p',`${r.locationMGRS} / Quantity ${r.quantity}`),make('p',r.uxoDescription));button('Open saved DEMO report '+(i+1),()=>open(r),item);button('Download DEMO XML '+(i+1),()=>download(E.xml(r),'mapnero-DEMO-spot-report.xml','application/xml'),item);box.append(item);});
+  const searchRow=make('label','Search MGRS, description or reference '),search=make('input');search.type='search';search.maxLength=5000;search.value=query;searchRow.append(search);box.append(searchRow);inputs.search=search;
+  const priorityRow=make('label','Filter report priority '),priority=make('select');['ALL',...E.priorities].forEach(p=>{const o=make('option',p);o.value=p;priority.append(o);});priority.value=filterPriority;priorityRow.append(priority);box.append(priorityRow);inputs.filter=priority;
+  const count=make('p'),list=make('div');box.append(count,list);
+  const render=()=>{const visible=matches();status.textContent='';list.replaceChildren();count.textContent=`${visible.length} matching / ${records.length} saved local practice reports. Native screenshot counts remain fixed.`;if(!visible.length)list.append(make('p',records.length?'No local reports match these filters.':'No saved local reports yet.'));visible.forEach(r=>{const i=records.indexOf(r)+1,item=make('section');item.append(make('h4',`Saved DEMO report ${i} - ${r.priority}`),make('p',`${r.locationMGRS} / Quantity ${r.quantity}`),make('p',r.uxoDescription),make('p',`Reference: ${r.missionRef||'—'}`));button('Open saved DEMO report '+i,()=>open(r),item);button('Download DEMO XML '+i,()=>download(E.xml(r),'mapnero-DEMO-spot-report.xml','application/xml'),item);list.append(item);});};
+  search.oninput=()=>{query=search.value;render();};priority.onchange=()=>{filterPriority=priority.value;render();};button('Clear report filters',()=>{query='';filterPriority='ALL';search.value='';priority.value='ALL';render();});render();
   button('New local practice report',fresh);
  }
  return {newRecord:safe(fresh),save:safe(save),focus,openLast:safe(openLast),download:safe(xml),showMap:safe(showMap),pick:safe(pick),mark:safe(mark),confirm:safe(confirm),cleanup:()=>{}};
 }
-return {mount,hasRecords:()=>records.length>0,reset:()=>{state=E.draft(new Date().toISOString());records=[];selected=null;marked=false;}};
+return {mount,hasRecords:()=>records.length>0,reset:()=>{state=E.draft(new Date().toISOString());records=[];selected=null;marked=false;query='';filterPriority='ALL';}};
 });

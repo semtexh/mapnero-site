@@ -8,5 +8,10 @@ function save(input,id,now){if(!/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.t
 function feature(record){const r=validate(record);return {type:'Feature',geometry:{type:'Point',coordinates:[r.longitude,r.latitude]},properties:{name:'DEMO Spot Report',spotReportID:record.id,priority:r.priority,locationMGRS:r.locationMGRS,quantity:r.quantity,demo:true,deviceGPS:false}};}
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 function xml(record){const r=save(record,record.id,record.createdAt),tag=(k,v)=>`<${k}>${esc(v)}</${k}>`;return '<?xml version="1.0" encoding="UTF-8"?>\n<!-- LOCAL DEMO ONLY: not an operational report or IMSMA acceptance claim. -->\n<IMSMARecord xmlns="http://www.gichd.org/imsma/v4">\n'+[tag('RecordType','UXO_SPOT_REPORT'),tag('GUID',r.id),tag('GeneratedBy','MapNero website DEMO'),tag('GeneratedAt',r.createdAt),tag('DTG',r.dtg),'<Reporter>'+tag('Name',r.reporterName)+tag('Role',r.reporterRole)+tag('Organization',r.reporterOrganization)+'</Reporter>',tag('ReportingTo',r.reportingTo),'<Location>'+tag('Latitude',r.latitude)+tag('Longitude',r.longitude)+tag('MGRS',r.locationMGRS)+tag('Description',r.locationDescription)+'</Location>',tag('Activity',r.activityWhenFound),tag('SAEDAConfirmed',r.saedaConfirmed),tag('Description',r.uxoDescription),tag('Quantity',r.quantity),tag('NBCContamination',r.nbcContamination),tag('NBCNotes',r.nbcNotes),tag('ProtectiveMeasures',r.protectiveMeasures),tag('Priority',r.priority),tag('MissionRef',r.missionRef)].join('\n')+'\n</IMSMARecord>';}
-return {draft,validate,save,feature,xml,priorities};
+function filterRecords(records,{query='',priority='ALL'}={}){
+ if(!Array.isArray(records)||typeof query!=='string'||query.length>5000||!['ALL',...priorities].includes(priority))throw Error('Invalid report search or priority filter.');
+ const needle=query.normalize('NFC').toLocaleLowerCase('en');
+ return records.filter(r=>!r.isTombstone&&(priority==='ALL'||r.priority===priority)&&['uxoDescription','locationMGRS','missionRef'].some(k=>String(r[k]??'').normalize('NFC').toLocaleLowerCase('en').includes(needle))).sort((a,b)=>Date.parse(b.createdAt)-Date.parse(a.createdAt));
+}
+return {draft,validate,save,feature,xml,priorities,filterRecords};
 });
