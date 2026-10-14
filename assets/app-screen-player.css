@@ -58,3 +58,9 @@
 .app-personal-workspace input[type=checkbox]{width:44px;min-height:44px}
 
 [data-checklist-player]{min-width:0;overflow-wrap:anywhere}[data-checklist-player] legend{max-width:100%;overflow-wrap:anywhere}
+
+.app-export-mobile-controls{display:none}
+@media(max-width:700px),(pointer:coarse){[data-app-frame=export] .app-touchpoint[aria-label^="Select "],[data-app-frame=export] .app-touchpoint[aria-label="Include demo media ZIP"],[data-app-frame=export] .app-touchpoint[aria-label="Export selected practice dataset"]{display:none}[data-app-frame=export] .app-export-mobile-controls{display:block}}
+
+.app-store-mobile-controls{display:none}
+@media(max-width:700px),(pointer:coarse){[data-app-frame=store] .app-touchpoint[aria-label^="Browse "],[data-app-frame=storeNature] .app-touchpoint[aria-label^="Browse "],[data-app-frame=store] .app-touchpoint[aria-label="Search captured store"]{display:none}.app-store-mobile-controls{display:block}}

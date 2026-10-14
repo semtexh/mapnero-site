@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,re
+root=Path(__file__).resolve().parents[1]
+catalog=json.loads((root/'assets/feature-catalog.json').read_text()); explorer=(root/'assets/feature-explorer.js').read_text();player=(root/'assets/app-screen-player.js').read_text()
+raw=explorer.split('const playable=',1)[1].split(';',1)[0];links={}
+for platform in ['apple','android','web']:
+ match=re.search(platform+r':\{([^}]*)\}',raw);links[platform]=dict(re.findall(r"'([^']+)':'([^']+)'",match[1])) if match else {}
+frames=set(re.findall(r'^\s*(\w+):\{image:',player,re.M));items=[]
+for item in catalog:
+ screen=links[item['platform']].get(item['id']); row={'platform':item['platform'],'id':item['id'],'title':item['title'],'entryScreen':screen,'entryExists':screen in frames if screen else False,'captures':[{'path':p,'exists':(root/p).is_file()} for p in item['images']],'requiredGuideSteps':[{**step,'acceptance':'unverified individual workflow step'} for step in item['steps']], 'runtimeAcceptance':'not established by this source inventory'};items.append(row)
+report={'scope':'Every feature currently advertised in the site catalog: 74 platform entries and 46 distinct topics. A link or screenshot is not functional acceptance. Existing tests do not establish whole-goal completion.','entries':items}
+(root/'docs/demo-coverage-inventory.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+lines=['# Interactive demo acceptance inventory','',report['scope'],'','Source inventory only. Every guide step remains listed in the JSON; none is silently dropped. Reuse a platform workflow only after inspecting its actual native behavior.','', '| Platform | Feature | Entry | Captures | Workflow acceptance |','| --- | --- | --- | --- | --- |']
+for item in items:lines.append(f"| {item['platform']} | {item['id']} | {item['entryScreen'] or 'MISSING'} | {len(item['captures'])} | requires individual verification |")
+lines+=['','## Concrete remaining gates','','- Apple: EOD field records, Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.','- Android: 25 topics have no connected interactive entry. The current four entries must still be checked for their full guide-step behavior.','- Web: all nine catalog entries have no connected interactive entry.','- Generated checklist execution works in local controls; its native player capture is pending the Simulator Save action.','- Native style templates currently show/generated/download rule schemas; TemplatePlayerView.stylePreview does not apply them to a map. Do not invent a native live-application claim.','- A mobile viewport and 44px targets do not establish touch/swipe acceptance on Safari or a physical phone.','- The final publication gate remains local preview reviewed by Serhan; no publication claimed.','']
+(root/'docs/demo-acceptance-inventory.md').write_text('\n'.join(lines))
+for p in links:
+ rows=[i for i in items if i['platform']==p];print(p,len(rows),'entries',sum(i['entryExists'] for i in rows),'linked',sum(not i['entryExists'] for i in rows),'unlinked')

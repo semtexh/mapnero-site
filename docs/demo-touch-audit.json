@@ -1,0 +1,18 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "framesChecked": 57,
+  "result": "All visible image hotspots had at least 44px within the image container; no target intersections exceeding 2px in both dimensions; no horizontal overflow. Route capture loading was rechecked separately after its transient image load.",
+  "limits": [
+    "Browser viewport inspection and semantic clicks only; no physical-phone or Safari touch acceptance.",
+    "This proves image/control geometry, not every feature workflow.",
+    "Final export touch group expanded to include KML; opening focuses the working format control."
+  ],
+  "verifiedInteractions": [
+    "Mobile export group focuses Practice export format; London sample route downloads as GPX with three independently parsed London coordinates.",
+    "Mobile Template Store group focuses Captured store category; Nature filter shows eight captured templates and actual Wildlife detail opens."
+  ],
+  "workflowCoverage": "See demo-coverage-inventory.json for all 74 platform entries and their individual unverified guide steps."
+}

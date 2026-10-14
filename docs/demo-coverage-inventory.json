@@ -1,0 +1,2424 @@
+{
+  "scope": "Every feature currently advertised in the site catalog: 74 platform entries and 46 distinct topics. A link or screenshot is not functional acceptance. Existing tests do not establish whole-goal completion.",
+  "entries": [
+    {
+      "platform": "apple",
+      "id": "template-store",
+      "title": "Template Store",
+      "entryScreen": "store",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/app-walkthrough/store-all.png",
+          "exists": true
+        },
+        {
+          "path": "assets/app-walkthrough/store-nature.png",
+          "exists": true
+        },
+        {
+          "path": "assets/app-walkthrough/store-wildlife.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Browse",
+          "body": "Choose Community or Organization and browse categories or search.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Preview",
+          "body": "Open a template to review its fields before downloading.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use",
+          "body": "Download to your library, then use the template to collect records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "template-store",
+      "title": "Template Store",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Browse",
+          "body": "Choose Community or Organization and browse categories or search.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Preview",
+          "body": "Open a template to review its fields before downloading.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use",
+          "body": "Download to your library, then use the template to collect records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "quick-start",
+      "title": "Start with Simple Map",
+      "entryScreen": "usageMode",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/quick-start.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose Simple Map",
+          "body": "On first launch, select Simple Map. Later, you can change it in Settings without deleting maps or records.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Allow location access",
+          "body": "Open the map and approve location access when asked. Go outdoors and wait briefly for the first accurate fix.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Learn the four controls",
+          "body": "Use Locate, Add Pin, Record and More. More contains measurement, basemap and offline map tools.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "import-map",
+      "title": "Import a PDF or map file",
+      "entryScreen": "importMap",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/import-map.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Import",
+          "body": "From the map or Library, open Import Map.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose the source",
+          "body": "Pick a PDF/GeoPDF, GeoTIFF, image, KMZ, web link or QR code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Check the map position",
+          "body": "Open the imported map and tap Locate. If an older imported PDF is misaligned, delete that copy and import it again so the current georeference parser runs.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use Open in MapNero",
+          "body": "You can also select a supported file in the Files app and share or open it with MapNero.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "photo-georeference",
+      "title": "Reference a photo manually",
+      "entryScreen": "manualReference",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/photo-georeference.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Import the image",
+          "body": "Choose Import Photo as Map, then begin the manual reference option.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Place known control points",
+          "body": "For each point, tap the same identifiable place on the image and on the base map. Spread points around the image rather than along one edge.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Check before relying on it",
+          "body": "Review the fit and open the saved map. In Library, the MAN badge confirms that the map was referenced manually.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "location-track",
+      "title": "Find your location and record a track",
+      "entryScreen": "londonTrack",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/location-track.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Centre the map",
+          "body": "Tap Locate. Tap it again to change the follow state if you want the map to remain centred while moving.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start recording",
+          "body": "Tap Record, confirm the recording state, then begin moving.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Watch the live line",
+          "body": "The recording line updates on the Base Map and imported PDF maps while recording.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Stop and save",
+          "body": "Tap the square Stop button to finish recording; the track is saved automatically. Review it later in the Library or its layer.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "pins-layers",
+      "title": "Add pins and manage layers",
+      "entryScreen": "layers",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/pins-layers.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose a visible layer",
+          "body": "Open Layers and select a normal writable layer. Turn its visibility on.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Add the pin",
+          "body": "Tap Add Pin or long-press the map, then choose the pin type.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Describe the record",
+          "body": "Add a name, notes, attributes or media, then save.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit later",
+          "body": "Tap the feature on the map and open Edit from its detail card.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "offline-maps",
+      "title": "Download a map for offline use",
+      "entryScreen": "offline",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/offline-maps.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Offline Maps",
+          "body": "On Base Map, move and zoom to the field area first. Then tap Offline Maps in the map controls; if needed, open More.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Frame the work area",
+          "body": "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose detail and download",
+          "body": "Select the zoom range, check the estimated size and start the download while online.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Test before leaving",
+          "body": "Turn on Airplane Mode, reopen the region and confirm the required zoom levels are visible.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "collections-atlas",
+      "title": "Use map collections and Atlas",
+      "entryScreen": "collections",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/collections-atlas.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Group adjoining maps",
+          "body": "In the Library, move georeferenced sheets into the same collection and place preferred detailed maps above fallback maps.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Browse across sheet edges",
+          "body": "Open a collection map and pan the centre crosshair into a neighbouring sheet. The active sheet changes while the camera scale is preserved.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose GPS auto-switch only if needed",
+          "body": "Manual centre browsing is on by default. GPS-based Auto-switch is separate and off by default in Map Collections settings.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create an Atlas",
+          "body": "With an offline raster MBTiles basemap active, open Create PDF Map, enable Atlas collection, choose scale and overlap, then create up to 64 sheets.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "measure-cogo-buffer",
+      "title": "Measure, draw a bearing and create a buffer",
+      "entryScreen": "measure",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/measure-cogo-buffer.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Measure on the map",
+          "body": "Open More → Measure, place points and read the live line length or area.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create by bearing and distance",
+          "body": "Open More → COGO, enter a base point or use the current GPS fix, then enter a 0–360° grid bearing and a distance up to 100 km.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create a buffer",
+          "body": "Open a point, line, track, polygon or circle, tap Buffer, enter metres, choose fill colour and opacity, then create.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit the result",
+          "body": "Open the buffer in Derived Buffers to change distance, fill colour or opacity. Changing distance rebuilds it from the original feature.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "buffer-workflow",
+      "title": "Create and edit a buffer",
+      "entryScreen": "buffer",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/buffer-workflow.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/buffer-workflow-appearance.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Select the source",
+          "body": "Tap a feature on the map, or open Layers and select a feature. In its detail card, choose Buffer; scroll the action row if necessary. This tool requires Pro or Team access.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the distance",
+          "body": "Enter a positive distance and choose metres or feet. You can give the output a name; leaving it empty keeps the automatic name.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Preview and style",
+          "body": "Use Preview to see how many sources and polygons can be processed. Preview does not save anything. Choose the fill colour and opacity before creating the buffer.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create the polygon",
+          "body": "Choose Create Buffer. The result goes into the separate Derived Buffers layer. Close the feature card to inspect it on the map; the original feature remains unchanged.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit or buffer several features",
+          "body": "Select the saved buffer to change its colour, opacity or distance. Distance updates need the original source. For several features, use lasso selection and Buffer; check processed and skipped counts.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "team-gnss",
+      "title": "Connect a team or external GNSS",
+      "entryScreen": "gnss",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/team-gnss.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Sign in",
+          "body": "Open Settings → Account, enter your email and complete the six-digit one-time code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Join your organization",
+          "body": "Accept an invitation or enter the organization code provided by its administrator.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Share a layer",
+          "body": "Open a layer and enable Share with organization. Internet access is required for synchronization.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Pair external GNSS",
+          "body": "Open Settings → External GNSS, enable Bluetooth, choose your receiver and wait for a valid position and accuracy reading.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "eod-safety",
+      "title": "Use EOD and mine-action records safely",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/eod-safety.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose the correct mode",
+          "body": "Open Settings and select the EOD or mine-action mode needed for the task.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Capture the field record",
+          "body": "Use Spot Report, Certificate or Land Release forms and complete the required source and location fields.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review before export",
+          "body": "Check coordinates, units, attachments and organization fields before creating PDF or IMSMA XML output.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use an approved authority",
+          "body": "For safety distances or consequence analysis, follow your organization’s approved standard, qualified EOD/ESO review and authorized tools.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "route-builder",
+      "title": "Plan a route with waypoints",
+      "entryScreen": "route",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/route-builder.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Route Builder",
+          "body": "Choose a visible, unlocked layer, then open More → Route Builder on the map.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Place the first point",
+          "body": "Pan the map until the centre crosshair is over your starting point, then tap Add Waypoint. Your GPS position does not have to be there.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Extend and check the route",
+          "body": "Move the crosshair and add at least one more point. Check the waypoint list and total distance. Use a row’s minus button to remove a mistaken point; the trash button clears the whole draft.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Save the route",
+          "body": "With at least two points, use the green Save to Layer button. The builder closes and the route is stored in the target layer. Closing with X discards an unsaved draft.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "track-3d",
+      "title": "Inspect a track in 3D",
+      "entryScreen": "track3D",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/track-3d.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the track card",
+          "body": "In Layers, open the layer containing your track and select the track. Tap 3D in its action row.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose a display",
+          "body": "Use Elevation, Speed or Route Only. Speed mode represents recorded speed, not terrain height; Route Only removes the vertical profile.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect and return",
+          "body": "The top-right rotation button stops or restarts automatic rotation. Drag to change the camera angle; use Back to return without editing the track.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "track-report",
+      "title": "Read and share a track report",
+      "entryScreen": "report",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/track-report.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Analysis or Report",
+          "body": "Select the track in its layer. Scroll the action row to More, then choose Analysis or Report. Report opens the detailed section; scroll up for the summary and graphs.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Compare the graphs",
+          "body": "Review distance, duration, average speed and maximum elevation. Switch between Combined, Speed and Elevation; missing or constant input data limits what these graphs can tell you.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the detailed figures",
+          "body": "With Core or higher, inspect moving/paused time, pace, speed, elevation gain/loss and point count. These are calculated from the available track data, not independent measurements.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Prepare and share the PDF",
+          "body": "Use Share PDF in the report section. Wait for preparation, then choose a destination in the system share sheet. At least two track points are needed. Review locations and other details before sending.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "track-navigation",
+      "title": "Follow a track with corridor alerts",
+      "entryScreen": "trackFollowOptions",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/track-follow-options.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/track-following.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/track-follow-paused.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the saved line or track",
+          "body": "In Layers, select a line or track with at least two points. In its detail card choose Track Navigation / Navigate Track.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set direction and alert corridor",
+          "body": "Choose Forward or Reverse, then set the alert distance from 5 m to 1000 m. The corridor is the distance from the line at which MapNero warns that you are off course.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start, monitor and finish",
+          "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "terrain-contours",
+      "title": "Create contours from an elevation GeoTIFF",
+      "entryScreen": "terrainContours",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/terrain-contours.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the GeoTIFF menu",
+          "body": "In Library, find the imported GeoTIFF, open its More menu and choose Create contours.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose an interval",
+          "body": "Select 5, 10, 20 or 50 metres. Use a wider interval for an overview and a tighter one only when the source resolution supports it.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create and check the layer",
+          "body": "Choose Create contours and keep MapNero open while processing finishes. A new editable contour layer is added to the same map; inspect it before field use and keep the original GeoTIFF.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use or export carefully",
+          "body": "You can style, edit, filter or export the resulting layer like other vector layers. Contours are derived data: verify their alignment, interval and source before sharing or using them for decisions.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "cluster-analysis",
+      "title": "Inspect point clusters",
+      "entryScreen": "androidClusters",
+      "entryExists": true,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose the layer",
+          "body": "In Layers, choose the relevant point layer. Analysis needs at least 8 points; lines and polygons are not its input.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open the analysis",
+          "body": "Open the layer’s (…) menu and choose Cluster Analysis. Pro or higher is required. Check the input point count before interpreting the distribution.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "community-trails",
+      "title": "Use Community Trails",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/community-trails.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the catalogue",
+          "body": "Open Settings → Community Trails. You can search by route name, description or general region.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Download a route",
+          "body": "Choose Download to add an independent copy to Track Records. Later changes or removal of the public item do not alter your local copy.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Publish your track",
+          "body": "Open a saved track, choose More → Community Trails, add a description, general region and licence, confirm the safety notice, then publish. Publishing requires a confirmed Core-or-higher account.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Control what you see",
+          "body": "Use the item menu to report a route or block its author. You can remove routes you published. Shared data is limited to route points, name, description, general region and licence; photos and private feature fields are not included.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "attribute-forms",
+      "title": "Create attribute forms for a layer",
+      "entryScreen": "layerAttributes",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/layer-attribute-schema.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/layer-schema-builder.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/layer-template-binding.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Start from the layer",
+          "body": "Open Layers, choose a writable layer, then open its settings and Attribute Schema. Add the fields that belong to every feature, such as species, cover, status, notes or a date.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Or create a reusable template",
+          "body": "Open Library → Templates and create a form with the fields your team needs. Use a template when the same form should be reused across more than one field workflow.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Bind the template to the layer",
+          "body": "Return to the layer’s settings, open Template Binding and choose the template. Its fields become the layer’s feature attribute schema.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Collect and review records",
+          "body": "Add or edit a point, line or polygon in that layer and complete the form. Open the layer’s attribute table to search, filter and review saved records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "field-templates",
+      "title": "Collect field data with a template",
+      "entryScreen": "record",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/field-templates.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/field-templates-selection.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Find the template",
+          "body": "Open Library → Templates, search or browse a category, then read the field list before starting. A template may include text, choices, numbers, GPS, date, photo and checklist fields.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start the field workflow",
+          "body": "Tap Play or Use Template. You can begin from the template library before opening a map. Complete required fields and allow GPS or camera access only when the form asks for them.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the saved record",
+          "body": "Submit the form, then open the created or selected layer to see the new feature and its attributes. Use the layer table to search or review results, and export only after checking the records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "create-edit-templates",
+      "title": "Create and edit a field template",
+      "entryScreen": "templateGenerate",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/create-edit-templates.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/create-edit-templates-fields.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-ai-create.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-ai-survey-preview.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/template-checklist-preview.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Create the template",
+          "body": "Open Library → Templates → Create. Choose Manual to build the form yourself; review every field before using an imported or store template.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Add the field structure",
+          "body": "Give the template a clear name, then add text, choice, number, date, GPS, photo, checkbox or icon fields. For a choice field, enter the permitted values.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the collection order",
+          "body": "Open each field to set its label, help text, required state and options. Use the up/down controls to put fields in field-work order, save, then run one test entry.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit safely",
+          "body": "In Library → Templates, open the template menu and choose Edit. Save the changes, reopen the template and use Play or Use Template for new records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "personal-workspace-sync",
+      "title": "Sync one layer with your account",
+      "entryScreen": "personalWorkspace",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/account-access.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/account-sign-in.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the layer editor",
+          "body": "Open Layers, select the layer, then choose Edit.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Enable Sync with my account",
+          "body": "Below Lock layer, turn on Sync with my account and save the layer.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Continue on another device",
+          "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "team-session",
+      "title": "Run a live Team Session",
+      "entryScreen": "team",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/team-session.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Create the session",
+          "body": "Settings → Team Tracking. On a phone or tablet, open Team and choose Create session. A Team account can host. An organization is optional; attach one only when the session belongs to that organization.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the access details",
+          "body": "Give the session a clear field name and set the name that will appear on the map. Choose a session password; MapNero generates the session code after creation. Send the generated code and password only to invited participants.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Join and finish safely",
+          "body": "Each participant chooses Join session or scans the QR code, then enters the code, password and display name. Core, Pro and Team accounts can join. When field work ends, the host ends the session and does not reuse its code.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "mobile-export",
+      "title": "Export field data and share it safely",
+      "entryScreen": "export",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/mobile-export.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose what to export",
+          "body": "Open the layer, track, map or report and choose Export. Select only the records you intend to send; use a recorded track for GPX and a GIS format for vector features.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose a compatible format",
+          "body": "KML, GPX, CSV and KMZ are available on Free. GeoPDF and GeoTIFF need Core or higher. Shapefile, GeoPackage, DXF and QGIS/QField bundle need Pro or higher.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review and deliver",
+          "body": "Check the selected layers, attributes, coordinates and attachments before generating the file. Use the system share sheet for a local file, or Share via Link only after checking that temporary public download is suitable.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "settings-workspace",
+      "title": "Configure MapNero settings",
+      "entryScreen": "settings",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/settings-workspace.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose a working mode",
+          "body": "Open Library → Settings → Usage Mode. Simple Map keeps the main workspace uncluttered; a specialist mode or Custom exposes the tools you choose. Your saved maps, layers and records remain intact.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set language, appearance and units",
+          "body": "In Settings, choose Language, Appearance, Display and Units of Measurement. Pick the coordinate format and units your team uses before recording values or sharing screenshots.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Tune map and symbol preferences",
+          "body": "Use Map Display for labels, grids, PDF boundary locking, collection behaviour and raster background choices. In Tools and Symbols, enable only the controls and symbol packs you want to see.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "watermarked-photos",
+      "title": "Capture a watermarked field photo",
+      "entryScreen": "photoWatermark",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/watermark-edit.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/watermark-preview.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the field camera",
+          "body": "From the map, open the Camera control. You can set reusable defaults in Settings → Photo Watermark.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose what the watermark shows",
+          "body": "Turn fields such as timestamp, coordinate, heading, place name, project, note, compass, logo or mini-map on only when they are appropriate. Set the position and panel opacity.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Capture, review and save",
+          "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "geofences",
+      "title": "Create a geofence",
+      "entryScreen": "geofence",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/london-geofences.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Geofences",
+          "body": "Open Settings → Geofences, or select a feature and choose Notify. Use a known location or wait for GPS before creating the boundary.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the circle",
+          "body": "Give it a clear name, choose the radius and colour, then select alerts for entry, exit or both. Confirm the centre before you create it.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Monitor and review",
+          "body": "Keep the fence enabled and allow the requested location and notification permissions. Open Geofence History to review events; disable or remove a fence when it is no longer needed.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "raster-background",
+      "title": "GeoTIFF / PDF background",
+      "entryScreen": "rasterBackground",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/raster-background.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the georeferenced map",
+          "body": "In Map Library, open a GeoTIFF, GeoPDF or manually referenced map. An image without a geographic reference needs georeferencing first.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose the background",
+          "body": "Open More (…). Under Map Background, choose Basemap to see the surrounding area or Blank Canvas to hide it.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Adjust visibility",
+          "body": "With Basemap selected, move the background visibility/opacity slider. A lower value makes the background less prominent. This does not edit the original file or your feature styles.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Find the map again",
+          "body": "Use Fit Map / fit to screen to return to the map’s extent. Locate centres on your current GPS position, which may be far outside this map.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "map-layout-export",
+      "title": "Create a GeoPDF map layout",
+      "entryScreen": "mapLayout",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/map-layout-export.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Set the map view",
+          "body": "On the Base Map, pan and zoom to the exact area you want on the page. Visible features are included; review sensitive pins and tracks before export.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Configure the layout",
+          "body": "Choose PDF, PNG or JPEG, page size and orientation. Add a title, author or project if needed, then choose elements such as legend, scale bar, north arrow, overview inset and UTM grid.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Export or build an Atlas",
+          "body": "Create the file and review it before sending. For a multi-page Atlas, enable Atlas collection, choose scale and page overlap, and use a downloaded raster MBTiles basemap. Atlas creation needs Pro.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "quick-start",
+      "title": "Start with Simple Map",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/quick-start.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose Simple Map",
+          "body": "On first launch, select Simple Map. You can change it later in Settings without deleting saved data.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Allow location access",
+          "body": "Approve precise location. MapNero asks separately before using background location for screen-off track recording.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Learn the four controls",
+          "body": "Use Locate, Add Pin, Record and More. More contains measurement, basemap and offline tools.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "import-map",
+      "title": "Import a PDF or GIS file",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/import-map.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Add Map or Import",
+          "body": "Choose Import PDF Map, KMZ, photo, link or QR from Add Map, or use Import for vector data.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose the file",
+          "body": "Supported vector imports include GeoJSON, KML/KMZ, GPX and zipped Shapefile. Limited MBTiles and GeoTIFF handling is also available.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the import summary",
+          "body": "Check the parse-and-confirm screen. It lists features that will be imported and any skipped items with reasons.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use Open with MapNero",
+          "body": "From Downloads or Files, select a supported file, tap Open with and choose MapNero.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "location-track",
+      "title": "Find your location and record in the background",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/location-track.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Centre and follow",
+          "body": "Tap Locate to centre the map. Change the follow state if you want the map to remain centred while moving.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Accept the disclosure",
+          "body": "When starting background recording, read the explanation and allow background location in Android Settings.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start recording",
+          "body": "Tap Record. Confirm the persistent recording notification, then lock the screen or use another app if needed.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Stop and save",
+          "body": "Return to MapNero or use the notification action, stop the recording and save the track.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "pins-layers",
+      "title": "Add pins and manage layers",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/pins-layers.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Select a writable layer",
+          "body": "Open Layers, select a normal layer and make sure its visibility is on.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Add a pin",
+          "body": "Tap Add Pin or long-press the map. Choose a category-specific symbol when useful.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Add field details",
+          "body": "Enter a title, attributes, notes and attachments, then save.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit or export",
+          "body": "Tap the feature to open its detail card. Use Edit, or export the layer as GPX, KML, CSV, GeoJSON or Shapefile when allowed.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "offline-maps",
+      "title": "Download and test an offline map",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/offline-maps.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Offline Maps",
+          "body": "On Base Map, move and zoom to the field area first. Then use Offline Maps in the map controls or More.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Select the area",
+          "body": "The download uses the visible Base Map area when Offline Maps opens. If it is wrong, close the screen, adjust the map, then open it again.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Download while online",
+          "body": "Check estimated size, start the download and wait for completion.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Test in Airplane Mode",
+          "body": "Disable the network, reopen the region and zoom through the levels you need.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "collections-atlas",
+      "title": "Use map collections and Atlas",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/collections-atlas.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Create a collection",
+          "body": "In My Maps, place adjoining georeferenced maps in one collection and order detailed sheets above fallback sheets.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Browse with the crosshair",
+          "body": "Open a member sheet and pan the centre crosshair onto a neighbouring sheet. It becomes active without resetting your working scale.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Keep records shared",
+          "body": "Store pins, tracks and drawings in the collection layer when they must remain visible and editable on every member sheet.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create an Atlas",
+          "body": "Activate an offline raster MBTiles map, open Create PDF Map, choose Atlas, scale and overlap, then create the sheet set.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "measure-cogo-buffer",
+      "title": "Measure, construct and buffer",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/measure-cogo-buffer.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Measure distance or area",
+          "body": "Open Measure, place points and read the live length label on the rubber-band line.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create a bearing line",
+          "body": "Open COGO, use the GPS fix or enter DD/UTM/MGRS, then enter a grid bearing and distance up to 100 km.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Buffer one or many features",
+          "body": "Open a feature, or select several with Lasso, then choose Buffer, distance, colour and opacity.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit Derived Buffers",
+          "body": "Open a saved buffer to change distance, fill colour or opacity. Distance changes regenerate the geometry from its source.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "buffer-workflow",
+      "title": "Create and edit a buffer",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/buffer-workflow.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Select the source",
+          "body": "Tap a feature on the map, or open Layers and select a feature. In its detail card, choose Buffer; scroll the action row if necessary. This tool requires Pro or Team access.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the distance",
+          "body": "Enter a positive distance and choose metres or feet. You can give the output a name; leaving it empty keeps the automatic name.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Preview and style",
+          "body": "Use Preview to see how many sources and polygons can be processed. Preview does not save anything. Choose the fill colour and opacity before creating the buffer.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create the polygon",
+          "body": "Choose Create Buffer. The result goes into the separate Derived Buffers layer. Close the feature card to inspect it on the map; the original feature remains unchanged.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit or buffer several features",
+          "body": "Select the saved buffer to change its colour, opacity or distance. Distance updates need the original source. For several features, use lasso selection and Buffer; check processed and skipped counts.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "team-gnss",
+      "title": "Connect a team or external GNSS",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/team-gnss.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Sign in",
+          "body": "Open Settings → Account, enter your email and complete the six-digit one-time code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Join the organization",
+          "body": "Accept an invitation or enter the organization join code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Share the layer",
+          "body": "Open the layer and enable Share with organization. Synchronization needs internet access.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Connect GNSS",
+          "body": "Open Settings, scroll to Location & Navigation, enable Use external GNSS receiver, then choose the receiver and verify fix type, accuracy and satellite status.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "eod-safety",
+      "title": "Use EOD and mine-action records safely",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose the correct mode",
+          "body": "Select EOD or mine-action mode in Settings.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Capture the record",
+          "body": "Complete the Spot Report, Certificate or Land Release fields, including source and location context.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the export",
+          "body": "Check coordinates, units, attachments and organization fields before producing PDF or IMSMA output.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Follow approved authority",
+          "body": "Use your organization’s approved standards, qualified EOD/ESO review and authorized tools for operational decisions.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "route-builder",
+      "title": "Plan a route with waypoints",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/route-builder.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Route Builder",
+          "body": "Select a visible, unlocked, writable feature layer. Open Route from the map toolbar or More menu, depending on your toolbar layout.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Place the first point",
+          "body": "Pan the map until the centre crosshair is over your starting point, then tap Add Waypoint. Your GPS position does not have to be there.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Extend and check the route",
+          "body": "Move the crosshair and add at least one more point. Check the waypoint list and total distance. Use a row’s minus button to remove a mistaken point; the trash button clears the whole draft.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Save the route",
+          "body": "With at least two points, tap the green Save button (it may still say Save in another app language). The route is saved to the target layer. X closes the builder and discards an unsaved draft.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "track-navigation",
+      "title": "Follow a track with corridor alerts",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the saved line or track",
+          "body": "In Layers, select a line or track with at least two points. In its detail card choose Track Navigation / Navigate Track.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set direction and alert corridor",
+          "body": "Choose Forward or Reverse, then set the alert distance from 5 m to 1000 m. The corridor is the distance from the line at which MapNero warns that you are off course.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start, monitor and finish",
+          "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "track-report",
+      "title": "Read and share a track report",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/track-report.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the recorded track",
+          "body": "Select the track in its layer or on the map to open its feature details. With at least two points, scroll to Track Analysis and tap Track Report. The detailed report requires Core or higher.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the report",
+          "body": "Check the top-down route sketch, distance, point count, start/end coordinates, speed and elevation sections. The sketch here is 2D, not Apple’s interactive 3D viewer. Missing or constant altitude/speed values limit the analysis.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Interpret time carefully",
+          "body": "In this version, moving time is the interval from the first GPS point to the last; paused time is the remaining part of the total recording duration. Stops within that point interval are not all removed. Do not interpret these as independently detected moving and stopped periods.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Share the PDF",
+          "body": "Tap Share PDF at the bottom or the share icon at the top. After preparation, choose a destination in the system share sheet. Review coordinates and other details before sending. The file is a report, not a GPX track; first-time PDF preparation may need internet to load fonts.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "track-3d",
+      "title": "Preview a route in 3D",
+      "entryScreen": "androidTrack3D",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/track-3d.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Prepare the route",
+          "body": "Open Route from the map toolbar or More and add at least two waypoints using the crosshair.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open the preview",
+          "body": "Tap 3D inside the route panel. After elevation lookup, the screen shows a relief-style route image and elevation profile. This is not an interactive 3D drawing editor.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Return to the route",
+          "body": "Use Back to return to the draft; save it separately with Save. The map toolbar’s separate 3D button requires Core or higher and toggles map tilt; tap it again for a top-down view. You can also turn 3D Terrain on or off and set camera pitch in Settings > 3D & Terrain.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "terrain-settings",
+      "title": "Configure 3D Terrain",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/terrain-settings.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open 3D Terrain",
+          "body": "From the Library, open Settings > 3D & Terrain > 3D Terrain.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Enable terrain view",
+          "body": "Turn on Enable 3D Terrain. Turn it off at any time to return the map to a top-down view.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set camera pitch",
+          "body": "Use Camera pitch from 0° to 60°. Start with a low angle when reading labels or working with a PDF map.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "cluster-analysis",
+      "title": "Inspect point clusters",
+      "entryScreen": "androidClusters",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/cluster-analysis.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose the layer",
+          "body": "In Layers, choose the relevant point layer. Analysis needs at least 8 points; lines and polygons are not its input.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open the analysis",
+          "body": "Open the layer’s (…) menu and choose Cluster Analysis. Pro or higher is required. Check the input point count before interpreting the distribution.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "community-trails",
+      "title": "Use Community Trails",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/community-trails.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the catalogue",
+          "body": "Open Settings → Community Trails. You can search by route name, description or general region.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Download a route",
+          "body": "Choose Download to add an independent copy to Track Records. Later changes or removal of the public item do not alter your local copy.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Publish your track",
+          "body": "Open a saved track, choose More → Community Trails, add a description, general region and licence, confirm the safety notice, then publish. Publishing requires a confirmed Core-or-higher account.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Control what you see",
+          "body": "Use the item menu to report a route or block its author. You can remove routes you published. Shared data is limited to route points, name, description, general region and licence; photos and private feature fields are not included.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "attribute-forms",
+      "title": "Create attribute forms for a layer",
+      "entryScreen": "androidWildlife",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/attribute-forms.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Start from the layer",
+          "body": "Open Layers, choose a writable layer, then open its settings and Attribute Schema. Add the fields that belong to every feature, such as species, cover, status, notes or a date.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Or create a reusable template",
+          "body": "Open Library → Templates and create a form with the fields your team needs. Use a template when the same form should be reused across more than one field workflow.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Bind the template to the layer",
+          "body": "Return to the layer’s settings, open Template Binding and choose the template. Its fields become the layer’s feature attribute schema.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Collect and review records",
+          "body": "Add or edit a point, line or polygon in that layer and complete the form. Open the layer’s attribute table to search, filter and review saved records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "field-templates",
+      "title": "Collect field data with a template",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/field-templates.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Find the template",
+          "body": "Open Library → Templates, search or browse a category, then read the field list before starting. A template may include text, choices, numbers, GPS, date, photo and checklist fields.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Start the field workflow",
+          "body": "Tap Play or Use Template. You can begin from the template library before opening a map. Complete required fields and allow GPS or camera access only when the form asks for them.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the saved record",
+          "body": "Submit the form, then open the created or selected layer to see the new feature and its attributes. Use the layer table to search or review results, and export only after checking the records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "create-edit-templates",
+      "title": "Create and edit a field template",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/create-edit-templates.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/android/en/create-edit-templates-fields.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Create the template",
+          "body": "Open Library → Templates → Create. Choose Manual to build the form yourself; review every field before using an imported or store template.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Add the field structure",
+          "body": "Give the template a clear name, then add text, choice, number, date, GPS, photo, checkbox or icon fields. For a choice field, enter the permitted values.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the collection order",
+          "body": "Open each field to set its label, help text, required state and options. Use the up/down controls to put fields in field-work order, save, then run one test entry.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit safely",
+          "body": "In Library → Templates, open the template menu and choose Edit. Save the changes, reopen the template and use Play or Use Template for new records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "personal-workspace-sync",
+      "title": "Sync one layer with your account",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the layer editor",
+          "body": "Open Layers, select the layer, then choose Edit.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Enable Sync with my account",
+          "body": "Below Lock layer, turn on Sync with my account and save the layer.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Continue on another device",
+          "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "team-session",
+      "title": "Run a live Team Session",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/team-session.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Create the session",
+          "body": "Settings → Team Tracking. On a phone or tablet, open Team and choose Create session. A Team account can host. An organization is optional; attach one only when the session belongs to that organization.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the access details",
+          "body": "Give the session a clear field name and set the name that will appear on the map. Choose a session password; MapNero generates the session code after creation. Send the generated code and password only to invited participants.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Join and finish safely",
+          "body": "Each participant chooses Join session or scans the QR code, then enters the code, password and display name. Core, Pro and Team accounts can join. When field work ends, the host ends the session and does not reuse its code.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "mobile-export",
+      "title": "Export field data and share it safely",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/mobile-export.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose what to export",
+          "body": "Open the layer, track, map or report and choose Export. Select only the records you intend to send; use a recorded track for GPX and a GIS format for vector features.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose a compatible format",
+          "body": "KML, GPX, CSV and KMZ are available on Free. GeoPDF and GeoTIFF need Core or higher. Shapefile, GeoPackage, DXF and QGIS/QField bundle need Pro or higher.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review and deliver",
+          "body": "Check the selected layers, attributes, coordinates and attachments before generating the file. Use the system share sheet for a local file, or Share via Link only after checking that temporary public download is suitable.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "settings-workspace",
+      "title": "Configure MapNero settings",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/settings-workspace.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose a working mode",
+          "body": "Open Library → Settings → Usage Mode. Simple Map keeps the main workspace uncluttered; a specialist mode or Custom exposes the tools you choose. Your saved maps, layers and records remain intact.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set language, appearance and units",
+          "body": "In Settings, choose Language, Appearance, Display and Units of Measurement. Pick the coordinate format and units your team uses before recording values or sharing screenshots.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Tune map and symbol preferences",
+          "body": "Use Map Display for labels, grids, PDF boundary locking, collection behaviour and raster background choices. In Tools and Symbols, enable only the controls and symbol packs you want to see.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "watermarked-photos",
+      "title": "Capture a watermarked field photo",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the field camera",
+          "body": "From the map, open the Camera control. You can set reusable defaults in Settings → Photo Watermark.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose what the watermark shows",
+          "body": "Turn fields such as timestamp, coordinate, heading, place name, project, note, compass, logo or mini-map on only when they are appropriate. Set the position and panel opacity.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Capture, review and save",
+          "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "geofences",
+      "title": "Create a geofence",
+      "entryScreen": "androidGeofence",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/geofences.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Geofences",
+          "body": "Open Settings → Geofences, or select a feature and choose Notify. Use a known location or wait for GPS before creating the boundary.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Set the circle",
+          "body": "Give it a clear name, choose the radius and colour, then select alerts for entry, exit or both. Confirm the centre before you create it.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Monitor and review",
+          "body": "Keep the fence enabled and allow the requested location and notification permissions. Open Geofence History to review events; disable or remove a fence when it is no longer needed.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "raster-background",
+      "title": "GeoTIFF / PDF background",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/raster-background.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the georeferenced map",
+          "body": "In Map Library, open a GeoTIFF, GeoPDF or manually referenced map. An image without a geographic reference needs georeferencing first.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose the background",
+          "body": "Open More (…). Under Map Background, choose Basemap to see the surrounding area or Blank Canvas to hide it.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Adjust visibility",
+          "body": "With Basemap selected, move the background visibility/opacity slider. A lower value makes the background less prominent. This does not edit the original file or your feature styles.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Find the map again",
+          "body": "Use Fit Map / fit to screen to return to the map’s extent. Locate centres on your current GPS position, which may be far outside this map.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "android",
+      "id": "map-layout-export",
+      "title": "Create a GeoPDF map layout",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/map-layout-export.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Set the map view",
+          "body": "On the Base Map, pan and zoom to the exact area you want on the page. Visible features are included; review sensitive pins and tracks before export.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Configure the layout",
+          "body": "Choose PDF, PNG or JPEG, page size and orientation. Add a title, author or project if needed, then choose elements such as legend, scale bar, north arrow, overview inset and UTM grid.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Export or build an Atlas",
+          "body": "Create the file and review it before sending. For a multi-page Atlas, enable Atlas collection, choose scale and page overlap, and use a downloaded raster MBTiles basemap. Atlas creation needs Pro.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "sign-in",
+      "title": "Sign in and open your workspace",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open app.mapnero.com",
+          "body": "Choose Login and enter the email for your MapNero account. Use the same account as mobile to see your own layers.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Enter the one-time code",
+          "body": "Use the six-digit code sent to your email. Never share it with another person.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open GIS · Layers",
+          "body": "Use the left navigation to open MapLibre GIS. Your own layers are private by default; organization layers appear only when they are shared with you.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "layers-features",
+      "title": "View layers and inspect features",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Choose a basemap",
+          "body": "Select Standard, OSM, Satellite, Hybrid, Topo or Dark for the current task.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Turn layers on",
+          "body": "Use the layer panel to enable your own layers or layers shared by an organization.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect a feature",
+          "body": "Click a point, line or polygon to open its information card and attributes.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use the attribute table",
+          "body": "Open the table to search, filter and inspect the layer’s records.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "import-export",
+      "title": "Import or export GIS data",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Start an import",
+          "body": "In GIS, choose Import and select GeoJSON, KML, GPX or a zipped Shapefile.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review the parse summary",
+          "body": "Check detected geometry, coordinate handling and any skipped features. Nothing is written until you confirm.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Choose the destination",
+          "body": "Select or create the correct writable organization layer and confirm the import.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Export when needed",
+          "body": "Choose the current layer or feature set and export GeoJSON, KML, GPX or CSV.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "edit-online",
+      "title": "Create and edit features online",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Select a writable layer",
+          "body": "Choose a normal organization layer. WMS/WMTS and read-only layers cannot receive features.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Enter edit mode",
+          "body": "Open the edit toolbar and choose point, line or polygon.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Draw and describe",
+          "body": "Place the geometry, complete its attributes and review the shape.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Save or resolve a conflict",
+          "body": "Save online. If another user changed the record, review the conflict instead of silently overwriting their work.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "offline-snapshot",
+      "title": "Prepare encrypted offline viewing",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Offline Access",
+          "body": "While signed in and online, open the GIS offline access panel.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Create a strong passphrase",
+          "body": "Enter at least 15 characters. The passphrase is never stored, so keep it in a secure password manager.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Save the current snapshot",
+          "body": "Wait until the encrypted envelope and offline shell are ready.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Test read-only access",
+          "body": "Disconnect the network, open the offline workspace and unlock it with the passphrase.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "reports",
+      "title": "Review reports and land-release records",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open the right section",
+          "body": "Use Dashboard, Rollup, Spot Reports, Land Release or Certificates from the left navigation.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Filter the records",
+          "body": "Narrow by the available status, date, area or organization fields.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open the record",
+          "body": "Review its source, location, status, attachments and audit context.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Edit only when authorized",
+          "body": "Use the edit action only when your role and organization procedure allow the change.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "team-live",
+      "title": "View a live team session",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Get the session code",
+          "body": "Ask the field-team owner for the active session code through an approved channel.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Open Team Live",
+          "body": "Choose Team from the web navigation and enter the code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Check freshness",
+          "body": "Confirm the session is active and review the last-update time before relying on a position.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "End access when finished",
+          "body": "Close the session view and follow the team’s process for ending or rotating the session code.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "web-limits",
+      "title": "Know what belongs on mobile",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Record tracks on mobile",
+          "body": "Web GIS does not record GPS tracks or pair with external GNSS receivers.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Download basemap regions on mobile",
+          "body": "Web offline is an encrypted GIS snapshot, not the mobile offline-map downloader.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Continue your own layers on web",
+          "body": "Layers from the same mobile account are available on web. Share with organization only when you want teammates to access a layer.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Use web for oversight",
+          "body": "Inspect layers, edit permitted GIS features, export data and review organization reports from a larger screen.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "web",
+      "id": "organization-admin",
+      "title": "Administer an organization",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Open Administration",
+          "body": "Sign in at app.mapnero.com with the invited email, then open Administration in the left navigation. This area is available only to organization owners and administrators.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Invite with the minimum role",
+          "body": "In Invite by email, enter the colleague’s email and choose Viewer for read-only access, Member for normal field work, or Administrator only for a trusted manager. Confirm the invitation and seat count.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Complete first access on mobile",
+          "body": "On iPhone, iPad or Android, open the invitation email, then open Organization under Account & Access in MapNero. Enter the invitation code from the email, the same email address, a password you choose and your display name; confirm the join. Use that email and password later at app.mapnero.com. If the app separately asks for email verification, follow its prompt; the sign-in code is not the organization invitation code.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Review and remove access",
+          "body": "Use the pending list to cancel an unused invitation. Use Manage in the members list to change a role or remove a person. Do this before a device or account leaves the project.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "coordinate-formats",
+      "title": "Convert coordinates",
+      "entryScreen": "cogo",
+      "entryExists": true,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Convert WGS84 positions to UTM and MGRS.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "cogo-construction",
+      "title": "Construct a point by grid bearing",
+      "entryScreen": "cogo",
+      "entryExists": true,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Create a local survey point from distance and grid bearing.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "military-symbols",
+      "title": "Choose map symbols",
+      "entryScreen": "symbols",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/military-symbol-picker.png",
+          "exists": true
+        }
+      ],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Preview sample identity frames and place a symbol on the map.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "apple-watch",
+      "title": "Try the Watch field controls",
+      "entryScreen": null,
+      "entryExists": false,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Start a simulated Watch track, advance a position and save a pin.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "template-import",
+      "title": "Import a template field list",
+      "entryScreen": "templateImport",
+      "entryExists": true,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Turn a sample CSV header into editable form fields.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    },
+    {
+      "platform": "apple",
+      "id": "team-chat",
+      "title": "Use a sample team chat",
+      "entryScreen": "team",
+      "entryExists": true,
+      "captures": [],
+      "requiredGuideSteps": [
+        {
+          "title": "Try the tool",
+          "body": "Exchange sample messages inside an illustrated team session.",
+          "acceptance": "unverified individual workflow step"
+        },
+        {
+          "title": "Inspect the result",
+          "body": "Change the sample input and run the tool again.",
+          "acceptance": "unverified individual workflow step"
+        }
+      ],
+      "runtimeAcceptance": "not established by this source inventory"
+    }
+  ]
+}
