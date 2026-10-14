@@ -86,7 +86,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 - Apple: EOD field records, Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
 - Android: 24 topics have no connected interactive entry. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
 - Web: all nine catalog entries have no connected interactive entry.
-- Generated checklist execution works in local controls; its native player capture is pending the Simulator Save action.
+- Native checklist player, confirmation and reopened result were captured in 51ef9f4. Local PDF export is now implemented; all-Unicode fonts and physical mobile acceptance remain open.
 - Native style templates currently show/generated/download rule schemas; TemplatePlayerView.stylePreview does not apply them to a map. Do not invent a native live-application claim.
 - A mobile viewport and 44px targets do not establish touch/swipe acceptance on Safari or a physical phone.
 - The final publication gate remains local preview reviewed by Serhan; no publication claimed.
@@ -94,3 +94,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Mobile geometry verification
 
 57 original player frames passed the 390×844 visible-hotspot bounds/overlap/overflow audit; this is not workflow, Safari or physical-touch acceptance. Android Add Map is a subsequently verified 58th frame with five 44px targets and no horizontal overflow. See demo-touch-audit.json and android-import-entry.md.
+
+## Watch deferral - 14 October 2026
+
+Serhan explicitly requested deferring Watch after phone Settings showed Apple Watch Connected but Watch Check Status remained ineffective, including his manual attempt. Preserve the requested Watch feature in scope; do not claim it functional. Revisit when the paired Simulator access refresh works, then capture and verify the real Watch workflows. Actual phone Quick Pins screen captured on Desktop; not yet integrated into demo.

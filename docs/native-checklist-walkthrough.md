@@ -39,3 +39,7 @@ provided a verified navigation path for restoring the preset.
 
 This completes this checklist capture/control unit, not all features, all
 catalogue guide steps, native PDF parity, physical/Safari touch or the full demo.
+
+## Website PDF export - 14 October 2026
+
+Saved local results can be downloaded as PDF using the existing vendored pdf-lib. Required completed steps, optional open steps, titles, descriptions, warnings and saved time come from the immutable saved snapshot. Rows paginate without leaving a short row heading alone. This report is local demo output, not native PDF layout parity, cloud storage or field certification. Standard Helvetica currently rejects unsupported glyphs explicitly and preserves exact text in the JSON fallback; full Unicode font support remains pending. Final browser download verified 4 required DONE and 3 optional OPEN; host tests cover 100 long steps and invalid snapshots.
