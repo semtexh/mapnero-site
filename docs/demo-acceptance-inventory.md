@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | MISSING | 1 | requires individual verification |
+| apple | eod-safety | eodRecords | 1 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -83,7 +83,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Concrete remaining gates
 
-- Apple: EOD field records, Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
+- Apple: EOD Spot Report local practice now has a connected menu entry; native form capture, Certificate and Land Release remain pending. Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
 - Android: 24 topics have no connected interactive entry. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
 - Web: all nine catalog entries have no connected interactive entry.
 - Native checklist player, confirmation and reopened result were captured in 51ef9f4. Local PDF export is now implemented; all-Unicode fonts and physical mobile acceptance remain open.

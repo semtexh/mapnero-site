@@ -429,8 +429,8 @@
       "platform": "apple",
       "id": "eod-safety",
       "title": "Use EOD and mine-action records safely",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "eodRecords",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/apple/en/eod-safety.png",
@@ -459,7 +459,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "not established by this source inventory"
+      "runtimeAcceptance": "Spot Report local record and XML workflow verified; native form capture, Certificate and Land Release still incomplete"
     },
     {
       "platform": "apple",
