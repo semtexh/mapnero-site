@@ -351,7 +351,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
     "access": "Mode and tier dependent",
-    "note": "Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/reopen/PDF/JSON work; native PDF comparison, map association, Land Release, cloud and official acceptance remain incomplete. Land Release local polygon drawing, independent classification/status/product, read-only grouping, progression and DEMO GeoJSON work on the London map. Native classified polygon/list/detail/editor and cloud acceptance remain pending. Programme Rollup real capture linked to local certificate/Spot Report project sums, exact JSON, DEMO PDF and CSV; native export comparison and legacy tracker workflow still pending. Evidence empty native capture connected to local creation, chronological custody append, JSON and recoverable trash. Native form/detail/handover captures and real persistence acceptance still pending.",
+    "note": "Actual native Mine Action, Spot Report, Certificate and Evidence captures with local synthetic record practice. Native classified Land Release, durable storage, cloud, export parity and physical touch remain separate acceptance gates.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -389,7 +389,12 @@
       "assets/guides/screenshots/apple/en/certificate-project.png",
       "assets/guides/screenshots/apple/en/land-release-empty.png",
       "assets/guides/screenshots/apple/en/programme-rollup.png",
-      "assets/guides/screenshots/apple/en/evidence-empty.png"
+      "assets/guides/screenshots/apple/en/evidence-empty.png",
+      "assets/guides/screenshots/apple/en/evidence-form.png",
+      "assets/guides/screenshots/apple/en/evidence-list-sample.png",
+      "assets/guides/screenshots/apple/en/evidence-detail.png",
+      "assets/guides/screenshots/apple/en/evidence-handover.png",
+      "assets/guides/screenshots/apple/en/evidence-history.png"
     ]
   },
   {
@@ -928,6 +933,7 @@
     "title": "Import a PDF or GIS file",
     "summary": "Open PDF maps and common GIS formats from MapNero or Android’s Open with menu.",
     "access": "Import availability depends on format and tier",
+    "note": "Actual captured Android Add Map menu. The browser practice connects PDF, KMZ raster overlays, photos, direct file links and QR PNG link reading, with local preview/save/download. It does not install files in Android. GIS vector summaries, OGC services and Android Open with remain pending; current native GeoTIFF has a separate action not shown in this older capture.",
     "steps": [
       {
         "title": "Open Add Map or Import",
@@ -948,8 +954,7 @@
     ],
     "images": [
       "assets/guides/screenshots/android/en/import-map.png"
-    ],
-    "note": "Actual captured Android Add Map menu. The browser practice connects PDF, KMZ raster overlays, photos, direct file links and QR PNG link reading, with local preview/save/download. It does not install files in Android. GIS vector summaries, OGC services and Android Open with remain pending; current native GeoTIFF has a separate action not shown in this older capture."
+    ]
   },
   {
     "platform": "android",
@@ -1722,7 +1727,10 @@
         "body": "Open the table to search, filter and inspect the layer’s records."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/web/en/layers-features.jpg",
+      "assets/guides/screenshots/web/en/layers-features-mobile.jpg"
+    ]
   },
   {
     "platform": "web",
@@ -1749,7 +1757,10 @@
         "body": "Choose the current layer or feature set and export GeoJSON, KML, GPX or CSV."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/web/en/import-export.jpg",
+      "assets/guides/screenshots/web/en/import-export-mobile.jpg"
+    ]
   },
   {
     "platform": "web",
@@ -1966,7 +1977,7 @@
     "platformLabel": "Apple workflow preview",
     "id": "military-symbols",
     "title": "Choose map symbols",
-    "summary": "Choose from the native symbol options and save a practice point with its SIDC.",
+    "summary": "Preview sample identity frames and place a symbol on the map.",
     "access": "Website sample; app access depends on tool and plan.",
     "note": "Real native picker capture. All current native code options are connected to a live web map with native frame rules and SF glyph assets.",
     "steps": [

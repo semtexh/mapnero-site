@@ -507,6 +507,26 @@
         {
           "path": "assets/guides/screenshots/apple/en/evidence-empty.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-form.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-list-sample.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-detail.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-handover.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-history.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
@@ -531,7 +551,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Durable Files save and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete; local Certificate full scalar form, immutable archive/reopen/JSON verified with real captures. Native save/PDF/map association and Land Release remain unverified; Certificate DEMO PDF browser download/render verified. Native PDF comparison, font-wide Unicode, map association and Land Release remain incomplete; Land Release browser polygon drawing, SHA/workedOn/reduced independent fields, read-only released/closed grouping, progression dates and actual GeoJSON independently verified. New drawing preserves earlier classification. Native classified polygon/list/detail/editor, cloud and physical touch still unverified.; Programme Rollup real native snapshot linked; local project grouping and incomplete-area subtotal from saved certificates/Spot Reports independently JSON verified. Local DEMO CSV downloaded and independently parsed with incomplete fields blank, explicit missing count, rounded known subtotal and Unicode/quote preservation; Local DEMO Programme PDF also downloaded/rendered, missing totals unavailable and known subtotals preserved; fitting project blocks kept together; long text and immutable snapshot verified. Actual native export comparison, Turkish PDF support browser/renderer verified; full Unicode and legacy tracker records remain open.; Evidence local creation/unknown-vs-zero/manual digits/history chronology/JSON/confirmed trash-restore verified. Native form/detail/handover captures, durable persistence and all guide steps remain unverified."
+      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Durable Files save and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete; local Certificate full scalar form, immutable archive/reopen/JSON verified with real captures. Native save/PDF/map association and Land Release remain unverified; Certificate DEMO PDF browser download/render verified. Native PDF comparison, font-wide Unicode, map association and Land Release remain incomplete; Land Release browser polygon drawing, SHA/workedOn/reduced independent fields, read-only released/closed grouping, progression dates and actual GeoJSON independently verified. New drawing preserves earlier classification. Native classified polygon/list/detail/editor, cloud and physical touch still unverified.; Programme Rollup real native snapshot linked; local project grouping and incomplete-area subtotal from saved certificates/Spot Reports independently JSON verified. Local DEMO CSV downloaded and independently parsed with incomplete fields blank, explicit missing count, rounded known subtotal and Unicode/quote preservation; Local DEMO Programme PDF also downloaded/rendered, missing totals unavailable and known subtotals preserved; fitting project blocks kept together; long text and immutable snapshot verified. Actual native export comparison, Turkish PDF support browser/renderer verified; full Unicode and legacy tracker records remain open.; Evidence local creation/unknown-vs-zero/manual digits/history chronology/JSON/confirmed trash-restore verified. Native form/detail/handover captures, durable persistence and all guide steps remain unverified. Real native blank Evidence form, synthetic saved item, reopened detail, handover form and saved custody entry captured; full-screen Device Hub resolves miniature-window blocker. Durable restart/disk persistence remains unverified."
     },
     {
       "platform": "apple",
@@ -2129,9 +2149,18 @@
       "platform": "web",
       "id": "layers-features",
       "title": "View layers and inspect features",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "webGIS",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/web/en/layers-features.jpg",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/web/en/layers-features-mobile.jpg",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Choose a basemap",
@@ -2154,15 +2183,24 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "not established by this source inventory"
+      "runtimeAcceptance": "Real desktop/mobile Web GIS/import-menu privacy crops; local layer/point/hide/download, GeoJSON choose/confirm/render/re-export geometry and attributes verified. Five mobile states44px/no overlap/no overflow. Other native live web import/export, authorization, raster/QGIS/KMZ vector and full guide steps remain unverified."
     },
     {
       "platform": "web",
       "id": "import-export",
       "title": "Import or export GIS data",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "webImportMenu",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/web/en/import-export.jpg",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/web/en/import-export-mobile.jpg",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Start an import",
@@ -2185,7 +2223,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "not established by this source inventory"
+      "runtimeAcceptance": "Real desktop/mobile Web GIS/import-menu privacy crops; local layer/point/hide/download, GeoJSON choose/confirm/render/re-export geometry and attributes verified. Five mobile states44px/no overlap/no overflow. Other native live web import/export, authorization, raster/QGIS/KMZ vector and full guide steps remain unverified."
     },
     {
       "platform": "web",

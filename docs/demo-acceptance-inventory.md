@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 19 | requires individual verification |
+| apple | eod-safety | eodRecords | 24 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -66,8 +66,8 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | raster-background | MISSING | 1 | requires individual verification |
 | android | map-layout-export | MISSING | 1 | requires individual verification |
 | web | sign-in | MISSING | 0 | requires individual verification |
-| web | layers-features | MISSING | 0 | requires individual verification |
-| web | import-export | MISSING | 0 | requires individual verification |
+| web | layers-features | webGIS | 2 | requires individual verification |
+| web | import-export | webImportMenu | 2 | requires individual verification |
 | web | edit-online | MISSING | 0 | requires individual verification |
 | web | offline-snapshot | MISSING | 0 | requires individual verification |
 | web | reports | MISSING | 0 | requires individual verification |
@@ -85,7 +85,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 - Apple: EOD Spot Report local practice now has a connected menu entry; native form capture, Certificate and Land Release remain pending. Community Trails and Watch have no connected entry. Watch has no actual capture. Community and personal cloud acceptance require an authorized signed-in test session.
 - Android: 23 topics have no connected interactive entry. Manual template builder and field picker are connected to local form editing; native configured editor capture, AI and manual checklist remain pending. Connected entries still require their full guide-step verification; Android Add Map currently covers only its raster/link/QR actions.
-- Web: all nine catalog entries have no connected interactive entry.
+- Web: two of nine entries have real desktop/mobile reference captures and local map/layer/import entry points; seven remain unconnected. Actual live web import/export and full guide-step acceptance remain unverified.
 - Native checklist player, confirmation and reopened result were captured in 51ef9f4. Local PDF export is now implemented; all-Unicode fonts and physical mobile acceptance remain open.
 - Native style templates currently show/generated/download rule schemas; TemplatePlayerView.stylePreview does not apply them to a map. Do not invent a native live-application claim.
 - A mobile viewport and 44px targets do not establish touch/swipe acceptance on Safari or a physical phone.

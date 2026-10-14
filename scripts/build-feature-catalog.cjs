@@ -8,6 +8,7 @@ for (const m of html.matchAll(/<script src="(assets\/guides[^"?]+)(?:\?[^\"]*)?"
  if(m[1] === 'assets/guides.js') continue;
  vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),ctx);
 }
+const retainedCatalog=JSON.parse(fs.readFileSync(path.join(root,'assets/feature-catalog.json'),'utf8'));
 const catalog=[];
 for(const [platform,data] of Object.entries(ctx.window.MAPNERO_GUIDES.en.platforms)) {
  for(const t of data.topics) {
@@ -34,5 +35,10 @@ spotReport.note="Real native Spot Report captures plus local synthetic record pr
 spotReport.images.push(...["assets/guides/screenshots/apple/en/mine-action-home.png", "assets/guides/screenshots/apple/en/certificate-empty.png", "assets/guides/screenshots/apple/en/evidence-empty.png", "assets/guides/screenshots/apple/en/programme-rollup.png", "assets/guides/screenshots/apple/en/land-release-empty.png", "assets/guides/screenshots/apple/en/certificate-project.png", "assets/guides/screenshots/apple/en/certificate-area.png", "assets/guides/screenshots/apple/en/certificate-signatories.png", "assets/guides/screenshots/apple/en/certificate-declaration.png"]);
 spotReport.note="Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/JSON work; Certificate PDF/map association, Land Release, cloud and official acceptance remain incomplete.";
 spotReport.note="Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/reopen/PDF/JSON work; native PDF comparison, map association, Land Release, cloud and official acceptance remain incomplete.";
+// Keep authored capture lists and acceptance notes across guide regeneration.
+for(const item of catalog){const prior=retainedCatalog.find(t=>t.platform===item.platform&&t.id===item.id);if(prior){item.images=prior.images;item.note=prior.note;}}
+for(const id of ['layers-features','import-export']){const item=catalog.find(t=>t.platform==='web'&&t.id===id);item.images=[`assets/guides/screenshots/web/en/${id}.jpg`,`assets/guides/screenshots/web/en/${id}-mobile.jpg`];}
+spotReport.images.push(...['evidence-form','evidence-list-sample','evidence-detail','evidence-handover','evidence-history'].map(id=>`assets/guides/screenshots/apple/en/${id}.png`).filter(p=>!spotReport.images.includes(p)));
+spotReport.note='Actual native Mine Action, Spot Report, Certificate and Evidence captures with local synthetic record practice. Native classified Land Release, durable storage, cloud, export parity and physical touch remain separate acceptance gates.';
 fs.writeFileSync(path.join(root,'assets/feature-catalog.json'),JSON.stringify(catalog,null,2)+'\n');
 console.log(`${catalog.length} platform-specific feature guides`);
