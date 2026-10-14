@@ -634,7 +634,7 @@
     "title": "Create and edit a field template",
     "summary": "Design a reusable form, choose its field order and update it safely.",
     "access": "Manual templates are free · AI and import options depend on tier",
-    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten.",
+    "note": "Template edits guide future entries. Values already saved in the results layer are not rewritten. Fresh actual iPhone captures show the AI prompt and its 20-item Field Survey Form preview. The website currently supports manual editing and local file import; prompt generation has not yet been connected.",
     "steps": [
       {
         "title": "Create the template",
@@ -655,7 +655,9 @@
     ],
     "images": [
       "assets/guides/screenshots/apple/en/create-edit-templates.png",
-      "assets/guides/screenshots/apple/en/create-edit-templates-fields.png"
+      "assets/guides/screenshots/apple/en/create-edit-templates-fields.png",
+      "assets/guides/screenshots/apple/en/template-ai-create.png",
+      "assets/guides/screenshots/apple/en/template-ai-survey-preview.png"
     ]
   },
   {
