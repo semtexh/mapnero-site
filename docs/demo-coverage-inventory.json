@@ -471,6 +471,26 @@
         {
           "path": "assets/guides/screenshots/apple/en/spot-report-form-lower.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/mine-action-home.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-area.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-signatories.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-declaration.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
@@ -495,7 +515,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Lower native form capture, durable Files save, Certificate and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete"
+      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Durable Files save and Land Release remain incomplete; native-key list search/priority/newest-order browser practice verified; locale-wide search and retraction UI remain unverified; native lower form lines6–9 captured and browser hotspot NBC/priority/reporting/save/XML verified. Bottom action capture and app-profile reporter autofill remain incomplete; local Certificate full scalar form, immutable archive/reopen/JSON verified with real captures. Native save/PDF/map association and Land Release remain unverified; Certificate DEMO PDF browser download/render verified. Native PDF comparison, font-wide Unicode, map association and Land Release remain incomplete"
     },
     {
       "platform": "apple",

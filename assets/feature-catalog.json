@@ -351,7 +351,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
     "access": "Mode and tier dependent",
-    "note": "Real native Spot Report captures plus local synthetic record practice: location selection, immutable save, reopen, XML export and map. The capture text/count stays fixed; live values appear below. Certificate and Land Release are not yet interactive.",
+    "note": "Real native Mine Action, Spot Report and Certificate captures. Local synthetic Spot Report XML and Certificate form/archive/reopen/PDF/JSON work; native PDF comparison, map association, Land Release, cloud and official acceptance remain incomplete.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -380,7 +380,12 @@
       "assets/guides/screenshots/apple/en/spot-report-picker.png",
       "assets/guides/screenshots/apple/en/spot-report-picker-marked.png",
       "assets/guides/screenshots/apple/en/spot-report-map.png",
-      "assets/guides/screenshots/apple/en/spot-report-form-lower.png"
+      "assets/guides/screenshots/apple/en/spot-report-form-lower.png",
+      "assets/guides/screenshots/apple/en/mine-action-home.png",
+      "assets/guides/screenshots/apple/en/certificate-empty.png",
+      "assets/guides/screenshots/apple/en/certificate-area.png",
+      "assets/guides/screenshots/apple/en/certificate-signatories.png",
+      "assets/guides/screenshots/apple/en/certificate-declaration.png"
     ]
   },
   {

@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 10 | requires individual verification |
+| apple | eod-safety | eodRecords | 15 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -103,3 +103,7 @@ Serhan explicitly requested deferring Watch after phone Settings showed Apple Wa
 14 October: eight unchanged native Spot Report captures connected to seven new frames (71 total). Browser practice validates required fields and Place→Confirm, preserves saved snapshots after draft edits, reopens selected records and downloads DEMO XML. Native saved DEMO/temporary XML verified separately. Lower native form capture and native durable Files save remain unverified; Certificate/Land Release and every individual EOD guide step are not completed.
 
 14 October follow-through: lower native form Line3–9 captured unchanged,72frames. NBC and three priority hotspots operate the live record; save/export verified with conditional notes/PRIORITY/reporting destination. Bottom XML action capture and automatic native profile identity remain separate open gates; Certificate/LandRelease/full EOD not completed.
+
+14 October: Mine Action home and4Certificate screenshots added,77frames. Native Certificates remain0; captured blank form canceled. Local scalar form/save/reopen/JSON implemented; PDF/map association/native saved detail and Land Release remain incomplete.
+
+14 October follow-through: Certificate DEMO PDF download/render independently verified (2A4 pages), long text preserved.308hosttests after strict-date fix. Native PDF/map association/font-wide Unicode/list filtering/retraction/Land Release still open.77frames does not prove all-feature acceptance.
