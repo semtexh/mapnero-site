@@ -351,7 +351,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture field records while keeping unverified calculation outputs out of operational decisions.",
     "access": "Mode and tier dependent",
-    "note": "RESS, Chemical and Nuclear calculator outputs are unverified planning/training drafts. Do not use them as safe distances, casualty predictions or operational authority.",
+    "note": "Real native Spot Report captures plus local synthetic record practice: location selection, immutable save, reopen, XML export and map. The capture text/count stays fixed; live values appear below. Certificate and Land Release are not yet interactive.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -371,7 +371,15 @@
       }
     ],
     "images": [
-      "assets/guides/screenshots/apple/en/eod-safety.png"
+      "assets/guides/screenshots/apple/en/eod-safety.png",
+      "assets/guides/screenshots/apple/en/spot-report-empty.png",
+      "assets/guides/screenshots/apple/en/spot-report-form.png",
+      "assets/guides/screenshots/apple/en/spot-report-form-filled.png",
+      "assets/guides/screenshots/apple/en/spot-report-list.png",
+      "assets/guides/screenshots/apple/en/spot-report-detail.png",
+      "assets/guides/screenshots/apple/en/spot-report-picker.png",
+      "assets/guides/screenshots/apple/en/spot-report-picker-marked.png",
+      "assets/guides/screenshots/apple/en/spot-report-map.png"
     ]
   },
   {

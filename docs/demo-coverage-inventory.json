@@ -435,6 +435,38 @@
         {
           "path": "assets/guides/screenshots/apple/en/eod-safety.png",
           "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-form.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-form-filled.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-list.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-detail.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-picker.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-picker-marked.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-map.png",
+          "exists": true
         }
       ],
       "requiredGuideSteps": [
@@ -459,7 +491,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "runtimeAcceptance": "Spot Report local record and XML workflow verified; native form capture, Certificate and Land Release still incomplete"
+      "runtimeAcceptance": "Native Spot Report save/reopen/temporary XML independently verified; real captures connected to local location/save/reopen/XML/map workflow. Lower native form capture, durable Files save, Certificate and Land Release remain incomplete"
     },
     {
       "platform": "apple",

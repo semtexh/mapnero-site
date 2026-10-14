@@ -18,7 +18,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | measure-cogo-buffer | measure | 1 | requires individual verification |
 | apple | buffer-workflow | buffer | 2 | requires individual verification |
 | apple | team-gnss | gnss | 1 | requires individual verification |
-| apple | eod-safety | eodRecords | 1 | requires individual verification |
+| apple | eod-safety | eodRecords | 9 | requires individual verification |
 | apple | route-builder | route | 1 | requires individual verification |
 | apple | track-3d | track3D | 1 | requires individual verification |
 | apple | track-report | report | 1 | requires individual verification |
@@ -98,3 +98,6 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Watch deferral - 14 October 2026
 
 Serhan explicitly requested deferring Watch after phone Settings showed Apple Watch Connected but Watch Check Status remained ineffective, including his manual attempt. Preserve the requested Watch feature in scope; do not claim it functional. Revisit when the paired Simulator access refresh works, then capture and verify the real Watch workflows. Actual phone Quick Pins screen captured on Desktop; not yet integrated into demo.
+
+
+14 October: eight unchanged native Spot Report captures connected to seven new frames (71 total). Browser practice validates required fields and Place→Confirm, preserves saved snapshots after draft edits, reopens selected records and downloads DEMO XML. Native saved DEMO/temporary XML verified separately. Lower native form capture and native durable Files save remain unverified; Certificate/Land Release and every individual EOD guide step are not completed.

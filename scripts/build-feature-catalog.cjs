@@ -27,5 +27,8 @@ const extras=[
  ['team-chat','Use a sample team chat','Exchange sample messages inside an illustrated team session.','UI/Map/TeamLibraryView.swift']
 ];
 for(const [id,title,summary,source]of extras)catalog.push({platform:'apple',platformLabel:'Apple workflow preview',id,title,summary,access:'Website sample; app access depends on tool and plan.',note:'This is a local workflow demo. It does not claim hardware connection, live communication or every app option.',steps:[{title:'Try the tool',body:summary},{title:'Inspect the result',body:'Change the sample input and run the tool again.'}],images:[],extra:true,source});
+const spotReport=catalog.find(t=>t.platform==='apple'&&t.id==='eod-safety');
+spotReport.images.push(...["assets/guides/screenshots/apple/en/spot-report-empty.png", "assets/guides/screenshots/apple/en/spot-report-form.png", "assets/guides/screenshots/apple/en/spot-report-form-filled.png", "assets/guides/screenshots/apple/en/spot-report-list.png", "assets/guides/screenshots/apple/en/spot-report-detail.png", "assets/guides/screenshots/apple/en/spot-report-picker.png", "assets/guides/screenshots/apple/en/spot-report-picker-marked.png", "assets/guides/screenshots/apple/en/spot-report-map.png"]);
+spotReport.note="Real native Spot Report captures plus local synthetic record practice: location selection, immutable save, reopen, XML export and map. The capture text/count stays fixed; live values appear below. Certificate and Land Release are not yet interactive.";
 fs.writeFileSync(path.join(root,'assets/feature-catalog.json'),JSON.stringify(catalog,null,2)+'\n');
 console.log(`${catalog.length} platform-specific feature guides`);
