@@ -38,6 +38,7 @@ spotReport.note="Real native Mine Action, Spot Report and Certificate captures. 
 // Keep authored capture lists and acceptance notes across guide regeneration.
 for(const item of catalog){const prior=retainedCatalog.find(t=>t.platform===item.platform&&t.id===item.id);if(prior){item.images=prior.images;item.note=prior.note;}}
 for(const id of ['layers-features','import-export']){const item=catalog.find(t=>t.platform==='web'&&t.id===id);item.images=[`assets/guides/screenshots/web/en/${id}.jpg`,`assets/guides/screenshots/web/en/${id}-mobile.jpg`];}
+spotReport.images.push(...['certificate-saved-list.png','certificate-saved-detail.png','certificate-native-pdf-preview.png'].map(name=>'assets/guides/screenshots/apple/en/'+name).filter(p=>!spotReport.images.includes(p)));
 spotReport.images.push(...['evidence-form','evidence-list-sample','evidence-detail','evidence-handover','evidence-history'].map(id=>`assets/guides/screenshots/apple/en/${id}.png`).filter(p=>!spotReport.images.includes(p)));
 spotReport.note='Actual native Mine Action, Spot Report, Certificate and Evidence captures with local synthetic record practice. Native classified Land Release, durable storage, cloud, export parity and physical touch remain separate acceptance gates.';
 spotReport.images.push(...['land-release-classification','land-release-products','land-release-released','land-release-progression'].map(id=>`assets/guides/screenshots/apple/en/${id}.png`).filter(p=>!spotReport.images.includes(p)));
