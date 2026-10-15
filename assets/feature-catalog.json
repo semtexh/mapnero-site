@@ -1321,7 +1321,7 @@
     "title": "Configure 3D Terrain",
     "summary": "Tilt the map camera without changing your maps, routes, or tracks.",
     "access": "Core or higher",
-    "note": "3D Terrain changes the map perspective only. It does not turn an ordinary line or route into a 3D track.",
+    "note": "Actual Android settings capture with a working London map camera: enable/disable, 0–60 degree pitch in 5 degree steps and top-down return. This is perspective only; source geometry and elevation remain unchanged. Local preferences survive screen navigation until reset or reload.",
     "steps": [
       {
         "title": "Open 3D Terrain",

@@ -1708,8 +1708,8 @@
       "platform": "android",
       "id": "terrain-settings",
       "title": "Configure 3D Terrain",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidTerrain",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/terrain-settings.png",
