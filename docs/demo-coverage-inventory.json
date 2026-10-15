@@ -1471,8 +1471,8 @@
       "platform": "android",
       "id": "buffer-workflow",
       "title": "Create and edit a buffer",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidBuffer",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/buffer-workflow.png",

@@ -1119,7 +1119,7 @@
     "title": "Create and edit a buffer",
     "summary": "Make a separate polygon around a point, line, track or polygon.",
     "access": "Pro / Team",
-    "note": "The circle drawing tool is different: use a point feature plus Buffer for a radius around a location. A buffer is a geometric area, not a certified safety boundary.",
+    "note": "Actual Android options capture plus local point/line/polygon buffers: source selection/batch, meters/feet, all 12 colors, opacity, preview, create/undo, map and exact saved GeoJSON. Turf AEQD/JSTS XY computation is separate from native MapNero. Polar/date-line/wide or invalid sources refuse explicitly; native derived-list/save/restart and physical touch remain pending.",
     "steps": [
       {
         "title": "Select the source",
