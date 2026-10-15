@@ -915,6 +915,7 @@
     "title": "Start with Simple Map",
     "summary": "Set up MapNero for a clear everyday workflow with four large map controls.",
     "access": "Free",
+    "note": "Actual Android mode picker and read-only native preset snapshot: six local presets apply coordinates, units and tool-summary values; nullable axes keep previous choices and original custom settings can be restored. Real phone permissions, foreground recording and native settings persistence remain separate.",
     "steps": [
       {
         "title": "Choose Simple Map",
@@ -1561,7 +1562,7 @@
     "title": "Configure MapNero settings",
     "summary": "Choose a working mode and adjust language, display and units without changing your project data.",
     "access": "Available to all users",
-    "note": "Some controls affect future display or new features only. Review the label before changing a field workflow or map preference.",
+    "note": "Actual Android settings reference plus working local coordinate, distance/area/speed/altitude/pace units and appearance example. Map-center and route/recording distances use local choices. Native account, language, GPS/receiver, icon, persistence and remaining settings workflows are not connected yet.",
     "steps": [
       {
         "title": "Choose a working mode",

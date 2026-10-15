@@ -1224,8 +1224,8 @@
       "platform": "android",
       "id": "quick-start",
       "title": "Start with Simple Map",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidUsageMode",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/quick-start.png",
@@ -1996,8 +1996,8 @@
       "platform": "android",
       "id": "settings-workspace",
       "title": "Configure MapNero settings",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidSettings",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/settings-workspace.png",

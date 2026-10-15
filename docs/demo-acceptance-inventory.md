@@ -37,7 +37,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | geofences | geofence | 1 | requires individual verification |
 | apple | raster-background | rasterBackground | 1 | requires individual verification |
 | apple | map-layout-export | mapLayout | 1 | requires individual verification |
-| android | quick-start | MISSING | 1 | requires individual verification |
+| android | quick-start | androidUsageMode | 1 | requires individual verification |
 | android | import-map | androidImportMap | 1 | requires individual verification |
 | android | location-track | androidMap | 1 | requires individual verification |
 | android | pins-layers | androidLayers | 1 | requires individual verification |
@@ -60,7 +60,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | personal-workspace-sync | MISSING | 0 | requires individual verification |
 | android | team-session | MISSING | 1 | requires individual verification |
 | android | mobile-export | androidExport | 1 | requires individual verification |
-| android | settings-workspace | MISSING | 1 | requires individual verification |
+| android | settings-workspace | androidSettings | 1 | requires individual verification |
 | android | watermarked-photos | MISSING | 0 | requires individual verification |
 | android | geofences | androidGeofence | 1 | requires individual verification |
 | android | raster-background | MISSING | 1 | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - apple: 2 unconnected entries: community-trails, apple-watch. Connected entries still require every individual guide step to be verified.
-- android: 18 unconnected entries: template-store, quick-start, offline-maps, collections-atlas, measure-cogo-buffer, team-gnss, eod-safety, track-navigation, track-report, terrain-settings, community-trails, field-templates, personal-workspace-sync, team-session, settings-workspace, watermarked-photos, raster-background, map-layout-export. Connected entries still require every individual guide step to be verified.
+- android: 16 unconnected entries: template-store, offline-maps, collections-atlas, measure-cogo-buffer, team-gnss, eod-safety, track-navigation, track-report, terrain-settings, community-trails, field-templates, personal-workspace-sync, team-session, watermarked-photos, raster-background, map-layout-export. Connected entries still require every individual guide step to be verified.
 - web: 6 unconnected entries: sign-in, edit-online, offline-snapshot, team-live, web-limits, organization-admin. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
@@ -94,4 +94,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Geometry scope
 
-99 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
+101 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
