@@ -1241,7 +1241,7 @@
     "title": "Follow a track with corridor alerts",
     "summary": "Use live position against a saved line or track without changing its geometry.",
     "access": "A line or track with at least two points",
-    "note": "Track following is guidance, not track recording. It uses the device location you have permitted and may pause or show a GPS warning when a reliable fix is unavailable.",
+    "note": "Actual Flutter map reference with working local forward/reverse following, corridor, projected progress, next waypoint, sample quality/off-course, pause/resume/stop and session download. The map capture is not a native navigation panel. Device GPS, Android alert delivery and native panel capture remain unverified.",
     "steps": [
       {
         "title": "Open the saved line or track",
@@ -1256,7 +1256,9 @@
         "body": "Tap Start following. The map panel shows the next point, remaining on-route distance, deviation and progress. Use Pause when needed; use Stop to finish. Starting or stopping does not alter or record the source track."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/android/en/location-track.png"
+    ]
   },
   {
     "platform": "android",
@@ -1265,7 +1267,7 @@
     "title": "Read and share a track report",
     "summary": "Read a recorded track’s statistics and share a PDF report.",
     "access": "Detailed report and PDF: Core or higher",
-    "note": "Use a recorded track for travel analysis. A manually drawn route does not contain reliable journey times or speeds. Check data and units before sharing.",
+    "note": "The existing image is the Flutter Help Center Track Report sheet, not a generated report screen. A working Android report entry and actual report/PDF capture remain pending; do not present this help sheet as that result.",
     "steps": [
       {
         "title": "Open the recorded track",

@@ -48,7 +48,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | team-gnss | MISSING | 1 | requires individual verification |
 | android | eod-safety | MISSING | 0 | requires individual verification |
 | android | route-builder | androidRoute | 1 | requires individual verification |
-| android | track-navigation | MISSING | 0 | requires individual verification |
+| android | track-navigation | androidNavigation | 1 | requires individual verification |
 | android | track-report | MISSING | 1 | requires individual verification |
 | android | track-3d | androidTrack3D | 1 | requires individual verification |
 | android | terrain-settings | androidTerrain | 1 | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - apple: 1 unconnected entries: apple-watch. Connected entries still require every individual guide step to be verified.
-- android: 10 unconnected entries: template-store, offline-maps, team-gnss, eod-safety, track-navigation, track-report, field-templates, personal-workspace-sync, team-session, watermarked-photos. Connected entries still require every individual guide step to be verified.
+- android: 9 unconnected entries: template-store, offline-maps, team-gnss, eod-safety, track-report, field-templates, personal-workspace-sync, team-session, watermarked-photos. Connected entries still require every individual guide step to be verified.
 - web: 3 unconnected entries: sign-in, team-live, organization-admin. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
@@ -94,4 +94,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Geometry scope
 
-111 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
+112 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.

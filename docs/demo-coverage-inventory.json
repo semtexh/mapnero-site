@@ -1615,9 +1615,14 @@
       "platform": "android",
       "id": "track-navigation",
       "title": "Follow a track with corridor alerts",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "androidNavigation",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/location-track.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Open the saved line or track",
