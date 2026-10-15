@@ -1646,8 +1646,8 @@
       "platform": "android",
       "id": "track-report",
       "title": "Read and share a track report",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidTrackReport",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/track-report.png",
