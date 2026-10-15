@@ -1154,6 +1154,7 @@
     "title": "Connect a team or external GNSS",
     "summary": "Share organization layers or use a Bluetooth receiver for improved positioning.",
     "access": "Team sharing · GNSS free",
+    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. The GNSS log tool opens an explicitly labeled iPhone reference; Android receiver screen/hardware pairing are not claimed.",
     "steps": [
       {
         "title": "Sign in",
@@ -1513,7 +1514,7 @@
     "title": "Run a live Team Session",
     "summary": "Create a temporary live map session for a field group without confusing it with permanent organization sharing.",
     "access": "Host: Team · Join: Core, Pro or Team",
-    "note": "A Team Session is temporary. Sharing a layer with an organization is a separate, persistent online workflow. Free accounts cannot join a Team Session.",
+    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. The GNSS log tool opens an explicitly labeled iPhone reference; Android receiver screen/hardware pairing are not claimed.",
     "steps": [
       {
         "title": "Create the session",

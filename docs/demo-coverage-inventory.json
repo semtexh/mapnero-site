@@ -1512,8 +1512,8 @@
       "platform": "android",
       "id": "team-gnss",
       "title": "Connect a team or external GNSS",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidTeamHome",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/team-gnss.png",
@@ -1943,8 +1943,8 @@
       "platform": "android",
       "id": "team-session",
       "title": "Run a live Team Session",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidTeamJoin",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/team-session.png",
