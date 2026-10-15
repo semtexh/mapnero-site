@@ -34,7 +34,7 @@
     "title": "Template Store",
     "summary": "Browse reusable templates by category, preview their fields and add them to your library.",
     "access": "Availability depends on template access and workspace permissions.",
-    "note": "The website uses sample templates. It does not download from the live store.",
+    "note": "Shared working workflow shown with an explicitly labeled macOS reference. Android capture for this specific screen remains unavailable. Real macOS app captures. The walkthrough navigates captured results; it does not send downloads or ratings to the live store.",
     "steps": [
       {
         "title": "Browse",
@@ -49,7 +49,14 @@
         "body": "Download to your library, then use the template to collect records."
       }
     ],
-    "images": []
+    "images": [
+      "assets/app-walkthrough/store-all.png",
+      "assets/app-walkthrough/store-nature.png",
+      "assets/app-walkthrough/store-wildlife.png"
+    ],
+    "demoReference": {
+      "platform": "macOS"
+    }
   },
   {
     "platform": "apple",
@@ -1154,7 +1161,7 @@
     "title": "Connect a team or external GNSS",
     "summary": "Share organization layers or use a Bluetooth receiver for improved positioning.",
     "access": "Team sharing · GNSS free",
-    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. The GNSS log tool opens an explicitly labeled iPhone reference; Android receiver screen/hardware pairing are not claimed.",
+    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. GNSS opens the actual Android settings reference with working local NMEA parsing; receiver hardware pairing is not claimed.",
     "steps": [
       {
         "title": "Sign in",
@@ -1174,7 +1181,8 @@
       }
     ],
     "images": [
-      "assets/guides/screenshots/android/en/team-gnss.png"
+      "assets/guides/screenshots/android/en/team-gnss.png",
+      "assets/guides/screenshots/android/en/team-gnss-gnss.png"
     ]
   },
   {
@@ -1184,7 +1192,7 @@
     "title": "Use EOD and mine-action records safely",
     "summary": "Capture structured field data without treating unverified calculators as operational authority.",
     "access": "Mode and tier dependent",
-    "note": "RESS, Chemical and Nuclear calculator outputs are unverified planning/training drafts. Never use them as operational safe distances or casualty predictions.",
+    "note": "Shared working workflow shown with an explicitly labeled iPhone reference. Android capture for this specific screen remains unavailable. Real native Mine Action, Spot Report, Certificate, Evidence and classified Land Release editor/list/progression references with local synthetic record practice. Durable storage, cloud, export parity and physical touch remain separate acceptance gates.",
     "steps": [
       {
         "title": "Choose the correct mode",
@@ -1203,7 +1211,42 @@
         "body": "Use your organization’s approved standards, qualified EOD/ESO review and authorized tools for operational decisions."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/eod-safety.png",
+      "assets/guides/screenshots/apple/en/spot-report-empty.png",
+      "assets/guides/screenshots/apple/en/spot-report-form.png",
+      "assets/guides/screenshots/apple/en/spot-report-form-filled.png",
+      "assets/guides/screenshots/apple/en/spot-report-list.png",
+      "assets/guides/screenshots/apple/en/spot-report-detail.png",
+      "assets/guides/screenshots/apple/en/spot-report-picker.png",
+      "assets/guides/screenshots/apple/en/spot-report-picker-marked.png",
+      "assets/guides/screenshots/apple/en/spot-report-map.png",
+      "assets/guides/screenshots/apple/en/spot-report-form-lower.png",
+      "assets/guides/screenshots/apple/en/mine-action-home.png",
+      "assets/guides/screenshots/apple/en/certificate-empty.png",
+      "assets/guides/screenshots/apple/en/certificate-area.png",
+      "assets/guides/screenshots/apple/en/certificate-signatories.png",
+      "assets/guides/screenshots/apple/en/certificate-declaration.png",
+      "assets/guides/screenshots/apple/en/certificate-project.png",
+      "assets/guides/screenshots/apple/en/land-release-empty.png",
+      "assets/guides/screenshots/apple/en/programme-rollup.png",
+      "assets/guides/screenshots/apple/en/evidence-empty.png",
+      "assets/guides/screenshots/apple/en/evidence-form.png",
+      "assets/guides/screenshots/apple/en/evidence-list-sample.png",
+      "assets/guides/screenshots/apple/en/evidence-detail.png",
+      "assets/guides/screenshots/apple/en/evidence-handover.png",
+      "assets/guides/screenshots/apple/en/evidence-history.png",
+      "assets/guides/screenshots/apple/en/land-release-classification.png",
+      "assets/guides/screenshots/apple/en/land-release-products.png",
+      "assets/guides/screenshots/apple/en/land-release-released.png",
+      "assets/guides/screenshots/apple/en/land-release-progression.png",
+      "assets/guides/screenshots/apple/en/certificate-saved-list.png",
+      "assets/guides/screenshots/apple/en/certificate-saved-detail.png",
+      "assets/guides/screenshots/apple/en/certificate-native-pdf-preview.png"
+    ],
+    "demoReference": {
+      "platform": "iPhone"
+    }
   },
   {
     "platform": "android",
@@ -1490,7 +1533,7 @@
     "title": "Sync one layer with your account",
     "summary": "Choose exactly which layers are available in your signed-in Web GIS and on your other MapNero devices.",
     "access": "Signed-in Pro or Team account",
-    "note": "This is personal workspace sync. It does not share a layer with your organization or a Team Session.",
+    "note": "Shared working workflow shown with an explicitly labeled iPhone reference. Android capture for this specific screen remains unavailable. Actual signed-out Account & Access and blank Sign in captures. The working two-device practice uses local profiles and independent copies in this tab; it does not authenticate or contact MapNero cloud. The signed-in layer opt-in screen remains to be captured.",
     "steps": [
       {
         "title": "Open the layer editor",
@@ -1505,7 +1548,13 @@
         "body": "Use the same signed-in MapNero account on Web GIS, iPhone, iPad or Android while online. The selected layer becomes available there after sync."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/account-access.png",
+      "assets/guides/screenshots/apple/en/account-sign-in.png"
+    ],
+    "demoReference": {
+      "platform": "iPhone"
+    }
   },
   {
     "platform": "android",
@@ -1514,7 +1563,7 @@
     "title": "Run a live Team Session",
     "summary": "Create a temporary live map session for a field group without confusing it with permanent organization sharing.",
     "access": "Host: Team · Join: Core, Pro or Team",
-    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. The GNSS log tool opens an explicitly labeled iPhone reference; Android receiver screen/hardware pairing are not claimed.",
+    "note": "Real Android Team Sessions home and Join sheet references with a working separate same-browser multi-tab session: code/password, AES-GCM messages, selected sample positions, shared practice layers and QR invite reader/generator. Native captured access locks remain fixed; this is not a live MapNero team. GNSS opens the actual Android settings reference with working local NMEA parsing; receiver hardware pairing is not claimed.",
     "steps": [
       {
         "title": "Create the session",
@@ -1592,7 +1641,7 @@
     "title": "Capture a watermarked field photo",
     "summary": "Take a field photo with the location details you choose, then review the final image before saving or sharing.",
     "access": "Available to all users",
-    "note": "A watermark can reveal location, time, project or EOD details. Review the preview and your organization’s data-handling rules before saving or sharing.",
+    "note": "Shared working workflow shown with an explicitly labeled iPhone reference. Android capture for this specific screen remains unavailable. A watermark can reveal location, time, project or EOD details. Review the preview and your organization’s data-handling rules before saving or sharing.",
     "steps": [
       {
         "title": "Open the field camera",
@@ -1607,7 +1656,13 @@
         "body": "Take a new photo or choose one from the gallery. Check the preview, edit fields or retake if needed, then save to Photos or share the finished image."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/watermark-edit.png",
+      "assets/guides/screenshots/apple/en/watermark-preview.png"
+    ],
+    "demoReference": {
+      "platform": "iPhone"
+    }
   },
   {
     "platform": "android",

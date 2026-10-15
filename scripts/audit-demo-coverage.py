@@ -7,11 +7,11 @@ for platform in ['apple','android','web']:
  match=re.search(platform+r':\{([^}]*)\}',raw);links[platform]=dict(re.findall(r"'([^']+)':'([^']+)'",match[1])) if match else {}
 frames=set(re.findall(r'^\s*(\w+):\{image:',player,re.M));items=[]
 for item in catalog:
- screen=links[item['platform']].get(item['id']); row={'platform':item['platform'],'id':item['id'],'title':item['title'],'entryScreen':screen,'entryExists':screen in frames if screen else False,'captures':[{'path':p,'exists':(root/p).is_file()} for p in item['images']],'requiredGuideSteps':[{**step,'acceptance':'unverified individual workflow step'} for step in item['steps']], 'runtimeAcceptance':'not established by this source inventory'};items.append(row)
+ screen=links[item['platform']].get(item['id']); row={'platform':item['platform'],'id':item['id'],'title':item['title'],'entryScreen':screen,'entryExists':screen in frames if screen else False,'captures':[{'path':p,'exists':(root/p).is_file()} for p in item['images']],'requiredGuideSteps':[{**step,'acceptance':'unverified individual workflow step'} for step in item['steps']], 'referencePlatform':item.get('demoReference',{}).get('platform',item['platform']), 'runtimeAcceptance':'not established by this source inventory'};items.append(row)
 report={'scope':'Every feature currently advertised in the site catalog: 74 platform entries and 46 distinct topics. A link or screenshot is not functional acceptance. Existing tests do not establish whole-goal completion.','entries':items}
 (root/'docs/demo-coverage-inventory.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-lines=['# Interactive demo acceptance inventory','',report['scope'],'','Source inventory only. Every guide step remains listed in the JSON; none is silently dropped. Reuse a platform workflow only after inspecting its actual native behavior.','', '| Platform | Feature | Entry | Captures | Workflow acceptance |','| --- | --- | --- | --- | --- |']
-for item in items:lines.append(f"| {item['platform']} | {item['id']} | {item['entryScreen'] or 'MISSING'} | {len(item['captures'])} | requires individual verification |")
+lines=['# Interactive demo acceptance inventory','',report['scope'],'','Source inventory only. Every guide step remains listed in the JSON; none is silently dropped. Reuse a platform workflow only after inspecting its actual native behavior.','', '| Platform | Feature | Entry | Captures | Reference | Workflow acceptance |','| --- | --- | --- | --- | --- | --- |']
+for item in items:lines.append(f"| {item['platform']} | {item['id']} | {item['entryScreen'] or 'MISSING'} | {len(item['captures'])} | {item['referencePlatform']} | requires individual verification |")
 lines+=['','## Concrete remaining gates','']
 for platform in ['apple','android','web']:
  missing=[i['id'] for i in items if i['platform']==platform and not i['entryExists']]

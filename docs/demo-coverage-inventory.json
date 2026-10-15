@@ -38,15 +38,29 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
       "platform": "android",
       "id": "template-store",
       "title": "Template Store",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "store",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/app-walkthrough/store-all.png",
+          "exists": true
+        },
+        {
+          "path": "assets/app-walkthrough/store-nature.png",
+          "exists": true
+        },
+        {
+          "path": "assets/app-walkthrough/store-wildlife.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Browse",
@@ -64,6 +78,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "macOS",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -95,6 +110,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -131,6 +147,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -162,6 +179,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -198,6 +216,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -234,6 +253,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -270,6 +290,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -306,6 +327,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -342,6 +364,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -387,6 +410,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -423,6 +447,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -579,6 +604,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -615,6 +641,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -646,6 +673,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -682,6 +710,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -721,6 +750,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -757,6 +787,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -778,6 +809,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -814,6 +846,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -858,6 +891,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -893,6 +927,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -957,6 +992,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -992,6 +1028,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1023,6 +1060,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1054,6 +1092,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1085,6 +1124,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1120,6 +1160,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1151,6 +1192,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1187,6 +1229,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1218,6 +1261,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1249,6 +1293,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1285,6 +1330,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1321,6 +1367,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1357,6 +1404,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1393,6 +1441,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1429,6 +1478,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1465,6 +1515,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1506,6 +1557,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1517,6 +1569,10 @@
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/team-gnss.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/android/en/team-gnss-gnss.png",
           "exists": true
         }
       ],
@@ -1542,15 +1598,141 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
       "platform": "android",
       "id": "eod-safety",
       "title": "Use EOD and mine-action records safely",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "eodRecords",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/eod-safety.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-form.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-form-filled.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-list.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-detail.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-picker.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-picker-marked.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-map.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/spot-report-form-lower.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/mine-action-home.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-area.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-signatories.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-declaration.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-project.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/programme-rollup.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-empty.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-form.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-list-sample.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-detail.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-handover.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/evidence-history.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-classification.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-products.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-released.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/land-release-progression.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-saved-list.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-saved-detail.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/certificate-native-pdf-preview.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Choose the correct mode",
@@ -1573,6 +1755,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "iPhone",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1609,6 +1792,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1640,6 +1824,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1676,6 +1861,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1707,6 +1893,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1738,6 +1925,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1764,6 +1952,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1800,6 +1989,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1836,6 +2026,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1871,6 +2062,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1911,15 +2103,25 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
       "platform": "android",
       "id": "personal-workspace-sync",
       "title": "Sync one layer with your account",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "personalWorkspace",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/account-access.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/account-sign-in.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Open the layer editor",
@@ -1937,6 +2139,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "iPhone",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1968,6 +2171,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -1999,6 +2203,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2030,15 +2235,25 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
       "platform": "android",
       "id": "watermarked-photos",
       "title": "Capture a watermarked field photo",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "photoWatermark",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/watermark-edit.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/apple/en/watermark-preview.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Open the field camera",
@@ -2056,6 +2271,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "iPhone",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2087,6 +2303,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2123,6 +2340,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2154,6 +2372,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2180,6 +2399,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2220,6 +2440,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2260,6 +2481,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2291,6 +2513,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2322,6 +2545,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2378,6 +2602,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2409,6 +2634,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2440,6 +2666,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2471,6 +2698,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "web",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2492,6 +2720,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2513,6 +2742,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2539,6 +2769,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2560,6 +2791,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2581,6 +2813,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2602,6 +2835,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
+      "referencePlatform": "apple",
       "runtimeAcceptance": "not established by this source inventory"
     }
   ]
