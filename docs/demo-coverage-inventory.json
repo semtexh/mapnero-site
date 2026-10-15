@@ -1399,8 +1399,8 @@
       "platform": "android",
       "id": "collections-atlas",
       "title": "Use map collections and Atlas",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidCollections",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/collections-atlas.png",
@@ -2084,8 +2084,8 @@
       "platform": "android",
       "id": "raster-background",
       "title": "GeoTIFF / PDF background",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidBackground",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/raster-background.png",
@@ -2120,8 +2120,8 @@
       "platform": "android",
       "id": "map-layout-export",
       "title": "Create a GeoPDF map layout",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidMapLayout",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/map-layout-export.png",

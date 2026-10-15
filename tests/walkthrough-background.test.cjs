@@ -4,3 +4,4 @@ test('rotated geographic map corners remain immutable and preserve all four posi
 test('unknown, self-crossing, degenerate and wrapped extents fail explicitly',()=>{for(const c of [null,[[0,0],[1,1]],[[0,0],[1,1],[0,1],[1,0]],[[0,0],[0,0],[0,0],[0,0]],[[179,1],[-179,1],[-179,0],[179,0]],[[0,90],[1,90],[1,89],[0,89]]])assert.throws(()=>B.coordinates(c));});
 
 test('reset restores native Basemap preference at twenty percent visibility',()=>{assert.deepEqual(B.reset(),{mode:'basemap',opacity:.2});});
+test('Android visibility range includes transparent zero and refuses values above the native 75 percent maximum',()=>{const limits={min:0,max:.75};assert.deepEqual(B.settings('basemap',0,limits),{mode:'basemap',opacity:0});assert.deepEqual(B.settings('basemap',.75,limits),{mode:'basemap',opacity:.75});assert.throws(()=>B.settings('basemap',.8,limits));assert.throws(()=>B.settings('blank',-.01,limits));assert.throws(()=>B.settings('basemap',.2,{min:.5,max:.1}));});

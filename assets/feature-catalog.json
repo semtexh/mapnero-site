@@ -1060,7 +1060,7 @@
     "title": "Use map collections and Atlas",
     "summary": "Pan across adjoining PDF sheets as one atlas while keeping collection features available.",
     "access": "Collections Core+ · Atlas creation Pro",
-    "note": "Atlas creation requires an active downloaded raster MBTiles source and supports up to 64 north-up GeoPDF sheets.",
+    "note": "Actual Android library reference plus local imported and generated Atlas collections, order, actual sheet bounds and map-center browsing. Captured names/counts stay fixed. Shared collection-layer record editing, native save/restart and physical touch remain pending.",
     "steps": [
       {
         "title": "Create a collection",
@@ -1638,7 +1638,7 @@
     "title": "GeoTIFF / PDF background",
     "summary": "Choose geographic context or a clean canvas without changing the saved map.",
     "access": "GeoTIFF · GeoPDF",
-    "note": "A basemap helps you compare alignment; it is not proof of surveying accuracy. Online backgrounds may need internet. Keep the map downloaded and use Blank Canvas when geographic context is unnecessary.",
+    "note": "Actual Android More menu plus local saved GeoTIFF/supported GeoPDF/reference display. Basemap/Blank, native Android 0–75% visibility, file-extent fit and unchanged-source download work independently of the fixed capture. Other georeferences, native alignment/persistence and physical touch remain separate.",
     "steps": [
       {
         "title": "Open the georeferenced map",
@@ -1668,7 +1668,7 @@
     "title": "Create a GeoPDF map layout",
     "summary": "Turn the current Base Map view and its visible field records into a new, printable map product.",
     "access": "Pro",
-    "note": "A new map output — not PDF import. Use the Base Map, then open More → Create Map. This creates a new file; it does not edit or convert an imported PDF.",
+    "note": "Actual Android layout capture plus local seven paper sizes, orientation/metadata/elements, visible viewport PDF/PNG/JPEG and offline raster MBTiles Atlas. GeoPDF uses four-corner WGS84 metadata; native renderer/tier/Share Sheet and device acceptance remain separate.",
     "steps": [
       {
         "title": "Set the map view",
