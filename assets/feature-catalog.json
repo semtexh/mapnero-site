@@ -970,7 +970,7 @@
     "title": "Find your location and record in the background",
     "summary": "Follow your position and keep an accurate track while the screen is off.",
     "access": "Free limits · unlimited with Core+",
-    "note": "Android requires a visible foreground-service notification while a track records in the background. MapNero does not record secretly.",
+    "note": "Actual Android Boston map reference plus local London sample recording. Start/stop, pause/resume, sample advancement, active-time accounting, live path, finished GeoJSON and 3D review work on this page. Phone GPS, Android background disclosure/service notification, native save/restart and physical-device acceptance remain separate.",
     "steps": [
       {
         "title": "Centre and follow",
@@ -1000,7 +1000,7 @@
     "title": "Add pins and manage layers",
     "summary": "Save field locations, use clear symbols and control layer visibility and order.",
     "access": "Free · advanced tools may require Core+",
-    "note": "Actual Android layer-list and Boston map references plus local London practice: create/search/group/rename/hide/lock/activate layers, place a pin in the selected visible unlocked layer and download exact GeoJSON. Captured names/counts stay fixed; service layers, organization sharing, native persistence and Android recording remain pending.",
+    "note": "Actual Android layer-list and Boston map references plus local London practice: create/search/group/rename/hide/lock/activate layers, place a pin in the selected visible unlocked layer and download exact GeoJSON. Captured names/counts stay fixed; service layers, organization sharing, native persistence and background GPS acceptance remain pending.",
     "steps": [
       {
         "title": "Select a writable layer",

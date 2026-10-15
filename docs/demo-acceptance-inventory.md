@@ -39,7 +39,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | map-layout-export | mapLayout | 1 | requires individual verification |
 | android | quick-start | MISSING | 1 | requires individual verification |
 | android | import-map | androidImportMap | 1 | requires individual verification |
-| android | location-track | MISSING | 1 | requires individual verification |
+| android | location-track | androidMap | 1 | requires individual verification |
 | android | pins-layers | androidLayers | 1 | requires individual verification |
 | android | offline-maps | MISSING | 1 | requires individual verification |
 | android | collections-atlas | MISSING | 1 | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - apple: 2 unconnected entries: community-trails, apple-watch. Connected entries still require every individual guide step to be verified.
-- android: 21 unconnected entries: template-store, quick-start, location-track, offline-maps, collections-atlas, measure-cogo-buffer, buffer-workflow, team-gnss, eod-safety, route-builder, track-navigation, track-report, terrain-settings, community-trails, field-templates, personal-workspace-sync, team-session, settings-workspace, watermarked-photos, raster-background, map-layout-export. Connected entries still require every individual guide step to be verified.
+- android: 20 unconnected entries: template-store, quick-start, offline-maps, collections-atlas, measure-cogo-buffer, buffer-workflow, team-gnss, eod-safety, route-builder, track-navigation, track-report, terrain-settings, community-trails, field-templates, personal-workspace-sync, team-session, settings-workspace, watermarked-photos, raster-background, map-layout-export. Connected entries still require every individual guide step to be verified.
 - web: 6 unconnected entries: sign-in, edit-online, offline-snapshot, team-live, web-limits, organization-admin. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.

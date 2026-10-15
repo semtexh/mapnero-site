@@ -1291,8 +1291,8 @@
       "platform": "android",
       "id": "location-track",
       "title": "Find your location and record in the background",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidMap",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/location-track.png",
