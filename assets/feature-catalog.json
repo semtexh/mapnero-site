@@ -1210,7 +1210,7 @@
     "title": "Plan a route with waypoints",
     "summary": "Place route points with the centre crosshair, inspect the distance and save the route to a layer.",
     "access": "A visible, writable layer is required",
-    "note": "This connects the points you choose; it does not automatically find a road or a safe walking route. A drawn route is a plan, not a recorded trip with real travel times or speeds.",
+    "note": "Actual Android Boston route-builder reference plus working local route: center-map waypoint, edit/reorder/remove, clear/undo/redo, complete-route view, GeoJSON/CSV and 3D inspection. Captured points/counts stay fixed. Local distance is spherical straight segments; native WGS84 parity, native save/restart, elevation lookup and physical touch remain separate.",
     "steps": [
       {
         "title": "Open Route Builder",

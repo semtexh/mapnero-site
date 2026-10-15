@@ -4,3 +4,5 @@ test('route validation refuses missing coordinates, out of bounds and insufficie
 test('waypoint CSV preserves commas, quotes and numeric coordinates',()=>{const csv=R.csv([{name:'Bank, "A"',lat:51.5,lon:-.12}]);assert.match(csv,/"Bank, ""A""","-0.12","51.5"/);});
 
 test('waypoint CSV keeps formula-like names as text while longitude stays numeric',()=>{const csv=R.csv([{name:'=1+1',lat:0,lon:-.12}]);assert.match(csv,/"'=1\+1","-0.12","0"/);});
+
+test('renaming a waypoint preserves its coordinate source but manually moving it records the new source',()=>{const original={name:'WP 1',lat:51.5,lon:-.12,source:'selected working map center; not device GPS'};const rename=R.editedPoint(original,{name:'New name',lat:51.5,lon:-.12});assert.equal(rename.source,original.source);assert.equal(original.name,'WP 1');const moved=R.editedPoint(original,{name:'Moved',lat:51.6,lon:-.12});assert.equal(moved.source,'manually entered practice waypoint');assert.equal(original.lat,51.5);});

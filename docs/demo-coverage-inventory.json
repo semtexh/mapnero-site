@@ -1579,8 +1579,8 @@
       "platform": "android",
       "id": "route-builder",
       "title": "Plan a route with waypoints",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidRoute",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/route-builder.png",
