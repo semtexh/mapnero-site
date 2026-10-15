@@ -1895,6 +1895,7 @@
     "title": "Know what belongs on mobile",
     "summary": "Use Web GIS for organization viewing, editing and reporting, and mobile apps for field tracking and downloaded basemaps.",
     "access": "All web users",
+    "note": "Interactive workspace chooser opens the corresponding working practice workflows for mobile recording, downloaded maps, Web encrypted snapshot, personal layer sync, GIS editing, reports and GNSS log inspection. Actual Web map reference remains fixed. Hardware GPS/GNSS is not simulated as a Web capability.",
     "steps": [
       {
         "title": "Record tracks on mobile",

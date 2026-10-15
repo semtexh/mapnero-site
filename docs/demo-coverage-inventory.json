@@ -2406,8 +2406,8 @@
       "platform": "web",
       "id": "web-limits",
       "title": "Know what belongs on mobile",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "webCapabilities",
+      "entryExists": true,
       "captures": [],
       "requiredGuideSteps": [
         {
