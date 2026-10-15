@@ -1,0 +1,5 @@
+Real Innsbruck vector tiles from MapLibre demotiles, pinned commit 601ae60796ceceda2cbd2ed3d2ea92d17a84be4b
+Map data © OpenStreetMap contributors (ODbL): https://www.openstreetmap.org/copyright
+Schema © OpenMapTiles: https://openmaptiles.org/
+Upstream: https://github.com/maplibre/demotiles/tree/601ae60796ceceda2cbd2ed3d2ea92d17a84be4b/tiles-omt
+This bounded example has no street labels or icons. It is not a MapNero account download.

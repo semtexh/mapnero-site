@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "id": "innsbruck-omt-601ae60796ce",
+  "name": "Innsbruck \u00b7 real OSM sample",
+  "coverage": [
+    11.37,
+    47.25,
+    11.43,
+    47.29
+  ],
+  "default_bounds": [
+    11.386,
+    47.261,
+    11.407,
+    47.278
+  ],
+  "minzoom": 12,
+  "maxzoom": 14,
+  "source": {
+    "repository": "https://github.com/maplibre/demotiles",
+    "commit": "601ae60796ceceda2cbd2ed3d2ea92d17a84be4b",
+    "upstream_bounds": [
+      11,
+      47,
+      12,
+      48
+    ]
+  },
+  "attribution": "\u00a9 OpenMapTiles \u00b7 \u00a9 OpenStreetMap contributors",
+  "tiles": [
+    {
+      "z": 12,
+      "x": 2177,
+      "y": 1435,
+      "path": "tiles/12/2177/1435.pbf",
+      "bytes": 45022,
+      "sha256": "6228b52dd092381f19434b0dcb9359cf98ba1b14d32c4d021cc60513f28f4fc7",
+      "upstream_path": "tiles-omt/12/2177/1435.pbf",
+      "upstream_sha256": "6228b52dd092381f19434b0dcb9359cf98ba1b14d32c4d021cc60513f28f4fc7"
+    },
+    {
+      "z": 12,
+      "x": 2177,
+      "y": 1436,
+      "path": "tiles/12/2177/1436.pbf",
+      "bytes": 69067,
+      "sha256": "93a3c51170b478e0eb87946d6beef25dca2c098d9f5cd64b2960dfc5b710f22a",
+      "upstream_path": "tiles-omt/12/2177/1436.pbf",
+      "upstream_sha256": "93a3c51170b478e0eb87946d6beef25dca2c098d9f5cd64b2960dfc5b710f22a"
+    },
+    {
+      "z": 12,
+      "x": 2178,
+      "y": 1435,
+      "path": "tiles/12/2178/1435.pbf",
+      "bytes": 53356,
+      "sha256": "632675fb3a895d57a0f2f188b739a90e4844814c211f68a29043b5f365455ccb",
+      "upstream_path": "tiles-omt/12/2178/1435.pbf",
+      "upstream_sha256": "632675fb3a895d57a0f2f188b739a90e4844814c211f68a29043b5f365455ccb"
+    },
+    {
+      "z": 12,
+      "x": 2178,
+      "y": 1436,
+      "path": "tiles/12/2178/1436.pbf",
+      "bytes": 46314,
+      "sha256": "107f8c54510151ccdbf8886dcbe2b5b7928ba2b167c28518803b47a72d13aa08",
+      "upstream_path": "tiles-omt/12/2178/1436.pbf",
+      "upstream_sha256": "107f8c54510151ccdbf8886dcbe2b5b7928ba2b167c28518803b47a72d13aa08"
+    },
+    {
+      "z": 13,
+      "x": 4354,
+      "y": 2871,
+      "path": "tiles/13/4354/2871.pbf",
+      "bytes": 36623,
+      "sha256": "31c79992cc51e93d22526234439110cdffa5bb401c9c07f416fdbc776fe265ba",
+      "upstream_path": "tiles-omt/13/4354/2871.pbf",
+      "upstream_sha256": "31c79992cc51e93d22526234439110cdffa5bb401c9c07f416fdbc776fe265ba"
+    },
+    {
+      "z": 13,
+      "x": 4354,
+      "y": 2872,
+      "path": "tiles/13/4354/2872.pbf",
+      "bytes": 61844,
+      "sha256": "425a8fc7ef6735291f8c4a1cff1a480c9a6ffeab99cb3e10228657fed71651ae",
+      "upstream_path": "tiles-omt/13/4354/2872.pbf",
+      "upstream_sha256": "425a8fc7ef6735291f8c4a1cff1a480c9a6ffeab99cb3e10228657fed71651ae"
+    },
+    {
+      "z": 13,
+      "x": 4355,
+      "y": 2871,
+      "path": "tiles/13/4355/2871.pbf",
+      "bytes": 52186,
+      "sha256": "522e26f94950f4080354a872a9ee7a6830025a73aa48654ccce017f303ddfba4",
+      "upstream_path": "tiles-omt/13/4355/2871.pbf",
+      "upstream_sha256": "522e26f94950f4080354a872a9ee7a6830025a73aa48654ccce017f303ddfba4"
+    },
+    {
+      "z": 13,
+      "x": 4355,
+      "y": 2872,
+      "path": "tiles/13/4355/2872.pbf",
+      "bytes": 92290,
+      "sha256": "305fd4a5b53486a02d3ebdfda9217c591e634f7b3628b83ffd20ac0b0eb13039",
+      "upstream_path": "tiles-omt/13/4355/2872.pbf",
+      "upstream_sha256": "305fd4a5b53486a02d3ebdfda9217c591e634f7b3628b83ffd20ac0b0eb13039"
+    },
+    {
+      "z": 13,
+      "x": 4356,
+      "y": 2871,
+      "path": "tiles/13/4356/2871.pbf",
+      "bytes": 44437,
+      "sha256": "429e9ea628491a416bec0c60fb02c49d2f7473cc58a118a8d3428a3b63456903",
+      "upstream_path": "tiles-omt/13/4356/2871.pbf",
+      "upstream_sha256": "429e9ea628491a416bec0c60fb02c49d2f7473cc58a118a8d3428a3b63456903"
+    },
+    {
+      "z": 13,
+      "x": 4356,
+      "y": 2872,
+      "path": "tiles/13/4356/2872.pbf",
+      "bytes": 55474,
+      "sha256": "8bbf6598f6e701b6acce044d36337eb5bf089f8de21ce4621279c2ed373c23c9",
+      "upstream_path": "tiles-omt/13/4356/2872.pbf",
+      "upstream_sha256": "8bbf6598f6e701b6acce044d36337eb5bf089f8de21ce4621279c2ed373c23c9"
+    },
+    {
+      "z": 14,
+      "x": 8709,
+      "y": 5743,
+      "path": "tiles/14/8709/5743.pbf",
+      "bytes": 30949,
+      "sha256": "b7b565553d2a796234e26b3e5b85a673aa61d9025a624f7b787c378767f24000",
+      "upstream_path": "tiles-omt/14/8709/5743.pbf",
+      "upstream_sha256": "b7b565553d2a796234e26b3e5b85a673aa61d9025a624f7b787c378767f24000"
+    },
+    {
+      "z": 14,
+      "x": 8709,
+      "y": 5744,
+      "path": "tiles/14/8709/5744.pbf",
+      "bytes": 153382,
+      "sha256": "e53fa49c315374f7ed00731e9e6733664b57d0f6a51a5c05f9ebfa58c7485465",
+      "upstream_path": "tiles-omt/14/8709/5744.pbf",
+      "upstream_sha256": "e53fa49c315374f7ed00731e9e6733664b57d0f6a51a5c05f9ebfa58c7485465"
+    },
+    {
+      "z": 14,
+      "x": 8709,
+      "y": 5745,
+      "path": "tiles/14/8709/5745.pbf",
+      "bytes": 188460,
+      "sha256": "49f168280faf9b6f4752abf6415255c94a9c8e57232efba386b6f7c1f914c4da",
+      "upstream_path": "tiles-omt/14/8709/5745.pbf",
+      "upstream_sha256": "49f168280faf9b6f4752abf6415255c94a9c8e57232efba386b6f7c1f914c4da"
+    },
+    {
+      "z": 14,
+      "x": 8710,
+      "y": 5743,
+      "path": "tiles/14/8710/5743.pbf",
+      "bytes": 87550,
+      "sha256": "79910e1737a23146026e693cb2cab1e7354799d8822c79f4e7baee0161a0e041",
+      "upstream_path": "tiles-omt/14/8710/5743.pbf",
+      "upstream_sha256": "79910e1737a23146026e693cb2cab1e7354799d8822c79f4e7baee0161a0e041"
+    },
+    {
+      "z": 14,
+      "x": 8710,
+      "y": 5744,
+      "path": "tiles/14/8710/5744.pbf",
+      "bytes": 372486,
+      "sha256": "005696bb48fc984c1691944f7b692b4dafff314dbc07380289e9b9a607225c49",
+      "upstream_path": "tiles-omt/14/8710/5744.pbf",
+      "upstream_sha256": "005696bb48fc984c1691944f7b692b4dafff314dbc07380289e9b9a607225c49"
+    },
+    {
+      "z": 14,
+      "x": 8710,
+      "y": 5745,
+      "path": "tiles/14/8710/5745.pbf",
+      "bytes": 310068,
+      "sha256": "ae78b0b9ad90fca549f9939c9b647315e58b910f9128a3418932f9e5885f93e4",
+      "upstream_path": "tiles-omt/14/8710/5745.pbf",
+      "upstream_sha256": "ae78b0b9ad90fca549f9939c9b647315e58b910f9128a3418932f9e5885f93e4"
+    },
+    {
+      "z": 14,
+      "x": 8711,
+      "y": 5743,
+      "path": "tiles/14/8711/5743.pbf",
+      "bytes": 108640,
+      "sha256": "a46025ccba6fa4109cfca1a90cc42ef7c5b1f96c496684fbb5f6eec508b7bcb1",
+      "upstream_path": "tiles-omt/14/8711/5743.pbf",
+      "upstream_sha256": "a46025ccba6fa4109cfca1a90cc42ef7c5b1f96c496684fbb5f6eec508b7bcb1"
+    },
+    {
+      "z": 14,
+      "x": 8711,
+      "y": 5744,
+      "path": "tiles/14/8711/5744.pbf",
+      "bytes": 254831,
+      "sha256": "30a3688e651a405718983639669bfb529a10b44a5aee41c59eefdc1152051a3c",
+      "upstream_path": "tiles-omt/14/8711/5744.pbf",
+      "upstream_sha256": "30a3688e651a405718983639669bfb529a10b44a5aee41c59eefdc1152051a3c"
+    },
+    {
+      "z": 14,
+      "x": 8711,
+      "y": 5745,
+      "path": "tiles/14/8711/5745.pbf",
+      "bytes": 197088,
+      "sha256": "74bf56dce375e9361bccb6263c536842c9918e80bc4c44f02fb0bab15b2ba064",
+      "upstream_path": "tiles-omt/14/8711/5745.pbf",
+      "upstream_sha256": "74bf56dce375e9361bccb6263c536842c9918e80bc4c44f02fb0bab15b2ba064"
+    },
+    {
+      "z": 14,
+      "x": 8712,
+      "y": 5743,
+      "path": "tiles/14/8712/5743.pbf",
+      "bytes": 100470,
+      "sha256": "de6f2f55769b2b88710ec4f9b6b307a3c23ed1ab567a6015721ca980d13a84d2",
+      "upstream_path": "tiles-omt/14/8712/5743.pbf",
+      "upstream_sha256": "de6f2f55769b2b88710ec4f9b6b307a3c23ed1ab567a6015721ca980d13a84d2"
+    },
+    {
+      "z": 14,
+      "x": 8712,
+      "y": 5744,
+      "path": "tiles/14/8712/5744.pbf",
+      "bytes": 144446,
+      "sha256": "f8c3e73f57e05be873e3bb33aebe11836e5e2ac66a04b780bfb3164626452020",
+      "upstream_path": "tiles-omt/14/8712/5744.pbf",
+      "upstream_sha256": "f8c3e73f57e05be873e3bb33aebe11836e5e2ac66a04b780bfb3164626452020"
+    },
+    {
+      "z": 14,
+      "x": 8712,
+      "y": 5745,
+      "path": "tiles/14/8712/5745.pbf",
+      "bytes": 134311,
+      "sha256": "54aa32c3d7a4835392e94615ab53330eb3070aa3c80cf3bcd0a399d7b2bdc7c3",
+      "upstream_path": "tiles-omt/14/8712/5745.pbf",
+      "upstream_sha256": "54aa32c3d7a4835392e94615ab53330eb3070aa3c80cf3bcd0a399d7b2bdc7c3"
+    }
+  ]
+}

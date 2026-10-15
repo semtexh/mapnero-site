@@ -1411,8 +1411,8 @@
       "platform": "android",
       "id": "offline-maps",
       "title": "Download and test an offline map",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidOffline",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/offline-maps.png",

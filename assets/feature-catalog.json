@@ -205,6 +205,7 @@
     "title": "Download a map for offline use",
     "summary": "Prepare a map region before leaving mobile or Wi-Fi coverage.",
     "access": "1 region Free · unlimited Core+",
+    "note": "Actual native/Flutter offline reference with separate real Innsbruck OpenMapTiles/OSM data. Select a rectangle or visible sample area, choose levels 12–14, review exact tile/byte estimate, prepare with hash/readback checks, cancel without replacing the previous completed region, and reopen a cache-only map viewer. Its shell and tiles have no runtime network fallback. The bounded sample has no labels and is not a live account region; browser storage may be evicted. Imported image/PDF/KMZ/GeoTIFF offline preparation remains a separate option.",
     "steps": [
       {
         "title": "Open Offline Maps",
@@ -1038,6 +1039,7 @@
     "title": "Download and test an offline map",
     "summary": "Save a region before field work and confirm it works without a network.",
     "access": "Free limit · unlimited Core+",
+    "note": "Actual native/Flutter offline reference with separate real Innsbruck OpenMapTiles/OSM data. Select a rectangle or visible sample area, choose levels 12–14, review exact tile/byte estimate, prepare with hash/readback checks, cancel without replacing the previous completed region, and reopen a cache-only map viewer. Its shell and tiles have no runtime network fallback. The bounded sample has no labels and is not a live account region; browser storage may be evicted. Imported image/PDF/KMZ/GeoTIFF offline preparation remains a separate option.",
     "steps": [
       {
         "title": "Open Offline Maps",

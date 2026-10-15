@@ -41,7 +41,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | import-map | androidImportMap | 1 | android | requires individual verification |
 | android | location-track | androidMap | 1 | android | requires individual verification |
 | android | pins-layers | androidLayers | 1 | android | requires individual verification |
-| android | offline-maps | MISSING | 1 | android | requires individual verification |
+| android | offline-maps | androidOffline | 1 | android | requires individual verification |
 | android | collections-atlas | androidCollections | 1 | android | requires individual verification |
 | android | measure-cogo-buffer | androidMeasure | 1 | android | requires individual verification |
 | android | buffer-workflow | androidBuffer | 1 | android | requires individual verification |
@@ -84,7 +84,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 ## Concrete remaining gates
 
 - apple: 1 unconnected entries: apple-watch. Connected entries still require every individual guide step to be verified.
-- android: 1 unconnected entries: offline-maps. Connected entries still require every individual guide step to be verified.
+- android: 0 unconnected entries: none. Connected entries still require every individual guide step to be verified.
 - web: 0 unconnected entries: none. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
@@ -94,4 +94,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Geometry scope
 
-122 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
+124 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
