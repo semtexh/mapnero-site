@@ -1090,7 +1090,7 @@
     "title": "Measure, construct and buffer",
     "summary": "Read live distance, construct by UTM grid bearing, and save editable buffer polygons.",
     "access": "Measure Free · Buffer Pro",
-    "note": "COGO currently uses UTM grid north. Do not enter a magnetic bearing as if it were a grid bearing.",
+    "note": "Actual Android Kuwait measurement reference plus working London crosshair/manual vertices, live-versus-committed preview, distance/area/radius/true-azimuth calculations, undo/cancel, local save and GeoJSON. Saved measurements feed the working Buffer tool. COGO opens an explicitly labeled iPhone reference/calculator. Date-line footprint export and large/polar circle export refuse explicitly while numeric results remain available. Native PDF/measurement submode wiring, Android COGO captures, native persistence and physical touch remain separate.",
     "steps": [
       {
         "title": "Measure distance or area",

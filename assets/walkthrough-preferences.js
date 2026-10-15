@@ -25,5 +25,5 @@
  render();return{focus:key=>{const target=key==='appearance'?theme:controls[key];target?.focus();target?.scrollIntoView({block:'center'});},cleanup:()=>{alive=false;}};
  }
  function mountReadout(parent){let alive=true,position={lat:51.5074,lon:-.1278};const f=group(parent,'Your local coordinate display'),text=document.createElement('p');text.setAttribute('role','status');f.append(text);function render(){if(!alive)return;try{text.textContent=modeName()+' · Map center: '+E.coordinate(position,model.snapshot().settings.coordinateFormat)+'. Map position, not phone GPS.';}catch(error){text.textContent=error.message;}}render();return{update:p=>{position=p;render();},cleanup:()=>{alive=false;}};}
- return{mountMode,mountSettings,mountReadout,chooseMode:id=>model.apply(id),distance:value=>E.distance(value,model.snapshot().settings.distanceUnit),reset:()=>{model=E.create();appearance='system';}};
+ return{mountMode,mountSettings,mountReadout,chooseMode:id=>model.apply(id),distance:value=>E.distance(value,model.snapshot().settings.distanceUnit),area:value=>E.area(value,model.snapshot().settings.areaUnit),reset:()=>{model=E.create();appearance='system';}};
 });

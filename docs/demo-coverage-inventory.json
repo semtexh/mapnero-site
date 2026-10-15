@@ -1435,8 +1435,8 @@
       "platform": "android",
       "id": "measure-cogo-buffer",
       "title": "Measure, construct and buffer",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidMeasure",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/measure-cogo-buffer.png",
