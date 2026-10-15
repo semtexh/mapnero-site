@@ -1327,8 +1327,8 @@
       "platform": "android",
       "id": "pins-layers",
       "title": "Add pins and manage layers",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidLayers",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/pins-layers.png",

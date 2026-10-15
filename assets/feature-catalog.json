@@ -1000,7 +1000,7 @@
     "title": "Add pins and manage layers",
     "summary": "Save field locations, use clear symbols and control layer visibility and order.",
     "access": "Free · advanced tools may require Core+",
-    "note": "A hidden, locked, trashed or WMS/WMTS layer cannot receive new pins or editable features.",
+    "note": "Actual Android layer-list and Boston map references plus local London practice: create/search/group/rename/hide/lock/activate layers, place a pin in the selected visible unlocked layer and download exact GeoJSON. Captured names/counts stay fixed; service layers, organization sharing, native persistence and Android recording remain pending.",
     "steps": [
       {
         "title": "Select a writable layer",
