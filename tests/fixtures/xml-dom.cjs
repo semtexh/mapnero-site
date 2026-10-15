@@ -1,0 +1,4 @@
+// Independent standard-library XML parsing for Node tests; the app uses DOMParser.
+const {execFileSync}=require('node:child_process');
+function parseXML(xml){const raw=JSON.parse(execFileSync('python3',['-c',"import sys,json,xml.etree.ElementTree as E\ndef node(e): return {'tag':e.tag,'attrs':e.attrib,'text':''.join(e.itertext()),'children':[node(c) for c in e]}\nprint(json.dumps(node(E.fromstring(sys.stdin.read()))))"],{input:xml,encoding:'utf8',maxBuffer:4000000}));function wrap(n){const e={nodeType:1,localName:n.tag.split('}').at(-1),textContent:n.text,getAttribute:k=>n.attrs[k]??null,childNodes:n.children.map(wrap)};e.getElementsByTagName=name=>e.childNodes.flatMap(c=>[...(c.localName===name?[c]:[]),...c.getElementsByTagName(name)]);return e;}const root=wrap(raw);return{documentElement:root,getElementsByTagName:name=>[...(root.localName===name?[root]:[]),...root.getElementsByTagName(name)]};}
+module.exports={parseXML};
