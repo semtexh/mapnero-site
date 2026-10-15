@@ -1982,7 +1982,7 @@
     "title": "Administer an organization",
     "summary": "Invite the right people, choose roles carefully and verify that permanent field layers are shared before deployment.",
     "access": "Organization owner or administrator",
-    "note": "The web workspace signs in to an existing invited account. It does not create an organization account for an uninvited email address.",
+    "note": "Actual blank Web Admin control crops exclude private member data. Separate local sample invitations, code/email binding, expiry/revoke/renew, seat reservations, limited-use join codes, membership roles/removal, read-only role guard and activity/state download work in this tab. No email, real account/onboarding, organization, credentials or license is changed.",
     "steps": [
       {
         "title": "Open Administration",
@@ -2001,7 +2001,10 @@
         "body": "Use the pending list to cancel an unused invitation. Use Manage in the members list to change a role or remove a person. Do this before a device or account leaves the project."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/web/en/organization-admin-join.png",
+      "assets/guides/screenshots/web/en/organization-admin-invite.png"
+    ]
   },
   {
     "platform": "apple",

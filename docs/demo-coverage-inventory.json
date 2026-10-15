@@ -2673,9 +2673,18 @@
       "platform": "web",
       "id": "organization-admin",
       "title": "Administer an organization",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "webOrganization",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/web/en/organization-admin-join.png",
+          "exists": true
+        },
+        {
+          "path": "assets/guides/screenshots/web/en/organization-admin-invite.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Open Administration",
