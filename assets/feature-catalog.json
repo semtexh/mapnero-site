@@ -1805,7 +1805,7 @@
     "title": "Prepare encrypted offline viewing",
     "summary": "Create a protected read-only snapshot for viewing organization GIS data without a connection.",
     "access": "Organization access",
-    "note": "The web offline workspace is encrypted and read-only. It does not download mobile basemap regions, edit data or synchronize while offline.",
+    "note": "Actual Web GIS map reference with separate working AES-GCM/PBKDF2 encrypted practice file and self-contained offline HTML reader. Passphrase, file reimport, read-only coordinate plot/records, manual/background/inactivity lock and 24-hour expiry work locally. Practice format is not a signed production snapshot; native offline panel capture and production issuer/access control are not claimed.",
     "steps": [
       {
         "title": "Open Offline Access",

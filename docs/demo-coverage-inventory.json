@@ -2288,8 +2288,8 @@
       "platform": "web",
       "id": "offline-snapshot",
       "title": "Prepare encrypted offline viewing",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "webSnapshot",
+      "entryExists": true,
       "captures": [],
       "requiredGuideSteps": [
         {
