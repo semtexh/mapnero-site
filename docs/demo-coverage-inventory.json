@@ -1842,9 +1842,13 @@
       "platform": "android",
       "id": "field-templates",
       "title": "Collect field data with a template",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidFieldLibrary",
+      "entryExists": true,
       "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/field-templates-library.png",
+          "exists": true
+        },
         {
           "path": "assets/guides/screenshots/android/en/field-templates.png",
           "exists": true

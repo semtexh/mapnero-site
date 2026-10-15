@@ -1431,7 +1431,7 @@
     "title": "Collect field data with a template",
     "summary": "Start a reusable field form, capture a record and find its results layer.",
     "access": "Manual templates are free · AI and import options depend on tier",
-    "note": "A template guides collection; it does not turn an unreferenced image into a map or replace a project's data-validation procedure.",
+    "note": "Real Android library and Vegetation Survey form references plus separate local library search/category, required Species, illustrative cover choices, observation date, optional London sample, submit/archive/reopen and exact JSON/GeoJSON. Records survive walkthrough navigation in this tab, not page reload. Native result detail, live template/account library, companion layer, photos and cloud persistence are not claimed.",
     "steps": [
       {
         "title": "Find the template",
@@ -1447,6 +1447,7 @@
       }
     ],
     "images": [
+      "assets/guides/screenshots/android/en/field-templates-library.png",
       "assets/guides/screenshots/android/en/field-templates.png"
     ]
   },
