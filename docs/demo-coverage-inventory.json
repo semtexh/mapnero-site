@@ -784,8 +784,8 @@
       "platform": "apple",
       "id": "community-trails",
       "title": "Use Community Trails",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "communityTrails",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/apple/en/community-trails.png",
@@ -1765,8 +1765,8 @@
       "platform": "android",
       "id": "community-trails",
       "title": "Use Community Trails",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "androidCommunity",
+      "entryExists": true,
       "captures": [
         {
           "path": "assets/guides/screenshots/android/en/community-trails.png",

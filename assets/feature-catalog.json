@@ -575,7 +575,7 @@
     "title": "Use Community Trails",
     "summary": "Find shared routes, save a local copy, or publish one of your own tracks.",
     "access": "Browse: signed-in session · Publish: confirmed Core+ account",
-    "note": "Public routes may be inaccurate, outdated or unsafe. Check local access rules, conditions and official sources before field use.",
+    "note": "Real platform catalogue capture with separate synthetic London routes. Local search/sort/preview/rating, independent GeoJSON copies, sample publishing with eligibility/safety controls, report/block/remove work in the page. No live community, subscription or moderation request is sent; private source fields and media are excluded.",
     "steps": [
       {
         "title": "Open the catalogue",
@@ -1369,7 +1369,7 @@
     "title": "Use Community Trails",
     "summary": "Find shared routes, save a local copy, or publish one of your own tracks.",
     "access": "Browse: signed-in session · Publish: confirmed Core+ account",
-    "note": "Public routes may be inaccurate, outdated or unsafe. Check local access rules, conditions and official sources before field use.",
+    "note": "Real platform catalogue capture with separate synthetic London routes. Local search/sort/preview/rating, independent GeoJSON copies, sample publishing with eligibility/safety controls, report/block/remove work in the page. No live community, subscription or moderation request is sent; private source fields and media are excluded.",
     "steps": [
       {
         "title": "Open the catalogue",
