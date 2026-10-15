@@ -265,7 +265,7 @@
     "title": "Measure, draw a bearing and create a buffer",
     "summary": "Measure distance or area, construct a line by grid bearing, and create persistent buffer polygons.",
     "access": "Measure Free · Buffer Pro",
-    "note": "The current COGO bearing is measured from UTM grid north. It is not a magnetic or true-north bearing.",
+    "note": "Actual iPhone fixed measurement reference plus working local WGS84 distance/true azimuth, approximate area/radius, crosshair or entered vertices, undo/cancel, save/map/GeoJSON and Buffer/COGO continuation. The captured checkmark saves the current separate practice measurement; it does not copy the screenshot distance.",
     "steps": [
       {
         "title": "Measure on the map",
@@ -475,7 +475,7 @@
     "title": "Read and share a track report",
     "summary": "Review statistics and graphs, then prepare a PDF when your plan includes detailed reports.",
     "access": "Detailed report and PDF: Core or higher",
-    "note": "Use a recorded track for travel analysis. A manually drawn route does not contain reliable journey times or speeds. Check data and units before sharing.",
+    "note": "Actual native captured report remains available as a clearly labeled fixed reference. A separate calculator reads the finished London practice recording or one local GeoJSON line and produces its own WGS84 distance, explicit time/speed/altitude metrics, units and PDF/source downloads. Captured statistics are not substituted for missing source measurements.",
     "steps": [
       {
         "title": "Open Analysis or Report",
@@ -563,7 +563,7 @@
     "title": "Inspect point clusters",
     "summary": "Explore point distribution in the EOD-oriented Cluster Analysis screen, not visual pin grouping.",
     "access": "Pro+",
-    "note": "DBSCAN groups nearby points. A cluster alone does not establish its cause; results depend on the records supplied. The EOD-specific estimates and risk labels are not independently verified field conclusions.",
+    "note": "Shared working cluster workflow uses the explicitly labeled actual Android reference. Local point selection, epsilon/minimum count, cluster/noise result, geometry export and the real map are separate from account data. An Apple cluster screen is not presented as captured.",
     "steps": [
       {
         "title": "Choose the layer",
@@ -574,7 +574,12 @@
         "body": "Open the layer’s (…) menu and choose Cluster Analysis. Pro or higher is required. Check the input point count before interpreting the distribution."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/android/en/cluster-analysis.png"
+    ],
+    "demoReference": {
+      "platform": "Android"
+    }
   },
   {
     "platform": "apple",
@@ -2089,23 +2094,20 @@
     "platform": "apple",
     "platformLabel": "Apple workflow preview",
     "id": "apple-watch",
-    "title": "Try the Watch field controls",
-    "summary": "Start a simulated Watch track, advance a position and save a pin.",
+    "title": "Apple Watch companion",
+    "summary": "Apple Watch field controls are part of the app; their interactive walkthrough is deferred in this preview.",
     "access": "Website sample; app access depends on tool and plan.",
-    "note": "This is a local workflow demo. It does not claim hardware connection, live communication or every app option.",
+    "note": "Deferred at the user request. Revisit when the user asks to resume the Watch preview.",
     "steps": [
       {
-        "title": "Try the tool",
-        "body": "Start a simulated Watch track, advance a position and save a pin."
-      },
-      {
-        "title": "Inspect the result",
-        "body": "Change the sample input and run the tool again."
+        "title": "Deferred walkthrough",
+        "body": "The Watch walkthrough is deferred at the user request. Revisit it when the user asks to resume the companion-screen preview."
       }
     ],
     "images": [],
     "extra": true,
-    "source": "MapNeroWatch/Views/TrackView.swift"
+    "source": "MapNeroWatch/Views/TrackView.swift",
+    "deferred": true
   },
   {
     "platform": "apple",

@@ -18,7 +18,7 @@
  function renderDetail(t){
  detail.replaceChildren(el('span',t.platformLabel,'explorer-eyebrow'),el('h3',t.title),el('p',t.summary),el('p',t.access,'explorer-access'));
  if(t.images.length){const gallery=el('div',null,'explorer-captures');t.images.forEach(src=>{const img=el('img');img.src=src;img.alt=`${t.demoReference?.platform||t.platformLabel}: ${t.title}`;img.loading='lazy';gallery.append(img);});detail.append(gallery,el('p',t.demoReference?'Actual '+t.demoReference.platform+' app reference':'Actual MapNero app screens','explorer-caption'));}
- else detail.append(el('p','This feature is awaiting its app screen capture.','explorer-caption'));
+ else detail.append(el('p',t.deferred?'This walkthrough is deferred for the current preview.':'This feature is awaiting its app screen capture.','explorer-caption'));
  const screen=playable[t.platform]?.[t.id];if(screen){const tryScreen=el('button',t.demoReference?'Try shared workflow · '+t.demoReference.platform+' reference →':'Try this app screen →','explorer-try-screen');tryScreen.type='button';tryScreen.onclick=()=>document.dispatchEvent(new CustomEvent('mapnero:open-screen',{detail:screen}));detail.append(tryScreen);}
  const steps=el('ol',null,'explorer-steps');t.steps.forEach(s=>{const li=el('li');li.append(el('strong',s.title),el('p',s.body));steps.append(li);});detail.append(steps);
  if(t.note)detail.append(el('p',t.note,'explorer-note'));

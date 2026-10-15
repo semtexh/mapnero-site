@@ -796,7 +796,12 @@
       "title": "Inspect point clusters",
       "entryScreen": "androidClusters",
       "entryExists": true,
-      "captures": [],
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/android/en/cluster-analysis.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Choose the layer",
@@ -809,7 +814,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "referencePlatform": "apple",
+      "referencePlatform": "Android",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2794,19 +2799,14 @@
     {
       "platform": "apple",
       "id": "apple-watch",
-      "title": "Try the Watch field controls",
+      "title": "Apple Watch companion",
       "entryScreen": null,
       "entryExists": false,
       "captures": [],
       "requiredGuideSteps": [
         {
-          "title": "Try the tool",
-          "body": "Start a simulated Watch track, advance a position and save a pin.",
-          "acceptance": "unverified individual workflow step"
-        },
-        {
-          "title": "Inspect the result",
-          "body": "Change the sample input and run the tool again.",
+          "title": "Deferred walkthrough",
+          "body": "The Watch walkthrough is deferred at the user request. Revisit it when the user asks to resume the companion-screen preview.",
           "acceptance": "unverified individual workflow step"
         }
       ],

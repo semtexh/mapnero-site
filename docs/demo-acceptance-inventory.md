@@ -24,7 +24,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | track-report | report | 1 | apple | requires individual verification |
 | apple | track-navigation | trackFollowOptions | 3 | apple | requires individual verification |
 | apple | terrain-contours | terrainContours | 1 | apple | requires individual verification |
-| apple | cluster-analysis | androidClusters | 0 | apple | requires individual verification |
+| apple | cluster-analysis | androidClusters | 1 | Android | requires individual verification |
 | apple | community-trails | communityTrails | 1 | apple | requires individual verification |
 | apple | attribute-forms | layerAttributes | 3 | apple | requires individual verification |
 | apple | field-templates | record | 2 | apple | requires individual verification |
@@ -81,15 +81,15 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | apple | template-import | templateImport | 0 | apple | requires individual verification |
 | apple | team-chat | team | 0 | apple | requires individual verification |
 
-## Concrete remaining gates
+## Connection inventory (not runtime acceptance)
 
 - apple: 1 unconnected entries: apple-watch. Connected entries still require every individual guide step to be verified.
 - android: 0 unconnected entries: none. Connected entries still require every individual guide step to be verified.
 - web: 0 unconnected entries: none. Connected entries still require every individual guide step to be verified.
-- Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
+- Watch is deferred at the user request; revisit when the user asks to resume its preview. The requested marketing demo uses local sample data and real app references. It does not establish production cloud authorization, device GPS or native storage parity.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
-- Encrypted offline snapshot: current live GIS UI did not expose the panel in the 2026-10-14 inspection. Native setup/capture/acceptance remains pending.
-- Style templates have generated/downloadable rule schemas; native stylePreview application is a separate open gate.
+- Encrypted snapshot uses a real Web map reference and a separate working encrypted file/reader; an unavailable native snapshot-panel capture is not represented as present.
+- Style-template output is a generated/downloadable rule schema; native application of those rules is not represented as demonstrated here.
 - Preview and publication are separate; no publication is established by this inventory.
 
 ## Geometry scope
