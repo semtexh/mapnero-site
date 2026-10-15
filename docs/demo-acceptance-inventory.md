@@ -65,13 +65,13 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | android | geofences | androidGeofence | 1 | android | requires individual verification |
 | android | raster-background | androidBackground | 1 | android | requires individual verification |
 | android | map-layout-export | androidMapLayout | 1 | android | requires individual verification |
-| web | sign-in | MISSING | 0 | web | requires individual verification |
+| web | sign-in | accountSignIn | 1 | iPhone | requires individual verification |
 | web | layers-features | webGIS | 2 | web | requires individual verification |
 | web | import-export | webImportMenu | 2 | web | requires individual verification |
 | web | edit-online | webEdit | 0 | web | requires individual verification |
 | web | offline-snapshot | webSnapshot | 0 | web | requires individual verification |
 | web | reports | webReports | 6 | web | requires individual verification |
-| web | team-live | MISSING | 0 | web | requires individual verification |
+| web | team-live | webTeamLive | 1 | web | requires individual verification |
 | web | web-limits | webCapabilities | 0 | web | requires individual verification |
 | web | organization-admin | webOrganization | 2 | web | requires individual verification |
 | apple | coordinate-formats | cogo | 0 | apple | requires individual verification |
@@ -85,7 +85,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 - apple: 1 unconnected entries: apple-watch. Connected entries still require every individual guide step to be verified.
 - android: 1 unconnected entries: offline-maps. Connected entries still require every individual guide step to be verified.
-- web: 2 unconnected entries: sign-in, team-live. Connected entries still require every individual guide step to be verified.
+- web: 0 unconnected entries: none. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
 - Encrypted offline snapshot: current live GIS UI did not expose the panel in the 2026-10-14 inspection. Native setup/capture/acceptance remains pending.
@@ -94,4 +94,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Geometry scope
 
-121 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
+122 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.

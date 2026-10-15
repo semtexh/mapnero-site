@@ -2379,9 +2379,14 @@
       "platform": "web",
       "id": "sign-in",
       "title": "Sign in and open your workspace",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "accountSignIn",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/apple/en/account-sign-in.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Open app.mapnero.com",
@@ -2399,7 +2404,7 @@
           "acceptance": "unverified individual workflow step"
         }
       ],
-      "referencePlatform": "web",
+      "referencePlatform": "iPhone",
       "runtimeAcceptance": "not established by this source inventory"
     },
     {
@@ -2609,9 +2614,14 @@
       "platform": "web",
       "id": "team-live",
       "title": "View a live team session",
-      "entryScreen": null,
-      "entryExists": false,
-      "captures": [],
+      "entryScreen": "webTeamLive",
+      "entryExists": true,
+      "captures": [
+        {
+          "path": "assets/guides/screenshots/web/en/team-live-empty.png",
+          "exists": true
+        }
+      ],
       "requiredGuideSteps": [
         {
           "title": "Get the session code",

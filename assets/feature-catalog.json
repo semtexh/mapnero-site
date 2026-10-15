@@ -1753,6 +1753,7 @@
     "title": "Sign in and open your workspace",
     "summary": "Pro and Team accounts can use their own GIS workspace; organization access is optional.",
     "access": "Pro or Team · organization optional",
+    "note": "Shared iPhone sign-in reference opens the predefined Field Observer practice profile and its independent phone/Web layer workflow. This demo requests no real credentials, sends no email and performs no real sign-in or one-time-code verification. For actual Web access use the live app and the full guide below.",
     "steps": [
       {
         "title": "Open app.mapnero.com",
@@ -1767,7 +1768,12 @@
         "body": "Use the left navigation to open MapLibre GIS. Your own layers are private by default; organization layers appear only when they are shared with you."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/apple/en/account-sign-in.png"
+    ],
+    "demoReference": {
+      "platform": "iPhone"
+    }
   },
   {
     "platform": "web",
@@ -1927,6 +1933,7 @@
     "title": "View a live team session",
     "summary": "Open an active field session with its code and monitor shared team information.",
     "access": "Team",
+    "note": "Actual Web Team Live empty-state crop. A separate read-only local viewer joins another preview tab by demo code/passphrase and receives verified messages, selected sample positions and layers. Position timestamps and sample age are displayed, with a demo stale warning after 60 seconds; 5-second local refresh also detects session end/expiry. Client mutation guards prevent this viewer creating, messaging, publishing position/layers or ending a session. Live MapNero membership/decryption and native populated-session capture are not claimed.",
     "steps": [
       {
         "title": "Get the session code",
@@ -1945,7 +1952,9 @@
         "body": "Close the session view and follow the team’s process for ending or rotating the session code."
       }
     ],
-    "images": []
+    "images": [
+      "assets/guides/screenshots/web/en/team-live-empty.png"
+    ]
   },
   {
     "platform": "web",
