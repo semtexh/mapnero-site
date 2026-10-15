@@ -1777,7 +1777,7 @@
     "title": "Create and edit features online",
     "summary": "Draw point, line or polygon features and edit attributes with conflict protection.",
     "access": "Online · write role",
-    "note": "Web editing requires an internet connection. The offline workspace is read-only.",
+    "note": "Real Web GIS map reference with separate local point/line/polygon editing, attributes and geometry edits, writable/read-only/service layer guards, offline save rejection and shared-layer revision conflict review. The draft survives a conflict and can be downloaded before explicitly receiving the newer copy. Native toolbar capture and live organization editing are not claimed.",
     "steps": [
       {
         "title": "Select a writable layer",

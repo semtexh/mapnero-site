@@ -68,7 +68,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 | web | sign-in | MISSING | 0 | requires individual verification |
 | web | layers-features | webGIS | 2 | requires individual verification |
 | web | import-export | webImportMenu | 2 | requires individual verification |
-| web | edit-online | MISSING | 0 | requires individual verification |
+| web | edit-online | webEdit | 0 | requires individual verification |
 | web | offline-snapshot | MISSING | 0 | requires individual verification |
 | web | reports | webReports | 6 | requires individual verification |
 | web | team-live | MISSING | 0 | requires individual verification |
@@ -85,7 +85,7 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 - apple: 1 unconnected entries: apple-watch. Connected entries still require every individual guide step to be verified.
 - android: 10 unconnected entries: template-store, offline-maps, team-gnss, eod-safety, track-navigation, track-report, field-templates, personal-workspace-sync, team-session, watermarked-photos. Connected entries still require every individual guide step to be verified.
-- web: 6 unconnected entries: sign-in, edit-online, offline-snapshot, team-live, web-limits, organization-admin. Connected entries still require every individual guide step to be verified.
+- web: 5 unconnected entries: sign-in, offline-snapshot, team-live, web-limits, organization-admin. Connected entries still require every individual guide step to be verified.
 - Watch is deferred at the user request. Community/cloud authorization, durable restart, native map/PDF attachment, native Web editing, full export/import parity and physical Safari touch remain separate gates.
 - EOD local record save/reopen/export and native reference captures are documented in certificate-practice.md, evidence-practice.md and web-reports-practice.md; the inventory does not replace those runtime proofs.
 - Encrypted offline snapshot: current live GIS UI did not expose the panel in the 2026-10-14 inspection. Native setup/capture/acceptance remains pending.
@@ -94,4 +94,4 @@ Source inventory only. Every guide step remains listed in the JSON; none is sile
 
 ## Geometry scope
 
-108 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.
+109 source player frames are enumerated. A frame count, a 44px target or a browser viewport does not prove workflow completeness or physical touch acceptance.

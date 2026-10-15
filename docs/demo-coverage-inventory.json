@@ -2257,8 +2257,8 @@
       "platform": "web",
       "id": "edit-online",
       "title": "Create and edit features online",
-      "entryScreen": null,
-      "entryExists": false,
+      "entryScreen": "webEdit",
+      "entryExists": true,
       "captures": [],
       "requiredGuideSteps": [
         {
