@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "repository": "semtexh/mapnero-site",
+  "category": "Announcements",
+  "posts": [
+    {
+      "sequence": 1,
+      "title": "Did you know? — MapNero #01: Bring your own map",
+      "body": "### Did you know? — MapNero #01\n\nHave a GeoPDF for your next field visit? You can import it into MapNero and open it in the map viewer.\n\nOpen **Import Map → Select from Files**, choose a supported map, then check its position against known landmarks before relying on it. A normal PDF without georeferencing is not automatically a correctly positioned map.\n\nSome formats require Core or Pro; multi-page PDFs require Pro.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/import-map.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/import-map.png"
+    },
+    {
+      "sequence": 2,
+      "title": "Did you know? — MapNero #02: Prepare your map before you lose signal",
+      "body": "### Did you know? — MapNero #02\n\nYou can download a map region before leaving coverage.\n\nFrame the work area on the Base Map, open **Offline Maps**, choose the detail you need and complete the download while online. Test the region in Airplane Mode before heading out.\n\nCheck both the downloaded bounds and zoom levels. Free includes one region; Core and higher support unlimited regions.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/offline-maps.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/offline-maps.png"
+    },
+    {
+      "sequence": 3,
+      "title": "Did you know? — MapNero #03: Turn your field walk into a saved track",
+      "body": "### Did you know? — MapNero #03\n\nMapNero can record your movement as a GPS track on the Base Map or an imported PDF map.\n\nTap **Record**, confirm recording has started, and use **Stop** to finish. Reopen the saved track afterward to review it.\n\nAllow location access and test your device outdoors first. GPS accuracy depends on the device and conditions. Free recording limits apply; Core and higher remove those limits.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/location-track.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/location-track.png"
+    },
+    {
+      "sequence": 4,
+      "title": "Did you know? — MapNero #04: Keep field records organised with layers",
+      "body": "### Did you know? — MapNero #04\n\nA saved pin can hold more than a location: add a name, notes, attributes or media so your field observations have context.\n\nBefore adding a pin, select the intended **visible, writable layer**. Hidden, locked, trashed and web-service layers are not valid pin destinations.\n\nBasic pins and layers are available with Free; advanced layer tools may require Core or higher.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/pins-layers.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/pins-layers.png"
+    },
+    {
+      "sequence": 5,
+      "title": "Did you know? — MapNero #05: Give an unreferenced image a real-world position",
+      "body": "### Did you know? — MapNero #05\n\nHave a scanned map with identifiable real-world landmarks? MapNero offers manual photo georeferencing.\n\nUse **Import Photo as Map** and match at least three well-spaced, non-collinear control points to positions whose coordinates you know. Review the fit and the saved map before field use.\n\nDo not guess control points: referencing does not make an inaccurate source accurate. Requires Core or higher.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/import-map.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/import-map.png"
+    },
+    {
+      "sequence": 6,
+      "title": "Did you know? — MapNero #06: Browse neighbouring map sheets as a collection",
+      "body": "### Did you know? — MapNero #06\n\nWorking across adjoining GeoPDF sheets? Group downloaded, georeferenced maps in a collection and browse across sheet edges.\n\nOrder overlapping sheets deliberately. Manual centre browsing and optional GPS-based auto-switch are separate settings; GPS auto-switch is off by default.\n\nCollections require Core or higher. Atlas creation requires Pro and an active downloaded raster MBTiles source; an online-only or vector basemap is not enough.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/collections-atlas.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/collections-atlas.png"
+    },
+    {
+      "sequence": 7,
+      "title": "Did you know? — MapNero #07: Start with a field template",
+      "body": "### Did you know? — MapNero #07\n\nMapNero includes a field template library to help structure data collection.\n\nChoose a template that fits the task, review its fields, and try one non-sensitive sample record before using it for real work. Check the saved result and any export your workflow needs.\n\nAvailable templates and tools depend on platform, app version and plan; a template is not a certification or a substitute for your organisation’s procedures.\n\n![MapNero iOS guide screenshot](https://www.mapnero.com/assets/guides/screenshots/apple/en/field-templates-selection.png)\n\n*Screenshot: iOS guide. Controls may differ on Android and macOS.*\n\n[Explore MapNero and current plans](https://www.mapnero.com) · [Step-by-step guides](https://www.mapnero.com/guides.html) · [Community](https://www.reddit.com/r/MapNero/)\n\nWhat would you like to try in your next field project?\n\n— Serhan, The Nero Labs · **One map. Many ways.**",
+      "source": "assets/guides-data.js",
+      "image": "assets/guides/screenshots/apple/en/field-templates-selection.png"
+    }
+  ]
+}
