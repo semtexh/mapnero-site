@@ -712,8 +712,7 @@ footer {
 }
 </style>
 <link rel="stylesheet" href="assets/site-modern.css?v=20261014-downloads">
-<link rel="stylesheet" href="assets/feature-explorer.css?v=20261013-vector-2">
-<link rel="stylesheet" href="assets/app-screen-player.css?v=26ea1c654bc2">
+<style>.demo-entry{max-width:1200px;margin:0 auto;padding:40px 24px 72px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;border-top:1px solid #dce3dc}.demo-entry h2{color:#172720;font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-.04em;line-height:1.15;margin:12px 0 18px}.demo-entry p{color:#52615b;line-height:1.7;max-width:520px}.demo-entry-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:24px}.demo-entry-actions>a:not(.btn-primary){color:#355e47;font-weight:700}.demo-entry-screens{height:230px;overflow:hidden;display:flex;justify-content:center;gap:18px;background:#eaf0e9;border:1px solid #dce3dc;border-radius:16px;padding:24px 20px 0}.demo-entry-screens img{height:300px;width:auto;max-width:46%;object-fit:cover;object-position:top;border-radius:12px;box-shadow:0 8px 20px #17272015}.demo-entry-screens img+img{margin-top:24px}@media(max-width:640px){.demo-entry{grid-template-columns:1fr;gap:28px;padding:32px 24px 48px}.demo-entry-screens{height:190px}.demo-entry-actions .btn-primary{width:100%;justify-content:center}}</style>
 </head>
 <body>
 
@@ -772,7 +771,7 @@ footer {
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero" class="btn-primary" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
       <a href="https://app.mapnero.com" class="btn-outline" target="_blank" rel="noopener noreferrer">Open Web App ↗</a>
-      <a href="#field-game" class="hero-team-link">Try the app →</a>
+      <a href="demo.html#field-game" class="hero-team-link">Try the app →</a>
       <a href="#organizations" class="hero-team-link">Plans for your team →</a>
     </div>
     <div class="hero-platforms">
@@ -802,26 +801,6 @@ footer {
 
 
 
-<section id="field-game" class="app-player-section" data-app-player>
- <div class="app-player-heading"><div><span class="section-tag">TRY MAPNERO</span><h2>The app.<br>At your fingertips.</h2></div><p>Explore real MapNero screens. Tap the highlighted app controls to move through the walkthrough on your phone or computer. Swipe left or right on an empty part of the screen to browse; swipe up or down to scroll the page.</p></div>
- <div class="app-player-layout">
-  <div class="app-phone"><img data-app-screen src="assets/guides/screenshots/apple/en/field-templates-selection.png" alt="MapNero template library" width="1206" height="2622"><div class="app-hotspots" data-app-hotspots></div></div>
-  <div class="app-player-tools"><label>Choose a feature<select data-app-feature aria-label="Choose app screen"></select></label><h3 data-app-title>Templates</h3><p data-app-description></p><div class="app-player-buttons"><button type="button" data-app-previous>← Previous screen</button><button type="button" data-app-next>Next screen →</button><button type="button" data-app-back>← Back</button><button type="button" data-app-reset>Start again</button><button type="button" data-app-hints aria-pressed="true">Touch hints</button></div><a href="#explore">Browse all app screens →</a></div>
- </div><div class="app-player-status" data-app-status role="status"></div><p class="app-player-footnote">Interactive walkthrough using real app captures. Controls navigate the captured screens; this website does not run mobile GPS or connect to your app account.</p>
-</section>
-
-<section id="explore" class="explorer">
-  <div class="explorer-heading"><div><span class="section-tag">EXPLORE MAPNERO</span><h2>Put the tools<br>in your hands.</h2></div><p>Explore the actual MapNero screens and the workflows behind them.</p></div>
-  <div class="explorer-shell">
-    <aside class="explorer-sidebar" aria-label="Choose a feature">
-      <label>Platform<select data-feature-platform><option value="apple">iPhone · iPad · Mac</option><option value="android">Android</option><option value="web">Web</option></select></label>
-      <label>Find a feature<input data-feature-search type="search" placeholder="Templates, tracks, maps…"></label>
-      <span data-feature-count class="explorer-eyebrow"></span><div data-feature-list></div>
-    </aside><div class="explorer-detail" data-feature-detail></div>
-  </div>
-</section>
-
-<div class="field-strip"><span>YOUR FIELDWORK, CONNECTED</span><p>Own maps <b>/</b> GPS tracks <b>/</b> Field data <b>/</b> Team sessions</p></div>
 <!-- FEATURES -->
 <div id="features">
   <div class="section">
@@ -884,6 +863,11 @@ footer {
 </div>
 
 <div class="gold-divider"></div>
+
+<section id="field-game" class="demo-entry" aria-labelledby="demo-entry-title">
+  <div><span class="section-tag">TAKE A CLOSER LOOK</span><h2 id="demo-entry-title">See MapNero in action.</h2><p>Explore real app screens and try maps, templates and fieldwork tools at your own pace.</p><div class="demo-entry-actions"><a class="btn-primary" href="demo.html#field-game">Open interactive demo →</a><a href="demo.html#explore">Browse features →</a></div></div>
+  <a href="demo.html#field-game" class="demo-entry-screens" aria-label="Explore the MapNero interactive demo"><img src="assets/guides/screenshots/apple/en/field-templates-selection.png" alt="MapNero template library" width="1206" height="2622" loading="lazy"><img src="assets/guides/screenshots/android/en/pins-layers.png" alt="MapNero layers on Android" width="1080" height="2400" loading="lazy"></a>
+</section>
 
 <!-- PRICING -->
 <div id="pricing" class="pricing-section">
@@ -1021,128 +1005,6 @@ document.querySelectorAll('.feature-card, .tier-card').forEach((el, i) => {
   el.style.transitionDelay = (i % 3) * 0.08 + 's';
 });
 </script>
-<script src="assets/vendor/jszip.min.js" defer></script>
-<script src="assets/walkthrough-shapefile.js" defer></script>
-<script src="assets/walkthrough-export.js?v=286ecb59a453" defer></script>
-<script src="assets/walkthrough-track-report.js" defer></script>
-<script src="assets/raster-lab-engine.js?v=9a1898f51733" defer></script>
-<script src="assets/walkthrough-kmz.js?v=20261013-touch" defer></script>
-<script src="assets/walkthrough-map-link-engine.js?v=20261013-map-link-qr" defer></script>
-<script src="assets/walkthrough-map-link.js?v=0fd9a748915e" defer></script>
-<script src="assets/vendor/pdf-lib/pdf-lib.min.js" defer></script>
-<script src="assets/vendor/fontkit/fontkit.umd.min.js" defer></script>
-<script src="assets/pdf-fonts.js" defer></script>
-<script src="assets/geopdf-reader.js?v=1dcc8387e87f" defer></script>
-<script src="assets/walkthrough-map-import.js?v=4f3dde4065d9" defer></script>
-<script src="assets/walkthrough-store.js?v=20261013-checklist" defer></script>
-<script src="assets/walkthrough-template.js" defer></script>
-<script src="assets/walkthrough-template-gis.js" defer></script>
-<script src="assets/walkthrough-template-import.js" defer></script>
-<script src="assets/walkthrough-template-ocr.js" defer></script>
-<script src="assets/walkthrough-checklist.js?v=0e4ffa44863d" defer></script>
-<script src="assets/checklist-pdf.js?v=39beb8f719ed" defer></script>
-<script src="assets/template-generator-engine.js?v=2cac2327ba54" defer></script>
-<script src="assets/walkthrough-template-generator.js?v=1fa4b1cbb143" defer></script>
-<script src="assets/vendor/spatial-buffer/buffer.js?v=af6d29852e47" defer></script>
-<script src="assets/spatial-buffer-engine.js?v=9cda6fb74f09" defer></script>
-<script src="assets/walkthrough-buffer.js?v=f5f30bfc9cdc" defer></script>
-<script src="assets/walkthrough-route.js?v=63f342079d77" defer></script>
-<script src="assets/walkthrough-layers.js?v=e853feb9d8a1" defer></script>
-<script src="assets/walkthrough-track.js?v=da3493d6145d" defer></script>
-<script src="assets/coordinate-lab-engine.js?v=bb9867cb2aec" defer></script>
-<script src="assets/usage-mode-presets.js?v=f2e5202875f3" defer></script>
-<script src="assets/preferences-engine.js?v=6a81f37029ff" defer></script>
-<script src="assets/walkthrough-preferences.js?v=a729389a8e64" defer></script>
-<script src="assets/evidence-engine.js" defer></script>
-<script src="assets/walkthrough-evidence.js" defer></script>
-<script src="assets/programme-rollup-engine.js?v=6e1971017d9f" defer></script>
-<script src="assets/programme-pdf.js?v=bdb7e1e64c93" defer></script>
-<script src="assets/walkthrough-programme-rollup.js?v=400a1a192446" defer></script>
-<script src="assets/land-release-engine.js" defer></script>
-<script src="assets/walkthrough-land-release.js?v=2d671f9d3f" defer></script>
-<script src="assets/certificate-engine.js?v=6caf7d085882" defer></script>
-<script src="assets/certificate-pdf.js?v=2919ca798798" defer></script>
-<script src="assets/walkthrough-certificate.js?v=fd3d1771e967" defer></script>
-<script src="assets/spot-report-engine.js?v=249c613e87a7" defer></script>
-<script src="assets/walkthrough-spot-report.js?v=f9c6cecac097" defer></script>
-<script src="assets/wmm2025.js" defer></script>
-<script src="assets/wgs84-direct.js" defer></script>
-<script src="assets/walkthrough-cogo.js?v=20261013-magnetic" defer></script>
 <link rel="stylesheet" href="assets/vendor/maplibre/maplibre-gl.css">
-<script src="assets/walkthrough-map-drawing.js" defer></script>
-<script src="assets/walkthrough-live-map.js?v=314cec516a95" defer></script>
-<script src="assets/vector-lab-engine.js" defer></script>
-<script src="assets/vector-import-engine.js?v=bce3d4868e1c" defer></script>
-<script src="assets/vendor/shpjs/shp.min.js" defer></script>
-<script src="assets/vendor/proj4/proj4.js" defer></script>
-<script src="assets/vector-shapefile-import.js" defer></script>
-<script src="assets/walkthrough-vector-import.js?v=d759bd5f86e4" defer></script>
-<script src="assets/walkthrough-stakeout.js" defer></script>
-<script src="assets/walkthrough-geofence.js" defer></script>
-<script src="assets/walkthrough-collections.js?v=7ed022b41c01" defer></script>
-<script src="assets/walkthrough-clusters.js?v=5c0ab479c2aa" defer></script>
-<script src="assets/walkthrough-track3d.js?v=f99b8d3440c1" defer></script>
-<script src="assets/walkthrough-offline-store.js" defer></script>
-<script src="assets/walkthrough-offline.js?v=20261013-pdf" defer></script>
-<script src="assets/walkthrough-georeference-engine.js" defer></script>
-<script src="assets/walkthrough-georeference.js?v=20261013-local-team" defer></script>
-<script src="assets/walkthrough-team-engine.js?v=d6fe3d647035-shared-layers" defer></script>
-<script src="assets/vendor/team-qr/qrcode.js" defer></script>
-<script src="assets/vendor/team-qr/jsQR.js" defer></script>
-<script src="assets/walkthrough-team-invite-engine.js?v=20261013-team-qr" defer></script>
-<script src="assets/walkthrough-team-invite.js?v=91f114809919-team-qr" defer></script>
-<script src="assets/walkthrough-team.js?v=7e1db5d6b758-team-qr" defer></script>
-<script src="assets/walkthrough-gnss-engine.js?v=20261013-nmea-sky" defer></script>
-<script src="assets/walkthrough-gnss-sky.js?v=20261013-nmea-sky" defer></script>
-<script src="assets/walkthrough-gnss.js?v=20261013-nmea-sky" defer></script>
-<script src="assets/walkthrough-map-layout.js?v=17303668dcd5" defer></script>
-<script src="assets/vendor/sqljs/sql-wasm.js" defer></script>
-<script src="assets/mbtiles-atlas-engine.js?v=f49eb567cb7e" defer></script>
-<script src="assets/walkthrough-atlas-create.js?v=54fa565e35c3" defer></script>
-<script src="assets/walkthrough-photo.js?v=6fc0390b59ed" defer></script>
-<script src="assets/symbol-native-catalog.js" defer></script>
-<script src="assets/walkthrough-symbols.js?v=238a5029c65f" defer></script>
-<script src="assets/symbol-renderer.js?v=a66574e059b0" defer></script>
-<script src="assets/track-follow-engine.js?v=b15d9872e9db" defer></script>
-<script src="assets/walkthrough-track-follow.js?v=065e47826e33" defer></script>
-<script src="assets/terrain-contours-engine.js?v=2c3eef351bb9" defer></script>
-<script src="assets/walkthrough-terrain.js?v=444f031abac1" defer></script>
-<script src="assets/walkthrough-attributes.js?v=da9c3aa00670" defer></script>
-<script src="assets/walkthrough-background.js?v=8b5029b43e94" defer></script>
-<script src="assets/personal-workspace-engine.js?v=057938190b94" defer></script>
-<script src="assets/walkthrough-personal-workspace.js?v=7e6fc7e87cae" defer></script>
-<script src="assets/web-report-review-engine.js" defer></script>
-<script src="assets/walkthrough-web-reports.js" defer></script>
-<script src="assets/dxf-export-engine.js?v=99c20cac862f" defer></script>
-<script src="assets/geopackage-export-engine.js?v=cf3b3262ba72" defer></script>
-<script src="assets/qgis-export-engine.js?v=a63d40b93503" defer></script>
-<script src="assets/android-export-engine.js" defer></script>
-<script src="assets/walkthrough-android-export.js?v=1074187c85cb" defer></script>
-<script src="assets/wgs84-inverse.js?v=4d8c94804243" defer></script>
-<script src="assets/measurement-engine.js?v=412dd232b927" defer></script>
-<script src="assets/walkthrough-measurement.js?v=863c1d36d4a7" defer></script>
-<script src="assets/walkthrough-terrain-view.js?v=7fd4aa0b021a" defer></script>
-<script src="assets/walkthrough-community.js?v=fa30077040e6" defer></script>
-<script src="assets/walkthrough-web-edit.js?v=1f9b5acc5668" defer></script>
-<script src="assets/walkthrough-web-snapshot.js?v=3a832545e835" defer></script>
-<script src="assets/real-region-engine.js?v=d8a72a2a5f5d" defer></script>
-<script src="assets/walkthrough-real-region.js?v=1dc905ea95ec" defer></script>
-<script src="assets/walkthrough-organization.js?v=417c5b8bafa2" defer></script>
-<script src="assets/walkthrough-android-forms.js?v=e7f47a4f0c0c" defer></script>
-<script src="assets/walkthrough-recorded-report.js?v=aad0424ab0da" defer></script>
-<script src="assets/app-touch-navigation.js?v=9de605ecc645" defer></script>
-<script src="assets/qgis-import-engine.js?v=02cd0edb3370" defer></script>
-<script src="assets/walkthrough-qgis-import.js?v=7dbfb11dbfbb" defer></script>
-<script src="assets/app-screen-player.js?v=da6bd01ba466" defer></script>
-<script src="assets/map-pdf-engine.js" defer></script>
-<script src="assets/feature-lab-engine.js" defer></script>
-<script src="assets/photo-exif.js?v=8c73692138b4" defer></script>
-<script src="assets/photo-composition.js?v=c137da77ad53" defer></script>
-<script src="assets/photo-lab.js?v=e8bb56fabff6" defer></script>
-<script src="assets/offline-region-lab.js" defer></script>
-<script src="assets/vector-lab.js" defer></script>
-<script src="assets/raster-lab.js" defer></script>
-<script src="assets/feature-lab.js" defer></script>
-<script src="assets/feature-explorer.js?v=9d4749832ccb" defer></script>
 </body>
 </html>
