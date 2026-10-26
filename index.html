@@ -9,7 +9,7 @@
 <title>MapNero — Professional GIS Mapping</title>
 <meta name="description" content="Professional GIS mapping for iOS, Android and macOS. Offline maps, GPS tracking, UTM/MGRS coordinates, NATO symbols, EOD/CBRN modules, and real-time team sessions.">
 <meta name="msvalidate.01" content="C8CC8F889EAD520587B760815DE83773">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.mapnero.com/#organization", "name": "The Nero Labs LLC"}, {"@type": "WebSite", "@id": "https://www.mapnero.com/#website", "name": "MapNero", "url": "https://www.mapnero.com/", "publisher": {"@id": "https://www.mapnero.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://www.mapnero.com/#app", "name": "MapNero", "url": "https://www.mapnero.com/", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "GIS mapping", "operatingSystem": ["iOS", "iPadOS", "Android", "macOS"], "description": "Offline GIS mapping with local map imports, GPS track recording and field data tools. The app interface supports 20 languages. Features and file support vary by platform and plan.", "image": "https://www.mapnero.com/image.png", "publisher": {"@id": "https://www.mapnero.com/#organization"}, "softwareHelp": "https://www.mapnero.com/guides.html", "installUrl": ["https://apps.apple.com/app/id6758651027", "https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero"], "sameAs": ["https://www.youtube.com/@MapNero", "https://www.reddit.com/r/MapNero/"]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.mapnero.com/#organization", "name": "The Nero Labs LLC"}, {"@type": "WebSite", "@id": "https://www.mapnero.com/#website", "name": "MapNero", "url": "https://www.mapnero.com/", "publisher": {"@id": "https://www.mapnero.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://www.mapnero.com/#app", "name": "MapNero", "url": "https://www.mapnero.com/", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "GIS mapping", "operatingSystem": ["iOS", "iPadOS", "Android", "macOS"], "description": "Offline GIS mapping with local map imports, GPS track recording and field data tools. The app interface supports 20 languages. Features and file support vary by platform and plan.", "image": "https://www.mapnero.com/image.png", "publisher": {"@id": "https://www.mapnero.com/#organization"}, "softwareHelp": "https://www.mapnero.com/guides.html", "installUrl": ["https://apps.apple.com/app/id6758651027", "https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero"], "sameAs": ["https://www.youtube.com/@MapNero", "https://www.reddit.com/r/MapNero/", "https://www.instagram.com/mapneroapp/", "https://www.facebook.com/profile.php?id=61595658911491", "https://www.pinterest.com/mapneroapp/"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -641,6 +641,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .footer-brand {
@@ -664,7 +666,12 @@ footer {
 
 .footer-links {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem 1.5rem;
+  max-width: 720px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -706,6 +713,7 @@ footer {
   .tiers-grid { grid-template-columns: 1fr 1fr; }
   .cta-section { padding: 5rem 1.5rem; }
   footer { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; text-align: center; }
+  .footer-links { justify-content: center; }
 }
 
 @media (max-width: 580px) {
@@ -995,6 +1003,9 @@ footer {
   <ul class="footer-links">
     <li><a href="guides.html">User Guides</a></li>
     <li><a href="https://www.youtube.com/@MapNero">YouTube Tutorials</a></li>
+    <li><a href="https://www.instagram.com/mapneroapp/">Instagram</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=61595658911491">Facebook</a></li>
+    <li><a href="https://www.pinterest.com/mapneroapp/">Pinterest</a></li>
     <li><a href="geopdf-maps.html">GeoPDF maps</a></li>
     <li><a href="geotiff-maps.html">GeoTIFF maps</a></li>
     <li><a href="offline-gps-tracks.html">Offline GPS tracks</a></li>
