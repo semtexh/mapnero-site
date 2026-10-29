@@ -156,13 +156,13 @@ window.MAPNERO_GUIDES = {
             access: "Collections Core+ · Atlas creation Pro",
             note: "Atlas creation needs an active downloaded raster MBTiles source. It does not create an atlas from an online-only or vector basemap.",
             steps: [
-              { title: "Group adjoining maps", body: "In the Library, move georeferenced sheets into the same collection and place preferred detailed maps above fallback maps." },
-              { title: "Browse across sheet edges", body: "Open a collection map and pan the centre crosshair into a neighbouring sheet. The active sheet changes while the camera scale is preserved." },
-              { title: "Choose GPS auto-switch only if needed", body: "Manual centre browsing is on by default. GPS-based Auto-switch is separate and off by default in Map Collections settings." },
+              { title: "Create a group in Library", body: "Open Library → Maps, clear the search and set the filter to All. Tap the three-dot button beside your first imported map, then Move to group… → New group. Enter a name and tap Done. For each remaining map, choose Move to group… and select that same group. These groups are your map collections." },
+              { title: "Show the group as an Atlas", body: "In the group heading, unlock the padlock if needed, then open its three-dot menu and choose Show as Atlas. Open a member map and pan the centre crosshair into a neighbouring sheet. The active sheet changes while the camera scale is preserved." },
+              { title: "Follow your position for GPS auto-switch", body: "In Settings → Map Collections, enable Auto-switch collection maps. Open a map from the group and use Locate to follow your position. GPS auto-switch is separate from manual centre browsing and is off by default. Continuous Tracking does not create or group map collections." },
               { title: "Create an Atlas", body: "With an offline raster MBTiles basemap active, open Create PDF Map, enable Atlas collection, choose scale and overlap, then create up to 64 sheets." }
             ],
             tips: [
-              { q: "The collection does not switch maps", a: "Each sheet must be downloaded, georeferenced and in the same collection. Overlapping sheets need a unique order." },
+              { q: "I cannot find or switch a collection", a: "There is no separate Collections button: use groups in Library → Maps. Move to group requires Core or higher. Clear search and choose All to see group headings. For switching, every sheet must be stored on this device, georeferenced and in the same Atlas group. Give overlapping sheets a unique order, with preferred detailed maps above fallback maps. Test the setup before leaving." },
               { q: "Pins or tracks disappear after switching", a: "Use the collection layer for records that should be shared across every sheet." }
             ]
           },
