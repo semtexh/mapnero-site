@@ -106,7 +106,7 @@ window.MAPNERO_GUIDES = {
             id: "location-track",
             title: "Find your location and record a track",
             summary: "Keep the map centred on your position and save your movement as a track.",
-            access: "Free limits · unlimited with Core+",
+            access: "Free",
             steps: [
               { title: "Centre the map", body: "Tap Locate. Tap it again to change the follow state if you want the map to remain centred while moving." },
               { title: "Start recording", body: "Tap Record, confirm the recording state, then begin moving." },
@@ -251,7 +251,7 @@ window.MAPNERO_GUIDES = {
             id: "location-track",
             title: "Find your location and record in the background",
             summary: "Follow your position and keep an accurate track while the screen is off.",
-            access: "Free limits · unlimited with Core+",
+            access: "Free",
             note: "Android requires a visible foreground-service notification while a track records in the background. MapNero does not record secretly.",
             steps: [
               { title: "Centre and follow", body: "Tap Locate to centre the map. Change the follow state if you want the map to remain centred while moving." },
@@ -614,7 +614,7 @@ window.registerMapNeroCompactGuideLocale = function registerMapNeroCompactGuideL
   const english = window.MAPNERO_GUIDES.en;
   const mobileShared = payload.mobile || {};
   const accessKeys = {
-    "quick-start": "free", "import-map": "mixed", "location-track": "mixed",
+    "quick-start": "free", "import-map": "mixed", "location-track": "free",
     "pins-layers": "mixed", "offline-maps": "mixed", "collections-atlas": "atlas",
     "measure-cogo-buffer": "buffer", "team-gnss": "team", "eod-safety": "safety",
     "sign-in": "organization", "layers-features": "organization", "import-export": "write",

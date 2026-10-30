@@ -72,7 +72,7 @@
           "location-track": {
             title: "Konumunuzu bulun ve iz kaydedin",
             summary: "Haritayı konumunuzda merkezli tutup hareketinizi iz olarak kaydedin.",
-            access: "Ücretsiz sınırlar · Core+ ile sınırsız",
+            access: "Ücretsiz",
             steps: [
               ["Haritayı merkezleyin", "Konum’a dokunun. Hareket ederken haritanın merkezde kalması için takip durumunu değiştirmek üzere tekrar dokunun."],
               ["Kaydı başlatın", "Kayıt’a dokunun, kayıt durumunu doğrulayın ve hareket etmeye başlayın."],
@@ -197,7 +197,7 @@
           "location-track": {
             title: "Konumunuzu bulun ve arka planda iz kaydedin",
             summary: "Konumunuzu takip edin ve ekran kapalıyken de doğru bir iz kaydedin.",
-            access: "Ücretsiz sınırlar · Core+ ile sınırsız",
+            access: "Ücretsiz",
             note: "Android, arka planda iz kaydederken görünür bir ön plan servis bildirimi ister. MapNero gizli kayıt yapmaz.",
             steps: [
               ["Merkezleyip takip edin", "Haritayı merkezlemek için Konum’a dokunun. Hareket ederken merkezde kalması için takip durumunu değiştirin."],

@@ -39,7 +39,7 @@
           ["Compruebe la posición", "Abra el mapa importado y pulse Localizar. Si un PDF antiguo está desplazado, elimínelo e impórtelo otra vez."],
           ["Use Abrir en MapNero", "También puede seleccionar un archivo compatible en Archivos y compartirlo o abrirlo con MapNero."]
         ], [["El mapa está vacío", "Confirme que terminó la importación y que la vista está dentro de sus límites geográficos."], ["Mi posición está fuera del mapa", "El PDF puede no estar georreferenciado o usar puntos de control no válidos. Pruebe la misma posición en el mapa base."]], "Los PDF de varias páginas requieren Pro. Georreferenciar una foto como mapa requiere Core o superior."),
-        "location-track": T("Encontrar su posición y grabar un track", "Mantenga el mapa centrado y guarde su recorrido como track.", "Límites gratuitos · ilimitado con Core+", [
+        "location-track": T("Encontrar su posición y grabar un track", "Mantenga el mapa centrado y guarde su recorrido como track.", "Gratis", [
           ["Centre el mapa", "Pulse Localizar. Vuelva a pulsarlo para cambiar el seguimiento y mantener el mapa centrado al moverse."],
           ["Inicie la grabación", "Pulse Grabar, confirme el estado y empiece a moverse."],
           ["Observe la línea en directo", "La línea se actualiza durante la grabación en el mapa base y en los PDF importados."],
@@ -84,7 +84,7 @@
           ["Revise el resumen", "La pantalla de confirmación muestra las entidades que se importarán y las omitidas con el motivo."],
           ["Use Abrir con MapNero", "En Descargas o Archivos seleccione un archivo compatible, pulse Abrir con y elija MapNero."]
         ], [["Se omitió una entidad Shapefile", "Revise el resumen: allí se indican proyecciones, geometrías incompatibles o archivos auxiliares ausentes."], ["Un PDF antiguo sigue desplazado", "Elimine esa copia e importe de nuevo el PDF original para usar el lector corregido."]]),
-        "location-track": T("Encontrar su posición y grabar en segundo plano", "Siga su posición y mantenga un track preciso con la pantalla apagada.", "Límites gratuitos · ilimitado con Core+", [
+        "location-track": T("Encontrar su posición y grabar en segundo plano", "Siga su posición y mantenga un track preciso con la pantalla apagada.", "Gratis", [
           ["Centre y siga", "Pulse Localizar y cambie el estado de seguimiento si quiere mantener el mapa centrado."],
           ["Acepte el aviso", "Lea la explicación y permita la ubicación en segundo plano en Ajustes de Android."],
           ["Inicie la grabación", "Pulse Grabar, confirme la notificación permanente y bloquee la pantalla si lo necesita."],
