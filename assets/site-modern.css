@@ -34,3 +34,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #136b50;outline-offset:5p
 
 /* Keep responsive image sources in the existing screenshot layout. */
 .hero-map-picture{display:contents}.hero-map-picture>source{display:none}
+
+/* Explain the free entry and keep translated map guides discoverable. */
+.hero-download-note{font-size:.85rem;color:var(--muted);margin:-.75rem 0 1.5rem;line-height:1.6}
+.localized-map-guides{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:16px;font-size:.85rem;line-height:1.6;color:var(--muted)}.localized-map-guides a{color:var(--gold);text-underline-offset:3px}.localized-map-guides a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
