@@ -1,0 +1,1 @@
+Cannot add a pin? First check the layer. In Map Nero, open Layers. Choose a visible, writable layer. Hidden, locked and web-service layers cannot receive the pin. Then try Add Pin again. Map Nero dot com.
