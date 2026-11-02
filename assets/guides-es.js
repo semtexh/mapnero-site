@@ -64,7 +64,7 @@
           ["Cree un búfer", "Abra un punto, línea, track, polígono o círculo, pulse Búfer y elija metros, color de relleno y opacidad."],
           ["Edite el resultado", "Abra el búfer en Búferes derivados y cambie distancia, relleno u opacidad. La distancia lo reconstruye desde la entidad original."]
         ], [["No se puede crear el búfer", "Confirme una geometría válida y los límites de 500 km de extensión y 10 km de búfer."]], "El rumbo COGO actual se mide desde el norte de cuadrícula UTM, no desde el norte magnético o verdadero."),
-        "team-gnss": T("Conectar un equipo o GNSS externo", "Inicie sesión para compartir con la organización o conecte un receptor para mayor precisión.", "Equipo · GNSS gratis durante la beta", [
+        "team-gnss": T("Conectar un equipo o GNSS externo", "Inicie sesión para compartir con la organización o conecte un receptor para mayor precisión.", "Equipo · GNSS Pro/Team (beta)", [
           ["Inicie sesión", "Abra Ajustes → Cuenta, escriba su correo e introduzca el código de seis dígitos."],
           ["Únase a la organización", "Acepte una invitación o introduzca el código del administrador."],
           ["Comparta una capa", "Abra una capa, active Compartir con la organización. La sincronización necesita internet."],

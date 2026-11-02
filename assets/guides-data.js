@@ -186,7 +186,7 @@ window.MAPNERO_GUIDES = {
             id: "team-gnss",
             title: "Connect a team or external GNSS",
             summary: "Sign in for organization sharing, or pair a supported receiver for higher-accuracy positioning.",
-            access: "Team sharing · GNSS free during beta",
+            access: "Team sharing · GNSS Pro/Team (Beta)",
             steps: [
               { title: "Sign in", body: "Open Settings → Account, enter your email and complete the six-digit one-time code." },
               { title: "Join your organization", body: "Accept an invitation or enter the organization code provided by its administrator." },

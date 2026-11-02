@@ -141,7 +141,7 @@
           "team-gnss": {
             title: "Ekibe veya harici GNSS’e bağlanın",
             summary: "Kuruluş paylaşımı için giriş yapın veya daha hassas konum için desteklenen bir alıcı eşleştirin.",
-            access: "Ekip paylaşımı · beta boyunca GNSS ücretsiz",
+            access: "Ekip paylaşımı · GNSS Pro/Team (Beta)",
             steps: [
               ["Giriş yapın", "Ayarlar → Hesap’ı açın, e-postanızı girip altı haneli tek kullanımlık kodu tamamlayın."],
               ["Kuruluşunuza katılın", "Davet kabul edin veya yönetici tarafından verilen kuruluş kodunu girin."],
