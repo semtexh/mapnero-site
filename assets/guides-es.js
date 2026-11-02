@@ -109,7 +109,7 @@
           ["Aplique búfer a una o varias entidades", "Abra una entidad o seleccione varias con Lazo y elija distancia, color y opacidad."],
           ["Edite Búferes derivados", "Cambie distancia, relleno u opacidad. Una nueva distancia regenera la geometría desde la fuente."]
         ], [["Falla un búfer SHP complejo", "Compruebe los límites de 500 km de geometría y 10 km de búfer, y que la capa fuente sea editable."]], "COGO usa ahora el norte de cuadrícula UTM. No introduzca un rumbo magnético como si fuera de cuadrícula."),
-        "team-gnss": T("Conectar un equipo o GNSS externo", "Comparta capas de organización o use un receptor Bluetooth para mejorar la posición.", "Equipo · GNSS gratis", [
+        "team-gnss": T("Conectar un equipo o GNSS externo", "Comparta capas de organización o use un receptor Bluetooth para mejorar la posición.", "Equipo · GNSS Pro/Team (beta)", [
           ["Inicie sesión", "Abra Ajustes → Cuenta, escriba su correo y el código de seis dígitos."],
           ["Únase a la organización", "Acepte una invitación o introduzca el código de unión."],
           ["Comparta la capa", "Active Compartir con la organización. La sincronización necesita internet."],

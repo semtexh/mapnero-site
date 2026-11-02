@@ -264,7 +264,7 @@
           "team-gnss": {
             title: "Ekibe veya harici GNSS’e bağlanın",
             summary: "Kuruluş katmanlarını paylaşın veya daha iyi konum için Bluetooth alıcısı kullanın.",
-            access: "Ekip paylaşımı · GNSS ücretsiz",
+            access: "Ekip paylaşımı · GNSS Pro/Team (Beta)",
             steps: [
               ["Giriş yapın", "Ayarlar → Hesap’ı açın, e-postanızı girip altı haneli tek kullanımlık kodu tamamlayın."],
               ["Kuruluşa katılın", "Davet kabul edin veya kuruluş katılım kodunu girin."],

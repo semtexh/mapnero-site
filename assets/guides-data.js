@@ -331,7 +331,7 @@ window.MAPNERO_GUIDES = {
             id: "team-gnss",
             title: "Connect a team or external GNSS",
             summary: "Share organization layers or use a Bluetooth receiver for improved positioning.",
-            access: "Team sharing · GNSS free",
+            access: "Team sharing · GNSS Pro/Team (Beta)",
             steps: [
               { title: "Sign in", body: "Open Settings → Account, enter your email and complete the six-digit one-time code." },
               { title: "Join the organization", body: "Accept an invitation or enter the organization join code." },
