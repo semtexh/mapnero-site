@@ -144,6 +144,17 @@ h1 {
   font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
+/* Keep localized field guides available without changing the selected app guide. */
+.field-guide-entry { margin-block: 1.5rem 2rem; }
+.field-guide-entry > h2 { margin: 0; font-size: 1.25rem; }
+.field-guide-entry p { color: var(--muted); margin: 0.5rem 0 0.8rem; }
+.field-guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 0.8rem; }
+.field-guide-grid article { padding: 1rem; border: 1px solid var(--border); border-radius: 0.9rem; background: var(--surface); }
+.field-guide-grid h3 { margin: 0; font-size: 1rem; }
+.field-guide-grid nav { display: flex; flex-wrap: wrap; gap: 0.35rem 0.8rem; }
+.field-guide-grid a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--gold-bright); text-underline-offset: 0.2em; }
+.field-guide-grid a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 0.15rem; }
+
 .intro-tools { display: grid; gap: 0.7rem; }
 
 .search-field {
@@ -563,7 +574,7 @@ h1 {
 
 @media print {
   body { background: #fff; color: #111; }
-  .site-header, .guide-intro, .platform-picker, .topic-panel, .article-actions, .article-footer, .site-footer, .toast { display: none !important; }
+  .site-header, .guide-intro, .field-guide-entry, .platform-picker, .topic-panel, .article-actions, .article-footer, .site-footer, .toast { display: none !important; }
   .guide-shell { width: 100%; padding: 0; }
   .workspace { display: block; min-height: 0; border: 0; box-shadow: none; background: transparent; }
   .guide-card { padding: 0; }
