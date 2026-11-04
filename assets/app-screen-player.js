@@ -351,5 +351,6 @@
  find('[data-app-previous]').onclick=()=>browseScreen(-1);
  find('[data-app-next]').onclick=()=>browseScreen(1);
  MapNeroTouchNavigation.bind(touch,{getFrame:()=>current,onBrowse:browseScreen});
- show('templates',false);
+ const initialPractice = new URLSearchParams(window.location.search).get('practice');
+ show(initialPractice === 'geofence' ? 'androidGeofence' : 'templates', false);
 })();
