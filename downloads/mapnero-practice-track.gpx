@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="MapNero" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>MapNero Practice Island</name>
+    <desc>Fictional coordinates for GPX import practice. Do not use for navigation.</desc>
+  </metadata>
+  <trk>
+    <name>Practice Island A to C</name>
+    <trkseg>
+      <trkpt lat="0.0060" lon="0.0044"/>
+      <trkpt lat="0.0084" lon="0.0082"/>
+      <trkpt lat="0.0138" lon="0.0144"/>
+    </trkseg>
+  </trk>
+</gpx>
