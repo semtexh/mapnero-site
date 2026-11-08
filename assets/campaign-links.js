@@ -14,7 +14,7 @@
     practice_hook_b: 'youtube',
     practice_hook_c: 'youtube'
   });
-  const routes = new Set(["/", "/buffer-map.html", "/geofence-alerts-es.html", "/geofence-alerts-pt-br.html", "/geofence-alerts.html", "/geopdf-maps-es.html", "/geopdf-maps-fr.html", "/geopdf-maps-id.html", "/geopdf-maps-pt-br.html", "/geopdf-maps.html", "/geotiff-maps-es.html", "/geotiff-maps-id.html", "/geotiff-maps-pt-br.html", "/geotiff-maps.html", "/guides.html", "/route-builder.html", "/save-field-point-id.html", "/index.html", "/measure-map-distance.html", "/offline-gps-tracks-es.html", "/offline-gps-tracks-id.html", "/offline-gps-tracks-pt-br.html", "/offline-gps-tracks.html", "/qgis-mobile-fieldwork-pt-br.html", "/qgis-mobile-fieldwork.html", "/save-field-point-es.html", "/save-field-point-pt-br.html", "/save-field-point.html"]);
+  const routes = new Set(["/", "/buffer-map.html", "/geofence-alerts-es.html", "/geofence-alerts-pt-br.html", "/geofence-alerts.html", "/geopdf-maps-es.html", "/geopdf-maps-fr.html", "/geopdf-maps-id.html", "/geopdf-maps-pt-br.html", "/geopdf-maps.html", "/geotiff-maps-es.html", "/geotiff-maps-id.html", "/geotiff-maps-pt-br.html", "/geotiff-maps.html", "/guides.html", "/route-builder.html", "/route-builder-es.html", "/route-builder-pt-br.html", "/save-field-point-id.html", "/index.html", "/measure-map-distance.html", "/offline-gps-tracks-es.html", "/offline-gps-tracks-id.html", "/offline-gps-tracks-pt-br.html", "/offline-gps-tracks.html", "/qgis-mobile-fieldwork-pt-br.html", "/qgis-mobile-fieldwork.html", "/save-field-point-es.html", "/save-field-point-pt-br.html", "/save-field-point.html"]);
   function rewriteHref(href, pageUrl) {
     let page, target;
     try { page = new URL(pageUrl); target = new URL(href, page); }
