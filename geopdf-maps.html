@@ -51,7 +51,7 @@
     <section class="section" aria-labelledby="starting-point-title">
       <h2 id="starting-point-title">Choose your starting point</h2>
       <div class="platforms">
-        <article class="card"><h3>New to map files?</h3><p>Start with a small map of a familiar place. Check the file first, then choose your device and follow the import steps.</p><a class="text-link" href="#practice-map">Try the practice map →</a></article>
+        <article class="card"><h3>New to map files?</h3><p>Start with a small map of a familiar place. Check the file first, then choose your device and follow the import steps.</p><a class="text-link" href="#practice-map">Try the practice map →</a><p><a class="text-link" href="#check-your-pdf">Check whether your PDF has georeferencing →</a></p></article>
         <article class="card"><h3>Already work with GIS?</h3><p>Have a georeferenced PDF ready? Go straight to your device’s import steps. Check the map’s position and test it offline after import.</p><a class="text-link" href="#import-steps">Go to import steps →</a></article>
       </div>
     </section>
@@ -127,11 +127,16 @@ Map Nero dot com has the guides. Access varies by plan.</p><h3>Check map positio
       <a class="text-link" href="https://www.youtube.com/@MapNero">Visit the MapNero YouTube channel →</a>
     </section>
 
-    <section class="section" aria-labelledby="before-title">
+    <section id="check-your-pdf" class="section" aria-labelledby="before-title">
       <p class="eyebrow">BEFORE YOU START</p>
-      <h2 id="before-title">A PDF needs a geographic position.</h2>
-      <p>A GeoPDF includes information that places the map in the real world. A regular PDF may only contain a picture of a map. Opening that file does not establish where your GPS position belongs on it.</p>
-      <p>Use a map with valid georeferencing and check a known location after import. If your position appears outside the map, compare it with the Base Map and check the source file.</p>
+      <h2 id="before-title">How can you tell if a PDF map is georeferenced?</h2>
+      <p>A georeferenced PDF stores the information a mapping app needs to place the map on Earth. Both kinds of PDF can have a printed coordinate grid. The two files below look identical, even though only one stores geographic placement.</p>
+      <div class="guide-links" aria-label="Download the two comparison files">
+        <a href="downloads/mapnero-practice-map.pdf" download>Download the georeferenced sample</a>
+        <a href="downloads/mapnero-practice-map-plain.pdf" download>Download the plain PDF comparison</a>
+      </div>
+      <p>On a computer with GDAL and PDF read support, run <code>gdalinfo</code> on each file. The georeferenced sample reports WGS 84 and geographic placement. The plain sample reports page dimensions without a coordinate system. For your own map, check the page you intend to use. <a href="https://gdal.org/en/stable/drivers/raster/pdf.html">GDAL’s PDF driver documentation</a> explains how multipage maps are handled.</p>
+      <p>On your phone, <a href="#import-steps">import the georeferenced sample first</a> and compare its printed reference points with the map coordinates. Then check your own file against known landmarks. If MapNero shows <strong>Location Outside</strong>, your phone may simply be outside the map bounds. Check the map placement separately.</p>
     </section>
 
     <section id="import-steps" class="section" aria-labelledby="steps-title">
