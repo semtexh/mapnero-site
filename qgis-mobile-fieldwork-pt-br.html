@@ -46,6 +46,16 @@
     <div class="reference-points"><table><caption>Coordenadas esperadas nos arquivos de exemplo</caption><thead><tr><th scope="col">Nome</th><th scope="col">Longitude (°)</th><th scope="col">Latitude (°)</th></tr></thead><tbody><tr><th scope="row">Reference A</th><td>30,000</td><td>0,000</td></tr><tr><th scope="row">Reference B</th><td>30,001</td><td>0,001</td></tr><tr><th scope="row">Reference Ç</th><td>30,002</td><td>0,000</td></tr></tbody></table></div>
     <p class="small">Na tabela de atributos, confira os campos <code>ref_id</code>, <code>name</code>, <code>status</code> e <code>notes</code>. Os exemplos foram exportados com o QGIS 3.44.15 e conferidos em uma versão de teste do MapNero para Android.</p>
   </section>
+
+  <section id="export-geojson" class="section" aria-labelledby="export-geojson-title">
+    <h2 id="export-geojson-title">Exporte uma camada do QGIS como GeoJSON</h2>
+    <ol>
+      <li>No painel de camadas, clique com o botão direito em uma camada vetorial. Escolha <strong>Exportar → Salvar feições como…</strong> (<span lang="en">Save Features As…</span>).</li>
+      <li>Selecione GeoJSON no campo <strong>Formato</strong> e escolha um novo nome com a extensão <code>.geojson</code>. Use <strong>EPSG:4326 (WGS 84)</strong> como sistema de coordenadas de saída. Se o sistema da camada original estiver incorreto ou for desconhecido, confira-o antes de exportar.</li>
+      <li>Abra o arquivo no celular seguindo o guia de importação. Confira o número de feições, uma localização conhecida e os campos de que precisa antes de transferir os outros dados.</li>
+    </ol>
+    <p class="small"><a href="https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/create_layers.html#creating-new-layers-from-an-existing-layer">Documentação do QGIS (em inglês)</a></p>
+  </section>
   <section class="section" aria-labelledby="steps-title">
     <h2 id="steps-title">Confira a transferência nos dois sentidos</h2>
     <div class="platforms">

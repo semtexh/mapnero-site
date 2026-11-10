@@ -45,6 +45,16 @@
     <div class="reference-points"><table><caption>Coordenadas esperadas en los archivos de ejemplo</caption><thead><tr><th scope="col">Nombre</th><th scope="col">Longitude (°)</th><th scope="col">Latitude (°)</th></tr></thead><tbody><tr><th scope="row">Reference A</th><td>30,000</td><td>0,000</td></tr><tr><th scope="row">Reference B</th><td>30,001</td><td>0,001</td></tr><tr><th scope="row">Reference Ç</th><td>30,002</td><td>0,000</td></tr></tbody></table></div>
     <p class="small">En la tabla de atributos, comprueba los campos <code>ref_id</code>, <code>name</code>, <code>status</code> y <code>notes</code>. Los ejemplos se exportaron con QGIS 3.44.15 y se comprobaron en una versión de prueba de MapNero para Android.</p>
   </section>
+
+  <section id="export-geojson" class="section" aria-labelledby="export-geojson-title">
+    <h2 id="export-geojson-title">Exporta una capa de QGIS como GeoJSON</h2>
+    <ol>
+      <li>En el panel de capas, haz clic con el botón derecho en una capa vectorial. Elige <strong>Exportar → Guardar objetos como…</strong> (<span lang="en">Save Features As…</span>).</li>
+      <li>Selecciona GeoJSON como <strong>formato</strong> y elige un nombre nuevo que termine en <code>.geojson</code>. Usa <strong>EPSG:4326 (WGS 84)</strong> como sistema de coordenadas de salida. Si el sistema de la capa original es desconocido o incorrecto, compruébalo antes de exportar.</li>
+      <li>Abre el archivo guardado en tu móvil siguiendo la guía de importación. Comprueba el número de elementos, un lugar conocido y los campos que necesitas antes de transferir el resto de los datos.</li>
+    </ol>
+    <p class="small"><a href="https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/create_layers.html#creating-new-layers-from-an-existing-layer">Documentación de QGIS (en inglés)</a></p>
+  </section>
   <section class="section" aria-labelledby="steps-title">
     <h2 id="steps-title">Comprueba la transferencia en ambos sentidos</h2>
     <div class="platforms">

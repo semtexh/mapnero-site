@@ -68,6 +68,16 @@
     </div>
     <p class="small">Periksa kolom <code>ref_id</code>, <code>name</code>, <code>status</code>, dan <code>notes</code>. File contoh diekspor dengan QGIS 3.44.15 dan diperiksa pada versi uji MapNero untuk Android.</p>
   </section>
+
+  <section id="export-geojson" class="section" aria-labelledby="export-geojson-title">
+    <h2 id="export-geojson-title">Ekspor satu layer QGIS ke GeoJSON</h2>
+    <ol>
+      <li>Klik kanan layer vektor di panel Layers. Pilih <strong>Export → Save Features As…</strong>.</li>
+      <li>Pilih GeoJSON pada <strong>Format</strong> dan beri nama baru dengan ekstensi <code>.geojson</code>. Pilih <strong>EPSG:4326 (WGS 84)</strong> sebagai sistem koordinat keluaran. Jika sistem koordinat layer sumber belum diketahui atau salah, periksa dulu sebelum mengekspor.</li>
+      <li>Buka file yang disimpan di ponsel dengan mengikuti panduan impor. Periksa jumlah fitur, satu lokasi yang Anda kenal, dan kolom yang Anda perlukan sebelum memindahkan data lainnya.</li>
+    </ol>
+    <p class="small"><a href="https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/create_layers.html#creating-new-layers-from-an-existing-layer">Dokumentasi QGIS (bahasa Inggris)</a></p>
+  </section>
   <section class="section" aria-labelledby="steps-title">
     <h2 id="steps-title">Periksa hasil transfer di kedua aplikasi</h2>
     <div class="platforms">
