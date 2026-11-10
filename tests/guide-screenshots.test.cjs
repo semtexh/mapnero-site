@@ -51,6 +51,23 @@ for (const topic of ['import-map', 'quick-start', 'measure-cogo-buffer', 'locati
   assert.equal(hashes.size, 12);
 });
 const source = fs.readFileSync(path.join(root, 'assets/guides.js'), 'utf8');
+test('guide language switches preserve Google Play campaign attribution', () => {
+  const renderStoreLanguage = source.slice(source.indexOf('  function renderStoreLanguage()'), source.indexOf('  function renderUI()'));
+  const mapping = source.match(/  const playStoreLocales = .*;/)[0];
+  const googlePlay = {href: 'https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero&utm_source=youtube&utm_campaign=youtube_profile'};
+  const context = {URL, elements: {googlePlay}, locale: 'pt'};
+  vm.createContext(context);
+  vm.runInContext(mapping + renderStoreLanguage, context);
+  for (const [locale, expected] of [['pt', 'pt_BR'], ['es', 'es'], ['en', null]]) {
+    context.locale = locale;
+    vm.runInContext('renderStoreLanguage()', context);
+    const query = new URL(googlePlay.href).searchParams;
+    assert.equal(query.get('hl'), expected);
+    assert.equal(query.get('id'), 'com.thenerolabs.mapnero');
+    assert.equal(query.get('utm_source'), 'youtube');
+    assert.equal(query.get('utm_campaign'), 'youtube_profile');
+  }
+});
 const localeSelection = source.slice(source.indexOf('  function selectInitialLocale()'), source.indexOf('  function readHash()'));
 test('an app language deep link overrides a different saved browser language', () => {
   const context = {

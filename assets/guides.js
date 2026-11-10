@@ -10,6 +10,7 @@
   const locales = window.MAPNERO_GUIDE_LOCALES || [];
   const guides = window.MAPNERO_GUIDES || {};
   const platformIds = ["apple", "android", "web"];
+  const playStoreLocales = new Map([["es", "es"], ["pt", "pt_BR"]]);
   // The encrypted Web GIS offline reopening implementation is intentionally
   // not enabled for public production users yet. Keep its detailed guide out
   // of the public navigation until the production key and rollout acceptance
@@ -25,6 +26,7 @@
 
   const elements = {
     language: document.getElementById("language-select"),
+    googlePlay: document.getElementById("guide-google-play"),
     search: document.getElementById("guide-search"),
     platformTabs: document.getElementById("platform-tabs"),
     topicList: document.getElementById("topic-list"),
@@ -187,6 +189,14 @@
     });
   }
 
+  function renderStoreLanguage() {
+    const url = new URL(elements.googlePlay.href);
+    const playLocale = playStoreLocales.get(locale);
+    if (playLocale) url.searchParams.set("hl", playLocale);
+    else url.searchParams.delete("hl");
+    elements.googlePlay.href = url.href;
+  }
+
   function renderUI() {
     const localeInfo = locales.find((item) => item.id === locale) || locales[0];
     document.documentElement.lang = locale;
@@ -204,6 +214,7 @@
       node.setAttribute("title", label);
     });
     elements.language.setAttribute("aria-label", text("language"));
+    renderStoreLanguage();
   }
 
   function renderPlatforms() {
