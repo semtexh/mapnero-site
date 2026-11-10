@@ -52,7 +52,7 @@
     <section class="section" aria-labelledby="starting-point-title">
       <h2 id="starting-point-title">Elige por dónde empezar</h2>
       <div class="platforms">
-        <article class="card"><h3>¿Es tu primer archivo de mapa?</h3><p>Empieza con un mapa pequeño de un lugar que conozcas. Comprueba el archivo, elige tu dispositivo y sigue los pasos de importación.</p><a class="text-link" href="#practice-map">Prueba el mapa de práctica →</a></article>
+        <article class="card"><h3>¿Es tu primer archivo de mapa?</h3><p>Empieza con un mapa pequeño de un lugar que conozcas. Comprueba el archivo, elige tu dispositivo y sigue los pasos de importación.</p><a class="text-link" href="#practice-map">Prueba el mapa de práctica →</a><br><a class="text-link" href="#check-your-pdf">Compara un GeoPDF con un PDF normal →</a></article>
         <article class="card"><h3>¿Ya trabajas con SIG?</h3><p>Si ya tienes un PDF georreferenciado, ve a los pasos de importación de tu dispositivo. Después, comprueba su posición y pruébalo sin conexión.</p><a class="text-link" href="#import-steps">Ir a los pasos de importación →</a></article>
       </div>
     </section>
@@ -98,11 +98,26 @@
       <p><a class="text-link" href="save-field-point-es.html">Después, guarda un punto y añade una nota →</a></p>
     </section>
 
-    <section class="section" aria-labelledby="before-title">
+    <section id="check-your-pdf" class="section" aria-labelledby="before-title">
       <p class="eyebrow">ANTES DE EMPEZAR</p>
-      <h2 id="before-title">Un PDF necesita una ubicación geográfica.</h2>
-      <p>Un GeoPDF incluye información que sitúa el mapa en el mundo real. Un PDF normal puede contener solo una imagen de un mapa. Abrirlo no determina dónde se encuentra tu posición GPS dentro de esa imagen.</p>
-      <p>Usa un mapa con georreferenciación válida y comprueba un lugar conocido tras importarlo. Si tu posición aparece fuera del mapa, compárala con el mapa base y revisa el archivo original.</p>
+      <h2 id="before-title">¿Cómo saber si un PDF está georreferenciado?</h2>
+      <p>Los dos archivos de práctica muestran el mismo mapa ficticio. El GeoPDF guarda datos que sitúan el mapa en coordenadas geográficas. Un PDF normal también puede mostrar una cuadrícula y coordenadas impresas.</p>
+      <div class="guide-links" aria-label="Descarga los archivos para compararlos">
+        <a href="downloads/mapnero-practice-map.pdf" download>Descargar el ejemplo de GeoPDF</a>
+        <a href="downloads/mapnero-practice-map-plain.pdf" download>Descargar el ejemplo de PDF normal</a>
+      </div>
+      <details>
+        <summary>Ver la comparación en 17 segundos (sin audio)</summary>
+        <figure style="margin:16px 0;max-width:300px">
+          <video controls playsinline preload="none" width="1080" height="1920" poster="assets/field-guides/geopdf-or-plain-pdf-es-poster.jpg" aria-label="Comparar un GeoPDF con un PDF normal" aria-describedby="compare-pdf-es-caption" style="display:block;width:100%;height:auto">
+            <source src="assets/field-guides/geopdf-or-plain-pdf-es.mp4" type="video/mp4">
+            <p><a href="assets/field-guides/geopdf-or-plain-pdf-es.mp4">Descargar el vídeo comparativo</a>.</p>
+          </video>
+          <figcaption id="compare-pdf-es-caption" class="small">Texto del vídeo en español. Los dos archivos usan un mapa ficticio.</figcaption>
+        </figure>
+      </details>
+      <p>Si tienes GDAL con soporte para PDF en tu computadora, ejecuta <code>gdalinfo</code> con cada archivo. El GeoPDF de práctica muestra WGS 84 y su ubicación geográfica. El PDF normal muestra las dimensiones de la página, sin un sistema de coordenadas. Si el PDF tiene varias páginas, comprueba la que vas a usar. <a href="https://gdal.org/en/stable/drivers/raster/pdf.html">Documentación de GDAL (en inglés)</a>.</p>
+      <p>En el móvil, <a href="#import-steps">importa el GeoPDF de práctica</a> y compara los puntos de referencia con las coordenadas impresas. En tu propio mapa, verifica varios lugares conocidos. Si MapNero indica <strong>Location Outside</strong>, tu posición GPS puede estar fuera del área del mapa. Comprueba por separado si el mapa está bien ubicado.</p>
     </section>
 
     <section id="import-steps" class="section" aria-labelledby="steps-title">
