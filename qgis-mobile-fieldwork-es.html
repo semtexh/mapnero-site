@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo llevar datos de QGIS al móvil | MapNero</title>
+<meta name="description" content="Exporta una capa de QGIS, ábrela en MapNero y comprueba sus coordenadas y atributos. Descarga un ejemplo en GeoJSON, GeoPackage o Shapefile.">
+<link rel="canonical" href="https://www.mapnero.com/qgis-mobile-fieldwork-es.html">
+<link rel="alternate" hreflang="en" href="https://www.mapnero.com/qgis-mobile-fieldwork.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mapnero.com/qgis-mobile-fieldwork-pt-br.html">
+<link rel="alternate" hreflang="id" href="https://www.mapnero.com/qgis-mobile-fieldwork-id.html">
+<link rel="alternate" hreflang="es" href="https://www.mapnero.com/qgis-mobile-fieldwork-es.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mapnero.com/qgis-mobile-fieldwork.html">
+<link rel="icon" href="image.png" type="image/png">
+<link rel="stylesheet" href="assets/geopdf-landing.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cómo llevar datos de QGIS al móvil | MapNero">
+<meta property="og:description" content="Exporta una capa de QGIS, ábrela en MapNero y comprueba sus coordenadas y atributos. Descarga un ejemplo en GeoJSON, GeoPackage o Shapefile.">
+<meta property="og:url" content="https://www.mapnero.com/qgis-mobile-fieldwork-es.html">
+</head><body>
+<a class="skip" href="#main">Ir al contenido</a>
+<header class="wrap nav">
+  <a class="brand" href="/"><img src="image.png" width="42" height="42" alt=""><span>Map<span class="gold">Nero</span></span></a>
+  <nav aria-label="Navegación principal"><a href="guides.html?lang=es">Guías</a><a href="qgis-mobile-fieldwork.html" lang="en" hreflang="en">English</a><a href="qgis-mobile-fieldwork-pt-br.html" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="qgis-mobile-fieldwork-id.html" lang="id" hreflang="id">Bahasa Indonesia</a></nav>
+</header>
+<main id="main" class="wrap">
+  <section class="hero">
+    <div class="intro">
+      <p class="eyebrow">GUÍAS DE CAMPO DE MAPNERO</p>
+      <h1>Lleva tus datos de QGIS al móvil</h1>
+      <p class="lead">Exporta una capa pequeña de QGIS y comprueba sus coordenadas y atributos en MapNero antes de transferir tus datos de campo.</p>
+      <div class="actions"><a class="button" href="https://apps.apple.com/app/apple-store/id6758651027?pt=128311453&amp;ct=qgis_mobile_fieldwork_es&amp;mt=8">Descargar en App Store</a><a class="button outline" href="https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero&amp;hl=es&amp;utm_source=mapnero_website&amp;utm_campaign=qgis_mobile_fieldwork_es">Descargar en Google Play</a></div>
+      <p><a class="text-link" href="#sample-files">Ver los archivos de ejemplo ↓</a></p>
+    </div>
+    <figure class="phone"><img src="assets/guides/screenshots/apple/es/mobile-export.png" width="1206" height="2622" alt="Pantalla de exportación de MapNero en iPhone"><figcaption>Opciones de exportación en iPhone.</figcaption></figure>
+  </section>
+  <section id="sample-files" class="section" aria-labelledby="sample-title">
+    <h2 id="sample-title">Prueba con tres puntos</h2>
+    <p>Los tres archivos contienen los mismos puntos ficticios en <strong>EPSG:4326 (WGS 84)</strong>. Elige un formato y compara los nombres y atributos después de importar la capa.</p>
+    <div class="guide-links" aria-label="Archivos de ejemplo">
+      <a href="assets/field-guides/qgis-three-points/QGIS-GeoJSON-3points.geojson" download>Descargar GeoJSON</a>
+      <a href="assets/field-guides/qgis-three-points/QGIS-GeoPackage-3points.gpkg" download>Descargar GeoPackage</a>
+      <a href="assets/field-guides/qgis-three-points/QGIS-Shapefile-3points.zip" download>Descargar Shapefile (ZIP)</a>
+    </div>
+    <p class="small">Puedes importar GeoJSON con el plan gratuito. Para importar GeoPackage o Shapefile necesitas el plan Core o superior. Mantén el Shapefile en su ZIP para conservar todos los archivos de la capa.</p>
+    <div class="reference-points"><table><caption>Coordenadas esperadas en los archivos de ejemplo</caption><thead><tr><th scope="col">Nombre</th><th scope="col">Longitude (°)</th><th scope="col">Latitude (°)</th></tr></thead><tbody><tr><th scope="row">Reference A</th><td>30,000</td><td>0,000</td></tr><tr><th scope="row">Reference B</th><td>30,001</td><td>0,001</td></tr><tr><th scope="row">Reference Ç</th><td>30,002</td><td>0,000</td></tr></tbody></table></div>
+    <p class="small">En la tabla de atributos, comprueba los campos <code>ref_id</code>, <code>name</code>, <code>status</code> y <code>notes</code>. Los ejemplos se exportaron con QGIS 3.44.15 y se comprobaron en una versión de prueba de MapNero para Android.</p>
+  </section>
+  <section class="section" aria-labelledby="steps-title">
+    <h2 id="steps-title">Comprueba la transferencia en ambos sentidos</h2>
+    <div class="platforms">
+      <article class="card"><h3>De QGIS a MapNero</h3><p>Exporta una capa pequeña con el tipo de geometría, el sistema de coordenadas y los campos que necesitas. Importa el archivo en el móvil. Comprueba que los puntos aparezcan en el lugar esperado y vuelve a abrir la capa para verificar los registros guardados.</p><div class="guide-links"><a href="guides.html?lang=es#apple/import-map">Importar en iPhone y iPad</a><a href="guides.html?lang=es#android/import-map">Importar en Android</a></div></article>
+      <article class="card"><h3>De MapNero a QGIS</h3><p>Exporta la capa en un formato compatible y abre el archivo en un proyecto de prueba de QGIS. Comprueba el número de elementos, las coordenadas y los atributos. Revisa los estilos y los archivos adjuntos por separado. Conserva el proyecto y los archivos originales.</p><div class="guide-links"><a href="guides.html?lang=es#apple/mobile-export">Exportar desde iPhone y iPad</a><a href="guides.html?lang=es#android/mobile-export">Exportar desde Android</a></div></article>
+    </div>
+  </section>
+  <section class="section end">
+    <h2>Abre una capa de prueba en MapNero</h2>
+    <div class="actions"><a class="button" href="https://apps.apple.com/app/apple-store/id6758651027?pt=128311453&amp;ct=qgis_mobile_fieldwork_es&amp;mt=8">Descargar en App Store</a><a class="button outline" href="https://play.google.com/store/apps/details?id=com.thenerolabs.mapnero&amp;hl=es&amp;utm_source=mapnero_website&amp;utm_campaign=qgis_mobile_fieldwork_es">Descargar en Google Play</a></div>
+    <div class="guide-links"><a href="geotiff-maps-es.html">Abrir un mapa GeoTIFF</a><a href="geopdf-maps-es.html">Abrir un mapa GeoPDF</a></div>
+  </section>
+</main>
+<footer class="wrap"><a href="/">MapNero</a><a href="guides.html?lang=es">Todas las guías</a><a href="privacy.html" lang="en">Privacy</a></footer>
+<script src="assets/campaign-links.js?v=20261105" defer></script>
+</body></html>
