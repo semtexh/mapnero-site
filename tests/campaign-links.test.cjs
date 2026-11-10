@@ -37,8 +37,8 @@ test('known campaigns are short, fixed labels and mapping is idempotent', () => 
   }
 });
 
-test('social source survives the route and Indonesian point guides before store handoff', () => {
-  for (const path of ['route-builder.html', 'route-builder-id.html', 'route-builder-es.html', 'route-builder-pt-br.html', 'save-field-point-id.html']) {
+test('social source survives route, point and QGIS guide links before store handoff', () => {
+  for (const path of ['route-builder.html', 'route-builder-id.html', 'route-builder-es.html', 'route-builder-pt-br.html', 'save-field-point-id.html', 'qgis-mobile-fieldwork-id.html']) {
     const fromHub = rewriteHref(path, 'https://www.mapnero.com/guides.html?mn_campaign=youtube_profile');
     assert.equal(new URL(fromHub).searchParams.get('mn_campaign'), 'youtube_profile');
     const store = new URL(rewriteHref(play, fromHub));
