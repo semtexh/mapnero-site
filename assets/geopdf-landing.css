@@ -7,3 +7,9 @@
 .sample-download{margin-top:20px}.sample-download p{margin-bottom:8px}.sample-download .small{margin:8px 0 20px}
 
 #first-map-video video::cue{font-size:clamp(16px,1.4vw,24px);color:#fff;background-color:rgba(5,20,30,.88)}
+
+.desktop-transfer{display:none}
+@media(min-width:761px) and (hover:hover) and (pointer:fine){
+  .desktop-transfer{display:block;margin-top:14px}
+  .desktop-transfer img{display:block;margin-top:12px;max-width:100%;height:auto}
+}
