@@ -51,7 +51,8 @@ test('social source survives route, point and QGIS guide links before store hand
 
 test('Portuguese GeoPDF share has a distinct store campaign and keeps the practice download intact', () => {
   const guide = 'https://www.mapnero.com/geopdf-maps-pt-br.html?mn_campaign=pt_geopdf_x#practice-map';
-  const google = new URL(rewriteHref(play, guide));
+  const google = new URL(rewriteHref(play + '&hl=pt_BR', guide));
+  assert.equal(google.searchParams.get('hl'), 'pt_BR');
   assert.equal(google.searchParams.get('utm_source'), 'x');
   assert.equal(google.searchParams.get('utm_campaign'), 'pt_geopdf_x');
   assert.equal(new URL(rewriteHref(apple, guide)).searchParams.get('ct'), 'pt_geopdf_x');
