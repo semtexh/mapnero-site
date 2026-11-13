@@ -77,3 +77,24 @@ test('download introduction preserves known campaign through guide and both stor
   const html = require('node:fs').readFileSync(require('node:path').join(__dirname,'../start.html'),'utf8');
   assert.match(html, /src="assets\/campaign-links\.js[^"]*" defer/);
 });
+
+
+test('language changes preserve a known source through download introduction and local practice guide', () => {
+  for (const [path, guide, language] of [
+    ['start-id.html', 'geopdf-maps-id.html', 'id'],
+    ['start-pt-br.html', 'geopdf-maps-pt-br.html', 'pt']
+  ]) {
+    const localized = rewriteHref(path, 'https://www.mapnero.com/start.html?mn_campaign=instagram_profile');
+    assert.equal(new URL(localized).searchParams.get('mn_campaign'), 'instagram_profile');
+    assert.equal(new URL(rewriteHref(apple, localized)).searchParams.get('ct'), 'instagram_profile');
+    assert.equal(new URL(rewriteHref(play, localized)).searchParams.get('utm_source'), 'instagram');
+    const practice = new URL(rewriteHref(guide+'#practice-map', localized));
+    assert.equal(practice.searchParams.get('mn_campaign'), 'instagram_profile');
+    assert.equal(practice.hash, '#practice-map');
+    const manual = new URL(rewriteHref('guides.html?lang='+language, localized));
+    assert.equal(manual.searchParams.get('lang'), language);
+    assert.equal(manual.searchParams.get('mn_campaign'), 'instagram_profile');
+    assert.equal(rewriteHref('#download', localized), '#download');
+    assert.equal(rewriteHref('start.html', localized), 'https://www.mapnero.com/start.html?mn_campaign=instagram_profile');
+  }
+});
