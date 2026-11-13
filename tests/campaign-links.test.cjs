@@ -59,3 +59,21 @@ test('Portuguese GeoPDF share has a distinct store campaign and keeps the practi
   assert.equal(rewriteHref('downloads/mapnero-practice-map.pdf', guide), 'downloads/mapnero-practice-map.pdf');
   assert.equal(rewriteHref('#practice-map', guide), '#practice-map');
 });
+
+
+test('download introduction preserves known campaign through guide and both stores', () => {
+  for (const campaign of ['x_profile', 'linkedin_profile']) {
+    const start = rewriteHref('start.html', 'https://www.mapnero.com/?mn_campaign='+campaign);
+    assert.equal(new URL(start).searchParams.get('mn_campaign'), campaign);
+    assert.equal(new URL(rewriteHref(apple, start)).searchParams.get('ct'), campaign);
+    assert.equal(new URL(rewriteHref(play, start)).searchParams.get('utm_campaign'), campaign);
+    const practice = new URL(rewriteHref('geopdf-maps.html#practice-map', start));
+    assert.equal(practice.hash, '#practice-map');
+    assert.equal(practice.searchParams.get('mn_campaign'), campaign);
+    assert.equal(rewriteHref('#download', start), '#download');
+    assert.equal(rewriteHref('#plans', start), '#plans');
+  }
+  assert.equal(rewriteHref(play, 'https://www.mapnero.com/start.html?mn_campaign=unknown'), play);
+  const html = require('node:fs').readFileSync(require('node:path').join(__dirname,'../start.html'),'utf8');
+  assert.match(html, /src="assets\/campaign-links\.js[^"]*" defer/);
+});
