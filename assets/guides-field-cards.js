@@ -27,16 +27,49 @@
   "Meça distâncias no mapa",
   "Veja a distância durante a medição em um exemplo de 15 segundos no iPhone."
 ];
+  const indonesian = [
+  "Panduan lapangan singkat",
+  "Pilih topik dan bahasa. Video menggunakan narasi bahasa Inggris; takarir yang tersedia tercantum di setiap pemutar. Panduan perangkat di bawah mengikuti pilihan bahasa di atas.",
+  "Unduh MapNero",
+  "Unduh aplikasinya, lalu ikuti panduan untuk perangkat Anda.",
+  "Buka peta GeoPDF",
+  "Impor peta dan periksa posisinya sebelum ke lapangan. ",
+  "Bandingkan GeoPDF dengan PDF biasa",
+  "Buka peta GeoTIFF",
+  "Periksa format yang didukung perangkat Anda dan uji peta tanpa koneksi.",
+  "Bawa data QGIS ke ponsel",
+  "Uji satu layer contoh di ponsel sebelum memindahkan data lapangan.",
+  "Rekam jejak GPS tanpa koneksi",
+  "Uji rekaman singkat sebelum keluar dari jangkauan jaringan, lalu ekspor sebagai GPX.",
+  "Simpan titik dan tambahkan catatan",
+  "Tonton panduan iPhone 32 detik dengan takarir.",
+  "Atur peringatan geofence",
+  "Pilih radius dan terima peringatan saat masuk atau keluar.",
+  "Rencanakan rute dengan titik",
+  "Tempatkan titik, periksa jarak, lalu simpan rute yang digambar. Tonton panduan iPhone 24 detik.",
+  "Ukur jarak pada peta",
+  "Lihat jarak selama pengukuran dalam contoh iPhone 15 detik."
+];
   const nodes = Array.from(section.querySelectorAll('[data-field-copy]'));
   const originals = nodes.map(node => node.textContent);
-  function render() {
-    const isPortuguese = language.value === 'pt';
-    section.lang = isPortuguese ? 'pt-BR' : 'en';
+  function render(selectedLanguage) {
+    const copy = { pt: portuguese, id: indonesian }[selectedLanguage];
+    section.lang = { pt: 'pt-BR', id: 'id' }[selectedLanguage] || 'en';
     section.dir = 'ltr';
     nodes.forEach((node, index) => {
-      node.textContent = isPortuguese ? portuguese[Number(node.dataset.fieldCopy)] : originals[index];
+      node.textContent = copy ? copy[Number(node.dataset.fieldCopy)] : originals[index];
     });
+    const comparison = section.querySelector('[data-field-copy="6"]');
+    if (comparison) {
+      comparison.setAttribute('href', ({
+        pt: 'geopdf-maps-pt-br.html',
+        id: 'geopdf-maps-id.html'
+      }[selectedLanguage] || 'geopdf-maps.html') + '#check-your-pdf');
+    }
   }
-  language.addEventListener('change', render);
-  render();
+  language.addEventListener('change', function () { render(language.value); });
+  // The device-guide catalog currently falls back to English for Indonesian.
+  // Keep these independent quick cards in the language requested by their link.
+  const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+  render(requestedLanguage === 'id' ? 'id' : language.value);
 }());
