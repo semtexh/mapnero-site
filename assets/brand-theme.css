@@ -1,0 +1,66 @@
+/* Shared MapNero identity. Layout and interactive map content stay page-specific. */
+:root{color-scheme:dark;--bg:#07131f;--surface:#0f2233;--panel:#0f2233;--surface-raised:#142b40;--navy:#07131f;--navy-2:#0f2233;--ink:#07131f;--cream:#f6f1e4;--text:#f6f1e4;--muted:#b7c4cf;--gold:#edb64e;--gold-light:#f5cb73;--gold-bright:#edb64e;--gold-dim:#c79537;--accent:#edb64e;--border:#334657;--line:#334657;--border-soft:#273d50;--gold-glow:rgba(237,182,78,.12);--brand-font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.mn-site{background-color:var(--bg);background-image:linear-gradient(rgba(7,19,31,.88),rgba(7,19,31,.88)),url('brand-contours.svg');background-size:auto,1500px auto;color:var(--text);font-family:var(--brand-font);line-height:1.65}
+.mn-site h1,.mn-site h2,.mn-site h3,.mn-site h4,.mn-site .brand,.mn-site .logo-text,.mn-site .nav-name,.mn-site .footer-name,.mn-site .tier-name,.mn-site .tier-price,.mn-site .btn,.mn-site .btn-primary,.mn-site .btn-outline,.mn-site .store-btn-name,.mn-site th{font-family:var(--brand-font);letter-spacing:-.025em}
+.mn-site h1,.mn-site h2{color:var(--text);font-weight:700;line-height:1.15}
+.mn-site h3,.mn-site h4{font-weight:650}
+.mn-site button,.mn-site input,.mn-site select,.mn-site textarea{font-family:var(--brand-font)}
+.mn-site a{color:var(--gold);text-underline-offset:4px}
+.mn-site a:focus-visible,.mn-site button:focus-visible,.mn-site input:focus-visible,.mn-site select:focus-visible,.mn-site summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.mn-site .brand,.mn-site .nav-brand,.mn-site .footer-brand,.mn-site .logo-text{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;flex-shrink:0}
+.mn-site .brand,.mn-site .logo-text,.mn-site .nav-name,.mn-site .footer-name{font-size:1.35rem;font-weight:750;letter-spacing:-.025em;color:#fff}
+.mn-site .brand img,.mn-site .nav-icon,.mn-site .logo-text img{width:42px;height:42px;object-fit:contain;border-radius:10px;flex-shrink:0}
+.mn-site .brand .gold,.mn-site .mn-gold,.mn-site .nav-name .gold,.mn-site .footer-name .gold{color:var(--gold)}
+.mn-site .site-header,.mn-site>header,.mn-site>nav{background:rgba(7,19,31,.97);border-bottom:1px solid var(--border)}
+.mn-site .nav-links a,.mn-site .home-link,.mn-site .header-actions a,.mn-site header nav a{color:var(--muted)}
+.mn-site .nav-links a:hover,.mn-site header nav a:hover{color:var(--gold)}
+.mn-site .button,.mn-site .btn-primary,.mn-site .btn,.mn-site .nav-dl .btn-store{background:var(--gold);border-color:var(--gold);border-radius:10px;color:#07131f;font-weight:700;box-shadow:none}
+.mn-site .button:hover,.mn-site .btn-primary:hover,.mn-site .btn:hover{background:var(--gold-light);color:#07131f}
+.mn-site .outline,.mn-site .btn-outline{background:transparent;border:1px solid var(--gold);border-radius:10px;color:var(--text)}
+.mn-site .outline:hover,.mn-site .btn-outline:hover{background:var(--surface-raised);color:var(--text)}
+.mn-site footer{background:var(--bg);color:var(--muted);border-color:var(--border)}
+.mn-site .card,.mn-site .tier-card,.mn-site .topic-card{background:var(--panel);border-color:var(--border);border-radius:14px}
+.mn-site .hero .meta{opacity:1;color:var(--muted)}
+.mn-site .warning,.mn-site .notice{background:#282516;border-color:var(--gold);color:var(--text)}
+.mn-site .hero{background-color:transparent}
+.mn-document .hero{background:linear-gradient(135deg,#07131f,#10283a);border-color:var(--border)}
+.mn-document p,.mn-document li,.mn-document td{color:var(--muted)}
+.mn-document .card p,.mn-document .card li{color:var(--text)}
+.mn-document>header{padding:18px max(24px,calc((100vw - 1120px)/2))}
+.mn-home .hero{background:transparent}
+.mn-home .hero::before{background-image:url('brand-contours.svg');opacity:.12}
+.mn-home .hero-sub,.mn-home .feature-card p,.mn-home .field-strip p,.mn-home .org-heading>p,.mn-home .org-details,.mn-home .org-unit,.mn-home .org-note{color:var(--muted)}
+.mn-home .hero-badge,.mn-home .hero-team-link,.mn-home .org-package a{color:var(--gold)}
+.mn-home .product-screens,.mn-home .demo-entry-screens{background:var(--surface);border:1px solid var(--border);border-radius:18px}
+.mn-home .pricing-section,.mn-home .organization-section,.mn-home .cta-section{background:var(--surface)}
+.mn-home .tier-card.featured{background:var(--surface-raised);border-color:var(--gold)}
+.mn-home .tier-card.featured::before{background:var(--gold);color:#07131f}
+.mn-home .tier-name,.mn-home .tier-price,.mn-home .org-price,.mn-home .org-package h3,.mn-home .feature-card h3,.mn-home .demo-entry h2{color:var(--text)}
+.mn-home .tier-features li,.mn-home .tier-desc,.mn-home .org-custom p,.mn-home .demo-entry p{color:var(--muted)}
+.mn-home .org-custom,.mn-home .ftag{background:#142b40;color:var(--text)}
+.mn-home .org-package,.mn-home .org-packages,.mn-home .org-package a,.mn-home .field-strip,.mn-home .demo-entry,.mn-home .feature-card{border-color:var(--border)}
+.mn-home .org-details strong,.mn-home .org-custom h3,.mn-home .hero-product figcaption{color:var(--text)}
+.mn-home .store-btn{background:var(--surface-raised);border-color:var(--border);color:var(--text)}
+.mn-home .store-btn:hover{background:#1b354c}
+.mn-home .demo-entry-actions>a:not(.btn-primary),.mn-home .localized-map-guides a{color:var(--gold)}
+.mn-home .hero-map-key,.mn-home .hero-map-key span{color:var(--muted)}
+.mn-download:before{opacity:.10}
+.mn-demo .explorer-shell{background:var(--surface);border-color:var(--border)}
+.mn-demo .explorer-sidebar,.mn-demo .explorer-captures,.mn-demo .sample-store,.mn-demo .sample-map-demo,.mn-demo .feature-lab{background:#102638}
+.mn-demo .explorer input,.mn-demo .explorer select,.mn-demo .explorer textarea,.mn-demo .explorer button{background:var(--bg);color:var(--text);border-color:var(--border)}
+.mn-demo .explorer [data-feature-list] button[aria-pressed=true]{background:var(--gold);color:#07131f}
+.mn-demo .explorer-detail>a,.mn-demo .explorer-eyebrow{color:var(--gold)}
+.mn-demo .explorer-caption,.mn-demo .lab-disclosure,.mn-demo .lab-controls+p{color:var(--muted)}
+/* Keep the simulated map/diagram canvas legible without recoloring geographic data. */
+.mn-demo .lab-surface{background:#f6f1e4;color:#142231;border-radius:8px}
+.mn-demo .lab-surface h4,.mn-demo .lab-surface p,.mn-demo .lab-result{color:#142231}
+@media(max-width:600px){.mn-site .brand,.mn-site .nav-name,.mn-site .footer-name,.mn-site .logo-text{font-size:1.2rem}.mn-home h1{font-size:clamp(2.6rem,12vw,3.7rem)}.mn-site .brand img,.mn-site .nav-icon,.mn-site .logo-text img{width:38px;height:38px}.mn-site .site-header{gap:12px}}
+@media(prefers-reduced-motion:reduce){.mn-site{scroll-behavior:auto}}
+
+.mn-site .hero::before{background-image:url('brand-contours.svg');opacity:.20}
+.mn-demo .demo-intro p,.mn-demo .app-player-tools p,.mn-demo .app-player-tools label,.mn-demo .app-player-footnote{color:var(--muted)}
+.mn-demo .app-player-layout{background:var(--surface);border-color:var(--border);border-radius:16px}
+.mn-demo .app-player-tools select,.mn-demo .app-player-buttons button{background:var(--bg);color:var(--text);border-color:var(--border);border-radius:9px}
+.mn-demo .app-player-status{border-color:var(--border)}
+
+.mn-download::before{background-image:url("brand-contours.svg");opacity:.12}
