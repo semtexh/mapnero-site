@@ -26,7 +26,10 @@
       window.MAPNERO_GUIDES[id].platforms[platform].topics.push({
         id: "settings-workspace", title, summary, access, note,
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
-        tips: [{ q: tip[0], a: tip[1] }]
+        tips: [{ q: tip[0], a: tip[1] }],
+        ...(id === "en" && platform === "android" ? {
+          motion: { caption: "Check your units before recording values. This video uses an Android guide screenshot, editorial highlighting and AI-generated English narration. Labels may vary by app version." }
+        } : {})
       });
     }
   }
