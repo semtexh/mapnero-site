@@ -39,7 +39,7 @@
         steps: steps.map(([stepTitle, body]) => ({ title: stepTitle, body })),
         tips: [{ q: tip[0], a: tip[1] }],
         ...(id === "en" && platform === "apple" ? {
-          motion: { caption: "Sharing a GPS track? Choose GPX, then reopen the exported file in your destination app and check the track before fieldwork. This video uses an existing iPhone guide screenshot, editorial highlighting and AI-generated English narration; it does not demonstrate a completed export." }
+          motion: { subtitles: [{ language: "en", label: "English" }, { language: "es", label: "Español" }, { language: "pt-BR", label: "Português (Brasil)" }], caption: "Subtitles: English, Español, Português (Brasil). Sharing a GPS track? Choose GPX, then reopen the exported file in your destination app and check the track before fieldwork. This video uses an existing iPhone guide screenshot, editorial highlighting and AI-generated English narration; it does not demonstrate a completed export." }
         } : {})
       });
     }

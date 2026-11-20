@@ -422,6 +422,15 @@
 
     const path = `assets/guides/videos/${platform}/${locale}/${topic.id}.mp4`;
     const caption = motion.caption;
+    for (const subtitle of motion.subtitles || []) {
+      const track = document.createElement("track");
+      track.kind = "subtitles";
+      track.srclang = subtitle.language;
+      track.label = subtitle.label;
+      track.default = subtitle.language === "en";
+      track.src = path.replace(/\.mp4$/, `.${subtitle.language}.vtt`);
+      video.append(track);
+    }
     video.onloadeddata = () => {
       if (request !== motionRequest) return;
       elements.motionCaption.textContent = caption;
