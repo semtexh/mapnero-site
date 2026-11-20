@@ -98,6 +98,7 @@
     if (!match) return;
     platform = match[1].toLowerCase();
     topicId = match[2] || "";
+    return Boolean(match[2]) && currentTopics().some((topic) => topic.id === topicId);
   }
 
   function text(key) {
@@ -490,7 +491,7 @@
     renderArticle();
   }
 
-  readHash();
+  const openedSharedTopic = readHash();
   elements.language.addEventListener("change", (event) => setLocale(event.target.value));
   elements.search.addEventListener("input", (event) => {
     query = event.target.value;
@@ -505,9 +506,19 @@
     renderArticle();
     showToast(text("resetDone"));
   });
+  // Only explicit, valid topic links bypass the guide directory.
+  function revealSharedTopic() {
+    requestAnimationFrame(() => {
+      elements.content.focus({ preventScroll: true });
+      elements.content.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+  }
+
   window.addEventListener("hashchange", () => {
-    readHash();
+    const sharedTopic = readHash();
     render();
+    if (sharedTopic) revealSharedTopic();
   });
   render();
+  if (openedSharedTopic) revealSharedTopic();
 })();

@@ -21,6 +21,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Keep shared guide headings below the sticky navigation. */
+#guide-content { scroll-margin-top: 6rem; }
+
 body {
   min-width: 320px;
   margin: 0;
