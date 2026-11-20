@@ -72,7 +72,7 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  color: var(--gold-bright);
+  color: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.2rem;
   font-weight: 800;
@@ -81,6 +81,7 @@ a { color: inherit; }
 }
 
 .brand img { border-radius: 0.65rem; }
+.brand .gold { color: var(--gold-bright); }
 
 .header-actions { display: flex; align-items: center; gap: 0.8rem; }
 
