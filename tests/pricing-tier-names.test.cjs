@@ -20,10 +20,11 @@ test('higher tiers refer to the canonical preceding tier', () => {
   assert.match(cards[3], /<li>Everything in Pro<\/li>/);
 });
 
-test('pricing preserves existing prices without promising Apple-only billing', () => {
+test('pricing labels U.S. App Store reference prices and points to in-app offers', () => {
   assert.deepEqual(cards.map(card => text(card.match(/<div class="tier-price">([\s\S]*?)<\/div>/)[1])),
     ['$0', '$34.99/yr', '$79.99/yr', '$99.99/yr']);
-  assert.match(pricing, /Check your app store for local prices and subscription terms\./);
+  assert.match(pricing, /Annual subscription prices shown in USD are from the U\.S\. App Store\./);
+  assert.match(pricing, /Check MapNero for prices and offers in your region/);
   assert.doesNotMatch(pricing, /All plans billed yearly through Apple\./);
 });
 
@@ -39,4 +40,20 @@ test('Core conversion is distinct from Pro map layout creation', () => {
   assert.match(cards[1], /25 active geofences/);
   assert.match(cards[2], /Create new GeoPDF map layouts/);
   assert.doesNotMatch(pricing, /Unlimited everything/);
+});
+
+test('pricing separates unlimited personal map imports from offline region limits', () => {
+  assert.match(cards[0], /Unlimited imports of your own GeoPDF and supported GeoTIFF maps/);
+  assert.match(cards[0], /1 offline region/);
+});
+
+test('supported File Geodatabase and forestry features appear under Pro', () => {
+  assert.match(cards[2], /Esri File Geodatabase \(\.gdb\.zip\) import and export/);
+  assert.match(cards[2], /Forestry calculations and field reports/);
+  assert.match(pricing, /Features vary by device and platform/);
+  assert.doesNotMatch(cards[0] + cards[1], /\.gdb\.zip/);
+  for (const file of ['start.html', 'start-id.html', 'start-pt-br.html']) {
+    const download = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
+    assert.match(download, /<h3>Pro<\/h3><p>[^<]*Esri File Geodatabase \(\.gdb\.zip\)/, file);
+  }
 });
